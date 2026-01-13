@@ -17,7 +17,7 @@ export function RequestSection() {
                     {/* Left Side: Text & Process */}
                     <div className="lg:w-5/12 space-y-10">
                         <div className="space-y-6">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-black uppercase tracking-widest">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
                                 <Sparkles className="w-3.5 h-3.5" /> Twoje Auto Czeka
                             </div>
                             <h2 className="text-2xl md:text-4xl font-black leading-[1.1] uppercase tracking-tighter text-slate-900 dark:text-white">

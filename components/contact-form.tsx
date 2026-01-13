@@ -154,7 +154,7 @@ export function ContactForm({
                         {isSubmitting ? "Wysyłanie..." : "Wyślij zgłoszenie"}
                         {!isSubmitting && <Send className="ml-3 w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
                     </Button>
-                    <p className="text-center text-[9px] text-muted-foreground font-bold uppercase tracking-tighter">
+                    <p className="text-center text-xs text-muted-foreground font-bold uppercase tracking-tighter">
                         Wysyłając zgłoszenie akceptujesz politykę prywatności. Dane są przetwarzane wyłącznie w celu obsługi zapytania.
                     </p>
                 </form>

@@ -44,7 +44,7 @@ export function FaqSection() {
 
             <div className="container mx-auto px-4 md:px-8 max-w-3xl relative z-10">
                 <div className="text-center mb-16 space-y-4">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-black uppercase tracking-widest">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
                         FAQ
                     </div>
                     <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter leading-none text-foreground">

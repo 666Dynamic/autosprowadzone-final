@@ -56,14 +56,14 @@ export function Calculator() {
                         </div>
                         Parametry Importu
                     </CardTitle>
-                    <CardDescription className="text-muted-foreground text-[10px] font-bold uppercase tracking-[0.2em] mt-1">
+                    <CardDescription className="text-muted-foreground text-xs font-bold uppercase tracking-[0.2em] mt-1">
                         Skonfiguruj dane swojego pojazdu.
                     </CardDescription>
                 </CardHeader>
                 <CardContent className="p-6 md:p-8 space-y-8">
                     <div className="grid gap-6 sm:grid-cols-2">
                         <div className="space-y-3">
-                            <Label htmlFor="price" className="text-[10px] font-black uppercase tracking-[0.2em] text-primary/80 ml-1">Cena (EUR)</Label>
+                            <Label htmlFor="price" className="text-xs font-bold uppercase tracking-[0.2em] text-primary/80 ml-1">Cena (EUR)</Label>
                             <div className="relative group">
                                 <Input
                                     id="price"

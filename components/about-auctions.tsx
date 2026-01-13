@@ -180,7 +180,7 @@ export function AboutAuctions() {
 
                     {/* Left: Text Content */}
                     <div className="lg:w-1/2 space-y-8">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-black uppercase tracking-widest text-[10px]">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
                             <Sparkles className="w-3 h-3" /> Ekskluzywny Dostęp B2B
                         </div>
                         <h2 className="text-2xl md:text-4xl font-black leading-[1.1] text-white uppercase tracking-tighter">
