@@ -13,8 +13,8 @@
 
   --primary: #f59e0b;
   /* Amber-500 - NOW PRIMARY */
-  --primary-foreground: #171717;
-  /* Neutral-900 (High Contrast Black) */
+  --primary-foreground: #ffffff;
+  /* White text on amber (WCAG AA) */
 
   --secondary: #f1f5f9;
   --secondary-foreground: #0f172a;
@@ -47,8 +47,8 @@
 
   --primary: #f59e0b;
   /* Amber-500 - NOW PRIMARY */
-  --primary-foreground: #171717;
-  /* Neutral-900 (High Contrast Black) */
+  --primary-foreground: #ffffff;
+  /* White text on amber (WCAG AA) */
 
   --secondary: #1e293b;
   --secondary-foreground: #f8fafc;
