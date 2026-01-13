@@ -46,9 +46,9 @@ export default function VerificationPage() {
                                     <div className="inline-block px-4 py-1.5 rounded-full bg-white/20 border border-white/30 text-white text-xs font-bold uppercase tracking-widest">
                                         Import Indywidualny
                                     </div>
-                                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-tighter leading-[0.9]">
+                                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight leading-[1.1] drop-shadow-md">
                                         Sam znalazłeś auto? <br />
-                                        <span className="text-white italic drop-shadow-md">Sprawdzimy je dla Ciebie.</span>
+                                        <span className="text-white italic">Sprawdzimy je dla Ciebie.</span>
                                     </h2>
                                     <p className="text-xl md:text-2xl text-white font-semibold leading-relaxed max-w-2xl">
                                         Znalazłeś interesującą ofertę w Niemczech? Nie ryzykuj wyjazdu w ciemno.
