@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { motion, AnimatePresence } from "framer-motion"
 import { ArrowRight, Gavel, Timer, Fuel, Gauge, Calendar, ShieldCheck, Euro, Zap, Search, Activity, Sparkles, CheckCircle2, ChevronLeft, ChevronRight, Clock, MapPin, History as HistoryIcon, Camera } from "lucide-react"
 import Link from "next/link"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useMemo } from "react"
 
 export function AboutAuctions() {
     const [price, setPrice] = useState(18658)
@@ -15,7 +15,7 @@ export function AboutAuctions() {
     const [isFinished, setIsFinished] = useState(false)
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-    const images = [
+    const images = useMemo(() => [
         "/audi/max-AD55987_01bdb54e3e0af8794c16fffcbf2ca28d.jpg",
         "/audi/max-AD55987_2d6cf1cc4d29426a8dc28267a693307d.jpg",
         "/audi/max-AD55987_339081aa4a32ad5ea2581b0a9375e908.jpg",
@@ -24,7 +24,7 @@ export function AboutAuctions() {
         "/audi/max-AD55987_dbedf5b7e4de4bc9977b9c004db8622c.jpg",
         "/audi/max-AD55987_dfb80e1c658ec4aaa94a866e2f02f8a7.jpg",
         "/audi/max-AD55987_ee56ff1e3170932847ff99740f2fd3f6.jpg"
-    ]
+    ], [])
 
     useEffect(() => {
         setMounted(true)
@@ -183,7 +183,7 @@ export function AboutAuctions() {
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-black uppercase tracking-widest text-[10px]">
                             <Sparkles className="w-3 h-3" /> Ekskluzywny Dostęp B2B
                         </div>
-                        <h2 className="text-3xl md:text-5xl font-black leading-[1.1] text-white uppercase tracking-tighter">
+                        <h2 className="text-2xl md:text-4xl font-black leading-[1.1] text-white uppercase tracking-tighter">
                             Ekskluzywny <br />
                             <span className="text-primary italic">Dostęp B2B</span>
                         </h2>

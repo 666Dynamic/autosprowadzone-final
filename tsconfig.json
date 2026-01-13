@@ -1,10 +1,9 @@
 {
-  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
     // Language and Environment
     "target": "ES2022",
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     
     // Modules
     "module": "ESNext",
@@ -14,13 +13,12 @@
     "checkJs": false,
     
     // Emit
-    "declaration": true,
-    "declarationMap": true,
+    "declaration": false,
     "sourceMap": true,
-    "outDir": "./dist",
-    "removeComments": false,
-    "noEmit": false,
-    "importHelpers": true,
+    "noEmit": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
     
     // Strict Type-Checking Options
     "strict": true,
@@ -38,40 +36,31 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true,
-    "noPropertyAccessFromIndexSignature": true,
     
     // Interop Constraints
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    
+    // Next.js specific
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     
     // Path Aliases
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@pages/*": ["src/pages/*"],
-      "@utils/*": ["src/utils/*"],
-      "@types/*": ["src/types/*"],
-      "@constants/*": ["src/constants/*"],
-      "@hooks/*": ["src/hooks/*"],
-      "@styles/*": ["src/styles/*"],
-      "@public/*": ["public/*"]
-    },
-    
-    // Experimental Features
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+      "@/*": ["./*"]
+    }
   },
   "include": [
-    "src/**/*",
-    "astro.config.mjs"
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "dist",
-    ".astro"
+    "node_modules"
   ]
 }

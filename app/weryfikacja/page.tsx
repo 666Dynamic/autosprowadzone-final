@@ -20,7 +20,7 @@ export default function VerificationPage() {
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-black uppercase tracking-widest">
                             <Sparkles className="w-4 h-4" /> Profesjonalny Audyt Pojazdu
                         </div>
-                        <h1 className="text-4xl md:text-8xl font-black leading-none uppercase tracking-tighter text-foreground">
+                        <h1 className="text-3xl md:text-5xl lg:text-7xl font-black leading-none uppercase tracking-tighter text-foreground">
                             Weryfikacja <br /><span className="text-primary italic">Zanim Kupisz</span>
                         </h1>
                         <p className="text-xl text-muted-foreground font-medium max-w-3xl mx-auto leading-relaxed">
@@ -46,7 +46,7 @@ export default function VerificationPage() {
                                     <div className="inline-block px-4 py-1.5 rounded-full bg-black/10 border border-black/10 text-black text-xs font-black uppercase tracking-widest">
                                         Import Indywidualny
                                     </div>
-                                    <h2 className="text-4xl md:text-7xl font-black text-black uppercase tracking-tighter leading-[0.9]">
+                                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-black uppercase tracking-tighter leading-[0.9]">
                                         Sam znalazłeś auto? <br />
                                         <span className="text-white italic drop-shadow-md">Sprawdzimy je dla Ciebie.</span>
                                     </h2>
@@ -73,6 +73,8 @@ export default function VerificationPage() {
                                             fill
                                             className="object-cover object-center opacity-90 mix-blend-multiply"
                                             sizes="(max-width: 768px) 100vw, 40vw"
+                                            priority={false}
+                                            quality={85}
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-amber-600/80 via-transparent to-transparent" />
                                     </div>

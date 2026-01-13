@@ -7,16 +7,17 @@ import Link from "next/link"
 export function Hero() {
     return (
         <section className="relative overflow-hidden bg-background pt-24 md:pt-32 pb-24 lg:pt-40 lg:pb-32 min-h-[85vh] flex items-center">
-            {/* Background Video - Optimized loop instead of JS rewind */}
-            <div className="absolute inset-0 z-0">
+            {/* Background Video - Only video, no images */}
+            <div className="absolute inset-0 z-0 bg-slate-950">
                 <video
                     autoPlay
                     loop
                     muted
                     playsInline
-                    preload="none"
-                    poster="/hero-bg.png"
-                    className="absolute inset-0 w-full h-full object-cover opacity-30 dark:opacity-20"
+                    preload="auto"
+                    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 [&.loaded]:opacity-30 dark:[&.loaded]:opacity-20"
+                    aria-hidden="true"
+                    onLoadedData={(e) => e.currentTarget.classList.add('loaded')}
                 >
                     <source src="/13164895_3840_2160_30fps.mp4" type="video/mp4" />
                 </video>
@@ -34,7 +35,7 @@ export function Hero() {
                         Zaufany Pośrednik
                     </div>
 
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1]">
+                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1]">
                         Sprowadzamy Auta na <br />
                         <span className="text-primary">Indywidualne Zamówienie</span>
                     </h1>

@@ -5,7 +5,7 @@ import { Search, Send, Sparkles, Filter, CheckCircle2 } from "lucide-react"
 
 export function RequestSection() {
     return (
-        <section id="request-section" className="py-24 md:py-32 bg-slate-50 dark:bg-[#0b1222] relative overflow-hidden">
+        <section id="request-section" className="py-24 md:py-32 bg-secondary/20 dark:bg-slate-950/50 relative overflow-hidden">
             {/* Decorative background elements */}
             <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-1/4 h-1/3 bg-primary/10 blur-[100px] rounded-full pointer-events-none" />
@@ -20,7 +20,7 @@ export function RequestSection() {
                             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-black uppercase tracking-widest">
                                 <Sparkles className="w-3.5 h-3.5" /> Twoje Auto Czeka
                             </div>
-                            <h2 className="text-4xl md:text-7xl font-black leading-[1.1] uppercase tracking-tighter text-slate-900 dark:text-white">
+                            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black leading-[1.1] uppercase tracking-tighter text-slate-900 dark:text-white">
                                 Czego dokładnie <br /><span className="text-primary italic">szukasz?</span>
                             </h2>
                             <p className="text-xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed max-w-xl">

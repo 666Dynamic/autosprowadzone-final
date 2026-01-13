@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle2, ChevronRight, Gavel, MonitorCheck, TrendingUp, ShieldCheck, Globe, Zap, Search, Euro, Activity, BarChart3, ShieldEllipsis, Building2, Truck, AlertTriangle, Eye, Scale, Handshake } from "lucide-react"
+import { CheckCircle2, ChevronRight, Gavel, MonitorCheck, TrendingUp, ShieldCheck, Globe, Zap, Search, Euro, Activity, ShieldEllipsis, Building2, Truck, AlertTriangle, Scale, Handshake } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
 
@@ -53,7 +53,7 @@ export default function AuctionsPage() {
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold uppercase tracking-wider mb-8">
                             Verified Broker Access
                         </div>
-                        <h1 className="text-4xl md:text-7xl lg:text-8xl font-black text-foreground leading-none uppercase tracking-tighter mb-8">
+                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-foreground leading-none uppercase tracking-tighter mb-8">
                             AUKCJE <br />
                             <span className="text-primary italic">EUROPEJSKIE</span>
                         </h1>
@@ -79,7 +79,7 @@ export default function AuctionsPage() {
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
                                 Profesjonalny Rynek
                             </div>
-                            <h2 className="text-3xl md:text-6xl font-black uppercase tracking-tighter leading-none text-foreground">
+                            <h2 className="text-2xl md:text-4xl lg:text-5xl font-black uppercase tracking-tighter leading-none text-foreground">
                                 Czym są <span className="text-primary italic">Aukcje B2B?</span>
                             </h2>
                             <p className="text-xl text-muted-foreground font-medium leading-relaxed">
@@ -135,7 +135,7 @@ export default function AuctionsPage() {
             <section className="py-24 bg-background border-b border-border">
                 <div className="container mx-auto px-4 md:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-foreground mb-4">Bezpieczny Zakup: <span className="text-primary italic">Co weryfikujemy?</span></h2>
+                        <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter text-foreground mb-4">Bezpieczny Zakup: <span className="text-primary italic">Co weryfikujemy?</span></h2>
                         <p className="text-muted-foreground font-medium max-w-3xl mx-auto">
                             Import auta z aukcji wymaga doświadczenia. Nie polegamy tylko na raporcie domu aukcyjnego – weryfikujemy każdy szczegół przed Twoją licytacją.
                         </p>
@@ -190,7 +190,7 @@ export default function AuctionsPage() {
                             <div className="w-20 h-20 bg-emerald-500/10 rounded-[2rem] flex items-center justify-center text-emerald-600 dark:text-emerald-400 transform group-hover:rotate-6 transition-transform">
                                 <TrendingUp className="w-10 h-10" />
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-foreground leading-[0.9]">Dlaczego <br /><span className="text-emerald-500 italic">się opłaca?</span></h2>
+                            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter text-foreground leading-[0.9]">Dlaczego <br /><span className="text-emerald-500 italic">się opłaca?</span></h2>
                             <ul className="space-y-8">
                                 <li className="flex gap-5">
                                     <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-1">
@@ -228,7 +228,7 @@ export default function AuctionsPage() {
                             <div className="w-20 h-20 bg-amber-500/10 rounded-[2rem] flex items-center justify-center text-amber-600 dark:text-amber-400 transform group-hover:-rotate-6 transition-transform">
                                 <ShieldCheck className="w-10 h-10" />
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-foreground leading-[0.9]">Twoje <br /><span className="text-amber-500 italic">Bezpieczeństwo</span></h2>
+                            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter text-foreground leading-[0.9]">Twoje <br /><span className="text-amber-500 italic">Bezpieczeństwo</span></h2>
                             <ul className="space-y-8">
                                 <li className="flex gap-5">
                                     <div className="w-8 h-8 rounded-full bg-amber-500/10 flex items-center justify-center shrink-0 mt-1">
@@ -267,7 +267,7 @@ export default function AuctionsPage() {
             <section className="py-24 bg-background">
                 <div className="container mx-auto px-4 md:px-8">
                     <div className="text-center mb-16 space-y-4">
-                        <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-foreground">Główni Partnerzy <span className="text-primary italic">B2B</span></h2>
+                        <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter text-foreground">Główni Partnerzy <span className="text-primary italic">B2B</span></h2>
                         <p className="text-muted-foreground font-medium max-w-2xl mx-auto">
                             Poznaj najpopularniejsze platformy. Jesteśmy zweryfikowanym użytkownikiem na każdej z nich.
                         </p>

@@ -17,7 +17,7 @@ export default function BlogPage() {
                 <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-black uppercase tracking-widest">
                     Baza Wiedzy & Newsy
                 </div>
-                <h1 className="text-4xl md:text-8xl font-black uppercase tracking-tighter leading-none italic text-foreground">
+                <h1 className="text-3xl md:text-5xl lg:text-7xl font-black uppercase tracking-tighter leading-none italic text-foreground">
                     Blog <br /><span className="text-primary not-italic">Importeria</span>
                 </h1>
                 <p className="text-xl text-muted-foreground font-medium leading-relaxed">
