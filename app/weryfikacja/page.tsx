@@ -132,7 +132,7 @@ export default function VerificationPage() {
                                 </ul>
                             </div>
 
-                            <div className="space-y-8 bg-white p-10 rounded-[3rem] border border-primary/20 shadow-2xl relative overflow-hidden">
+                            <div className="space-y-8 bg-slate-950 p-10 rounded-[3rem] border border-primary/20 shadow-2xl relative overflow-hidden">
                                 <div className="absolute top-0 right-0 p-10 opacity-5">
                                     <ShieldCheck className="w-32 h-32 text-primary" />
                                 </div>
@@ -221,13 +221,13 @@ export default function VerificationPage() {
                     {/* Pricing Grid */}
                     <div className="grid lg:grid-cols-2 gap-8 items-stretch pt-12">
                         {/* Package 1 */}
-                        <div className="bg-white p-10 rounded-[3rem] shadow-2xl relative overflow-hidden flex flex-col justify-between border-2 border-primary min-h-[600px]">
+                        <div className="bg-slate-900 text-white p-10 rounded-[3rem] shadow-2xl relative overflow-hidden flex flex-col justify-between border-2 border-primary min-h-[600px]">
                             <div className="absolute top-0 right-0 bg-primary px-8 py-3 font-black text-xs uppercase tracking-widest rounded-bl-3xl">Najczęściej wybierany</div>
                             <div className="space-y-8">
-                                <h3 className="text-2xl font-black uppercase tracking-tight flex items-center text-slate-900">
+                                <h3 className="text-2xl font-black uppercase tracking-tight flex items-center text-white">
                                     <MapPin className="mr-3 h-8 w-8 text-primary" /> Region Bremen (Baza)
                                 </h3>
-                                <p className="text-slate-600 text-sm font-bold uppercase tracking-widest leading-tight">Obszar do 100km od Osterholz-Scharmbeck</p>
+                                <p className="text-slate-400 text-sm font-bold uppercase tracking-widest leading-tight">Obszar do 100km od Osterholz-Scharmbeck</p>
 
                                 <div className="space-y-6">
                                     {[
@@ -240,16 +240,16 @@ export default function VerificationPage() {
                                     ].map((item, i) => (
                                         <div key={i} className="flex items-center gap-3">
                                             <CheckCircle2 className="w-5 h-5 text-primary" />
-                                            <span className="text-sm font-bold uppercase tracking-tight text-slate-700">{item}</span>
+                                            <span className="text-sm font-bold uppercase tracking-tight text-slate-200">{item}</span>
                                         </div>
                                     ))}
                                 </div>
                             </div>
-                            <div className="pt-8 border-t border-slate-200 flex flex-col gap-4">
+                            <div className="pt-8 border-t border-white/10 flex flex-col gap-4">
                                 <div className="flex justify-between items-end">
                                     <div>
-                                        <div className="text-[10px] text-slate-600 font-black uppercase tracking-widest">Koszt ryczałtowy</div>
-                                        <div className="text-5xl font-black text-slate-900 tracking-tighter">250 €</div>
+                                        <div className="text-[10px] text-slate-400 font-black uppercase tracking-widest">Koszt ryczałtowy</div>
+                                        <div className="text-5xl font-black text-white tracking-tighter">250 €</div>
                                     </div>
                                     <a href="#form" className="bg-primary hover:bg-white hover:text-black transition-all px-8 py-4 rounded-xl font-black uppercase tracking-widest text-xs">Zamów teraz</a>
                                 </div>
