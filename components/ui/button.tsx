@@ -8,7 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 const buttonVariants = {
-    default: "bg-primary text-primary-foreground hover:bg-primary/90 drop-shadow-sm",
+    default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-md [text-shadow:0_1px_2px_rgba(0,0,0,0.2)]",
     outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
     ghost: "hover:bg-accent hover:text-accent-foreground",
     link: "text-primary underline-offset-4 hover:underline",
