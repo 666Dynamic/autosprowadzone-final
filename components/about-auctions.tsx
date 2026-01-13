@@ -226,9 +226,9 @@ export function AboutAuctions() {
 
                         <div className="pt-4">
                             <Link href="/aukcje">
-                                <Button size="lg" className="w-full md:w-auto bg-primary text-slate-950 hover:bg-primary/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-2xl shadow-primary/30 group px-10 py-8 font-black uppercase tracking-widest rounded-3xl text-sm">
+                                <Button size="lg" className="w-full md:w-auto bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-12 px-8 font-semibold rounded-lg shadow-lg">
                                     Zobacz jak kupujemy na aukcjach
-                                    <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform text-slate-950" />
+                                    <ArrowRight className="ml-2 h-5 w-5" />
                                 </Button>
                             </Link>
                         </div>

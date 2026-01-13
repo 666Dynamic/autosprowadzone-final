@@ -401,8 +401,8 @@ export default function AuctionsPage() {
                     </h2>
                     <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
                         <Link href="/#request-section">
-                            <Button size="lg" className="bg-slate-950 text-white hover:bg-white hover:text-slate-950 transition-all px-12 h-20 text-xl font-black uppercase tracking-widest rounded-3xl shadow-2xl">
-                                Zapytaj o dostęp <Zap className="ml-2 w-6 h-6 fill-current" />
+                            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-12 px-8 font-semibold rounded-lg shadow-lg">
+                                Zapytaj o dostęp <Zap className="ml-2 w-5 h-5" />
                             </Button>
                         </Link>
                     </div>

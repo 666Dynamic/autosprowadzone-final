@@ -81,7 +81,7 @@ export function FaqSection() {
                     <div className="inline-flex flex-col sm:flex-row items-center gap-6 bg-muted/50 p-6 rounded-[2rem] border border-border">
                         <p className="text-sm font-bold text-muted-foreground px-2">Nie znalazłeś tego, czego szukasz?</p>
                         <Link href="/kontakt">
-                            <Button className="bg-primary text-slate-950 hover:bg-slate-900 hover:text-white font-black uppercase tracking-widest px-8 py-6 rounded-xl transition-all shadow-lg shadow-primary/10 text-[11px]">
+                            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-12 px-6 rounded-lg font-semibold shadow-lg">
                                 Napisz do nas
                             </Button>
                         </Link>

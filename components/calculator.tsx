@@ -183,10 +183,10 @@ export function Calculator() {
                 <div className="space-y-4">
                     <Button
                         onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="w-full h-16 text-lg bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-[1.02] transition-all duration-300 rounded-2xl font-black uppercase tracking-[0.2em] shadow-xl shadow-primary/20 group"
+                        className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-12 font-semibold rounded-lg shadow-lg"
                     >
                         <span>Zamów Weryfikację</span>
-                        <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
+                        <ArrowRight className="ml-3 h-5 w-5" />
                     </Button>
                     <p className="text-[9px] text-center text-muted-foreground font-bold uppercase tracking-[0.3em]">
                         * Powyższa kalkulacja ma charakter szacunkowy.

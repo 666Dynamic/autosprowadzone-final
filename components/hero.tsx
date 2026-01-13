@@ -46,13 +46,13 @@ export function Hero() {
 
                     <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                         <Link href="#request-section">
-                            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 w-full sm:w-auto group font-semibold h-12 px-6">
+                            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all w-full sm:w-auto h-12 px-6 font-semibold rounded-lg shadow-lg">
                                 Zamów bezpłatną wycenę
                                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                             </Button>
                         </Link>
                         <Link href="#process-section">
-                            <Button size="lg" variant="outline" className="bg-accent/10 text-accent hover:bg-accent/20 hover:scale-105 border-2 border-accent w-full sm:w-auto font-bold uppercase tracking-wider">
+                            <Button size="lg" variant="outline" className="bg-accent/10 text-accent hover:bg-accent/20 transition-all border border-accent w-full sm:w-auto h-12 px-6 font-semibold rounded-lg">
                                 Zobacz jak to działa
                             </Button>
                         </Link>

@@ -48,7 +48,7 @@ export function Navbar() {
                     ))}
                     <ModeToggle />
                     <Link href="#zlecenie">
-                        <Button className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105">Wyceń Import</Button>
+                        <Button className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-10 px-4 font-semibold rounded-lg">Wyceń Import</Button>
                     </Link>
                 </div>
 
@@ -88,7 +88,7 @@ export function Navbar() {
                                 </Link>
                             ))}
                             <Link href="#zlecenie" onClick={() => setIsOpen(false)}>
-                                <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">Wyceń Import</Button>
+                                <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-12 font-semibold rounded-lg">Wyceń Import</Button>
                             </Link>
                         </div>
                     </motion.div>
