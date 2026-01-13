@@ -20,7 +20,7 @@ export default function VerificationPage() {
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-black uppercase tracking-widest">
                             <Sparkles className="w-4 h-4" /> Profesjonalny Audyt Pojazdu
                         </div>
-                        <h1 className="text-3xl md:text-5xl lg:text-7xl font-black leading-none uppercase tracking-tighter text-foreground">
+                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-black leading-none uppercase tracking-tighter text-foreground">
                             Weryfikacja <br /><span className="text-primary italic">Zanim Kupisz</span>
                         </h1>
                         <p className="text-xl text-muted-foreground font-medium max-w-3xl mx-auto leading-relaxed">
@@ -43,20 +43,20 @@ export default function VerificationPage() {
 
                                 {/* Content Area */}
                                 <div className="lg:w-3/5 p-8 md:p-16 space-y-8 relative z-10 flex flex-col justify-center">
-                                    <div className="inline-block px-4 py-1.5 rounded-full bg-black/10 border border-black/10 text-black text-xs font-black uppercase tracking-widest">
+                                    <div className="inline-block px-4 py-1.5 rounded-full bg-white/20 border border-white/30 text-white text-xs font-bold uppercase tracking-widest">
                                         Import Indywidualny
                                     </div>
-                                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-black uppercase tracking-tighter leading-[0.9]">
+                                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-tighter leading-[0.9]">
                                         Sam znalazłeś auto? <br />
                                         <span className="text-white italic drop-shadow-md">Sprawdzimy je dla Ciebie.</span>
                                     </h2>
-                                    <p className="text-xl md:text-2xl text-black/90 font-bold leading-relaxed max-w-2xl">
+                                    <p className="text-xl md:text-2xl text-white font-semibold leading-relaxed max-w-2xl">
                                         Znalazłeś interesującą ofertę w Niemczech? Nie ryzykuj wyjazdu w ciemno.
                                         Nasi eksperci przeprowadzą dla Ciebie pełną weryfikację sprzedawcy oraz audyt techniczny na miejscu.
                                     </p>
                                     <div className="flex flex-wrap gap-4 pt-4">
                                         {["Analiza ogłoszenia", "Weryfikacja sprzedawcy", "Inspekcja techniczna", "Negocjacje ceny"].map((tag, i) => (
-                                            <div key={i} className="px-4 py-2 bg-black/10 rounded-xl border border-black/5 text-black font-black uppercase text-[10px] tracking-widest">
+                                            <div key={i} className="px-4 py-2 bg-white/20 rounded-xl border border-white/30 text-white font-semibold text-xs">
                                                 {tag}
                                             </div>
                                         ))}

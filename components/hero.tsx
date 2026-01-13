@@ -35,7 +35,7 @@ export function Hero() {
                         Zaufany Pośrednik
                     </div>
 
-                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1]">
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1]">
                         Sprowadzamy Auta na <br />
                         <span className="text-primary">Indywidualne Zamówienie</span>
                     </h1>
@@ -46,7 +46,7 @@ export function Hero() {
 
                     <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                         <Link href="#request-section">
-                            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 w-full sm:w-auto group font-bold uppercase tracking-wider">
+                            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 w-full sm:w-auto group font-semibold h-12 px-6">
                                 Zamów bezpłatną wycenę
                                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                             </Button>

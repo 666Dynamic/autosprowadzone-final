@@ -53,7 +53,7 @@ export default function AuctionsPage() {
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold uppercase tracking-wider mb-8">
                             Verified Broker Access
                         </div>
-                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-foreground leading-none uppercase tracking-tighter mb-8">
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-none uppercase tracking-tighter mb-8">
                             AUKCJE <br />
                             <span className="text-primary italic">EUROPEJSKIE</span>
                         </h1>
@@ -62,7 +62,7 @@ export default function AuctionsPage() {
                         </p>
                         <div className="flex flex-wrap gap-6 justify-center md:justify-start">
                             <Link href="/#request-section">
-                                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-12 h-16 text-lg font-bold uppercase tracking-widest rounded-2xl shadow-xl shadow-primary/20">
+                                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 h-12 font-semibold rounded-lg shadow-lg">
                                     Darmowa konsultacja <ChevronRight className="ml-2 w-5 h-5" />
                                 </Button>
                             </Link>
