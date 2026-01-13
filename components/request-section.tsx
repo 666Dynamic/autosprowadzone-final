@@ -56,7 +56,7 @@ export function RequestSection() {
                     <div className="lg:w-7/12 w-full relative">
                         {/* Shadow Glow */}
                         <div className="absolute -inset-4 bg-primary/10 blur-3xl rounded-[4rem] pointer-events-none -z-10" />
-                        <ContactForm mode="search" className="border-primary/30 dark:bg-slate-900/60" />
+                        <ContactForm mode="search" className="border-primary/30" />
                     </div>
                 </div>
             </div>
