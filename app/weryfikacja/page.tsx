@@ -83,7 +83,7 @@ export default function VerificationPage() {
                                         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent pointer-events-none" />
                                         <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/20 blur-3xl rounded-full pointer-events-none" />
                                         <div className="space-y-2 relative z-10">
-                                            <div className="text-[10px] font-black uppercase tracking-widest bg-primary/20 text-primary px-4 py-2 rounded-full w-fit border border-primary/20">Weryfikacja pod Bremen</div>
+                                            <div className="text-xs font-bold uppercase tracking-widest bg-primary/20 text-primary px-4 py-2 rounded-full w-fit border border-primary/20">Weryfikacja pod Bremen</div>
                                             <div className="flex items-baseline gap-2">
                                                 <span className="text-4xl md:text-7xl font-black tracking-tighter uppercase leading-none text-white">250 €</span>
                                             </div>
@@ -250,7 +250,7 @@ export default function VerificationPage() {
                             <div className="pt-8 border-t border-white/10 flex flex-col gap-4 relative z-10">
                                 <div className="flex justify-between items-end">
                                     <div>
-                                        <div className="text-[10px] text-slate-400 font-black uppercase tracking-widest">Koszt ryczałtowy</div>
+                                        <div className="text-xs text-slate-400 font-bold uppercase tracking-widest">Koszt ryczałtowy</div>
                                         <div className="text-5xl font-black text-white tracking-tighter">250 €</div>
                                     </div>
                                     <a href="#form" className="bg-primary hover:bg-white hover:text-black transition-all px-8 py-4 rounded-xl font-black uppercase tracking-widest text-xs">Zamów teraz</a>
@@ -274,15 +274,15 @@ export default function VerificationPage() {
                                 <div className="bg-primary/5 p-6 rounded-2xl border border-primary/10">
                                     <p className="text-xs font-black uppercase text-primary tracking-widest">Procedura wyceny:</p>
                                     <ul className="mt-4 space-y-3">
-                                        <li className="text-[11px] font-bold text-muted-foreground uppercase flex gap-2"><div className="text-primary">•</div> Weryfikacja dostępności rzeczoznawcy</li>
-                                        <li className="text-[11px] font-bold text-muted-foreground uppercase flex gap-2"><div className="text-primary">•</div> Kalkulacja kosztów dojazdu i paliwa</li>
-                                        <li className="text-[11px] font-bold text-muted-foreground uppercase flex gap-2"><div className="text-primary">•</div> Realizacja zazwyczaj w 24-48h</li>
+                                        <li className="text-xs font-bold text-muted-foreground uppercase flex gap-2"><div className="text-primary">•</div> Weryfikacja dostępności rzeczoznawcy</li>
+                                        <li className="text-xs font-bold text-muted-foreground uppercase flex gap-2"><div className="text-primary">•</div> Kalkulacja kosztów dojazdu i paliwa</li>
+                                        <li className="text-xs font-bold text-muted-foreground uppercase flex gap-2"><div className="text-primary">•</div> Realizacja zazwyczaj w 24-48h</li>
                                     </ul>
                                 </div>
                             </div>
                             <div className="pt-8 border-t border-border flex justify-between items-end">
                                 <div>
-                                    <div className="text-[10px] text-muted-foreground font-black uppercase tracking-widest">Wycena indywidualna</div>
+                                    <div className="text-xs text-muted-foreground font-bold uppercase tracking-widest">Wycena indywidualna</div>
                                     <div className="text-3xl font-black text-foreground tracking-tighter uppercase whitespace-nowrap">Kontakt</div>
                                 </div>
                                 <a href="#form" className="border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all px-8 py-4 rounded-xl font-black uppercase tracking-widest text-xs">Zapytaj o cenę</a>

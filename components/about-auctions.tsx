@@ -216,17 +216,17 @@ export function AboutAuctions() {
                         <div className="grid grid-cols-2 gap-4">
                             <div className="bg-slate-900 dark:bg-[#0f172a] p-6 rounded-[2rem] border border-slate-800 dark:border-[#1e293b] shadow-2xl">
                                 <div className="text-4xl font-black text-primary mb-1 tracking-tighter">150k+</div>
-                                <div className="text-[11px] text-slate-400 font-bold uppercase tracking-[0.15em]">Aut miesięcznie</div>
+                                <div className="text-xs text-slate-400 font-bold uppercase tracking-[0.15em]">Aut miesięcznie</div>
                             </div>
                             <div className="bg-slate-50 dark:bg-slate-800 p-6 rounded-[2rem] border border-slate-200 dark:border-slate-700 shadow-2xl">
                                 <div className="text-4xl font-black text-slate-900 dark:text-white mb-1 tracking-tighter">0%</div>
-                                <div className="text-[11px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-[0.15em]">Ukrytych marż</div>
+                                <div className="text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-[0.15em]">Ukrytych marż</div>
                             </div>
                         </div>
 
                         <div className="pt-4">
                             <Link href="/aukcje">
-                                <Button size="lg" className="w-full md:w-auto bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-12 px-8 font-semibold rounded-lg shadow-lg">
+                                <Button size="lg" className="w-full md:w-auto bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-12 px-8 font-bold rounded-lg shadow-lg">
                                     Zobacz jak kupujemy na aukcjach
                                     <ArrowRight className="ml-2 h-5 w-5" />
                                 </Button>
