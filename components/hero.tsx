@@ -35,9 +35,9 @@ export function Hero() {
                         Zaufany Pośrednik
                     </div>
 
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1]">
+                    <h1 className="text-3xl md:text-5xl lg:text-7xl font-black tracking-tighter leading-none uppercase italic">
                         Sprowadzamy Auta na <br />
-                        <span className="text-primary">Indywidualne Zamówienie</span>
+                        <span className="text-primary not-italic">Indywidualne Zamówienie</span>
                     </h1>
 
                     <p className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">

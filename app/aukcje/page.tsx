@@ -53,9 +53,9 @@ export default function AuctionsPage() {
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold uppercase tracking-wider mb-8">
                             Verified Broker Access
                         </div>
-                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-none uppercase tracking-tighter mb-8">
+                        <h1 className="text-3xl md:text-5xl lg:text-7xl font-black text-foreground leading-none uppercase tracking-tighter mb-8 italic">
                             AUKCJE <br />
-                            <span className="text-primary italic">EUROPEJSKIE</span>
+                            <span className="text-primary not-italic">EUROPEJSKIE</span>
                         </h1>
                         <p className="text-base md:text-lg text-muted-foreground font-medium mb-12 leading-relaxed max-w-2xl mx-auto md:mx-0">
                             Omiń pośredników i marże handlarzy. Zapewniamy pełny dostęp do ponad 40 zamkniętych platform B2B, gdzie kupisz sprawdzone auta poleasingowe z całej Europy.
@@ -185,76 +185,76 @@ export default function AuctionsPage() {
                 <div className="container mx-auto px-4 md:px-8">
                     <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
                         {/* Why it pays off */}
-                        <div className="p-10 md:p-16 bg-card rounded-[3.5rem] border border-emerald-500/20 shadow-[0_32px_64px_-12px_rgba(16,185,129,0.1)] space-y-10 relative overflow-hidden group hover:border-emerald-500/40 transition-all">
+                        <div className="p-8 md:p-12 bg-card rounded-[3rem] border border-emerald-500/20 shadow-[0_32px_64px_-12px_rgba(16,185,129,0.1)] space-y-8 relative overflow-hidden group hover:border-emerald-500/40 transition-all">
                             <div className="absolute -top-12 -right-12 w-48 h-48 bg-emerald-500/5 blur-[80px] rounded-full group-hover:bg-emerald-500/10 transition-colors" />
-                            <div className="w-20 h-20 bg-emerald-500/10 rounded-[2rem] flex items-center justify-center text-emerald-600 dark:text-emerald-400 transform group-hover:rotate-6 transition-transform">
-                                <TrendingUp className="w-10 h-10" />
+                            <div className="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-600 dark:text-emerald-400 transform group-hover:rotate-6 transition-transform">
+                                <TrendingUp className="w-8 h-8" />
                             </div>
-                            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter text-foreground leading-[0.9]">Dlaczego <br /><span className="text-emerald-500 italic">się opłaca?</span></h2>
-                            <ul className="space-y-8">
-                                <li className="flex gap-5">
-                                    <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-1">
-                                        <Euro className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+                            <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tighter text-foreground leading-none italic">Dlaczego <br /><span className="text-emerald-500 not-italic">się opłaca?</span></h2>
+                            <ul className="space-y-6">
+                                <li className="flex gap-4">
+                                    <div className="w-7 h-7 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-1">
+                                        <Euro className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                                     </div>
                                     <div>
-                                        <h4 className="font-bold uppercase text-sm text-foreground tracking-tight mb-2">Cena Poniżej Rynku (Hurtowa)</h4>
-                                        <p className="text-base text-muted-foreground leading-relaxed font-medium">Auta na aukcjach B2B są wystawiane po cenach hurtowych. Omijasz marżę handlarza (zwykle 2,000-5,000 EUR) oraz koszty ekspozycji w salonie. Wylicytowane auto jest często 15-20% tańsze niż na portalu mobile.de.</p>
+                                        <h4 className="font-bold uppercase text-xs text-foreground tracking-tight mb-1">Cena Poniżej Rynku (Hurtowa)</h4>
+                                        <p className="text-sm text-muted-foreground leading-relaxed font-medium">Auta na aukcjach B2B są wystawiane po cenach hurtowych. Omijasz marżę handlarza (zwykle 2,000-5,000 EUR) oraz koszty ekspozycji w salonie. Wylicytowane auto jest często 15-20% tańsze niż na portalu mobile.de.</p>
                                     </div>
                                 </li>
-                                <li className="flex gap-5">
-                                    <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-1">
-                                        <Search className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+                                <li className="flex gap-4">
+                                    <div className="w-7 h-7 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-1">
+                                        <Search className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                                     </div>
                                     <div>
-                                        <h4 className="font-bold uppercase text-sm text-foreground tracking-tight mb-2">Pewna Historia i Serwis ASO</h4>
-                                        <p className="text-base text-muted-foreground leading-relaxed font-medium">Zdecydowana większość ofert to kontrakty leasingowe z regularnym serwisem. Do każdego auta dołączony jest wykaz wizyt w ASO oraz pełna lista wyposażenia zakodowana wg numeru VIN.</p>
+                                        <h4 className="font-bold uppercase text-xs text-foreground tracking-tight mb-1">Pewna Historia i Serwis ASO</h4>
+                                        <p className="text-sm text-muted-foreground leading-relaxed font-medium">Zdecydowana większość ofert to kontrakty leasingowe z regularnym serwisem. Do każdego auta dołączony jest wykaz wizyt w ASO oraz pełna lista wyposażenia zakodowana wg numeru VIN.</p>
                                     </div>
                                 </li>
-                                <li className="flex gap-5">
-                                    <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-1">
-                                        <MonitorCheck className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+                                <li className="flex gap-4">
+                                    <div className="w-7 h-7 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-1">
+                                        <MonitorCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                                     </div>
                                     <div>
-                                        <h4 className="font-bold uppercase text-sm text-foreground tracking-tight mb-2">Potężny Wybór (30k+ Ofert Dziennie)</h4>
-                                        <p className="text-base text-muted-foreground leading-relaxed font-medium">Nie ograniczasz się do tego, co stoi w komisie. Wybierasz spośród dziesiątek tysięcy aut z całej Europy – w dowolnym kolorze, przebiegu i z konkretnym wyposażeniem.</p>
+                                        <h4 className="font-bold uppercase text-xs text-foreground tracking-tight mb-1">Potężny Wybór (30k+ Ofert Dziennie)</h4>
+                                        <p className="text-sm text-muted-foreground leading-relaxed font-medium">Nie ograniczasz się do tego, co stoi w komisie. Wybierasz spośród dziesiątek tysięcy aut z całej Europy – w dowolnym kolorze, przebiegu i z konkretnym wyposażeniem.</p>
                                     </div>
                                 </li>
                             </ul>
                         </div>
 
                         {/* Risks & Protection */}
-                        <div className="p-10 md:p-16 bg-card rounded-[3.5rem] border border-amber-500/20 shadow-[0_32px_64px_-12px_rgba(245,158,11,0.1)] space-y-10 relative overflow-hidden group hover:border-amber-500/40 transition-all">
+                        <div className="p-8 md:p-12 bg-card rounded-[3rem] border border-amber-500/20 shadow-[0_32px_64px_-12px_rgba(245,158,11,0.1)] space-y-8 relative overflow-hidden group hover:border-amber-500/40 transition-all">
                             <div className="absolute -top-12 -right-12 w-48 h-48 bg-amber-500/5 blur-[80px] rounded-full group-hover:bg-amber-500/10 transition-colors" />
-                            <div className="w-20 h-20 bg-amber-500/10 rounded-[2rem] flex items-center justify-center text-amber-600 dark:text-amber-400 transform group-hover:-rotate-6 transition-transform">
-                                <ShieldCheck className="w-10 h-10" />
+                            <div className="w-16 h-16 bg-amber-500/10 rounded-2xl flex items-center justify-center text-amber-600 dark:text-amber-400 transform group-hover:-rotate-6 transition-transform">
+                                <ShieldCheck className="w-8 h-8" />
                             </div>
-                            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter text-foreground leading-[0.9]">Twoje <br /><span className="text-amber-500 italic">Bezpieczeństwo</span></h2>
-                            <ul className="space-y-8">
-                                <li className="flex gap-5">
-                                    <div className="w-8 h-8 rounded-full bg-amber-500/10 flex items-center justify-center shrink-0 mt-1">
-                                        <AlertTriangle className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                            <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tighter text-foreground leading-none italic">Twoje <br /><span className="text-amber-500 not-italic">Bezpieczeństwo</span></h2>
+                            <ul className="space-y-6">
+                                <li className="flex gap-4">
+                                    <div className="w-7 h-7 rounded-full bg-amber-500/10 flex items-center justify-center shrink-0 mt-1">
+                                        <AlertTriangle className="w-4 h-4 text-amber-600 dark:text-amber-400" />
                                     </div>
                                     <div>
-                                        <h4 className="font-bold uppercase text-sm text-foreground tracking-tight mb-2 text-amber-700 dark:text-amber-500">Niezależne Raporty (DEKRA/SGS)</h4>
-                                        <p className="text-base text-muted-foreground leading-relaxed font-medium">Aukcje B2B opierają się na raportach zewnętrznych rzeczoznawców. Wykrywają one błędy niewidoczne gołym okiem: malowane elementy, niedziałające systemy czy drobne wgniecenia udokumentowane powiększeniem.</p>
+                                        <h4 className="font-bold uppercase text-xs text-foreground tracking-tight mb-1 text-amber-700 dark:text-amber-500">Niezależne Raporty (DEKRA/SGS)</h4>
+                                        <p className="text-sm text-muted-foreground leading-relaxed font-medium">Aukcje B2B opierają się na raportach zewnętrznych rzeczoznawców. Wykrywają one błędy niewidoczne gołym okiem: malowane elementy, niedziałające systemy czy drobne wgniecenia udokumentowane powiększeniem.</p>
                                     </div>
                                 </li>
-                                <li className="flex gap-5">
-                                    <div className="w-8 h-8 rounded-full bg-amber-500/10 flex items-center justify-center shrink-0 mt-1">
-                                        <Globe className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                                <li className="flex gap-4">
+                                    <div className="w-7 h-7 rounded-full bg-amber-500/10 flex items-center justify-center shrink-0 mt-1">
+                                        <Globe className="w-4 h-4 text-amber-600 dark:text-amber-400" />
                                     </div>
                                     <div>
-                                        <h4 className="font-bold uppercase text-sm text-foreground tracking-tight mb-2 text-amber-700 dark:text-amber-500">Bezpośrednie Płatności</h4>
-                                        <p className="text-base text-muted-foreground leading-relaxed font-medium">Współpracujemy z gigantami rynku jak BCA czy AUTO1. Twoja wpłata idzie bezpośrednio na konto wystawcy lub domu aukcyjnego. Gwarantuje to bezpieczeństwo transakcji i legalność pochodzenia auta.</p>
+                                        <h4 className="font-bold uppercase text-xs text-foreground tracking-tight mb-1 text-amber-700 dark:text-amber-500">Bezpośrednie Płatności</h4>
+                                        <p className="text-sm text-muted-foreground leading-relaxed font-medium">Współpracujemy z gigantami rynku jak BCA czy AUTO1. Twoja wpłata idzie bezpośrednio na konto wystawcy lub domu aukcyjnego. Gwarantuje to bezpieczeństwo transakcji i legalność pochodzenia auta.</p>
                                     </div>
                                 </li>
-                                <li className="flex gap-5">
-                                    <div className="w-8 h-8 rounded-full bg-amber-500/10 flex items-center justify-center shrink-0 mt-1">
-                                        <ShieldEllipsis className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                                <li className="flex gap-4">
+                                    <div className="w-7 h-7 rounded-full bg-amber-500/10 flex items-center justify-center shrink-0 mt-1">
+                                        <ShieldEllipsis className="w-4 h-4 text-amber-600 dark:text-amber-400" />
                                     </div>
                                     <div>
-                                        <h4 className="font-bold uppercase text-sm text-foreground tracking-tight mb-2 text-amber-700 dark:text-amber-500">Obsługa Dokumentacji Eksportowej</h4>
-                                        <p className="text-base text-muted-foreground leading-relaxed font-medium">Bierzemy na siebie cały proces przygotowania dokumentów: Zulassungsbescheinigung, CMR, COC oraz procedury wyrejestrowania auta i przygotowania do transportu międzynarodowego.</p>
+                                        <h4 className="font-bold uppercase text-xs text-foreground tracking-tight mb-1 text-amber-700 dark:text-amber-500">Obsługa Dokumentacji Eksportowej</h4>
+                                        <p className="text-sm text-muted-foreground leading-relaxed font-medium">Bierzemy na siebie cały proces przygotowania dokumentów: Zulassungsbescheinigung, CMR, COC oraz procedury wyrejestrowania auta i przygotowania do transportu międzynarodowego.</p>
                                     </div>
                                 </li>
                             </ul>

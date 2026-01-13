@@ -20,8 +20,8 @@ export default function VerificationPage() {
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-black uppercase tracking-widest">
                             <Sparkles className="w-4 h-4" /> Profesjonalny Audyt Pojazdu
                         </div>
-                        <h1 className="text-3xl md:text-4xl font-black leading-none uppercase tracking-tighter text-foreground">
-                            Weryfikacja <br /><span className="text-primary italic">Zanim Kupisz</span>
+                        <h1 className="text-3xl md:text-5xl lg:text-7xl font-black leading-none uppercase tracking-tighter text-foreground italic">
+                            Weryfikacja <br /><span className="text-primary not-italic">Zanim Kupisz</span>
                         </h1>
                         <p className="text-base text-muted-foreground font-medium max-w-3xl mx-auto leading-relaxed">
                             Nie ryzykuj oszczędności życia. Wyślij naszego eksperta na miejsce, aby sprawdził auto od osoby prywatnej lub dealera w całych Niemczech.
@@ -29,34 +29,33 @@ export default function VerificationPage() {
                     </div>
 
                     {/* GOLD AMBER: Sam znalazłeś auto? */}
-                    <div className="relative">
-                        <div className="absolute inset-0 bg-primary/20 blur-[120px] rounded-full scale-75 pointer-events-none" />
+                    <div className="relative group">
+                        <div className="absolute inset-0 bg-primary/30 blur-[120px] rounded-full scale-75 pointer-events-none group-hover:bg-primary/40 transition-colors" />
 
-                        <div className="relative bg-primary/10 p-1 md:p-2 rounded-3xl shadow-2xl overflow-hidden border border-primary/20 backdrop-blur-sm">
+                        <div className="relative bg-primary/10 p-1.5 md:p-3 rounded-[3rem] shadow-[0_32px_64px_-12px_rgba(245,158,11,0.2)] overflow-hidden border border-primary/20 backdrop-blur-sm transition-transform duration-500 hover:scale-[1.01]">
                             {/* Decorative Motive / Pattern */}
-                            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full translate-x-32 -translate-y-32 blur-[100px] pointer-events-none" />
+                            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/30 rounded-full translate-x-32 -translate-y-32 blur-[100px] pointer-events-none" />
                             <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full -translate-x-48 translate-y-48 blur-3xl pointer-events-none" />
 
-                            <div className="bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 rounded-2xl flex flex-col lg:flex-row items-stretch relative overflow-hidden">
+                            <div className="bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 rounded-[2.5rem] flex flex-col lg:flex-row items-stretch relative overflow-hidden">
                                 {/* Subtle Pattern Overlay */}
                                 <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-grid-white" />
 
                                 {/* Content Area */}
-                                <div className="lg:w-3/5 p-6 md:p-8 space-y-6 relative z-10 flex flex-col justify-center">
+                                <div className="lg:w-3/5 p-8 md:p-14 space-y-8 relative z-10 flex flex-col justify-center">
                                     <div className="inline-block px-4 py-1.5 rounded-full bg-white/20 border border-white/30 text-white text-xs font-bold uppercase tracking-widest drop-shadow-md">
                                         Import Indywidualny
                                     </div>
-                                    <h2 className="text-2xl md:text-4xl font-black text-white uppercase tracking-tighter leading-[0.9] drop-shadow-md">
-                                        Sam znalazłeś auto? <br />
-                                        <span className="text-white italic drop-shadow-md">Sprawdzimy je dla Ciebie.</span>
+                                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-tighter leading-none italic drop-shadow-lg">
+                                        Sam znalazłeś auto? <br /><span className="not-italic">Sprawdzimy je dla Ciebie</span>
                                     </h2>
-                                    <p className="text-base md:text-lg text-white font-semibold leading-relaxed max-w-2xl drop-shadow-md">
+                                    <p className="text-base md:text-lg text-white/90 font-medium leading-relaxed max-w-2xl drop-shadow-sm">
                                         Znalazłeś interesującą ofertę w Niemczech? Nie ryzykuj wyjazdu w ciemno.
                                         Nasi eksperci przeprowadzą dla Ciebie pełną weryfikację sprzedawcy oraz audyt techniczny na miejscu.
                                     </p>
                                     <div className="flex flex-wrap gap-4 pt-4">
                                         {["Analiza ogłoszenia", "Weryfikacja sprzedawcy", "Inspekcja techniczna", "Negocjacje ceny"].map((tag, i) => (
-                                            <div key={i} className="px-4 py-2 bg-white/20 rounded-xl border border-white/30 text-white font-semibold text-xs drop-shadow-md">
+                                            <div key={i} className="px-5 py-2.5 bg-white/20 rounded-xl border border-white/30 text-white font-bold text-xs uppercase tracking-wider drop-shadow-md">
                                                 {tag}
                                             </div>
                                         ))}
@@ -64,7 +63,7 @@ export default function VerificationPage() {
                                 </div>
 
                                 {/* Image & CTA Area */}
-                                <div className="lg:w-2/5 p-6 relative flex flex-col justify-end min-h-[400px]">
+                                <div className="lg:w-2/5 p-8 relative flex flex-col justify-end min-h-[400px]">
                                     {/* Expert Image Background with mask */}
                                     <div className="absolute inset-0 z-0">
                                         <Image
