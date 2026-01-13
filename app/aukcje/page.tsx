@@ -318,7 +318,7 @@ export default function AuctionsPage() {
                         {partners.map((partner, i) => (
                             <div key={i} className="p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
                                 <h4 className="text-sm font-black text-primary mb-1">{partner.name}</h4>
-                                <p className="text-[10px] text-slate-400 leading-tight">{partner.desc}</p>
+                                <p className="text-xs text-slate-400 leading-tight">{partner.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -360,7 +360,7 @@ export default function AuctionsPage() {
                                         </li>
                                         <li className="flex justify-between items-center">
                                             <span className="flex items-center gap-2"><Truck className="w-4 h-4 text-primary" /> Logistyka EU</span>
-                                            <span className="bg-primary/20 text-primary px-3 py-1 rounded-full text-[10px] font-black tracking-widest uppercase">Wycena indywidualna</span>
+                                            <span className="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase">Wycena indywidualna</span>
                                         </li>
                                     </ul>
                                 </div>
