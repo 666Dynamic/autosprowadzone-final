@@ -12,11 +12,9 @@ export default function ContactPage() {
             <div className="container mx-auto px-4 md:px-8">
 
                 {/* Header */}
-                <div className="text-center max-w-4xl mx-auto mb-20 space-y-6">
-                    <h1 className="text-3xl md:text-5xl lg:text-7xl font-black tracking-tighter uppercase italic leading-none">
-                        Skontaktuj <br /><span className="text-primary not-italic">się z nami</span>
-                    </h1>
-                    <p className="text-lg text-muted-foreground font-medium max-w-2xl mx-auto">
+                <div className="text-center max-w-2xl mx-auto mb-20 space-y-4">
+                    <h1 className="text-3xl md:text-5xl font-black tracking-tighter uppercase italic line-clamp-2">Skontaktuj się <span className="text-primary not-italic">z nami</span></h1>
+                    <p className="text-lg text-muted-foreground font-medium">
                         Masz pytania? Chcesz sprowadzić auto? Jesteśmy do Twojej dyspozycji.
                     </p>
                 </div>

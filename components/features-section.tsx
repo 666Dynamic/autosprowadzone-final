@@ -27,11 +27,9 @@ export function FeaturesSection() {
             {/* Subtle decorative element */}
             <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
             <div className="container mx-auto px-4 md:px-8 relative z-10">
-                <div className="text-center max-w-4xl mx-auto mb-16">
-                    <h2 className="text-3xl md:text-5xl lg:text-7xl font-black mb-6 text-foreground uppercase tracking-tighter leading-none italic">
-                        Dlaczego warto <br /><span className="text-primary not-italic">nam zaufać?</span>
-                    </h2>
-                    <p className="text-lg text-muted-foreground font-medium max-w-2xl mx-auto">
+                <div className="text-center max-w-3xl mx-auto mb-16">
+                    <h2 className="text-3xl md:text-4xl font-black mb-4 text-foreground uppercase tracking-tighter">Dlaczego warto nam zaufać?</h2>
+                    <p className="text-lg text-muted-foreground font-medium">
                         Nie jesteśmy typowym handlarzem. Jesteśmy Twoim przedstawicielem w Niemczech.
                         Zamiast ukrywać wady, prześwietlamy auto dla Ciebie.
                     </p>
