@@ -396,7 +396,7 @@ export default function AuctionsPage() {
             {/* CTA */}
             <section className="py-24 bg-primary px-4">
                 <div className="container mx-auto text-center space-y-8">
-                    <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter text-white leading-none">
+                    <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter text-white leading-none drop-shadow-md">
                         Chcesz sprawdzić <br /><span className="italic">aktualne oferty?</span>
                     </h2>
                     <div className="flex flex-col md:flex-row gap-6 justify-center items-center">

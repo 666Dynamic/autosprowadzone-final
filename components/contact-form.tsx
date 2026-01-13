@@ -72,11 +72,11 @@ export function ContactForm({
         <Card className={`w-full max-w-2xl mx-auto bg-white backdrop-blur-2xl border border-border/40 shadow-lg rounded-3xl overflow-hidden ${className}`}>
             <CardHeader className="bg-primary px-6 py-6 text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-8 opacity-10 rotate-12 bg-white rounded-full translate-x-12 -translate-y-12 w-48 h-48 pointer-events-none" />
-                <CardTitle className="text-2xl md:text-4xl font-black uppercase tracking-tighter flex items-center gap-3 relative z-10">
+                <CardTitle className="text-2xl md:text-4xl font-black uppercase tracking-tighter flex items-center gap-3 relative z-10 drop-shadow-md">
                     {mode === "search" ? <Search className="w-8 h-8" /> : (mode === "weryfikacja" ? <Car className="w-8 h-8" /> : <Send className="w-8 h-8" />)}
                     {title || defaultTitles[mode]}
                 </CardTitle>
-                <CardDescription className="text-white/80 font-bold text-xs md:text-sm uppercase tracking-widest mt-2 relative z-10">
+                <CardDescription className="text-white/80 font-bold text-xs md:text-sm uppercase tracking-widest mt-2 relative z-10 drop-shadow-md">
                     {description || defaultDescriptions[mode]}
                 </CardDescription>
             </CardHeader>

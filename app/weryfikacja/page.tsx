@@ -43,20 +43,20 @@ export default function VerificationPage() {
 
                                 {/* Content Area */}
                                 <div className="lg:w-3/5 p-8 md:p-16 space-y-8 relative z-10 flex flex-col justify-center">
-                                    <div className="inline-block px-4 py-1.5 rounded-full bg-white/20 border border-white/30 text-white text-xs font-bold uppercase tracking-widest">
+                                    <div className="inline-block px-4 py-1.5 rounded-full bg-white/20 border border-white/30 text-white text-xs font-bold uppercase tracking-widest drop-shadow-md">
                                         Import Indywidualny
                                     </div>
-                                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight leading-[1.1] drop-shadow-md">
+                                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-tighter leading-[0.9] drop-shadow-md">
                                         Sam znalazłeś auto? <br />
-                                        <span className="text-white italic">Sprawdzimy je dla Ciebie.</span>
+                                        <span className="text-white italic drop-shadow-md">Sprawdzimy je dla Ciebie.</span>
                                     </h2>
-                                    <p className="text-xl md:text-2xl text-white font-semibold leading-relaxed max-w-2xl">
+                                    <p className="text-xl md:text-2xl text-white font-semibold leading-relaxed max-w-2xl drop-shadow-md">
                                         Znalazłeś interesującą ofertę w Niemczech? Nie ryzykuj wyjazdu w ciemno.
                                         Nasi eksperci przeprowadzą dla Ciebie pełną weryfikację sprzedawcy oraz audyt techniczny na miejscu.
                                     </p>
                                     <div className="flex flex-wrap gap-4 pt-4">
                                         {["Analiza ogłoszenia", "Weryfikacja sprzedawcy", "Inspekcja techniczna", "Negocjacje ceny"].map((tag, i) => (
-                                            <div key={i} className="px-4 py-2 bg-white/20 rounded-xl border border-white/30 text-white font-semibold text-xs">
+                                            <div key={i} className="px-4 py-2 bg-white/20 rounded-xl border border-white/30 text-white font-semibold text-xs drop-shadow-md">
                                                 {tag}
                                             </div>
                                         ))}
