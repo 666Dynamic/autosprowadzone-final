@@ -57,7 +57,7 @@ export default function AuctionsPage() {
                             AUKCJE <br />
                             <span className="text-primary italic">EUROPEJSKIE</span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-muted-foreground font-medium mb-12 leading-relaxed max-w-2xl mx-auto md:mx-0">
+                        <p className="text-base md:text-lg text-muted-foreground font-medium mb-12 leading-relaxed max-w-2xl mx-auto md:mx-0">
                             Omiń pośredników i marże handlarzy. Zapewniamy pełny dostęp do ponad 40 zamkniętych platform B2B, gdzie kupisz sprawdzone auta poleasingowe z całej Europy.
                         </p>
                         <div className="flex flex-wrap gap-6 justify-center md:justify-start">
@@ -82,7 +82,7 @@ export default function AuctionsPage() {
                             <h2 className="text-2xl md:text-4xl lg:text-5xl font-black uppercase tracking-tighter leading-none text-foreground">
                                 Czym są <span className="text-primary italic">Aukcje B2B?</span>
                             </h2>
-                            <p className="text-xl text-muted-foreground font-medium leading-relaxed">
+                            <p className="text-base text-muted-foreground font-medium leading-relaxed">
                                 To zamknięte platformy remarketingowe (np. BCA, AUTO1, Autobid.de), gdzie rocznie sprzedaje się ponad <span className="text-foreground font-bold">2 miliony pojazdów</span>. Są to źródła, z których korzystają najwięksi dealerzy w Europie. Dzięki nam, Ty również masz tam wstęp.
                             </p>
                             <div className="grid sm:grid-cols-2 gap-6">
@@ -333,7 +333,7 @@ export default function AuctionsPage() {
                             <Scale className="w-10 h-10" />
                             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-foreground">Transparentne <span className="italic">Rozliczenie</span></h2>
                         </div>
-                        <p className="text-xl text-muted-foreground font-medium">
+                        <p className="text-base text-muted-foreground font-medium">
                             Kupując na aukcji B2B, finalna cena składa się z kilku elementów. Pomożemy Ci skalkulować wszystko przed licytacją, abyś wiedział, czy zakup jest opłacalny.
                         </p>
                         <div className="grid lg:grid-cols-2 gap-8">

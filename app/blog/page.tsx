@@ -20,7 +20,7 @@ export default function BlogPage() {
                 <h1 className="text-3xl md:text-5xl lg:text-7xl font-black uppercase tracking-tighter leading-none italic text-foreground">
                     Blog <br /><span className="text-primary not-italic">Importeria</span>
                 </h1>
-                <p className="text-xl text-muted-foreground font-medium leading-relaxed">
+                <p className="text-base text-muted-foreground font-medium leading-relaxed">
                     Najnowsze informacje ze świata motoryzacji, poradniki i kulisy importu aut z Niemiec.
                 </p>
             </div>

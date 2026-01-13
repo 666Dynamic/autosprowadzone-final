@@ -134,7 +134,7 @@ export default function CalculatorPage() {
 
                     <div className="max-w-2xl relative z-10">
                         <h3 className="text-primary-foreground text-2xl md:text-3xl font-black mb-6 uppercase tracking-tighter italic drop-shadow-md">Kompleksowa Obsługa</h3>
-                        <p className="text-primary-foreground/90 text-lg md:text-xl leading-relaxed mb-0 font-bold italic drop-shadow-md">
+                        <p className="text-primary-foreground/90 text-base leading-relaxed mb-0 font-bold italic drop-shadow-md">
                             Przejmujemy na siebie cały proces: od weryfikacji auta i negocjacji, po przygotowanie kompletu dokumentów do rejestracji. Ty tylko odbierasz kluczyki pod domem.
                         </p>
                     </div>

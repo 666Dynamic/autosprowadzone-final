@@ -23,7 +23,7 @@ export function RequestSection() {
                             <h2 className="text-2xl md:text-4xl font-black leading-[1.1] uppercase tracking-tighter text-slate-900 dark:text-white">
                                 Czego dokładnie <br /><span className="text-primary italic">szukasz?</span>
                             </h2>
-                            <p className="text-xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed max-w-xl">
+                            <p className="text-base text-slate-600 dark:text-slate-400 font-medium leading-relaxed max-w-xl">
                                 Twoje zlecenie trafia bezpośrednio do eksperta na rynku DE. Przeszukujemy systemy pod kątem aut ze sprawdzoną historią i wysyłamy Ci propozycje godne zakupu.
                             </p>
                         </div>

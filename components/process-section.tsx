@@ -60,7 +60,7 @@ export function ProcessSection() {
                         Twój Import <br />
                         <span className="text-primary italic">Krok po Kroku</span>
                     </h2>
-                    <p className="text-xl text-muted-foreground leading-relaxed font-medium max-w-2xl mx-auto">
+                    <p className="text-base text-muted-foreground leading-relaxed font-medium max-w-2xl mx-auto">
                         Zdejmujemy z Twoich barków cały ciężar importu.
                         Transparentny proces od pierwszej konsultacji po dostawę pod dom.
                     </p>

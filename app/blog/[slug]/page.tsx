@@ -69,7 +69,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     <h1 className="text-3xl md:text-5xl font-bold leading-tight">
                         {post.title}
                     </h1>
-                    <p className="text-xl text-muted-foreground leading-relaxed italic border-l-4 border-primary pl-6 py-2">
+                    <p className="text-base text-muted-foreground leading-relaxed italic border-l-4 border-primary pl-6 py-2">
                         {post.excerpt}
                     </p>
                 </div>

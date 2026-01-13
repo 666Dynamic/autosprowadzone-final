@@ -40,7 +40,7 @@ export function Hero() {
                         <span className="text-primary">Indywidualne Zamówienie</span>
                     </h1>
 
-                    <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+                    <p className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
                         Twój osobisty broker w Niemczech. Pozyskujemy auta z pewnych źródeł: licytacje B2B, floty bankowe oraz sprawdzeni dealerzy. Pełna weryfikacja i dostawa pod dom.
                     </p>
 

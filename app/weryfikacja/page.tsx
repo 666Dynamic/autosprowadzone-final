@@ -23,7 +23,7 @@ export default function VerificationPage() {
                         <h1 className="text-3xl md:text-4xl font-black leading-none uppercase tracking-tighter text-foreground">
                             Weryfikacja <br /><span className="text-primary italic">Zanim Kupisz</span>
                         </h1>
-                        <p className="text-xl text-muted-foreground font-medium max-w-3xl mx-auto leading-relaxed">
+                        <p className="text-base text-muted-foreground font-medium max-w-3xl mx-auto leading-relaxed">
                             Nie ryzykuj oszczędności życia. Wyślij naszego eksperta na miejsce, aby sprawdził auto od osoby prywatnej lub dealera w całych Niemczech.
                         </p>
                     </div>
@@ -50,7 +50,7 @@ export default function VerificationPage() {
                                         Sam znalazłeś auto? <br />
                                         <span className="text-white italic drop-shadow-md">Sprawdzimy je dla Ciebie.</span>
                                     </h2>
-                                    <p className="text-xl md:text-2xl text-white font-semibold leading-relaxed max-w-2xl drop-shadow-md">
+                                    <p className="text-base md:text-lg text-white font-semibold leading-relaxed max-w-2xl drop-shadow-md">
                                         Znalazłeś interesującą ofertę w Niemczech? Nie ryzykuj wyjazdu w ciemno.
                                         Nasi eksperci przeprowadzą dla Ciebie pełną weryfikację sprzedawcy oraz audyt techniczny na miejscu.
                                     </p>
