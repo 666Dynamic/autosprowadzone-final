@@ -132,17 +132,17 @@ export default function VerificationPage() {
                                 </ul>
                             </div>
 
-                            <div className="space-y-8 bg-slate-950 p-10 rounded-[3rem] border border-primary/20 shadow-2xl relative overflow-hidden">
+                            <div className="space-y-8 bg-card p-10 rounded-[3rem] border border-primary/30 shadow-lg relative overflow-hidden">
                                 <div className="absolute top-0 right-0 p-10 opacity-5">
                                     <ShieldCheck className="w-32 h-32 text-primary" />
                                 </div>
-                                <div className="p-3 bg-primary/20 rounded-2xl w-fit text-primary outline outline-1 outline-primary/30">
+                                <div className="p-3 bg-primary rounded-2xl w-fit text-primary-foreground">
                                     <ShieldCheck className="w-8 h-8" />
                                 </div>
-                                <h3 className="text-3xl font-black uppercase tracking-tighter text-white leading-none">
+                                <h3 className="text-3xl font-black uppercase tracking-tighter text-foreground leading-none line-clamp-2">
                                     Osoby Prywatne <br /><span className="text-primary italic">eBay Kleinanzeigen</span>
                                 </h3>
-                                <p className="text-slate-400 font-medium leading-relaxed">
+                                <p className="text-muted-foreground font-medium leading-relaxed">
                                     Tu czyha najwięcej pułapek. Kupując od osoby prywatnej, kładziemy szczególny nacisk na:
                                 </p>
                                 <ul className="space-y-4 relative z-10">
@@ -152,7 +152,7 @@ export default function VerificationPage() {
                                         "Weryfikacja faktycznego stanu prawnego pojazdu",
                                         "Osobista rozmowa ze sprzedawcą przed planowanym wyjazdem"
                                     ].map((item, i) => (
-                                        <li key={i} className="flex gap-3 text-sm font-bold text-slate-300 lowercase first-letter:uppercase">
+                                        <li key={i} className="flex gap-3 text-sm font-bold text-foreground/80 lowercase first-letter:uppercase">
                                             <div className="text-primary mt-1 flex-shrink-0">•</div>
                                             {item}
                                         </li>
