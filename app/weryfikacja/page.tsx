@@ -79,11 +79,11 @@ export default function VerificationPage() {
                                         <div className="absolute inset-0 bg-gradient-to-t from-amber-600/80 via-transparent to-transparent" />
                                     </div>
 
-                                    <div className="relative z-10 bg-white p-8 md:p-10 rounded-[2.5rem] shadow-2xl border border-primary/30 space-y-6">
+                                    <div className="relative z-10 bg-card p-8 md:p-10 rounded-[2.5rem] shadow-2xl border border-primary/30 space-y-6">
                                         <div className="space-y-2">
                                             <div className="text-[10px] font-black uppercase tracking-widest bg-primary/20 text-primary px-4 py-2 rounded-full w-fit border border-primary/20">Weryfikacja pod Bremen</div>
                                             <div className="flex items-baseline gap-2">
-                                                <span className="text-4xl md:text-7xl font-black tracking-tighter uppercase leading-none text-slate-900">250 €</span>
+                                                <span className="text-4xl md:text-7xl font-black tracking-tighter uppercase leading-none text-foreground">250 €</span>
                                             </div>
                                             <p className="font-bold text-sm text-muted-foreground leading-relaxed">
                                                 Pełna inspekcja techniczna, pomiar lakieru, diagnostyka komputerowa i kompleksowy raport rzeczoznawcy.
@@ -221,13 +221,13 @@ export default function VerificationPage() {
                     {/* Pricing Grid */}
                     <div className="grid lg:grid-cols-2 gap-8 items-stretch pt-12">
                         {/* Package 1 */}
-                        <div className="bg-slate-900 text-white p-10 rounded-[3rem] shadow-2xl relative overflow-hidden flex flex-col justify-between border-2 border-primary min-h-[600px]">
+                        <div className="bg-card p-10 rounded-[3rem] shadow-2xl relative overflow-hidden flex flex-col justify-between border-2 border-primary min-h-[600px]">
                             <div className="absolute top-0 right-0 bg-primary px-8 py-3 font-black text-xs uppercase tracking-widest rounded-bl-3xl">Najczęściej wybierany</div>
                             <div className="space-y-8">
-                                <h3 className="text-2xl font-black uppercase tracking-tight flex items-center text-white">
+                                <h3 className="text-2xl font-black uppercase tracking-tight flex items-center text-foreground">
                                     <MapPin className="mr-3 h-8 w-8 text-primary" /> Region Bremen (Baza)
                                 </h3>
-                                <p className="text-slate-400 text-sm font-bold uppercase tracking-widest leading-tight">Obszar do 100km od Osterholz-Scharmbeck</p>
+                                <p className="text-muted-foreground text-sm font-bold uppercase tracking-widest leading-tight">Obszar do 100km od Osterholz-Scharmbeck</p>
 
                                 <div className="space-y-6">
                                     {[
@@ -240,16 +240,16 @@ export default function VerificationPage() {
                                     ].map((item, i) => (
                                         <div key={i} className="flex items-center gap-3">
                                             <CheckCircle2 className="w-5 h-5 text-primary" />
-                                            <span className="text-sm font-bold uppercase tracking-tight text-slate-200">{item}</span>
+                                            <span className="text-sm font-bold uppercase tracking-tight text-muted-foreground">{item}</span>
                                         </div>
                                     ))}
                                 </div>
                             </div>
-                            <div className="pt-8 border-t border-white/10 flex flex-col gap-4">
+                            <div className="pt-8 border-t border-border flex flex-col gap-4">
                                 <div className="flex justify-between items-end">
                                     <div>
-                                        <div className="text-[10px] text-slate-400 font-black uppercase tracking-widest">Koszt ryczałtowy</div>
-                                        <div className="text-5xl font-black text-white tracking-tighter">250 €</div>
+                                        <div className="text-[10px] text-muted-foreground font-black uppercase tracking-widest">Koszt ryczałtowy</div>
+                                        <div className="text-5xl font-black text-foreground tracking-tighter">250 €</div>
                                     </div>
                                     <a href="#form" className="bg-primary hover:bg-white hover:text-black transition-all px-8 py-4 rounded-xl font-black uppercase tracking-widest text-xs">Zamów teraz</a>
                                 </div>
