@@ -20,7 +20,7 @@ export default function VerificationPage() {
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-black uppercase tracking-widest">
                             <Sparkles className="w-4 h-4" /> Profesjonalny Audyt Pojazdu
                         </div>
-                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-black leading-none uppercase tracking-tighter text-foreground">
+                        <h1 className="text-3xl md:text-4xl font-black leading-none uppercase tracking-tighter text-foreground">
                             Weryfikacja <br /><span className="text-primary italic">Zanim Kupisz</span>
                         </h1>
                         <p className="text-xl text-muted-foreground font-medium max-w-3xl mx-auto leading-relaxed">
@@ -32,21 +32,21 @@ export default function VerificationPage() {
                     <div className="relative">
                         <div className="absolute inset-0 bg-primary/20 blur-[120px] rounded-full scale-75 pointer-events-none" />
 
-                        <div className="relative bg-primary/10 p-1 md:p-2 rounded-[3.5rem] shadow-2xl overflow-hidden border border-primary/20 backdrop-blur-sm">
+                        <div className="relative bg-primary/10 p-1 md:p-2 rounded-3xl shadow-2xl overflow-hidden border border-primary/20 backdrop-blur-sm">
                             {/* Decorative Motive / Pattern */}
                             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full translate-x-32 -translate-y-32 blur-[100px] pointer-events-none" />
                             <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full -translate-x-48 translate-y-48 blur-3xl pointer-events-none" />
 
-                            <div className="bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 rounded-[3.1rem] flex flex-col lg:flex-row items-stretch relative overflow-hidden">
+                            <div className="bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 rounded-2xl flex flex-col lg:flex-row items-stretch relative overflow-hidden">
                                 {/* Subtle Pattern Overlay */}
                                 <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-grid-white" />
 
                                 {/* Content Area */}
-                                <div className="lg:w-3/5 p-8 md:p-16 space-y-8 relative z-10 flex flex-col justify-center">
+                                <div className="lg:w-3/5 p-6 md:p-8 space-y-6 relative z-10 flex flex-col justify-center">
                                     <div className="inline-block px-4 py-1.5 rounded-full bg-white/20 border border-white/30 text-white text-xs font-bold uppercase tracking-widest drop-shadow-md">
                                         Import Indywidualny
                                     </div>
-                                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-tighter leading-[0.9] drop-shadow-md">
+                                    <h2 className="text-2xl md:text-4xl font-black text-white uppercase tracking-tighter leading-[0.9] drop-shadow-md">
                                         Sam znalazłeś auto? <br />
                                         <span className="text-white italic drop-shadow-md">Sprawdzimy je dla Ciebie.</span>
                                     </h2>
@@ -64,7 +64,7 @@ export default function VerificationPage() {
                                 </div>
 
                                 {/* Image & CTA Area */}
-                                <div className="lg:w-2/5 p-8 md:p-10 relative flex flex-col justify-end min-h-[500px]">
+                                <div className="lg:w-2/5 p-6 relative flex flex-col justify-end min-h-[400px]">
                                     {/* Expert Image Background with mask */}
                                     <div className="absolute inset-0 z-0">
                                         <Image
@@ -79,7 +79,7 @@ export default function VerificationPage() {
                                         <div className="absolute inset-0 bg-gradient-to-t from-amber-600/80 via-transparent to-transparent" />
                                     </div>
 
-                                    <div className="relative z-10 bg-slate-900 p-8 md:p-10 rounded-[2.5rem] shadow-2xl border-2 border-primary/50 space-y-6 overflow-hidden">
+                                    <div className="relative z-10 bg-slate-900 p-6 rounded-2xl shadow-2xl border-2 border-primary/50 space-y-4 overflow-hidden">
                                         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent pointer-events-none" />
                                         <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/20 blur-3xl rounded-full pointer-events-none" />
                                         <div className="space-y-2 relative z-10">
@@ -223,7 +223,7 @@ export default function VerificationPage() {
                     {/* Pricing Grid */}
                     <div className="grid lg:grid-cols-2 gap-8 items-stretch pt-12">
                         {/* Package 1 */}
-                        <div className="bg-slate-900 text-white p-10 rounded-[3rem] shadow-2xl relative overflow-hidden flex flex-col justify-between border-2 border-primary/50 min-h-[600px]">
+                        <div className="bg-slate-900 text-white p-8 rounded-2xl shadow-2xl relative overflow-hidden flex flex-col justify-between border-2 border-primary/50 min-h-[500px]">
                             <div className="absolute top-0 right-0 bg-primary px-8 py-3 font-black text-xs uppercase tracking-widest rounded-bl-3xl z-10">Najczęściej wybierany</div>
                             <div className="space-y-8 relative z-10">
                                 <h3 className="text-2xl font-black uppercase tracking-tight flex items-center text-white">
@@ -259,7 +259,7 @@ export default function VerificationPage() {
                         </div>
 
                         {/* Package 2 */}
-                        <div className="bg-card p-10 rounded-[3rem] shadow-xl flex flex-col justify-between border border-border min-h-[600px]">
+                        <div className="bg-card p-8 rounded-2xl shadow-xl flex flex-col justify-between border border-border min-h-[500px]">
                             <div className="space-y-8">
                                 <h3 className="text-2xl font-black uppercase tracking-tight flex items-center text-foreground">
                                     <Globe className="mr-3 h-8 w-8 text-primary" /> Pozostałe Regiony DE

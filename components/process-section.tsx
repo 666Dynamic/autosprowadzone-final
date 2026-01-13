@@ -56,7 +56,7 @@ export function ProcessSection() {
                     <div className="inline-block px-4 py-1.5 mb-6 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-black uppercase tracking-widest">
                         Proces Zakupu
                     </div>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 text-foreground tracking-tighter uppercase leading-none">
+                    <h2 className="text-2xl md:text-4xl font-black mb-6 text-foreground tracking-tighter uppercase leading-none">
                         Twój Import <br />
                         <span className="text-primary italic">Krok po Kroku</span>
                     </h2>

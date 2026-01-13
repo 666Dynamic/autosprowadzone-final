@@ -127,13 +127,13 @@ export default function CalculatorPage() {
                     </div>
                 </div>
 
-                <div className="bg-primary text-primary-foreground p-10 md:p-16 rounded-[4rem] border-2 border-primary/20 mt-32 relative overflow-hidden group shadow-2xl shadow-primary/20">
+                <div className="bg-primary text-primary-foreground p-8 rounded-3xl border-2 border-primary/20 mt-32 relative overflow-hidden group shadow-2xl shadow-primary/20">
                     <div className="absolute top-0 right-0 p-8 transform group-hover:scale-110 transition-transform duration-500">
                         <ArrowRight className="w-48 h-48 text-white opacity-10 -rotate-45" />
                     </div>
 
                     <div className="max-w-2xl relative z-10">
-                        <h3 className="text-primary-foreground text-3xl md:text-4xl font-black mb-6 uppercase tracking-tighter italic drop-shadow-md">Kompleksowa Obsługa</h3>
+                        <h3 className="text-primary-foreground text-2xl md:text-3xl font-black mb-6 uppercase tracking-tighter italic drop-shadow-md">Kompleksowa Obsługa</h3>
                         <p className="text-primary-foreground/90 text-lg md:text-xl leading-relaxed mb-0 font-bold italic drop-shadow-md">
                             Przejmujemy na siebie cały proces: od weryfikacji auta i negocjacji, po przygotowanie kompletu dokumentów do rejestracji. Ty tylko odbierasz kluczyki pod domem.
                         </p>

@@ -37,8 +37,8 @@ export function ContactForm({
 
     if (isSuccess) {
         return (
-            <Card className={`w-full bg-white backdrop-blur-sm border-2 border-emerald-500/50 shadow-2xl rounded-[3rem] overflow-hidden ${className}`}>
-                <CardContent className="p-12 text-center space-y-6">
+            <Card className={`w-full bg-white backdrop-blur-sm border-2 border-emerald-500/50 shadow-2xl rounded-2xl overflow-hidden ${className}`}>
+                <CardContent className="p-8 text-center space-y-6">
                     <div className="w-20 h-20 bg-emerald-500/10 text-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                         <CheckCircle2 className="w-10 h-10" />
                     </div>

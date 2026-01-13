@@ -12,7 +12,7 @@ export function RequestSection() {
             <div className="absolute top-1/4 left-1/4 w-px h-1/2 bg-gradient-to-b from-transparent via-primary/20 to-transparent pointer-events-none" />
 
             <div className="container px-4 md:px-8 relative z-10 mx-auto">
-                <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+                <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
 
                     {/* Left Side: Text & Process */}
                     <div className="lg:w-5/12 space-y-10">
@@ -20,7 +20,7 @@ export function RequestSection() {
                             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-black uppercase tracking-widest">
                                 <Sparkles className="w-3.5 h-3.5" /> Twoje Auto Czeka
                             </div>
-                            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black leading-[1.1] uppercase tracking-tighter text-slate-900 dark:text-white">
+                            <h2 className="text-2xl md:text-4xl font-black leading-[1.1] uppercase tracking-tighter text-slate-900 dark:text-white">
                                 Czego dokładnie <br /><span className="text-primary italic">szukasz?</span>
                             </h2>
                             <p className="text-xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed max-w-xl">
