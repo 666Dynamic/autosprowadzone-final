@@ -107,7 +107,7 @@ export default function VerificationPage() {
                     {/* New Section: Dealer vs Private */}
                     <section className="py-24 border-y border-border">
                         <div className="grid lg:grid-cols-2 gap-12">
-                            <div className="space-y-8 bg-card p-10 rounded-[3rem] border border-border shadow-lg">
+                            <div className="space-y-8 bg-card p-10 rounded-[3rem] border border-primary/30 shadow-lg">
                                 <div className="p-3 bg-primary rounded-2xl w-fit text-primary-foreground">
                                     <Search className="w-8 h-8" />
                                 </div>
