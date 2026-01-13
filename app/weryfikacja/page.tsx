@@ -226,8 +226,8 @@ export default function VerificationPage() {
                         <div className="bg-slate-900 text-white p-10 rounded-[3rem] shadow-2xl relative overflow-hidden flex flex-col justify-between border-2 border-primary/50 min-h-[600px]">
                             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent pointer-events-none" />
                             <div className="absolute top-0 right-0 bg-primary px-8 py-3 font-black text-xs uppercase tracking-widest rounded-bl-3xl z-10">Najczęściej wybierany</div>
-                            <div className="space-y-8">
-                                <h3 className="text-2xl font-black uppercase tracking-tight flex items-center text-foreground">
+                            <div className="space-y-8 relative z-10">
+                                <h3 className="text-2xl font-black uppercase tracking-tight flex items-center text-white">
                                     <MapPin className="mr-3 h-8 w-8 text-primary" /> Region Bremen (Baza)
                                 </h3>
                                 <p className="text-slate-400 text-sm font-bold uppercase tracking-widest leading-tight">Obszar do 100km od Osterholz-Scharmbeck</p>
