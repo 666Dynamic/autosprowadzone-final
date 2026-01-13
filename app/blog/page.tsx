@@ -28,16 +28,16 @@ export default function BlogPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {posts.map((post) => (
                     <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
-                        <Card className="h-full border-2 border-border rounded-[2.5rem] overflow-hidden hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-primary/5 bg-card">
-                            <CardHeader className="p-8 pb-4">
-                                <div className="text-xs font-bold uppercase tracking-widest text-primary mb-4">{post.date}</div>
-                                <CardTitle className="text-2xl font-black uppercase tracking-tight group-hover:text-primary transition-colors leading-tight">{post.title}</CardTitle>
+                        <Card className="h-full border-2 border-border rounded-[2rem] md:rounded-[2.5rem] overflow-hidden hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-primary/5 bg-card">
+                            <CardHeader className="p-6 md:p-8 pb-4">
+                                <div className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-primary mb-4">{post.date}</div>
+                                <CardTitle className="text-xl md:text-2xl font-black uppercase tracking-tight group-hover:text-primary transition-colors leading-tight">{post.title}</CardTitle>
                             </CardHeader>
-                            <CardContent className="p-8 pt-0 space-y-6">
-                                <CardDescription className="text-base text-muted-foreground font-medium leading-relaxed">
+                            <CardContent className="p-6 md:p-8 pt-0 space-y-4 md:space-y-6">
+                                <CardDescription className="text-sm md:text-base text-muted-foreground font-medium leading-relaxed">
                                     {post.excerpt}
                                 </CardDescription>
-                                <div className="pt-4 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-foreground group-hover:text-primary transition-colors">
+                                <div className="pt-2 md:pt-4 flex items-center gap-2 text-[10px] md:text-xs font-bold uppercase tracking-widest text-foreground group-hover:text-primary transition-colors">
                                     Czytaj więcej <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                                 </div>
                             </CardContent>

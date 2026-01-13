@@ -39,13 +39,13 @@ export function FeaturesSection() {
                     {features.map((feature, idx) => (
                         <div
                             key={idx}
-                            className="bg-background p-8 rounded-2xl border-2 border-primary/20 shadow-sm hover:shadow-lg hover:shadow-primary/10 hover:scale-105 hover:border-primary/40 transition-all duration-300"
+                            className="bg-background p-6 md:p-8 rounded-[2rem] md:rounded-2xl border-2 border-primary/20 shadow-sm hover:shadow-lg hover:shadow-primary/10 hover:scale-[1.02] md:hover:scale-105 hover:border-primary/40 transition-all duration-300"
                         >
-                            <div className="h-12 w-12 bg-primary/20 border-2 border-primary/30 rounded-xl flex items-center justify-center mb-6 text-primary">
-                                <feature.icon className="h-6 w-6" />
+                            <div className="h-10 w-10 md:h-12 md:w-12 bg-primary/20 border-2 border-primary/30 rounded-xl flex items-center justify-center mb-6 text-primary">
+                                <feature.icon className="h-5 w-5 md:h-6 md:w-6" />
                             </div>
-                            <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                            <p className="leading-relaxed">
+                            <h3 className="text-xl font-black uppercase tracking-tight mb-3">{feature.title}</h3>
+                            <p className="text-sm md:text-base leading-relaxed text-muted-foreground font-medium">
                                 {feature.description}
                             </p>
                         </div>

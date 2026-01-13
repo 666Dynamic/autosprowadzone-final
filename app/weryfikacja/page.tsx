@@ -32,30 +32,30 @@ export default function VerificationPage() {
                     <div className="relative group">
                         <div className="absolute inset-0 bg-primary/30 blur-[120px] rounded-full scale-75 pointer-events-none group-hover:bg-primary/40 transition-colors" />
 
-                        <div className="relative bg-primary/10 p-1.5 md:p-3 rounded-[3rem] shadow-[0_32px_64px_-12px_rgba(245,158,11,0.2)] overflow-hidden border border-primary/20 backdrop-blur-sm transition-transform duration-500 hover:scale-[1.01]">
+                        <div className="relative bg-primary/10 p-1 md:p-3 rounded-[2rem] md:rounded-[3rem] shadow-[0_32px_64px_-12px_rgba(245,158,11,0.2)] overflow-hidden border border-primary/20 backdrop-blur-sm transition-transform duration-500 hover:scale-[1.01]">
                             {/* Decorative Motive / Pattern */}
                             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/30 rounded-full translate-x-32 -translate-y-32 blur-[100px] pointer-events-none" />
                             <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full -translate-x-48 translate-y-48 blur-3xl pointer-events-none" />
 
-                            <div className="bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 rounded-[2.5rem] flex flex-col lg:flex-row items-stretch relative overflow-hidden">
+                            <div className="bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 rounded-[1.75rem] md:rounded-[2.5rem] flex flex-col lg:flex-row items-stretch relative overflow-hidden">
                                 {/* Subtle Pattern Overlay */}
                                 <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-grid-white" />
 
                                 {/* Content Area */}
-                                <div className="lg:w-3/5 p-8 md:p-14 space-y-8 relative z-10 flex flex-col justify-center">
-                                    <div className="inline-block px-4 py-1.5 rounded-full bg-white/20 border border-white/30 text-white text-xs font-bold uppercase tracking-widest drop-shadow-md">
+                                <div className="lg:w-3/5 p-6 md:p-14 space-y-6 md:space-y-8 relative z-10 flex flex-col justify-center">
+                                    <div className="inline-block px-3 py-1 rounded-full bg-white/20 border border-white/30 text-white text-[10px] md:text-xs font-bold uppercase tracking-widest drop-shadow-md w-fit">
                                         Import Indywidualny
                                     </div>
-                                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-tighter leading-none italic drop-shadow-lg">
+                                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-tighter leading-[0.9] italic drop-shadow-lg">
                                         Sam znalazłeś auto? <br /><span className="not-italic">Sprawdzimy je dla Ciebie</span>
                                     </h2>
-                                    <p className="text-base md:text-lg text-white/90 font-medium leading-relaxed max-w-2xl drop-shadow-sm">
+                                    <p className="text-sm md:text-lg text-white/95 font-medium leading-relaxed max-w-2xl drop-shadow-sm">
                                         Znalazłeś interesującą ofertę w Niemczech? Nie ryzykuj wyjazdu w ciemno.
                                         Nasi eksperci przeprowadzą dla Ciebie pełną weryfikację sprzedawcy oraz audyt techniczny na miejscu.
                                     </p>
-                                    <div className="flex flex-wrap gap-4 pt-4">
+                                    <div className="flex flex-wrap gap-2 md:gap-4 pt-2 md:pt-4">
                                         {["Analiza ogłoszenia", "Weryfikacja sprzedawcy", "Inspekcja techniczna", "Negocjacje ceny"].map((tag, i) => (
-                                            <div key={i} className="px-5 py-2.5 bg-white/20 rounded-xl border border-white/30 text-white font-bold text-xs uppercase tracking-wider drop-shadow-md">
+                                            <div key={i} className="px-3 py-1.5 md:px-5 md:py-2.5 bg-white/10 md:bg-white/20 rounded-lg md:rounded-xl border border-white/20 md:border-white/30 text-white font-bold text-[10px] md:text-xs uppercase tracking-wider drop-shadow-md">
                                                 {tag}
                                             </div>
                                         ))}
@@ -63,7 +63,7 @@ export default function VerificationPage() {
                                 </div>
 
                                 {/* Image & CTA Area */}
-                                <div className="lg:w-2/5 p-8 relative flex flex-col justify-end min-h-[400px]">
+                                <div className="lg:w-2/5 p-4 md:p-8 relative flex flex-col justify-end min-h-[350px] md:min-h-[400px]">
                                     {/* Expert Image Background with mask */}
                                     <div className="absolute inset-0 z-0">
                                         <Image
@@ -75,27 +75,27 @@ export default function VerificationPage() {
                                             priority={false}
                                             quality={85}
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-amber-600/80 via-transparent to-transparent" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-amber-600/90 via-amber-600/20 to-transparent" />
                                     </div>
 
-                                    <div className="relative z-10 bg-slate-900 p-6 rounded-2xl shadow-2xl border-2 border-primary/50 space-y-4 overflow-hidden">
+                                    <div className="relative z-10 bg-slate-900 p-5 md:p-6 rounded-2xl shadow-2xl border-2 border-primary/50 space-y-4 overflow-hidden">
                                         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent pointer-events-none" />
                                         <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/20 blur-3xl rounded-full pointer-events-none" />
                                         <div className="space-y-2 relative z-10">
-                                            <div className="text-xs font-bold uppercase tracking-widest bg-primary/20 text-primary px-4 py-2 rounded-full w-fit border border-primary/20">Weryfikacja pod Bremen</div>
+                                            <div className="text-[10px] font-bold uppercase tracking-widest bg-primary/20 text-primary px-3 py-1 rounded-full w-fit border border-primary/20">Weryfikacja pod Bremen</div>
                                             <div className="flex items-baseline gap-2">
-                                                <span className="text-4xl md:text-7xl font-black tracking-tighter uppercase leading-none text-white">250 €</span>
+                                                <span className="text-5xl md:text-7xl font-black tracking-tighter uppercase leading-none text-white font-display italic">250 €</span>
                                             </div>
-                                            <p className="font-bold text-sm text-slate-300 leading-relaxed">
+                                            <p className="font-bold text-[11px] md:text-sm text-slate-300 leading-relaxed">
                                                 Pełna inspekcja techniczna, pomiar lakieru, diagnostyka komputerowa i kompleksowy raport rzeczoznawcy.
                                             </p>
                                         </div>
                                         <div className="space-y-4 relative z-10">
-                                            <a href="#form" className="flex items-center justify-center gap-3 bg-primary text-white hover:bg-primary/90 hover:shadow-[0_0_30px_rgba(245,158,11,0.5)] transition-all h-14 rounded-xl font-black uppercase tracking-wide text-base shadow-lg shadow-primary/30 group/btn [text-shadow:0_1px_2px_rgba(0,0,0,0.2)]">
+                                            <a href="#form" className="flex items-center justify-center gap-3 bg-primary text-white hover:bg-primary/90 hover:shadow-[0_0_30px_rgba(245,158,11,0.5)] transition-all h-12 md:h-14 rounded-xl font-black uppercase tracking-wide text-sm md:text-base shadow-lg shadow-primary/30 group/btn [text-shadow:0_1px_2px_rgba(0,0,0,0.2)]">
                                                 Zleć Inspekcję
                                                 <ChevronRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
                                             </a>
-                                            <p className="text-xs text-center text-slate-400 font-bold uppercase tracking-widest leading-relaxed">
+                                            <p className="text-[10px] text-center text-slate-400 font-bold uppercase tracking-widest leading-relaxed">
                                                 Dojazd w dowolne miejsce w Niemczech
                                             </p>
                                         </div>

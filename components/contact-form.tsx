@@ -38,16 +38,16 @@ export function ContactForm({
     if (isSuccess) {
         return (
             <Card className={`w-full bg-white backdrop-blur-sm border-2 border-emerald-500/50 shadow-2xl rounded-2xl overflow-hidden ${className}`}>
-                <CardContent className="p-8 text-center space-y-6">
-                    <div className="w-20 h-20 bg-emerald-500/10 text-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <CheckCircle2 className="w-10 h-10" />
+                <CardContent className="p-6 md:p-8 text-center space-y-6">
+                    <div className="w-16 h-16 md:w-20 md:h-20 bg-emerald-500/10 text-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <CheckCircle2 className="w-8 h-8 md:w-10 md:h-10" />
                     </div>
-                    <h3 className="text-3xl font-black uppercase tracking-tighter">Wiadomość wysłana!</h3>
-                    <p className="text-muted-foreground font-medium">Dziękujemy za kontakt. Nasz ekspert odezwie się do Ciebie w ciągu 24 godzin.</p>
+                    <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tighter">Wiadomość wysłana!</h3>
+                    <p className="text-sm md:text-muted-foreground font-medium">Dziękujemy za kontakt. Nasz ekspert odezwie się do Ciebie w ciągu 24 godzin.</p>
                     <Button
                         onClick={() => setIsSuccess(false)}
                         variant="outline"
-                        className="rounded-xl font-bold uppercase tracking-widest"
+                        className="rounded-xl font-bold uppercase tracking-widest text-xs"
                     >
                         Wyślij kolejną
                     </Button>

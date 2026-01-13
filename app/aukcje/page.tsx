@@ -275,23 +275,23 @@ export default function AuctionsPage() {
 
                     <div className="grid md:grid-cols-3 gap-8">
                         {mainPlatforms.map((p, idx) => (
-                            <Card key={idx} className="border-2 border-border hover:border-primary transition-all rounded-[2.5rem] overflow-hidden group shadow-lg flex flex-col bg-card">
+                            <Card key={idx} className="border-2 border-border hover:border-primary transition-all rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden group shadow-lg flex flex-col bg-card">
                                 <div className={`h-3 ${p.color}`} />
-                                <CardContent className="p-10 space-y-6 flex-1 flex flex-col">
+                                <CardContent className="p-6 md:p-10 space-y-6 flex-1 flex flex-col">
                                     <div className="flex justify-between items-start">
-                                        <h3 className="text-2xl font-black uppercase tracking-tight text-foreground">{p.name}</h3>
+                                        <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight text-foreground">{p.name}</h3>
                                         <TrendingUp className="text-primary w-6 h-6" />
                                     </div>
-                                    <p className="text-sm text-muted-foreground leading-relaxed font-medium flex-1">{p.description}</p>
+                                    <p className="text-xs md:text-sm text-muted-foreground leading-relaxed font-medium flex-1">{p.description}</p>
 
                                     <div className="grid grid-cols-2 gap-4 py-6 border-y border-border">
                                         <div>
-                                            <div className="text-xs font-black uppercase text-muted-foreground tracking-widest mb-1">Podaż</div>
-                                            <div className="text-lg font-black text-foreground tracking-tighter">{p.stats}</div>
+                                            <div className="text-[10px] font-black uppercase text-muted-foreground tracking-widest mb-1">Podaż</div>
+                                            <div className="text-base md:text-lg font-black text-foreground tracking-tighter">{p.stats}</div>
                                         </div>
                                         <div>
-                                            <div className="text-xs font-black uppercase text-muted-foreground tracking-widest mb-1">Typowe Opłaty</div>
-                                            <div className="text-sm font-bold text-primary leading-tight">{p.fees}</div>
+                                            <div className="text-[10px] font-black uppercase text-muted-foreground tracking-widest mb-1">Typowe Opłaty</div>
+                                            <div className="text-xs md:text-sm font-bold text-primary leading-tight">{p.fees}</div>
                                         </div>
                                     </div>
 
@@ -328,39 +328,39 @@ export default function AuctionsPage() {
             {/* Price Transparency Warning */}
             <section className="py-24 bg-secondary/10">
                 <div className="container mx-auto px-4 md:px-8">
-                    <div className="max-w-4xl mx-auto bg-card border border-border rounded-[3rem] p-10 md:p-16 space-y-8 shadow-2xl">
-                        <div className="flex items-center gap-4 text-primary">
-                            <Scale className="w-10 h-10" />
-                            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-foreground">Transparentne <span className="italic">Rozliczenie</span></h2>
+                    <div className="max-w-4xl mx-auto bg-card border border-border rounded-[2rem] md:rounded-[3rem] p-6 md:p-16 space-y-8 shadow-2xl">
+                        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 text-primary text-center sm:text-left">
+                            <Scale className="w-10 h-10 md:w-12 md:h-12" />
+                            <h2 className="text-2xl md:text-5xl font-black uppercase tracking-tighter text-foreground leading-[0.9]">Transparentne <span className="italic">Rozliczenie</span></h2>
                         </div>
-                        <p className="text-base text-muted-foreground font-medium">
+                        <p className="text-sm md:text-base text-muted-foreground font-medium text-center sm:text-left leading-relaxed">
                             Kupując na aukcji B2B, finalna cena składa się z kilku elementów. Pomożemy Ci skalkulować wszystko przed licytacją, abyś wiedział, czy zakup jest opłacalny.
                         </p>
                         <div className="grid lg:grid-cols-2 gap-8">
                             <div className="space-y-4">
-                                <div className="p-8 bg-black/5 dark:bg-white/5 rounded-[2.5rem] border-2 border-primary/20 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] relative overflow-hidden">
+                                <div className="p-6 md:p-8 bg-black/5 dark:bg-white/5 rounded-[1.5rem] md:rounded-[2.5rem] border-2 border-primary/20 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] relative overflow-hidden">
                                     <div className="absolute top-0 right-0 p-4">
                                         <Zap className="w-5 h-5 text-primary/30 animate-pulse" />
                                     </div>
-                                    <div className="text-xs font-black uppercase text-primary mb-6 tracking-[0.2em] flex items-center gap-2">
+                                    <div className="text-[10px] md:text-xs font-black uppercase text-primary mb-6 tracking-[0.2em] flex items-center gap-2 justify-center sm:justify-start">
                                         <span className="w-8 h-1 bg-primary rounded-full" /> Kalkulacja Kosztów
                                     </div>
-                                    <ul className="space-y-5 text-sm font-bold text-foreground uppercase tracking-tight">
+                                    <ul className="space-y-5 text-xs md:text-sm font-bold text-foreground uppercase tracking-tight">
                                         <li className="flex justify-between items-center border-b border-border/50 pb-3">
                                             <span className="flex items-center gap-2"><Gavel className="w-4 h-4 text-muted-foreground" /> Auto z aukcji</span>
-                                            <span className="text-primary font-black tracking-tighter text-base">Cena zakupu</span>
+                                            <span className="text-primary font-black tracking-tighter text-sm md:text-base">Cena zakupu</span>
                                         </li>
                                         <li className="flex justify-between items-center border-b border-border/50 pb-3">
                                             <span className="flex items-center gap-2"><Building2 className="w-4 h-4 text-muted-foreground" /> Opłata aukcyjna</span>
-                                            <span className="text-foreground font-black tracking-tighter text-base">~300 - 600 €</span>
+                                            <span className="text-foreground font-black tracking-tighter text-sm md:text-base">~300 - 600 €</span>
                                         </li>
                                         <li className="flex justify-between items-center border-b border-border/50 pb-3">
                                             <span className="flex items-center gap-2"><MonitorCheck className="w-4 h-4 text-muted-foreground" /> Dokumentacja</span>
-                                            <span className="text-foreground font-black tracking-tighter text-base">~100 - 150 €</span>
+                                            <span className="text-foreground font-black tracking-tighter text-sm md:text-base">~100 - 150 €</span>
                                         </li>
                                         <li className="flex justify-between items-center">
                                             <span className="flex items-center gap-2"><Truck className="w-4 h-4 text-primary" /> Logistyka EU</span>
-                                            <span className="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase">Wycena indywidualna</span>
+                                            <span className="bg-primary/20 text-primary px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase text-center">Wycena indywidualna</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -369,22 +369,22 @@ export default function AuctionsPage() {
                                 <div className="flex items-start gap-4">
                                     <div className="p-3 bg-emerald-500/10 text-emerald-500 rounded-xl shrink-0"><Euro className="w-6 h-6" /></div>
                                     <div className="space-y-1">
-                                        <h4 className="font-black text-sm uppercase text-foreground">Bezpośrednie płatności</h4>
-                                        <p className="text-sm text-muted-foreground font-medium leading-relaxed">W większości przypadków płacisz bezpośrednio do domu aukcyjnego. Bezpieczeństwo środków gwarantują giganci branży.</p>
+                                        <h4 className="font-black text-xs md:text-sm uppercase text-foreground">Bezpośrednie płatności</h4>
+                                        <p className="text-xs md:text-sm text-muted-foreground font-medium leading-relaxed">W większości przypadków płacisz bezpośrednio do domu aukcyjnego. Bezpieczeństwo środków gwarantują giganci branży.</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4 border-t border-border pt-6">
                                     <div className="p-3 bg-blue-500/10 text-blue-500 rounded-xl shrink-0"><Building2 className="w-6 h-6" /></div>
                                     <div className="space-y-1">
-                                        <h4 className="font-black text-sm uppercase text-foreground">Pośrednictwo finansowe</h4>
-                                        <p className="text-sm text-muted-foreground font-medium leading-relaxed">Jeśli dom aukcyjny nie pozwala na bezpośredni przelew zagraniczny (zależy od ich zasad), przeprowadzamy zakup przez nasze konto – przelewasz środki do nas, a my rozliczamy aukcję.</p>
+                                        <h4 className="font-black text-xs md:text-sm uppercase text-foreground">Pośrednictwo finansowe</h4>
+                                        <p className="text-xs md:text-sm text-muted-foreground font-medium leading-relaxed">Jeśli dom aukcyjny nie pozwala na bezpośredni przelew zagraniczny, przeprowadzamy zakup przez nasze konto.</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4 border-t border-border pt-6">
                                     <div className="p-3 bg-primary/10 text-primary rounded-xl shrink-0"><ShieldCheck className="w-6 h-6" /></div>
                                     <div className="space-y-1">
-                                        <h4 className="font-black text-sm uppercase text-foreground">Stała Prowizja</h4>
-                                        <p className="text-sm text-muted-foreground font-medium leading-relaxed">Nasza prowizja jest stała i znana przed licytacją. Zero ukrytych kosztów.</p>
+                                        <h4 className="font-black text-xs md:text-sm uppercase text-foreground">Stała Prowizja</h4>
+                                        <p className="text-xs md:text-sm text-muted-foreground font-medium leading-relaxed">Nasza prowizja jest stała i znana przed licytacją. Zero ukrytych kosztów.</p>
                                     </div>
                                 </div>
                             </div>
