@@ -32,14 +32,6 @@ export const metadata: Metadata = {
     title: "Auta z Niemiec - Aukcje B2B, Import, Weryfikacja | autosprowadzone.pl",
     description: "Bezpieczny import aut z Niemiec. Dostęp do aukcji B2B (BCA, Auto1). Weryfikacja techniczna na miejscu.",
     siteName: "autosprowadzone.pl",
-    images: [
-      {
-        url: "/hero-bg.png",
-        width: 1200,
-        height: 630,
-        alt: "Autosprowadzone.pl - Import aut z Niemiec",
-      },
-    ],
   },
   icons: {
     icon: "/favicon.ico",
