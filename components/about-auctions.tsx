@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { motion, AnimatePresence } from "framer-motion"
-import { ArrowRight, Gavel, Timer, Fuel, Gauge, Calendar, ShieldCheck, Euro, Zap, Search, Activity, Sparkles, CheckCircle2, ChevronLeft, ChevronRight, Clock, MapPin, History as HistoryIcon, Camera } from "lucide-react"
+import { ArrowRight, Fuel, Gauge, Calendar, ShieldCheck, Euro, Zap, Activity, Sparkles, Clock, MapPin, Camera } from "lucide-react"
 import Link from "next/link"
 import { useState, useEffect, useMemo } from "react"
 

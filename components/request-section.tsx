@@ -1,7 +1,7 @@
 "use client"
 
 import { ContactForm } from "@/components/contact-form"
-import { Search, Send, Sparkles, Filter, CheckCircle2 } from "lucide-react"
+import { Sparkles } from "lucide-react"
 
 export function RequestSection() {
     return (

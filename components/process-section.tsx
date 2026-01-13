@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import { Search, MonitorCheck, FileSignature, Wallet, Gavel, Truck } from "lucide-react"
-import { cn } from "@/lib/utils"
 
 const steps = [
     {

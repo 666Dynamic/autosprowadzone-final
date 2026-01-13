@@ -1,7 +1,6 @@
 "use client"
 
-import { ShieldCheck, Gavel, Search, Euro, Truck, FileCheck } from "lucide-react"
-import { motion } from "framer-motion"
+import { ShieldCheck, Gavel, FileCheck } from "lucide-react"
 
 const features = [
     {

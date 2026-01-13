@@ -1,6 +1,5 @@
 import { ContactForm } from "@/components/contact-form"
-import { ShieldCheck, MapPin, Euro, Search, Truck, CheckCircle2, Sparkles, ChevronRight, Activity, MonitorCheck, Globe, Clock } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
+import { ShieldCheck, MapPin, Euro, Search, CheckCircle2, Sparkles, ChevronRight, Globe, Clock } from "lucide-react"
 import type { Metadata } from "next"
 import Image from "next/image"
 
