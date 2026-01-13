@@ -29,8 +29,8 @@ export default function VerificationPage() {
                     </div>
 
                     {/* GOLD AMBER: Sam znalazłeś auto? */}
-                    <div className="relative group">
-                        <div className="absolute inset-0 bg-primary/20 blur-[120px] rounded-full scale-75 group-hover:scale-100 transition-transform duration-700 pointer-events-none" />
+                    <div className="relative">
+                        <div className="absolute inset-0 bg-primary/20 blur-[120px] rounded-full scale-75 pointer-events-none" />
 
                         <div className="relative bg-primary/10 p-1 md:p-2 rounded-[3.5rem] shadow-2xl overflow-hidden border border-primary/20 backdrop-blur-sm">
                             {/* Decorative Motive / Pattern */}
@@ -253,7 +253,7 @@ export default function VerificationPage() {
                                         <div className="text-[10px] text-slate-400 font-black uppercase tracking-widest">Koszt ryczałtowy</div>
                                         <div className="text-5xl font-black text-white tracking-tighter">250 €</div>
                                     </div>
-                                    <a href="#form" className="bg-primary hover:bg-primary/90 text-white transition-all px-8 py-4 rounded-xl font-black uppercase tracking-widest text-xs">Zamów teraz</a>
+                                    <a href="#form" className="bg-primary hover:bg-white hover:text-black transition-all px-8 py-4 rounded-xl font-black uppercase tracking-widest text-xs">Zamów teraz</a>
                                 </div>
                             </div>
                         </div>
