@@ -6,7 +6,7 @@ import Link from "next/link"
 
 export function Hero() {
     return (
-        <section className="relative overflow-hidden bg-background pt-24 md:pt-32 pb-24 lg:pt-40 lg:pb-32 min-h-[85vh] flex items-center">
+        <section className="relative overflow-hidden bg-background pt-20 md:pt-24 pb-24 lg:pt-32 lg:pb-32 min-h-[80vh] flex items-center">
             {/* Background Video - Only video, no images */}
             <div className="absolute inset-0 z-0 bg-slate-950">
                 <video
@@ -25,7 +25,7 @@ export function Hero() {
             </div>
 
             <div className="container relative z-10 mx-auto px-4 md:px-8">
-                <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-8 md:space-y-10">
+                <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-8 md:space-y-10 -mt-12 md:-mt-20">
 
                     <div className="inline-flex items-center rounded-full border-2 border-primary/30 bg-background/80 px-4 py-2 text-sm font-bold text-primary backdrop-blur-md shadow-sm">
                         <span className="relative flex h-2 w-2 mr-2">
