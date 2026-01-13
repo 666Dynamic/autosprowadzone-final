@@ -396,12 +396,12 @@ export default function AuctionsPage() {
             {/* CTA */}
             <section className="py-24 bg-primary px-4">
                 <div className="container mx-auto text-center space-y-8">
-                    <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter text-slate-950 leading-none">
+                    <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter text-white leading-none">
                         Chcesz sprawdzić <br /><span className="italic">aktualne oferty?</span>
                     </h2>
                     <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
                         <Link href="/#request-section">
-                            <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-50 transition-all h-12 px-8 font-semibold rounded-lg shadow-lg">
+                            <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 hover:scale-[1.02] transition-all h-12 px-8 font-semibold rounded-lg shadow-lg">
                                 Zapytaj o dostęp <Zap className="ml-2 w-5 h-5" />
                             </Button>
                         </Link>
