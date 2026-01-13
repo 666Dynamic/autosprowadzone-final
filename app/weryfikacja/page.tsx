@@ -79,22 +79,22 @@ export default function VerificationPage() {
                                         <div className="absolute inset-0 bg-gradient-to-t from-amber-600/80 via-transparent to-transparent" />
                                     </div>
 
-                                    <div className="relative z-10 bg-black/90 p-8 md:p-10 rounded-[2.5rem] shadow-2xl border border-white/10 space-y-6">
+                                    <div className="relative z-10 bg-white p-8 md:p-10 rounded-[2.5rem] shadow-2xl border border-primary/30 space-y-6">
                                         <div className="space-y-2">
                                             <div className="text-[10px] font-black uppercase tracking-widest bg-primary/20 text-primary px-4 py-2 rounded-full w-fit border border-primary/20">Weryfikacja pod Bremen</div>
                                             <div className="flex items-baseline gap-2">
-                                                <span className="text-4xl md:text-7xl font-black tracking-tighter uppercase leading-none text-white">250 €</span>
+                                                <span className="text-4xl md:text-7xl font-black tracking-tighter uppercase leading-none text-slate-900">250 €</span>
                                             </div>
-                                            <p className="font-bold text-sm text-slate-400 leading-relaxed">
+                                            <p className="font-bold text-sm text-muted-foreground leading-relaxed">
                                                 Pełna inspekcja techniczna, pomiar lakieru, diagnostyka komputerowa i kompleksowy raport rzeczoznawcy.
                                             </p>
                                         </div>
                                         <div className="space-y-4">
-                                            <a href="#form" className="flex items-center justify-center gap-3 bg-primary text-black hover:bg-white transition-all h-20 rounded-2xl font-black uppercase tracking-widest text-lg shadow-xl shadow-primary/20 group/btn">
+                                            <a href="#form" className="flex items-center justify-center gap-3 bg-primary text-white hover:bg-primary/90 transition-all h-12 rounded-lg font-semibold uppercase tracking-wide text-base shadow-lg group/btn">
                                                 Zleć Inspekcję
-                                                <ChevronRight className="w-6 h-6 group-hover/btn:translate-x-1 transition-transform" />
+                                                <ChevronRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
                                             </a>
-                                            <p className="text-[10px] text-center text-slate-500 font-black uppercase tracking-widest leading-relaxed">
+                                            <p className="text-[10px] text-center text-muted-foreground font-black uppercase tracking-widest leading-relaxed">
                                                 Dojazd w dowolne miejsce w Niemczech
                                             </p>
                                         </div>
