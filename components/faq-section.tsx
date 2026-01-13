@@ -47,8 +47,8 @@ export function FaqSection() {
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
                         FAQ
                     </div>
-                    <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter leading-none text-foreground">
-                        Częste <span className="text-primary italic">Pytania</span>
+                    <h2 className="text-3xl md:text-5xl lg:text-7xl font-black uppercase tracking-tighter leading-none text-foreground italic">
+                        Częste <br /><span className="text-primary not-italic">Pytania</span>
                     </h2>
                     <p className="text-lg text-muted-foreground font-medium max-w-xl mx-auto">
                         Odpowiedzi na najczęściej zadawane pytania dotyczące importu.

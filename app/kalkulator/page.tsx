@@ -11,10 +11,12 @@ import { ArrowRight, AlertTriangle } from "lucide-react"
 
 export default function CalculatorPage() {
     return (
-        <div className="container mx-auto px-4 md:px-8 py-12 md:py-20">
-            <div className="max-w-4xl mx-auto mb-12 text-center">
-                <h1 className="text-3xl md:text-4xl font-black mb-6">Kalkulator Kosztów Importu</h1>
-                <p className="text-lg text-muted-foreground">
+        <div className="container mx-auto px-4 md:px-8 py-12 md:py-24">
+            <div className="max-w-4xl mx-auto mb-20 text-center">
+                <h1 className="text-3xl md:text-5xl lg:text-7xl font-black mb-6 uppercase tracking-tighter leading-none italic">
+                    Kalkulator <br /><span className="text-primary not-italic">Kosztów Importu</span>
+                </h1>
+                <p className="text-lg text-muted-foreground font-medium max-w-2xl mx-auto">
                     Skorzystaj z naszego precyzyjnego narzędzia, aby oszacować całkowity koszt sprowadzenia samochodu "pod dom".
                     Uwzględniamy wszystkie opłaty urzędowe obowiązujące w 2026 roku.
                 </p>
