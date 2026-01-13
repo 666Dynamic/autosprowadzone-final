@@ -96,7 +96,7 @@ export default function VerificationPage() {
                                                 Zleć Inspekcję
                                                 <ChevronRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
                                             </a>
-                                            <p className="text-[10px] text-center text-slate-400 font-black uppercase tracking-widest leading-relaxed">
+                                            <p className="text-xs text-center text-slate-400 font-bold uppercase tracking-widest leading-relaxed">
                                                 Dojazd w dowolne miejsce w Niemczech
                                             </p>
                                         </div>

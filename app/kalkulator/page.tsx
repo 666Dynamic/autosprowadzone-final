@@ -13,7 +13,7 @@ export default function CalculatorPage() {
     return (
         <div className="container mx-auto px-4 md:px-8 py-12 md:py-20">
             <div className="max-w-4xl mx-auto mb-12 text-center">
-                <h1 className="text-2xl md:text-4xl font-bold mb-6">Kalkulator Kosztów Importu</h1>
+                <h1 className="text-3xl md:text-4xl font-black mb-6">Kalkulator Kosztów Importu</h1>
                 <p className="text-lg text-muted-foreground">
                     Skorzystaj z naszego precyzyjnego narzędzia, aby oszacować całkowity koszt sprowadzenia samochodu "pod dom".
                     Uwzględniamy wszystkie opłaty urzędowe obowiązujące w 2026 roku.
@@ -56,7 +56,7 @@ export default function CalculatorPage() {
                                     ].map((item, idx) => (
                                         <li key={idx} className="bg-card border-2 border-border p-5 rounded-3xl flex flex-col group-hover:border-primary/40 transition-all shadow-sm">
                                             <span className="text-primary font-black text-2xl">{item.rate}</span>
-                                            <span className="text-[10px] text-muted-foreground uppercase font-black tracking-widest mt-1">{item.desc}</span>
+                                            <span className="text-xs text-muted-foreground uppercase font-bold tracking-widest mt-1">{item.desc}</span>
                                         </li>
                                     ))}
                                 </ul>

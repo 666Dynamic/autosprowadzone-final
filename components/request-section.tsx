@@ -43,7 +43,7 @@ export function RequestSection() {
                                     </div>
                                     <div className="space-y-1">
                                         <h4 className="font-black text-slate-900 dark:text-white uppercase tracking-tight text-lg group-hover:text-primary transition-colors">{step.title}</h4>
-                                        <div className="flex items-center gap-2 text-[10px] font-black text-slate-500 dark:text-slate-500 uppercase tracking-widest">
+                                        <div className="flex items-center gap-2 text-xs font-bold text-slate-500 dark:text-slate-500 uppercase tracking-widest">
                                             {step.subtitle}
                                         </div>
                                     </div>

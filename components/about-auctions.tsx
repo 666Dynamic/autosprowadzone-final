@@ -239,7 +239,7 @@ export function AboutAuctions() {
                         <div className="relative group">
                             {/* LIVE Badge - Mobile: Inside/Corner, Desktop: Floating Outside */}
                             {!isFinished && (
-                                <div className="absolute top-0 left-0 md:-top-4 md:-left-4 z-20 bg-red-600 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-br-xl md:rounded-full font-black text-[9px] md:text-[10px] flex items-center gap-2 shadow-xl animate-pulse">
+                                <div className="absolute top-0 left-0 md:-top-4 md:-left-4 z-20 bg-red-600 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-br-xl md:rounded-full font-bold text-xs flex items-center gap-2 shadow-xl animate-pulse">
                                     <span className="h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-white animate-ping" />
                                     ● LIVE BIDDING
                                 </div>
@@ -250,9 +250,9 @@ export function AboutAuctions() {
                                     {/* Header Mock */}
                                     <div className="bg-slate-950 text-slate-100 border-b border-slate-800 p-5 flex justify-between items-center">
                                         <div className="flex items-center gap-2">
-                                            <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">ID: B2B-AUDI-Q5-2021</span>
+                                            <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">ID: B2B-AUDI-Q5-2021</span>
                                         </div>
-                                        <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest">
+                                        <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest">
                                             {isFinished ? (
                                                 <span className="text-primary animate-bounce">Aukcja zakończona</span>
                                             ) : (
@@ -294,7 +294,7 @@ export function AboutAuctions() {
                                                     >
                                                         <Sparkles className="w-8 h-8 text-primary mx-auto mb-2" />
                                                         <div className="text-2xl font-black text-slate-900 uppercase tracking-tighter">WYGRAŁEŚ!</div>
-                                                        <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Gratulacje, auto jest Twoje</div>
+                                                        <div className="text-xs font-bold text-slate-500 uppercase tracking-widest">Gratulacje, auto jest Twoje</div>
                                                     </motion.div>
                                                 </div>
                                             )}
@@ -307,7 +307,7 @@ export function AboutAuctions() {
                                                     <h3 className="font-black text-lg leading-tight tracking-tight uppercase mb-1">
                                                         Audi Q5 Sportback 40 TDI Mild-Hybrid quattro S line
                                                     </h3>
-                                                    <div className="flex items-center gap-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                                                    <div className="flex items-center gap-4 text-xs font-bold text-slate-400 uppercase tracking-widest">
                                                         <div className="flex items-center gap-1"><Camera className="w-3 h-3 text-primary" /> 40 FOTO</div>
                                                         <div className="flex items-center gap-1 text-green-600"><ShieldCheck className="w-3 h-3" /> BEZWYPADKOWY</div>
                                                     </div>
@@ -317,10 +317,10 @@ export function AboutAuctions() {
                                                 <div className="grid grid-cols-2 gap-y-3 gap-x-4">
                                                     {carSpecs.map((spec, i) => (
                                                         <div key={i} className="flex flex-col">
-                                                            <div className="text-[8px] font-black text-slate-400 uppercase tracking-widest flex items-center gap-1">
+                                                            <div className="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-1">
                                                                 <spec.icon className="w-2.5 h-2.5" /> {spec.label}
                                                             </div>
-                                                            <div className="text-[11px] font-bold text-slate-900">{spec.value}</div>
+                                                            <div className="text-sm font-bold text-slate-900">{spec.value}</div>
                                                         </div>
                                                     ))}
                                                 </div>
@@ -328,8 +328,8 @@ export function AboutAuctions() {
                                                 {/* Report Section */}
                                                 <div className="bg-slate-50 border border-slate-100 p-3 rounded-xl">
                                                     <div className="flex justify-between items-center mb-1">
-                                                        <span className="text-[9px] font-black uppercase text-slate-900 tracking-tighter">Pomiar lakieru (DEKRA)</span>
-                                                        <span className="text-[9px] font-bold text-green-600 uppercase">90-110 µm</span>
+                                                        <span className="text-xs font-bold uppercase text-slate-900 tracking-tighter">Pomiar lakieru (DEKRA)</span>
+                                                        <span className="text-xs font-bold text-green-600 uppercase">90-110 µm</span>
                                                     </div>
                                                     <div className="h-1.5 w-full bg-slate-200 rounded-full overflow-hidden">
                                                         <div className="h-full bg-green-500 w-[95%]" />
@@ -340,11 +340,11 @@ export function AboutAuctions() {
                                             <div className="mt-6 pt-4 border-t border-slate-100">
                                                 <div className="flex justify-between items-end mb-4">
                                                     <div className="space-y-1">
-                                                        <div className="text-[10px] text-slate-400 uppercase font-black tracking-widest leading-none">Minimalna oferta</div>
+                                                        <div className="text-xs text-slate-400 uppercase font-bold tracking-widest leading-none">Minimalna oferta</div>
                                                         <div className="text-xl font-black text-slate-900 tracking-tighter">18 658 €</div>
                                                     </div>
                                                     <div className="text-right">
-                                                        <div className="text-[10px] text-slate-400 uppercase font-black tracking-widest mb-1">Twoja oferta</div>
+                                                        <div className="text-xs text-slate-400 uppercase font-bold tracking-widest mb-1">Twoja oferta</div>
                                                         <div className={`text-3xl font-black tabular-nums tracking-tighter ${status === "winning" ? "text-green-600" : "text-red-600"}`}>
                                                             {price.toLocaleString()} €
                                                         </div>
@@ -353,7 +353,7 @@ export function AboutAuctions() {
 
                                                 <div className={`p-4 rounded-2xl flex items-center justify-center gap-3 transition-colors ${status === "winning" ? "bg-green-100 border-2 border-green-200" : "bg-red-100 border-2 border-red-200"}`}>
                                                     <div className={`h-2 w-2 rounded-full animate-ping ${status === "winning" ? "bg-green-600" : "bg-red-600"}`} />
-                                                    <span className={`text-[10px] font-black uppercase tracking-widest ${status === "winning" ? "text-green-700" : "text-red-700"}`}>
+                                                    <span className={`text-xs font-bold uppercase tracking-widest ${status === "winning" ? "text-green-700" : "text-red-700"}`}>
                                                         {isFinished ? "AUKCJA WYGRANA" : status === "winning" ? "TWOJA OFERTA NAJWYŻSZA" : "KTOŚ CIĘ PRZEBIŁ - LICYTUJ!"}
                                                     </span>
                                                 </div>

@@ -10,7 +10,7 @@ export function HeroForm() {
     return (
         <Card className="w-full max-w-4xl mx-auto shadow-2xl border-primary/20 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 relative z-20 -mt-8 md:mt-0">
             <CardHeader className="bg-primary/5 border-b border-border/50 pb-4">
-                <CardTitle className="text-lg md:text-xl font-semibold flex items-center text-primary">
+                <CardTitle className="text-lg md:text-xl font-black flex items-center text-primary">
                     <Search className="w-5 h-5 mr-2" />
                     Znajdź swoje wymarzone auto
                 </CardTitle>
@@ -33,7 +33,7 @@ export function HeroForm() {
                         <Input id="budget" type="number" placeholder="do 150 000" className="h-11" />
                     </div>
 
-                    <Button size="lg" className="h-11 w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-lg shadow-accent/20">
+                    <Button size="lg" className="h-11 w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold shadow-lg shadow-accent/20">
                         Wyceń Import <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
 

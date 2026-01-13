@@ -76,7 +76,7 @@ export function Calculator() {
                             </div>
                         </div>
                         <div className="space-y-3">
-                            <Label htmlFor="rate" className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground ml-1">Kurs EUR (PLN)</Label>
+                            <Label htmlFor="rate" className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground ml-1">Kurs EUR (PLN)</Label>
                             <div className="relative group">
                                 <Input
                                     id="rate"
@@ -92,7 +92,7 @@ export function Calculator() {
                     </div>
 
                     <div className="space-y-4">
-                        <Label className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground ml-1">Szczegóły pojazdu</Label>
+                        <Label className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground ml-1">Szczegóły pojazdu</Label>
                         <div className="grid gap-3">
                             {[
                                 { id: "engine", checked: isLargeEngine, set: setIsLargeEngine, label: "Silnik powyżej 2.0L", sub: "Akcyza 18.6%" },
@@ -116,7 +116,7 @@ export function Calculator() {
                                         <p className={`font-bold tracking-tight transition-colors ${item.checked ? "text-primary dark:text-primary" : "text-foreground group-hover:text-primary"}`}>
                                             {item.label}
                                         </p>
-                                        <p className="text-[9px] uppercase font-black tracking-widest text-muted-foreground group-hover:text-primary/70 transition-colors uppercase">{item.sub}</p>
+                                        <p className="text-xs uppercase font-bold tracking-widest text-muted-foreground group-hover:text-primary/70 transition-colors uppercase">{item.sub}</p>
                                     </div>
                                 </div>
                             ))}
@@ -130,16 +130,16 @@ export function Calculator() {
                 <Card className="bg-slate-900 dark:bg-slate-900 border-2 border-primary/20 shadow-2xl rounded-[3rem] overflow-hidden text-white backdrop-blur-2xl">
                     <CardHeader className="p-8 border-b border-white/5 bg-slate-800/20">
                         <CardTitle className="text-2xl font-black uppercase tracking-tighter">Wstępna Wycena</CardTitle>
-                        <CardDescription className="text-white/40 font-bold uppercase tracking-[0.2em] text-[10px]">Bez kosztów transportu (wycena indywidualna).</CardDescription>
+                        <CardDescription className="text-white/40 font-bold uppercase tracking-[0.2em] text-xs">Bez kosztów transportu (wycena indywidualna).</CardDescription>
                     </CardHeader>
                     <CardContent className="p-8 space-y-8">
                         <div className="bg-white/5 rounded-[2.5rem] border border-white/10 p-8 flex flex-col items-center justify-center text-center space-y-3 relative overflow-hidden group">
                             <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
-                            <span className="text-[10px] text-primary uppercase font-black tracking-[0.3em]">Cena Całkowita w Kraju</span>
+                            <span className="text-xs text-primary uppercase font-bold tracking-[0.3em]">Cena Całkowita w Kraju</span>
                             <span className="text-4xl md:text-5xl font-black text-white tabular-nums tracking-tighter">
                                 {formatCurrency(totalCost)}
                             </span>
-                            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 text-[9px] font-black uppercase tracking-widest text-white/60 border border-white/10">
+                            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 text-xs font-bold uppercase tracking-widest text-white/60 border border-white/10">
                                 <RefreshCcw className="w-3 h-3 text-primary animate-spin-slow" /> Kurs: {exchangeRate} PLN
                             </div>
                         </div>
@@ -174,7 +174,7 @@ export function Calculator() {
                 </Card>
 
                 <div className="bg-muted border border-border rounded-[2rem] p-6 text-center space-y-2 relative overflow-hidden group hover:border-primary/20 transition-all">
-                    <p className="text-[10px] font-black text-primary uppercase tracking-[0.3em] mb-1">Logistyka i Transport</p>
+                    <p className="text-xs font-bold text-primary uppercase tracking-[0.3em] mb-1">Logistyka i Transport</p>
                     <p className="text-sm text-muted-foreground leading-relaxed italic max-w-sm mx-auto">
                         Transport wyceniamy indywidualnie w zależności od odległości we Francji lub Niemczech. Koszt zazwyczaj mieści się w granicach <span className="text-foreground font-bold">1500 - 3500 zł</span>.
                     </p>
@@ -183,12 +183,12 @@ export function Calculator() {
                 <div className="space-y-4">
                     <Button
                         onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-12 font-semibold rounded-lg shadow-lg"
+                        className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-12 font-bold rounded-lg shadow-lg"
                     >
                         <span>Zamów Weryfikację</span>
                         <ArrowRight className="ml-3 h-5 w-5" />
                     </Button>
-                    <p className="text-[9px] text-center text-muted-foreground font-bold uppercase tracking-[0.3em]">
+                    <p className="text-xs text-center text-muted-foreground font-bold uppercase tracking-[0.3em]">
                         * Powyższa kalkulacja ma charakter szacunkowy.
                     </p>
                 </div>

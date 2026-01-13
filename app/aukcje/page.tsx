@@ -62,7 +62,7 @@ export default function AuctionsPage() {
                         </p>
                         <div className="flex flex-wrap gap-6 justify-center md:justify-start">
                             <Link href="/#request-section">
-                                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 h-12 font-semibold rounded-lg shadow-lg">
+                                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 h-12 font-bold rounded-lg shadow-lg">
                                     Darmowa konsultacja <ChevronRight className="ml-2 w-5 h-5" />
                                 </Button>
                             </Link>

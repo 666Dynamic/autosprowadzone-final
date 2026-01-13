@@ -149,7 +149,7 @@ export function ContactForm({
                     <Button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-12 rounded-lg font-semibold shadow-md group"
+                        className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-12 rounded-lg font-bold shadow-md group"
                     >
                         {isSubmitting ? "Wysyłanie..." : "Wyślij zgłoszenie"}
                         {!isSubmitting && <Send className="ml-3 w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}

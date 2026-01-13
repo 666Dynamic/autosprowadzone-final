@@ -50,7 +50,7 @@ export function TestimonialsSection() {
                             <p className="text-foreground mb-6 flex-grow italic">"{testimonial.text}"</p>
                             <div className="mt-auto flex items-center justify-between text-sm text-muted-foreground">
                                 <div>
-                                    <span className="font-semibold text-foreground block">{testimonial.name}</span>
+                                    <span className="font-bold text-foreground block">{testimonial.name}</span>
                                     <span>{testimonial.location}</span>
                                 </div>
                                 <span>{testimonial.date}</span>

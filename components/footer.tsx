@@ -8,7 +8,7 @@ export function Footer() {
                 <div className="flex flex-col space-y-4">
                     <Link href="/" className="flex items-center space-x-2">
                         <CarFront className="h-6 w-6 text-primary" />
-                        <span className="font-bold text-lg tracking-tight">autosprowadzone.pl</span>
+                        <span className="font-black text-lg tracking-tight">autosprowadzone.pl</span>
                     </Link>
                     <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
                         Twój zaufany partner w imporcie samochodów z Europy Zachodniej. Niemiecka jakość obsługi, polska cena.
@@ -16,7 +16,7 @@ export function Footer() {
                 </div>
 
                 <div className="flex flex-col space-y-3">
-                    <h3 className="font-semibold">O Nas</h3>
+                    <h3 className="font-black">O Nas</h3>
                     <Link href="/o-nas" className="text-sm text-muted-foreground hover:text-primary">O Firmie</Link>
                     <Link href="/weryfikacja" className="text-sm text-muted-foreground hover:text-primary">Weryfikacja Aut</Link>
                     <Link href="/kalkulator" className="text-sm text-muted-foreground hover:text-primary">Kalkulator</Link>
@@ -24,7 +24,7 @@ export function Footer() {
                 </div>
 
                 <div className="flex flex-col space-y-3">
-                    <h3 className="font-semibold">Firma</h3>
+                    <h3 className="font-black">Firma</h3>
                     <div className="text-sm text-muted-foreground leading-relaxed">
                         <strong className="text-foreground">Miami Autocenter GmbH</strong><br />
                         Bremer Heerstraße 7A<br />
@@ -34,7 +34,7 @@ export function Footer() {
                 </div>
 
                 <div className="flex flex-col space-y-3">
-                    <h3 className="font-semibold">Kontakt</h3>
+                    <h3 className="font-black">Kontakt</h3>
                     <div className="flex flex-col gap-2">
                         <span className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-3">
                             <span className="text-lg leading-none">🇩🇪</span>

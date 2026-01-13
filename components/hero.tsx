@@ -27,7 +27,7 @@ export function Hero() {
             <div className="container relative z-10 mx-auto px-4 md:px-8">
                 <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-8 md:space-y-10">
 
-                    <div className="inline-flex items-center rounded-full border-2 border-primary/30 bg-background/80 px-4 py-2 text-sm font-semibold text-primary backdrop-blur-md shadow-sm">
+                    <div className="inline-flex items-center rounded-full border-2 border-primary/30 bg-background/80 px-4 py-2 text-sm font-bold text-primary backdrop-blur-md shadow-sm">
                         <span className="relative flex h-2 w-2 mr-2">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
@@ -46,13 +46,13 @@ export function Hero() {
 
                     <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                         <Link href="#request-section">
-                            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all w-full sm:w-auto h-12 px-6 font-semibold rounded-lg shadow-lg">
+                            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all w-full sm:w-auto h-12 px-6 font-bold rounded-lg shadow-lg">
                                 Zamów bezpłatną wycenę
                                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                             </Button>
                         </Link>
                         <Link href="#process-section">
-                            <Button size="lg" variant="outline" className="bg-accent/10 text-accent hover:bg-accent/20 transition-all border border-accent w-full sm:w-auto h-12 px-6 font-semibold rounded-lg">
+                            <Button size="lg" variant="outline" className="bg-accent/10 text-accent hover:bg-accent/20 transition-all border border-accent w-full sm:w-auto h-12 px-6 font-bold rounded-lg">
                                 Zobacz jak to działa
                             </Button>
                         </Link>

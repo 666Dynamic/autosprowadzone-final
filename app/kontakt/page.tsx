@@ -37,7 +37,7 @@ export default function ContactPage() {
                                     <p key={j} className="text-muted-foreground text-sm font-bold">{line}</p>
                                 ))}
                             </div>
-                            {item.sub && <p className="text-[10px] font-black uppercase tracking-widest text-primary/60">{item.sub}</p>}
+                            {item.sub && <p className="text-xs font-bold uppercase tracking-widest text-primary/60">{item.sub}</p>}
                         </div>
                     ))}
                 </div>

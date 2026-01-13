@@ -63,7 +63,7 @@ export function FaqSection() {
                                 value={`item-${idx}`}
                                 className="border-2 border-border/50 rounded-2xl mb-3 px-6 bg-card/50 hover:border-primary/30 transition-all overflow-hidden"
                             >
-                                <AccordionTrigger className="text-left font-bold uppercase tracking-tight text-sm hover:no-underline py-5">
+                                <AccordionTrigger className="text-left font-black uppercase tracking-tight text-sm hover:no-underline py-5">
                                     <span className="flex items-center gap-4">
                                         <span className="text-primary font-black opacity-40">0{idx + 1}</span>
                                         {item.question}
@@ -81,7 +81,7 @@ export function FaqSection() {
                     <div className="inline-flex flex-col sm:flex-row items-center gap-6 bg-muted/50 p-6 rounded-[2rem] border border-border">
                         <p className="text-sm font-bold text-muted-foreground px-2">Nie znalazłeś tego, czego szukasz?</p>
                         <Link href="/kontakt">
-                            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-12 px-6 rounded-lg font-semibold shadow-lg">
+                            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-12 px-6 rounded-lg font-bold shadow-lg">
                                 Napisz do nas
                             </Button>
                         </Link>
