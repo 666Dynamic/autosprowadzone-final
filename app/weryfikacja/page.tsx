@@ -72,7 +72,8 @@ export default function VerificationPage() {
                                             className="object-cover object-center opacity-90 mix-blend-multiply"
                                             sizes="(max-width: 768px) 100vw, 40vw"
                                             priority={false}
-                                            quality={85}
+                                            quality={70}
+                                            loading="lazy"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-amber-600/90 via-amber-600/20 to-transparent" />
                                     </div>

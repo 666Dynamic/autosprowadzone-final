@@ -273,6 +273,9 @@ export function AboutAuctions() {
                                                     key={currentImageIndex}
                                                     src={images[currentImageIndex]}
                                                     alt="Audi Q5 Auction"
+                                                    loading="lazy"
+                                                    decoding="async"
+                                                    sizes="(min-width: 1024px) 45vw, 100vw"
                                                     initial={{ opacity: 0, scale: 1.1 }}
                                                     animate={{ opacity: 1, scale: 1 }}
                                                     exit={{ opacity: 0 }}

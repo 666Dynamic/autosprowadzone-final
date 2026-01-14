@@ -14,7 +14,7 @@ export function Hero() {
                     loop
                     muted
                     playsInline
-                    preload="auto"
+                    preload="metadata"
                     className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 [&.loaded]:opacity-15 dark:[&.loaded]:opacity-20"
                     aria-hidden="true"
                     onLoadedData={(e) => e.currentTarget.classList.add('loaded')}

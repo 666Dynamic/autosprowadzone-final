@@ -116,7 +116,7 @@ export default function CalculatorPage() {
                             ))}
                         </div>
 
-                        <div className="mt-12 pt-8 border-t border-border flex items-start gap-4 -mx-10 md:-mx-12 p-8 mb--12 bg-muted/30">
+                        <div className="mt-12 pt-8 border-t border-border flex items-start gap-4 -mx-4 md:-mx-12 p-8 mb--12 bg-muted/30">
                             <div className="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center shrink-0 border border-orange-500/20">
                                 <AlertTriangle className="w-5 h-5 text-orange-500" />
                             </div>
