@@ -5,12 +5,12 @@ import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 
 export function ModeToggle() {
-    const { setTheme, theme } = useTheme()
+    const { setTheme, resolvedTheme } = useTheme()
 
     return (
         <button
-            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-            className="p-2 rounded-full hover:bg-accent transition-colors relative"
+            onClick={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}
+            className="p-2 rounded-full hover:bg-muted transition-colors relative"
             aria-label="Toggle theme"
         >
             <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-foreground" />

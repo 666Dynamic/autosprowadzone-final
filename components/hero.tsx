@@ -8,20 +8,20 @@ export function Hero() {
     return (
         <section className="relative overflow-hidden bg-background pt-20 md:pt-24 pb-24 lg:pt-32 lg:pb-32 min-h-[80vh] flex items-center">
             {/* Background Video - Only video, no images */}
-            <div className="absolute inset-0 z-0 bg-slate-950">
+            <div className="absolute inset-0 z-0 bg-background dark:bg-slate-950">
                 <video
                     autoPlay
                     loop
                     muted
                     playsInline
                     preload="auto"
-                    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 [&.loaded]:opacity-30 dark:[&.loaded]:opacity-20"
+                    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 [&.loaded]:opacity-15 dark:[&.loaded]:opacity-20"
                     aria-hidden="true"
                     onLoadedData={(e) => e.currentTarget.classList.add('loaded')}
                 >
                     <source src="/13164895_3840_2160_30fps.mp4" type="video/mp4" />
                 </video>
-                <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background" />
+                <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-transparent" />
             </div>
 
             <div className="container relative z-10 mx-auto px-4 md:px-8">
@@ -37,7 +37,7 @@ export function Hero() {
 
                     <h1 className="text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter leading-[0.9] uppercase italic">
                         Sprowadzamy Auta na <br className="hidden sm:inline" />
-                        <span className="text-primary not-italic">Indywidualne Zamówienie</span>
+                        <span className="text-primary not-italic drop-shadow-[0_2px_8px_rgba(0,0,0,0.15)]">Indywidualne Zamówienie</span>
                     </h1>
 
                     <p className="text-sm md:text-lg text-muted-foreground max-w-2xl leading-relaxed px-2 md:px-0">
@@ -58,7 +58,7 @@ export function Hero() {
                         </Link>
                     </div>
 
-                    <div className="flex flex-col min-[420px]:flex-row flex-wrap items-center justify-center gap-y-4 gap-x-6 md:gap-8 pt-6 md:pt-8 text-xs md:text-sm text-muted-foreground font-bold uppercase tracking-widest">
+                    <div className="flex flex-col min-[420px]:flex-row flex-wrap items-center justify-center gap-y-4 gap-x-6 md:gap-8 pt-6 md:pt-8 text-xs md:text-sm text-foreground font-bold uppercase tracking-widest">
                         <div className="flex items-center gap-2">
                             <CheckCircle2 className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                             <span>Pełna Weryfikacja</span>

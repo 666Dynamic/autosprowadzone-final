@@ -37,7 +37,7 @@ export function ContactForm({
 
     if (isSuccess) {
         return (
-            <Card className={`w-full bg-white backdrop-blur-sm border-2 border-emerald-500/50 shadow-2xl rounded-2xl overflow-hidden ${className}`}>
+            <Card className={`w-full bg-card backdrop-blur-sm border-2 border-emerald-500/50 shadow-2xl rounded-2xl overflow-hidden ${className}`}>
                 <CardContent className="p-6 md:p-8 text-center space-y-6">
                     <div className="w-16 h-16 md:w-20 md:h-20 bg-emerald-500/10 text-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                         <CheckCircle2 className="w-8 h-8 md:w-10 md:h-10" />
@@ -69,7 +69,7 @@ export function ContactForm({
     }
 
     return (
-        <Card className={`w-full max-w-2xl mx-auto bg-white backdrop-blur-2xl border border-border/40 shadow-lg rounded-3xl overflow-hidden ${className}`}>
+        <Card className={`w-full max-w-2xl mx-auto bg-card backdrop-blur-2xl border border-border/40 shadow-lg rounded-3xl overflow-hidden ${className}`}>
             <CardHeader className="bg-primary px-6 py-6 text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-8 opacity-10 rotate-12 bg-white rounded-full translate-x-12 -translate-y-12 w-48 h-48 pointer-events-none" />
                 <CardTitle className="text-2xl md:text-4xl font-black uppercase tracking-tighter flex items-center gap-3 relative z-10 drop-shadow-md">

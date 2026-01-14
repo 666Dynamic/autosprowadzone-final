@@ -115,7 +115,7 @@ export function AboutAuctions() {
     ]
 
     return (
-        <section className="py-16 md:py-32 bg-[#0f172a] text-white relative overflow-hidden">
+        <section className="py-16 md:py-32 bg-background text-foreground relative overflow-hidden">
             {/* Ambient Background Glows - Optimized Layout & Performance */}
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
                 {/* Static blurred blobs instead of animated ones for better mobile perf */}
@@ -183,30 +183,30 @@ export function AboutAuctions() {
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
                             <Sparkles className="w-3 h-3" /> Ekskluzywny Dostęp B2B
                         </div>
-                        <h2 className="text-2xl md:text-4xl font-black leading-[1.1] text-white uppercase tracking-tighter">
+                        <h2 className="text-2xl md:text-4xl font-black leading-[1.1] text-foreground uppercase tracking-tighter">
                             Ekskluzywny <br />
                             <span className="text-primary italic">Dostęp B2B</span>
                         </h2>
                         <div className="space-y-6">
-                            <p className="text-lg text-slate-400 leading-relaxed">
-                                <span className="text-white font-bold">Aukcje B2B to serce rynku motoryzacyjnego.</span> To zamknięte systemy transakcyjne, gdzie banki, giganci leasingowi i największe sieci flotowe wystawiają tysiące aut dziennie.
+                            <p className="text-lg text-muted-foreground leading-relaxed">
+                                <span className="text-foreground font-bold">Aukcje B2B to serce rynku motoryzacyjnego.</span> To zamknięte systemy transakcyjne, gdzie banki, giganci leasingowi i największe sieci flotowe wystawiają tysiące aut dziennie.
                                 <br /><br />
                                 Większość aut na polskich portalach pochodzi właśnie stąd – my po prostu <span className="text-primary font-bold underline decoration-primary/30 underline-offset-4">usuwamy pośredników</span> i dajemy Ci klucze do tych samych narzędzi.
                             </p>
 
                             <div className="space-y-4">
                                 <div className="flex items-start gap-4">
-                                    <div className="bg-white/5 p-3 rounded-2xl text-primary shrink-0 border border-white/10 shadow-sm"><ShieldCheck className="w-6 h-6" /></div>
+                                    <div className="p-3 rounded-2xl text-primary shrink-0 border shadow-sm bg-muted border-border dark:bg-white/5 dark:border-white/10"><ShieldCheck className="w-6 h-6" /></div>
                                     <div>
-                                        <h4 className="font-black text-white uppercase tracking-tight text-base">Czysta Historia & Pewność</h4>
-                                        <p className="text-sm text-slate-400">Zapomnij o niepewności. Każdy pojazd posiada szczegółowy protokół szkód i pomiaru lakieru wykonany przez niezależnych rzeczoznawców.</p>
+                                        <h4 className="font-black text-foreground uppercase tracking-tight text-base">Czysta Historia & Pewność</h4>
+                                        <p className="text-sm text-muted-foreground">Zapomnij o niepewności. Każdy pojazd posiada szczegółowy protokół szkód i pomiaru lakieru wykonany przez niezależnych rzeczoznawców.</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
-                                    <div className="bg-white/5 p-3 rounded-2xl text-primary shrink-0 border border-white/10 shadow-sm"><Euro className="w-6 h-6" /></div>
+                                    <div className="p-3 rounded-2xl text-primary shrink-0 border shadow-sm bg-muted border-border dark:bg-white/5 dark:border-white/10"><Euro className="w-6 h-6" /></div>
                                     <div>
-                                        <h4 className="font-black text-white uppercase tracking-tight text-base">Ceny bez marży handlarza</h4>
-                                        <p className="text-sm text-slate-400">Kupujesz w cenach netto/brutto prosto z aukcji. Realne oszczędności sięgają od <span className="text-white font-bold italic">15% do nawet 25%</span>.</p>
+                                        <h4 className="font-black text-foreground uppercase tracking-tight text-base">Ceny bez marży handlarza</h4>
+                                        <p className="text-sm text-muted-foreground">Kupujesz w cenach netto/brutto prosto z aukcji. Realne oszczędności sięgają od <span className="text-foreground font-bold italic">15% do nawet 25%</span>.</p>
                                     </div>
                                 </div>
                             </div>
@@ -214,13 +214,13 @@ export function AboutAuctions() {
 
                         {/* Updated Stats with matching Screenshot Design - Responsive Theme */}
                         <div className="grid grid-cols-2 gap-4">
-                            <div className="bg-slate-900 dark:bg-[#0f172a] p-6 rounded-[2rem] border border-slate-800 dark:border-[#1e293b] shadow-2xl">
+                            <div className="bg-card p-6 rounded-[2rem] border border-border shadow-2xl">
                                 <div className="text-4xl font-black text-primary mb-1 tracking-tighter">150k+</div>
-                                <div className="text-xs text-slate-400 font-bold uppercase tracking-[0.15em]">Aut miesięcznie</div>
+                                <div className="text-xs text-muted-foreground font-bold uppercase tracking-[0.15em]">Aut miesięcznie</div>
                             </div>
-                            <div className="bg-slate-50 dark:bg-slate-800 p-6 rounded-[2rem] border border-slate-200 dark:border-slate-700 shadow-2xl">
-                                <div className="text-4xl font-black text-slate-900 dark:text-white mb-1 tracking-tighter">0%</div>
-                                <div className="text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-[0.15em]">Ukrytych marż</div>
+                            <div className="bg-card p-6 rounded-[2rem] border border-border shadow-2xl">
+                                <div className="text-4xl font-black text-foreground mb-1 tracking-tighter">0%</div>
+                                <div className="text-xs text-muted-foreground font-bold uppercase tracking-[0.15em]">Ukrytych marż</div>
                             </div>
                         </div>
 
@@ -245,10 +245,10 @@ export function AboutAuctions() {
                                 </div>
                             )}
 
-                            <Card className={`relative overflow-hidden border-2 ${status === "winning" ? "border-green-500 shadow-green-500/20" : "border-red-500 shadow-red-500/20"} ${isFinished ? "border-primary shadow-primary/40 scale-[1.02]" : ""} shadow-[0_20px_50px_rgba(0,0,0,0.25)] bg-white text-slate-800 rounded-[2rem] md:rounded-[2.5rem] transition-all duration-500`}>
+                            <Card className={`relative overflow-hidden border-2 ${status === "winning" ? "border-green-500 shadow-green-500/20" : "border-red-500 shadow-red-500/20"} ${isFinished ? "border-primary shadow-primary/40" : ""} shadow-[0_20px_50px_rgba(0,0,0,0.25)] bg-white text-slate-800 rounded-[2rem] md:rounded-[2.5rem] transition-colors duration-300`}>
                                 <CardContent className="p-0">
                                     {/* Header Mock */}
-                                    <div className="bg-slate-950 text-slate-100 border-b border-slate-800 p-5 flex justify-between items-center">
+                                    <div className="bg-slate-950 text-slate-100 border-b border-slate-800 p-5 min-h-[56px] flex justify-between items-center">
                                         <div className="flex items-center gap-2">
                                             <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">ID: B2B-AUDI-Q5-2021</span>
                                         </div>
@@ -338,22 +338,22 @@ export function AboutAuctions() {
                                             </div>
 
                                             <div className="mt-6 pt-4 border-t border-slate-100">
-                                                <div className="flex justify-between items-end mb-4">
-                                                    <div className="space-y-1">
+                                                <div className="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-4 mb-4">
+                                                    <div className="space-y-1 min-w-0">
                                                         <div className="text-xs text-slate-400 uppercase font-bold tracking-widest leading-none">Minimalna oferta</div>
-                                                        <div className="text-xl font-black text-slate-900 tracking-tighter">18 658 €</div>
+                                                        <div className="text-xl sm:text-2xl font-black text-slate-900 tracking-tighter">18 658 €</div>
                                                     </div>
-                                                    <div className="text-right">
+                                                    <div className="text-right justify-self-end">
                                                         <div className="text-xs text-slate-400 uppercase font-bold tracking-widest mb-1">Twoja oferta</div>
-                                                        <div className={`text-3xl font-black tabular-nums tracking-tighter ${status === "winning" ? "text-green-600" : "text-red-600"}`}>
+                                                        <div className={`text-3xl font-black tabular-nums tracking-tighter whitespace-nowrap leading-none ${status === "winning" ? "text-green-600" : "text-red-600"}`}>
                                                             {price.toLocaleString()} €
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <div className={`p-4 rounded-2xl flex items-center justify-center gap-3 transition-colors ${status === "winning" ? "bg-green-100 border-2 border-green-200" : "bg-red-100 border-2 border-red-200"}`}>
-                                                    <div className={`h-2 w-2 rounded-full animate-ping ${status === "winning" ? "bg-green-600" : "bg-red-600"}`} />
-                                                    <span className={`text-xs font-bold uppercase tracking-widest ${status === "winning" ? "text-green-700" : "text-red-700"}`}>
+                                                <div className={`p-4 min-h-[64px] rounded-2xl flex items-center justify-center gap-3 text-center transition-colors ${status === "winning" ? "bg-green-100 border-2 border-green-200" : "bg-red-100 border-2 border-red-200"}`}>
+                                                    <div className={`h-2 w-2 rounded-full animate-ping shrink-0 ${status === "winning" ? "bg-green-600" : "bg-red-600"}`} />
+                                                    <span className={`text-[11px] sm:text-xs font-bold uppercase tracking-widest leading-snug ${status === "winning" ? "text-green-700" : "text-red-700"}`}>
                                                         {isFinished ? "AUKCJA WYGRANA" : status === "winning" ? "TWOJA OFERTA NAJWYŻSZA" : "KTOŚ CIĘ PRZEBIŁ - LICYTUJ!"}
                                                     </span>
                                                 </div>

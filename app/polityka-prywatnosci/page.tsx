@@ -8,9 +8,9 @@ export default function PrivacyPolicyPage() {
             </h1>
 
             <div className="space-y-8">
-                <Card className="border-2 border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-950">
+                <Card className="border-2 border-border bg-card">
                     <CardHeader>
-                        <CardTitle className="uppercase tracking-widest text-lg font-black text-slate-500">Administrator Danych</CardTitle>
+                        <CardTitle className="uppercase tracking-widest text-lg font-black text-muted-foreground">Administrator Danych</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4 text-muted-foreground leading-relaxed">
                         <p>
@@ -24,9 +24,9 @@ export default function PrivacyPolicyPage() {
                     </CardContent>
                 </Card>
 
-                <Card className="border-2 border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-950">
+                <Card className="border-2 border-border bg-card">
                     <CardHeader>
-                        <CardTitle className="uppercase tracking-widest text-lg font-black text-slate-500">Impressum</CardTitle>
+                        <CardTitle className="uppercase tracking-widest text-lg font-black text-muted-foreground">Impressum</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4 text-muted-foreground leading-relaxed text-sm">
                         <p>

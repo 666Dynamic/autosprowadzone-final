@@ -72,7 +72,7 @@ export default function AuctionsPage() {
             </section>
 
             {/* How B2B Auctions Work */}
-            <section className="py-24 bg-secondary/10 dark:bg-slate-900/50 overflow-hidden relative">
+            <section className="py-24 bg-secondary/10 overflow-hidden relative">
                 <div className="container mx-auto px-4 md:px-8">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div className="space-y-8">
@@ -308,17 +308,17 @@ export default function AuctionsPage() {
             </section>
 
             {/* More Platforms List */}
-            <section className="py-16 bg-slate-900 text-white">
+            <section className="py-16 bg-background text-foreground">
                 <div className="container mx-auto px-4 md:px-8">
                     <div className="text-center mb-12">
                         <h3 className="text-2xl md:text-4xl font-black uppercase tracking-tighter italic">I ponad 30 innych portali</h3>
-                        <p className="text-slate-400 mt-2 font-medium">Bierzemy udział w aukcjach wszędzie tam, gdzie pojawia się dobra okazja.</p>
+                        <p className="text-muted-foreground mt-2 font-medium">Bierzemy udział w aukcjach wszędzie tam, gdzie pojawia się dobra okazja.</p>
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
                         {partners.map((partner, i) => (
-                            <div key={i} className="p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+                            <div key={i} className="p-4 rounded-xl border border-border bg-card text-card-foreground shadow-sm transition-colors hover:border-primary/40 hover:shadow-md">
                                 <h4 className="text-sm font-black text-primary mb-1">{partner.name}</h4>
-                                <p className="text-xs text-slate-400 leading-tight">{partner.desc}</p>
+                                <p className="text-xs text-muted-foreground leading-tight">{partner.desc}</p>
                             </div>
                         ))}
                     </div>
