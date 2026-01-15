@@ -60,6 +60,14 @@ const jsonLd = {
   }
 }
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: '#f59e0b',
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{

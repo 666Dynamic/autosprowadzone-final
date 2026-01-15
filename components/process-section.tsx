@@ -74,7 +74,7 @@ export function ProcessSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.08 }}
-                            className="bg-card border-2 border-border p-5 md:p-10 rounded-xl md:rounded-[2.5rem] hover:border-primary hover:shadow-lg md:hover:shadow-xl transition-all group relative overflow-hidden will-change-transform"
+                            className="bg-card border-2 border-border p-4 sm:p-6 md:p-10 rounded-xl sm:rounded-2xl md:rounded-[2.5rem] hover:border-primary hover:shadow-lg md:hover:shadow-xl transition-all group relative overflow-hidden will-change-transform min-h-[200px] sm:min-h-[240px] md:min-h-[280px]"
                         >
                             {/* Background Number */}
                             <div className="absolute -top-2 -right-2 text-6xl md:text-9xl font-black text-primary/5 select-none group-hover:text-primary/10 transition-colors pointer-events-none">
@@ -82,13 +82,13 @@ export function ProcessSection() {
                             </div>
 
                             <div className="relative z-10">
-                                <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center mb-4 md:mb-8 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300 shadow-xs md:shadow-sm">
-                                    <step.icon className="w-6 h-6 md:w-8 md:h-8" />
+                                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-lg sm:rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center mb-3 sm:mb-4 md:mb-8 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300 shadow-xs md:shadow-sm">
+                                    <step.icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
                                 </div>
-                                <h3 className="text-lg md:text-2xl font-black uppercase tracking-tight text-foreground mb-3 md:mb-4 group-hover:text-primary transition-colors">
+                                <h3 className="text-lg sm:text-xl md:text-2xl font-black uppercase tracking-tight text-foreground mb-2 sm:mb-3 md:mb-4 group-hover:text-primary transition-colors leading-tight">
                                     {step.title}
                                 </h3>
-                                <p className="text-xs md:text-base text-muted-foreground font-medium leading-relaxed">
+                                <p className="text-xs sm:text-sm md:text-base text-muted-foreground font-medium leading-relaxed">
                                     {step.description}
                                 </p>
                             </div>

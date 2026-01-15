@@ -213,13 +213,13 @@ export function AboutAuctions() {
                         </div>
 
                         {/* Updated Stats with matching Screenshot Design - Responsive Theme */}
-                        <div className="grid grid-cols-2 gap-4">
-                            <div className="bg-card p-6 rounded-[2rem] border border-border shadow-2xl">
-                                <div className="text-4xl font-black text-primary mb-1 tracking-tighter">150k+</div>
+                        <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                            <div className="bg-card p-4 sm:p-5 md:p-6 rounded-2xl sm:rounded-[2rem] border border-border shadow-lg sm:shadow-2xl">
+                                <div className="text-2xl sm:text-3xl md:text-4xl font-black text-primary mb-1 tracking-tighter">150k+</div>
                                 <div className="text-xs text-muted-foreground font-bold uppercase tracking-[0.15em]">Aut miesięcznie</div>
                             </div>
-                            <div className="bg-card p-6 rounded-[2rem] border border-border shadow-2xl">
-                                <div className="text-4xl font-black text-foreground mb-1 tracking-tighter">0%</div>
+                            <div className="bg-card p-4 sm:p-5 md:p-6 rounded-2xl sm:rounded-[2rem] border border-border shadow-lg sm:shadow-2xl">
+                                <div className="text-2xl sm:text-3xl md:text-4xl font-black text-foreground mb-1 tracking-tighter">0%</div>
                                 <div className="text-xs text-muted-foreground font-bold uppercase tracking-[0.15em]">Ukrytych marż</div>
                             </div>
                         </div>
@@ -267,7 +267,7 @@ export function AboutAuctions() {
                                     {/* Content Body */}
                                     <div className="flex flex-col lg:flex-row">
                                         {/* Image Area */}
-                                        <div className="lg:w-[45%] bg-slate-100 relative overflow-hidden h-[300px] lg:h-auto">
+                                        <div className="lg:w-[45%] bg-slate-100 relative overflow-hidden h-[200px] sm:h-[250px] md:h-[300px] lg:h-auto">
                                             <AnimatePresence mode="wait">
                                                 <motion.img
                                                     key={currentImageIndex}
@@ -304,10 +304,10 @@ export function AboutAuctions() {
                                         </div>
 
                                         {/* Details Area */}
-                                        <div className="lg:w-[55%] p-6 flex flex-col justify-between bg-white">
+                                        <div className="lg:w-[55%] p-4 sm:p-5 md:p-6 flex flex-col justify-between bg-white">
                                             <div className="space-y-4">
                                                 <div>
-                                                    <h3 className="font-black text-lg leading-tight tracking-tight uppercase mb-1">
+                                                    <h3 className="font-black text-base sm:text-lg leading-tight tracking-tight uppercase mb-1">
                                                         Audi Q5 Sportback 40 TDI Mild-Hybrid quattro S line
                                                     </h3>
                                                     <div className="flex items-center gap-4 text-xs font-bold text-slate-400 uppercase tracking-widest">
@@ -317,7 +317,7 @@ export function AboutAuctions() {
                                                 </div>
 
                                                 {/* Specs Grid */}
-                                                <div className="grid grid-cols-2 gap-y-3 gap-x-4">
+                                                <div className="grid grid-cols-2 gap-y-2 sm:gap-y-3 gap-x-2 sm:gap-x-4">
                                                     {carSpecs.map((spec, i) => (
                                                         <div key={i} className="flex flex-col">
                                                             <div className="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-1">
@@ -344,7 +344,7 @@ export function AboutAuctions() {
                                                 <div className="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-4 mb-4">
                                                     <div className="space-y-1 min-w-0">
                                                         <div className="text-xs text-slate-400 uppercase font-bold tracking-widest leading-none">Minimalna oferta</div>
-                                                        <div className="text-xl sm:text-2xl font-black text-slate-900 tracking-tighter">18 658 €</div>
+                                                        <div className="text-lg sm:text-xl md:text-2xl font-black text-slate-900 tracking-tighter">18 658 €</div>
                                                     </div>
                                                     <div className="text-right justify-self-end">
                                                         <div className="text-xs text-slate-400 uppercase font-bold tracking-widest mb-1">Twoja oferta</div>

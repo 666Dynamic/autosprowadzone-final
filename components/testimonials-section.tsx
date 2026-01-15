@@ -38,15 +38,15 @@ export function TestimonialsSection() {
                     {testimonials.map((testimonial, idx) => (
                         <div
                             key={idx}
-                            className="bg-card p-8 rounded-2xl border border-border/50 shadow-sm relative flex flex-col"
+                            className="bg-card p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl border border-border/50 shadow-sm relative flex flex-col"
                         >
-                            <Quote className="absolute top-4 right-4 h-8 w-8 text-primary/10" />
+                            <Quote className="absolute top-3 right-3 sm:top-4 sm:right-4 h-6 w-6 sm:h-8 sm:w-8 text-primary/10" />
                             <div className="flex gap-1 mb-4 text-amber-500">
                                 {[...Array(5)].map((_, i) => (
                                     <Star key={i} className="h-4 w-4 fill-current" />
                                 ))}
                             </div>
-                            <p className="text-foreground mb-6 flex-grow italic">"{testimonial.text}"</p>
+                            <p className="text-foreground mb-4 sm:mb-6 flex-grow italic text-sm sm:text-base">"{testimonial.text}"</p>
                             <div className="mt-auto flex items-center justify-between text-sm text-muted-foreground">
                                 <div>
                                     <span className="font-bold text-foreground block">{testimonial.name}</span>

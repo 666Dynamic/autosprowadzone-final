@@ -61,15 +61,15 @@ export function FaqSection() {
                             <AccordionItem
                                 key={idx}
                                 value={`item-${idx}`}
-                                className="border-2 border-border/50 rounded-2xl mb-3 px-6 bg-card/50 hover:border-primary/30 transition-all overflow-hidden"
+                                className="border-2 border-border/50 rounded-2xl mb-3 px-6 bg-card/50 hover:border-primary/30 transition-all overflow-hidden touch-manipulation"
                             >
-                                <AccordionTrigger className="text-left font-black uppercase tracking-tight text-sm hover:no-underline py-5">
+                                <AccordionTrigger className="text-left font-black uppercase tracking-tight text-sm hover:no-underline py-6 md:py-5 min-h-[60px] touch-manipulation">
                                     <span className="flex items-center gap-4">
-                                        <span className="text-primary font-black opacity-40">0{idx + 1}</span>
-                                        {item.question}
+                                        <span className="text-primary font-black opacity-40 text-base">0{idx + 1}</span>
+                                        <span className="text-left leading-tight">{item.question}</span>
                                     </span>
                                 </AccordionTrigger>
-                                <AccordionContent className="text-muted-foreground leading-relaxed text-sm font-medium pb-6 pt-2 border-t border-border/50">
+                                <AccordionContent className="text-muted-foreground leading-relaxed text-sm md:text-sm font-medium pb-6 pt-2 border-t border-border/50">
                                     {item.answer}
                                 </AccordionContent>
                             </AccordionItem>

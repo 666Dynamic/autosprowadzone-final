@@ -104,6 +104,8 @@
     /* Mobile-first optimizations */
     -webkit-tap-highlight-color: transparent;
     touch-action: pan-y;
+    /* Improved mobile performance */
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
@@ -115,6 +117,8 @@
     overscroll-behavior-x: none;
     /* Smoother scrolling on iOS */
     -webkit-overflow-scrolling: touch;
+    /* Better text rendering on mobile */
+    text-rendering: optimizeSpeed;
   }
 
   /* Global cursor and transition utilities */
@@ -170,5 +174,66 @@
     background-size: 40px 40px;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  }
+
+  /* Mobile touch optimization */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+
+  /* Minimum touch target size for accessibility */
+  button, 
+  a[role="button"], 
+  input[type="button"], 
+  input[type="submit"], 
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Prevent text scaling in landscape orientation on iOS */
+  @media screen and (orientation: landscape) {
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+  }
+
+  /* Extra small screens optimizations (320px - 375px) */
+  @media screen and (max-width: 375px) {
+    .container {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    
+    /* Smaller text on very small screens */
+    h1 {
+      font-size: clamp(1.75rem, 8vw, 2.5rem);
+    }
+    
+    h2 {
+      font-size: clamp(1.25rem, 6vw, 1.5rem);
+    }
+    
+    /* Reduce padding further on tiny screens */
+    .mobile-compact {
+      padding: 0.75rem;
+    }
+  }
+
+  /* iPhone SE specific (320px wide) */
+  @media screen and (max-width: 320px) {
+    .container {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+
+  /* Improved focus styles for accessibility */
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
   }
 }

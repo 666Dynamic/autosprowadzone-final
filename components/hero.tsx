@@ -14,10 +14,14 @@ export function Hero() {
                     loop
                     muted
                     playsInline
-                    preload="metadata"
+                    preload="none"
                     className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 [&.loaded]:opacity-15 dark:[&.loaded]:opacity-20"
                     aria-hidden="true"
                     onLoadedData={(e) => e.currentTarget.classList.add('loaded')}
+                    onError={(e) => {
+                        // Hide video if it fails to load on mobile
+                        e.currentTarget.style.display = 'none'
+                    }}
                 >
                     <source src="/13164895_3840_2160_30fps.mp4" type="video/mp4" />
                 </video>
@@ -44,15 +48,15 @@ export function Hero() {
                         Twój osobisty broker w Niemczech. Pozyskujemy auta z pewnych źródeł: licytacje B2B, floty bankowe oraz sprawdzeni dealerzy. Pełna weryfikacja i dostawa pod dom.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto px-4 md:px-0">
+                    <div className="flex flex-col sm:flex-row gap-4 md:gap-4 w-full sm:w-auto px-4 md:px-0">
                         <Link href="#request-section">
-                            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all w-full sm:w-auto h-12 md:h-14 px-8 font-bold rounded-lg shadow-lg [text-shadow:0_1px_2px_rgba(0,0,0,0.2)]">
+                            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all w-full sm:w-auto h-14 md:h-14 px-8 font-bold rounded-lg shadow-lg [text-shadow:0_1px_2px_rgba(0,0,0,0.2)] min-h-[56px] touch-manipulation">
                                 Zamów bezpłatną wycenę
                                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                             </Button>
                         </Link>
                         <Link href="#process-section">
-                            <Button size="lg" variant="outline" className="bg-accent/10 text-accent hover:bg-accent/20 transition-all border border-accent w-full sm:w-auto h-12 md:h-14 px-8 font-bold rounded-lg">
+                            <Button size="lg" variant="outline" className="bg-accent/10 text-accent hover:bg-accent/20 transition-all border border-accent w-full sm:w-auto h-14 md:h-14 px-8 font-bold rounded-lg min-h-[56px] touch-manipulation">
                                 Zobacz jak to działa
                             </Button>
                         </Link>

@@ -73,22 +73,22 @@ export function Navbar() {
                         exit={{ opacity: 0, height: 0 }}
                         className="md:hidden border-b border-border"
                     >
-                        <div className="container mx-auto px-4 py-4 flex flex-col space-y-4 bg-background">
+                        <div className="container mx-auto px-4 py-6 flex flex-col space-y-2 bg-background">
                             {navItems.map((item) => (
                                 <Link
                                     key={item.href}
                                     href={item.href}
                                     onClick={() => setIsOpen(false)}
                                     className={cn(
-                                        "text-sm font-medium py-2 transition-colors hover:text-primary",
-                                        pathname === item.href ? "text-primary" : "text-muted-foreground"
+                                        "text-sm font-medium py-4 px-2 transition-colors hover:text-primary touch-manipulation rounded-lg hover:bg-muted/50 block min-h-[48px] flex items-center",
+                                        pathname === item.href ? "text-primary bg-primary/5" : "text-muted-foreground"
                                     )}
                                 >
                                     {item.name}
                                 </Link>
                             ))}
-                            <Link href="#zlecenie" onClick={() => setIsOpen(false)}>
-                                <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-12 font-bold rounded-lg">Wyceń Import</Button>
+                            <Link href="#zlecenie" onClick={() => setIsOpen(false)} className="pt-4">
+                                <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-12 font-bold rounded-lg touch-manipulation min-h-[48px]">Wyceń Import</Button>
                             </Link>
                         </div>
                     </motion.div>
