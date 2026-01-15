@@ -54,7 +54,7 @@ export default function CalculatorPage() {
                                         { rate: "1.55% / 9.3%", desc: "hybrydy (HEV/PHEV)" },
                                         { rate: "0%", desc: "auta elektryczne" },
                                     ].map((item, idx) => (
-                                        <li key={idx} className="bg-card border-2 border-border p-5 rounded-3xl flex flex-col group-hover:border-primary/40 transition-all shadow-sm">
+                                        <li key={idx} className="bg-card border border-border p-5 rounded-3xl flex flex-col group-hover:border-primary/40 transition-all shadow-sm">
                                             <span className="text-primary font-black text-2xl">{item.rate}</span>
                                             <span className="text-xs text-muted-foreground uppercase font-bold tracking-widest mt-1">{item.desc}</span>
                                         </li>
@@ -76,7 +76,7 @@ export default function CalculatorPage() {
                         </div>
                     </div>
 
-                    <div className="bg-card p-10 md:p-12 rounded-[3.5rem] border-2 border-border shadow-2xl relative overflow-hidden group">
+                    <div className="bg-card p-10 md:p-12 rounded-[3.5rem] border border-border shadow-2xl relative overflow-hidden group">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -mr-16 -mt-16" />
 
                         <h2 className="text-2xl font-black mb-12 text-foreground uppercase tracking-tight flex items-center gap-4">

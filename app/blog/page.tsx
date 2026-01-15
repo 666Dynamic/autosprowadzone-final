@@ -28,7 +28,7 @@ export default function BlogPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {posts.map((post) => (
                     <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
-                        <Card className="h-full border-2 border-border rounded-[2rem] md:rounded-[2.5rem] overflow-hidden hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-primary/5 bg-card">
+                        <Card className="h-full border border-border rounded-[2rem] md:rounded-[2.5rem] overflow-hidden hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-primary/5 bg-card">
                             <CardHeader className="p-6 md:p-8 pb-4">
                                 <div className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-primary mb-4">{post.date}</div>
                                 <CardTitle className="text-xl md:text-2xl font-black uppercase tracking-tight group-hover:text-primary transition-colors leading-tight">{post.title}</CardTitle>

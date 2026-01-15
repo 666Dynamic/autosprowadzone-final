@@ -275,7 +275,7 @@ export default function AuctionsPage() {
 
                     <div className="grid md:grid-cols-3 gap-8">
                         {mainPlatforms.map((p, idx) => (
-                            <Card key={idx} className="border-2 border-border hover:border-primary transition-all rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden group shadow-lg flex flex-col bg-card">
+                            <Card key={idx} className="border border-border hover:border-primary transition-all rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden group shadow-lg flex flex-col bg-card">
                                 <div className={`h-3 ${p.color}`} />
                                 <CardContent className="p-6 md:p-10 space-y-6 flex-1 flex flex-col">
                                     <div className="flex justify-between items-start">

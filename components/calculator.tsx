@@ -46,7 +46,7 @@ export function Calculator() {
     return (
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-stretch relative z-10">
             {/* Inputs */}
-            <Card className="min-h-[600px] flex flex-col border-2 border-primary/10 shadow-lg lg:shadow-xl rounded-2xl lg:rounded-[2rem] overflow-hidden bg-card text-card-foreground transition-all duration-500 hover:border-primary/30">
+            <Card className="min-h-[600px] flex flex-col border border-primary/10 shadow-lg lg:shadow-xl rounded-2xl lg:rounded-[2rem] overflow-hidden bg-card text-card-foreground transition-all duration-500 hover:border-primary/30">
                 <CardHeader className="bg-muted/50 border-b border-border p-4 sm:p-6 md:p-8">
                     <CardTitle className="flex items-center gap-3 sm:gap-4 text-lg sm:text-xl md:text-2xl font-black uppercase tracking-tight">
                         <div className="p-2 sm:p-3 rounded-xl sm:rounded-2xl bg-primary/10 border border-primary/20">
@@ -124,7 +124,7 @@ export function Calculator() {
             </Card>
 
             {/* Results */}
-            <Card className="min-h-[600px] flex flex-col border-2 border-primary/10 shadow-lg lg:shadow-xl rounded-2xl lg:rounded-[2rem] overflow-hidden bg-card text-card-foreground transition-all duration-500 hover:border-primary/30">
+            <Card className="min-h-[600px] flex flex-col border border-primary/10 shadow-lg lg:shadow-xl rounded-2xl lg:rounded-[2rem] overflow-hidden bg-card text-card-foreground transition-all duration-500 hover:border-primary/30">
                 <CardHeader className="p-6 sm:p-7 md:p-8 border-b border-border bg-muted/50">
                     <CardTitle className="text-lg sm:text-xl md:text-2xl font-black uppercase tracking-tighter">Wstępna Wycena</CardTitle>
                     <CardDescription className="text-muted-foreground font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs">Bez kosztów transportu (wycena indywidualna).</CardDescription>

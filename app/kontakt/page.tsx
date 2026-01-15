@@ -27,7 +27,7 @@ export default function ContactPage() {
                         { icon: MapPin, title: "Lokalizacja", content: ["Miami Autocenter GmbH", "Bremer Heerstraße 7A", "27711 OHZ, Niemcy"], sub: "" },
                         { icon: Clock, title: "Godziny pracy", content: ["Poniedziałek - Piątek", "9:00 - 18:00"], sub: "Soboty: Po ustaleniu" }
                     ].map((item, i) => (
-                        <div key={i} className="flex flex-col items-center text-center p-6 md:p-8 bg-card border-2 border-border rounded-[2rem] md:rounded-[2.5rem] shadow-sm hover:border-primary/30 transition-all group">
+                        <div key={i} className="flex flex-col items-center text-center p-6 md:p-8 bg-card border border-border rounded-[2rem] md:rounded-[2.5rem] shadow-sm hover:border-primary/30 transition-all group">
                             <div className="w-12 h-12 md:w-14 md:h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
                                 <item.icon className="w-5 h-5 md:w-6 md:h-6" />
                             </div>

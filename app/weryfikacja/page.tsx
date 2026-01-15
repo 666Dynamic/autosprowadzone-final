@@ -222,7 +222,7 @@ export default function VerificationPage() {
                     {/* Pricing Grid */}
                     <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch pt-12">
                         {/* Package 1 */}
-                        <div className="bg-card/80 backdrop-blur-sm text-card-foreground p-6 md:p-8 rounded-2xl shadow-2xl relative overflow-hidden flex flex-col justify-between border border-primary/15 min-h-[500px] md:min-h-[450px] lg:min-h-[500px]">
+                        <div className="bg-card/80 backdrop-blur-sm text-card-foreground p-6 md:p-8 rounded-2xl shadow-2xl relative overflow-hidden flex flex-col justify-between border border-border min-h-[500px] md:min-h-[450px] lg:min-h-[500px]">
                             <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-8 py-3 font-black text-xs uppercase tracking-widest rounded-bl-3xl z-10">Najczęściej wybierany</div>
                             <div className="space-y-8 relative z-10">
                                 <h3 className="text-2xl font-black uppercase tracking-tight flex items-center text-foreground">
@@ -258,7 +258,7 @@ export default function VerificationPage() {
                         </div>
 
                         {/* Package 2 */}
-                        <div className="bg-card/80 backdrop-blur-sm text-card-foreground p-6 md:p-8 rounded-2xl shadow-xl flex flex-col justify-between border border-primary/15 min-h-[500px] md:min-h-[450px] lg:min-h-[500px]">
+                        <div className="bg-card/80 backdrop-blur-sm text-card-foreground p-6 md:p-8 rounded-2xl shadow-xl flex flex-col justify-between border border-border min-h-[500px] md:min-h-[450px] lg:min-h-[500px]">
                             <div className="space-y-8">
                                 <h3 className="text-2xl font-black uppercase tracking-tight flex items-center text-foreground">
                                     <Globe className="mr-3 h-8 w-8 text-primary" /> Pozostałe Regiony DE

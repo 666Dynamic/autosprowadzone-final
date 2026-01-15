@@ -70,11 +70,11 @@ export function ProcessSection() {
                     {steps.map((step, idx) => (
                         <motion.div
                             key={idx}
-                            initial={{ opacity: 0, y: typeof window !== 'undefined' && window.innerWidth < 768 ? 0 : 20 }}
+                            initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: idx * 0.08 }}
-                            className="bg-card border-2 border-border p-4 sm:p-6 md:p-10 rounded-xl sm:rounded-2xl md:rounded-[2.5rem] hover:border-primary hover:shadow-lg md:hover:shadow-xl transition-all group relative overflow-hidden will-change-transform min-h-[200px] sm:min-h-[240px] md:min-h-[280px]"
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ delay: idx * 0.05, duration: 0.4, ease: "easeOut" }}
+                            className="bg-card border border-border p-4 sm:p-6 md:p-10 rounded-xl sm:rounded-2xl md:rounded-[2.5rem] hover:border-primary hover:shadow-lg transition-all duration-200 group relative overflow-hidden min-h-[200px] sm:min-h-[240px] md:min-h-[280px]"
                         >
                             {/* Background Number */}
                             <div className="absolute -top-2 -right-2 text-6xl md:text-9xl font-black text-primary/5 select-none group-hover:text-primary/10 transition-colors pointer-events-none">
