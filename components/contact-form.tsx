@@ -110,27 +110,28 @@ export function ContactForm({
                         </>
                     ) : (
                         <>
-                            <div className="grid md:grid-cols-2 gap-6">
+                            <div className="grid md:grid-cols-2 gap-4">
                                 <div className="space-y-2">
                                     {showLabels && <Label htmlFor="name" className="text-sm font-medium text-muted-foreground">Imię i Nazwisko</Label>}
-                                    <Input id="name" placeholder="Jan Kowalski" required className="h-11 px-4 rounded-lg border border-border/60 focus-visible:ring-1 focus-visible:ring-primary/50 transition-all" />
+                                    <Input id="name" placeholder="Jan Kowalski" required className="h-12 md:h-11 px-4 rounded-lg border border-border/60 focus-visible:ring-1 focus-visible:ring-primary/50 transition-all touch-manipulation" />
                                 </div>
                                 <div className="space-y-2">
-                                    {showLabels && <Label htmlFor="phone" className="text-sm font-medium text-muted-foreground">Telefon</Label>}
-                                    <Input id="phone" type="tel" placeholder="+48 123 456 789" required className="h-11 px-4 rounded-lg border border-border/60 focus-visible:ring-1 focus-visible:ring-primary/50 transition-all" />
+                                    {showLabels && <Label htmlFor="email" className="text-sm font-medium text-muted-foreground">Email</Label>}
+                                    <Input id="email" type="email" placeholder="jan@kowalski.pl" required className="h-12 md:h-11 px-4 rounded-lg border border-border/60 focus-visible:ring-1 focus-visible:ring-primary/50 transition-all touch-manipulation" />
                                 </div>
                             </div>
                             <div className="space-y-2">
-                                {showLabels && <Label htmlFor="email" className="text-sm font-medium text-muted-foreground">Email (opcjonalnie)</Label>}
-                                <Input id="email" type="email" placeholder="jan@kowalski.pl" className="h-11 px-4 rounded-lg border border-border/60 focus-visible:ring-1 focus-visible:ring-primary/50 transition-all" />
+                                {showLabels && <Label htmlFor="phone" className="text-sm font-medium text-muted-foreground">Telefon (opcjonalnie)</Label>}
+                                <Input id="phone" type="tel" placeholder="+48 123 456 789" className="h-12 md:h-11 px-4 rounded-lg border border-border/60 focus-visible:ring-1 focus-visible:ring-primary/50 transition-all touch-manipulation" />
                             </div>
                             <div className="space-y-2">
-                                {showLabels && <Label htmlFor="link" className="text-sm font-medium text-muted-foreground">Link do ogłoszenia</Label>}
-                                <Input id="link" placeholder="mobile.de / autoscout24" type="url" className="h-11 px-4 rounded-lg border border-border/60 focus-visible:ring-1 focus-visible:ring-primary/50 transition-all" />
-                            </div>
-                            <div className="space-y-2">
-                                {showLabels && <Label htmlFor="message" className="text-sm font-medium text-muted-foreground">Wiadomość</Label>}
-                                <Textarea id="message" placeholder="Dzień dobry, proszę o kontakt w sprawie..." className="min-h-[100px] px-4 py-3 rounded-lg border border-border/60 focus-visible:ring-1 focus-visible:ring-primary/50 transition-all resize-none" required />
+                                {showLabels && <Label htmlFor="message" className="text-sm font-medium text-muted-foreground">{mode === "weryfikacja" ? "Link do ogłoszenia" : "Wiadomość"}</Label>}
+                                <Textarea 
+                                    id="message" 
+                                    placeholder={mode === "weryfikacja" ? "mobile.de/autoscout24 link + dodatkowe informacje..." : "Dzień dobry, proszę o kontakt w sprawie..."}
+                                    className="min-h-[120px] px-4 py-3 rounded-lg border border-border/60 focus-visible:ring-1 focus-visible:ring-primary/50 transition-all resize-none touch-manipulation text-sm leading-relaxed"
+                                    required
+                                />
                             </div>
                         </>
                     )}

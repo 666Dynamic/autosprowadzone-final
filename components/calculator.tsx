@@ -46,7 +46,7 @@ export function Calculator() {
     return (
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-start relative z-10">
             {/* Inputs */}
-            <Card className="border-2 border-primary/10 shadow-lg lg:shadow-xl rounded-2xl lg:rounded-[2.5rem] overflow-hidden bg-card text-card-foreground transition-all duration-500 hover:border-primary/30">
+            <Card className="h-fit border-2 border-primary/10 shadow-lg lg:shadow-xl rounded-2xl lg:rounded-[2rem] overflow-hidden bg-card text-card-foreground transition-all duration-500 hover:border-primary/30">
                 <CardHeader className="bg-muted/50 border-b border-border p-4 sm:p-6 md:p-8">
                     <CardTitle className="flex items-center gap-3 sm:gap-4 text-lg sm:text-xl md:text-2xl font-black uppercase tracking-tight">
                         <div className="p-2 sm:p-3 rounded-xl sm:rounded-2xl bg-primary/10 border border-primary/20">
@@ -58,8 +58,8 @@ export function Calculator() {
                         Skonfiguruj dane swojego pojazdu.
                     </CardDescription>
                 </CardHeader>
-                <CardContent className="p-4 sm:p-6 md:p-8 space-y-6 sm:space-y-8">
-                    <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
+                <CardContent className="p-4 sm:p-5 md:p-6 space-y-3 sm:space-y-4 md:space-y-5">
+                    <div className="grid gap-3 sm:gap-4 sm:grid-cols-2">
                         <div className="space-y-3">
                             <Label htmlFor="price" className="text-xs font-bold uppercase tracking-[0.2em] text-primary/80 ml-1">Cena (EUR)</Label>
                             <div className="relative group">
@@ -68,7 +68,7 @@ export function Calculator() {
                                     type="number"
                                     value={eurPrice}
                                     onChange={(e) => setEurPrice(Number(e.target.value))}
-                                    className="relative h-12 sm:h-14 text-lg sm:text-xl font-bold rounded-xl sm:rounded-2xl border-border bg-muted/30 focus-visible:ring-primary focus-visible:border-primary transition-all pr-12"
+                                    className="relative h-12 sm:h-14 text-lg sm:text-xl font-bold rounded-xl sm:rounded-2xl border border-border bg-background focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary transition-all pr-12 hover:border-border/80"
                                 />
                                 <div className="absolute right-5 top-1/2 -translate-y-1/2 text-primary font-black text-lg">€</div>
                             </div>
@@ -82,16 +82,16 @@ export function Calculator() {
                                     step="0.01"
                                     value={exchangeRate}
                                     onChange={(e) => setExchangeRate(Number(e.target.value))}
-                                    className="relative h-12 sm:h-14 text-lg sm:text-xl font-bold rounded-xl sm:rounded-2xl border-border bg-muted/30 focus-visible:ring-primary focus-visible:border-primary transition-all pr-12"
+                                    className="relative h-12 sm:h-14 text-lg sm:text-xl font-bold rounded-xl sm:rounded-2xl border border-border bg-background focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary transition-all pr-12 hover:border-border/80"
                                 />
                                 <div className="absolute right-5 top-1/2 -translate-y-1/2 text-muted-foreground/50 font-bold">zł</div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="space-y-3 sm:space-y-4">
+                    <div className="space-y-2 sm:space-y-3">
                         <Label className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground ml-1">Szczegóły pojazdu</Label>
-                        <div className="grid gap-2 sm:gap-3">
+                        <div className="grid gap-2">
                             {[
                                 { id: "engine", checked: isLargeEngine, set: setIsLargeEngine, label: "Silnik powyżej 2.0L", sub: "Akcyza 18.6%" },
                                 { id: "lpg", checked: isLpg, set: setIsLpg, label: "Instalacja LPG", sub: "+63 PLN badanie" },
@@ -101,7 +101,7 @@ export function Calculator() {
                                 <div
                                     key={item.id}
                                     onClick={() => item.set(!item.checked)}
-                                    className={`group flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 md:p-4 rounded-xl sm:rounded-2xl border transition-all cursor-pointer select-none touch-manipulation min-h-[52px] sm:min-h-[64px] ${item.checked
+                                    className={`group flex items-center space-x-3 sm:space-x-4 p-3 sm:p-3.5 md:p-4 rounded-xl sm:rounded-2xl border transition-all cursor-pointer select-none touch-manipulation min-h-[48px] sm:min-h-[56px] ${item.checked
                                         ? "border-primary/50 bg-primary/5 shadow-md shadow-primary/5"
                                         : "border-border bg-card hover:bg-muted/50 hover:border-primary/20"
                                         }`}
@@ -124,17 +124,17 @@ export function Calculator() {
             </Card>
 
             {/* Results */}
-            <div className="space-y-6 lg:space-y-8">
-                <Card className="border-2 border-primary/20 shadow-lg sm:shadow-2xl rounded-2xl sm:rounded-[2rem] md:rounded-[3rem] overflow-hidden backdrop-blur-2xl bg-card text-card-foreground">
-                    <CardHeader className="p-4 sm:p-6 md:p-8 border-b border-border bg-muted/30 dark:border-white/5 dark:bg-white/5">
+            <div className="h-fit space-y-6 lg:space-y-8">
+                <Card className="border-2 border-primary/10 shadow-lg lg:shadow-xl rounded-2xl lg:rounded-[2rem] overflow-hidden bg-card text-card-foreground transition-all duration-500 hover:border-primary/30">
+                    <CardHeader className="p-6 sm:p-7 md:p-8 border-b border-border bg-muted/50">
                         <CardTitle className="text-lg sm:text-xl md:text-2xl font-black uppercase tracking-tighter">Wstępna Wycena</CardTitle>
                         <CardDescription className="text-muted-foreground font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs">Bez kosztów transportu (wycena indywidualna).</CardDescription>
                     </CardHeader>
-                    <CardContent className="p-4 sm:p-5 md:p-8 space-y-4 sm:space-y-6 md:space-y-8">
-                        <div className="bg-muted dark:bg-white/5 rounded-xl sm:rounded-[1.5rem] md:rounded-[2.5rem] border border-border dark:border-white/10 p-4 sm:p-6 md:p-8 flex flex-col items-center justify-center text-center space-y-2 sm:space-y-3 relative overflow-hidden group">
+                    <CardContent className="p-6 sm:p-7 md:p-8 space-y-5 sm:space-y-6 md:space-y-8">
+                        <div className="bg-muted dark:bg-white/5 rounded-xl sm:rounded-[1.5rem] md:rounded-[2.5rem] border border-border dark:border-white/10 p-6 sm:p-7 md:p-8 flex flex-col items-center justify-center text-center space-y-2 sm:space-y-3 relative overflow-hidden group">
                             <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
                             <span className="text-[10px] md:text-xs text-primary uppercase font-bold tracking-[0.3em]">Cena Całkowita w Kraju</span>
-                            <span className="text-2xl sm:text-3xl md:text-5xl font-black text-foreground tabular-nums tracking-tighter">
+                            <span className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground tabular-nums tracking-tighter">
                                 {formatCurrency(totalCost)}
                             </span>
                             <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-muted text-[10px] font-bold uppercase tracking-widest text-muted-foreground border border-border dark:bg-white/10 dark:text-white/60 dark:border-white/10">
