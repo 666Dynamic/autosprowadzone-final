@@ -84,16 +84,16 @@ export default function VerificationPage() {
                                         <div className="space-y-2 relative z-10">
                                             <div className="text-[10px] font-bold uppercase tracking-widest bg-primary/20 text-primary px-3 py-1 rounded-full w-fit border border-primary/20">Weryfikacja pod Bremen</div>
                                             <div className="flex items-baseline gap-2">
-                                                <span className="text-5xl md:text-7xl font-black tracking-tighter uppercase leading-none text-foreground dark:text-white font-display italic">250 €</span>
+                                                <span className="text-3xl md:text-5xl lg:text-7xl font-black tracking-tighter uppercase leading-none text-foreground dark:text-white font-display italic">250 €</span>
                                             </div>
                                             <p className="font-bold text-[11px] md:text-sm text-muted-foreground leading-relaxed">
                                                 Pełna inspekcja techniczna, pomiar lakieru, diagnostyka komputerowa i kompleksowy raport rzeczoznawcy.
                                             </p>
                                         </div>
                                         <div className="space-y-4 relative z-10">
-                                            <a href="#form" className="flex items-center justify-center gap-3 bg-primary text-white hover:bg-primary/90 hover:shadow-[0_0_30px_rgba(245,158,11,0.5)] transition-all h-12 md:h-14 rounded-xl font-black uppercase tracking-wide text-sm md:text-base shadow-lg shadow-primary/30 group/btn [text-shadow:0_1px_2px_rgba(0,0,0,0.2)]">
+                                            <a href="#form" className="flex items-center justify-center gap-2 md:gap-3 bg-primary text-white hover:bg-primary/90 hover:shadow-[0_0_30px_rgba(245,158,11,0.5)] transition-all h-11 md:h-12 lg:h-14 rounded-xl font-black uppercase tracking-wide text-xs md:text-sm lg:text-base shadow-lg shadow-primary/30 group/btn [text-shadow:0_1px_2px_rgba(0,0,0,0.2)]">
                                                 Zleć Inspekcję
-                                                <ChevronRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+                                                <ChevronRight className="w-4 md:w-5 h-4 md:h-5 group-hover/btn:translate-x-1 transition-transform" />
                                             </a>
                                             <p className="text-[10px] text-center text-muted-foreground font-bold uppercase tracking-widest leading-relaxed">
                                                 Dojazd w dowolne miejsce w Niemczech
@@ -222,11 +222,11 @@ export default function VerificationPage() {
                     {/* Pricing Grid */}
                     <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch pt-12">
                         {/* Package 1 */}
-                        <div className="bg-card/80 backdrop-blur-sm text-card-foreground p-6 md:p-8 rounded-2xl shadow-2xl relative overflow-hidden flex flex-col justify-between border border-border min-h-[500px] md:min-h-[450px] lg:min-h-[500px]">
-                            <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-8 py-3 font-black text-xs uppercase tracking-widest rounded-bl-3xl z-10">Najczęściej wybierany</div>
-                            <div className="space-y-8 relative z-10">
-                                <h3 className="text-2xl font-black uppercase tracking-tight flex items-center text-foreground">
-                                    <MapPin className="mr-3 h-8 w-8 text-primary" /> Region Bremen (Baza)
+                        <div className="bg-card/80 backdrop-blur-sm text-card-foreground p-4 md:p-6 lg:p-8 rounded-xl lg:rounded-2xl shadow-2xl relative overflow-hidden flex flex-col justify-between border border-border min-h-[400px] sm:min-h-[450px] lg:min-h-[500px]">
+                            <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-4 md:px-8 py-2 md:py-3 font-black text-xs uppercase tracking-widest rounded-bl-2xl md:rounded-bl-3xl z-10">Najczęściej wybierany</div>
+                            <div className="space-y-4 md:space-y-6 lg:space-y-8 relative z-10">
+                                <h3 className="text-lg md:text-xl lg:text-2xl font-black uppercase tracking-tight flex items-center text-foreground">
+                                    <MapPin className="mr-2 md:mr-3 h-5 md:h-6 lg:h-8 w-5 md:w-6 lg:w-8 text-primary" /> Region Bremen (Baza)
                                 </h3>
                                 <p className="text-muted-foreground text-sm font-bold uppercase tracking-widest leading-tight">Obszar do 100km od Osterholz-Scharmbeck</p>
 
@@ -246,22 +246,22 @@ export default function VerificationPage() {
                                     ))}
                                 </div>
                             </div>
-                            <div className="pt-8 border-t border-border dark:border-white/10 flex flex-col gap-4 relative z-10">
+                            <div className="pt-6 md:pt-8 border-t border-border dark:border-white/10 flex flex-col gap-3 md:gap-4 relative z-10">
                                 <div className="flex justify-between items-end">
                                     <div>
                                         <div className="text-xs text-muted-foreground font-bold uppercase tracking-widest">Koszt ryczałtowy</div>
-                                        <div className="text-5xl font-black text-foreground tracking-tighter">250 €</div>
+                                        <div className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground tracking-tighter">250 €</div>
                                     </div>
-                                    <a href="#form" className="bg-primary hover:bg-white hover:text-black transition-all px-6 md:px-8 py-3 md:py-4 rounded-xl font-black uppercase tracking-widest text-xs text-white">Zamów teraz</a>
+                                    <a href="#form" className="bg-primary hover:bg-white hover:text-black transition-all px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-4 rounded-lg md:rounded-xl font-black uppercase tracking-widest text-xs text-white">Zamów teraz</a>
                                 </div>
                             </div>
                         </div>
 
                         {/* Package 2 */}
-                        <div className="bg-card/80 backdrop-blur-sm text-card-foreground p-6 md:p-8 rounded-2xl shadow-xl flex flex-col justify-between border border-border min-h-[500px] md:min-h-[450px] lg:min-h-[500px]">
-                            <div className="space-y-8">
-                                <h3 className="text-2xl font-black uppercase tracking-tight flex items-center text-foreground">
-                                    <Globe className="mr-3 h-8 w-8 text-primary" /> Pozostałe Regiony DE
+                        <div className="bg-card/80 backdrop-blur-sm text-card-foreground p-4 md:p-6 lg:p-8 rounded-xl lg:rounded-2xl shadow-xl flex flex-col justify-between border border-border min-h-[400px] sm:min-h-[450px] lg:min-h-[500px]">
+                            <div className="space-y-4 md:space-y-6 lg:space-y-8">
+                                <h3 className="text-lg md:text-xl lg:text-2xl font-black uppercase tracking-tight flex items-center text-foreground">
+                                    <Globe className="mr-2 md:mr-3 h-5 md:h-6 lg:h-8 w-5 md:w-6 lg:w-8 text-primary" /> Pozostałe Regiony DE
                                 </h3>
                                 <p className="text-muted-foreground text-sm font-bold uppercase tracking-widest leading-tight">Berlin, Hamburg, Monachium i okolice</p>
 
@@ -279,12 +279,12 @@ export default function VerificationPage() {
                                     </ul>
                                 </div>
                             </div>
-                            <div className="pt-8 border-t border-border flex justify-between items-end">
+                            <div className="pt-6 md:pt-8 border-t border-border flex justify-between items-end">
                                 <div>
                                     <div className="text-xs text-muted-foreground font-bold uppercase tracking-widest">Wycena indywidualna</div>
-                                    <div className="text-3xl font-black text-foreground tracking-tighter uppercase whitespace-nowrap">Kontakt</div>
+                                    <div className="text-2xl md:text-3xl font-black text-foreground tracking-tighter uppercase whitespace-nowrap">Kontakt</div>
                                 </div>
-                                <a href="#form" className="border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all px-6 md:px-8 py-3 md:py-4 rounded-xl font-black uppercase tracking-widest text-xs">Zapytaj o cenę</a>
+                                <a href="#form" className="border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-4 rounded-lg md:rounded-xl font-black uppercase tracking-widest text-xs">Zapytaj o cenę</a>
                             </div>
                         </div>
                     </div>

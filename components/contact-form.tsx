@@ -85,16 +85,16 @@ export function ContactForm({
                     <div className="grid md:grid-cols-2 gap-4">
                         <div className="space-y-2">
                             {showLabels && <Label htmlFor="name" className="text-sm font-medium text-muted-foreground">Imię i Nazwisko</Label>}
-                            <Input id="name" placeholder="Jan Kowalski" required className="h-12 md:h-11 px-4 rounded-lg border border-border bg-background focus-visible:ring-2 focus-visible:ring-primary focus-visible:border-primary transition-all touch-manipulation" />
+                            <Input id="name" placeholder="Jan Kowalski" required className="h-12 md:h-11 px-4 rounded-lg border border-border bg-background focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary transition-all touch-manipulation hover:border-border/80" />
                         </div>
                         <div className="space-y-2">
                             {showLabels && <Label htmlFor="email" className="text-sm font-medium text-muted-foreground">Email</Label>}
-                            <Input id="email" type="email" placeholder="jan@kowalski.pl" required className="h-12 md:h-11 px-4 rounded-lg border border-border bg-background focus-visible:ring-2 focus-visible:ring-primary focus-visible:border-primary transition-all touch-manipulation" />
+                            <Input id="email" type="email" placeholder="jan@kowalski.pl" required className="h-12 md:h-11 px-4 rounded-lg border border-border bg-background focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary transition-all touch-manipulation hover:border-border/80" />
                         </div>
                     </div>
                     <div className="space-y-2">
                         {showLabels && <Label htmlFor="phone" className="text-sm font-medium text-muted-foreground">Telefon (opcjonalnie)</Label>}
-                        <Input id="phone" type="tel" placeholder="+48 123 456 789" className="h-12 md:h-11 px-4 rounded-lg border border-border bg-background focus-visible:ring-2 focus-visible:ring-primary focus-visible:border-primary transition-all touch-manipulation" />
+                        <Input id="phone" type="tel" placeholder="+48 123 456 789" className="h-12 md:h-11 px-4 rounded-lg border border-border bg-background focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary transition-all touch-manipulation hover:border-border/80" />
                     </div>
                     <div className="space-y-2">
                         {showLabels && <Label htmlFor="message" className="text-sm font-medium text-muted-foreground">
@@ -109,7 +109,7 @@ export function ContactForm({
                                         ? "mobile.de/autoscout24 link + dodatkowe informacje..."
                                         : "Dzień dobry, proszę o kontakt w sprawie..."
                             }
-                            className="min-h-[120px] px-4 py-3 rounded-lg border border-border bg-background focus-visible:ring-2 focus-visible:ring-primary focus-visible:border-primary transition-all resize-none touch-manipulation text-sm leading-relaxed"
+                            className="min-h-[120px] px-4 py-3 rounded-lg border border-border bg-background focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary transition-all resize-none touch-manipulation text-sm leading-relaxed hover:border-border/80"
                             required
                         />
                     </div>
