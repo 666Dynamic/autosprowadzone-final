@@ -169,7 +169,6 @@ export function Calculator() {
                         </div>
                     </CardContent>
                 </Card>
-            </div>
 
             {/* Buttons and info section outside grid */}
             <div className="col-span-full mt-8 space-y-6">
