@@ -82,59 +82,37 @@ export function ContactForm({
             </CardHeader>
             <CardContent className="px-4 py-4 sm:px-6 sm:py-6">
                 <form onSubmit={handleSubmit} className="space-y-4">
-                    {mode === "search" ? (
-                        <>
-                            <div className="grid md:grid-cols-2 gap-4">
-                                <div className="space-y-2">
-                                    {showLabels && <Label htmlFor="name" className="text-sm font-medium text-muted-foreground">Imię i Nazwisko</Label>}
-                                    <Input id="name" placeholder="Jan Kowalski" required className="h-12 md:h-11 px-4 rounded-lg border border-border/60 focus-visible:ring-1 focus-visible:ring-primary/50 transition-all touch-manipulation" />
-                                </div>
-                                <div className="space-y-2">
-                                    {showLabels && <Label htmlFor="email" className="text-sm font-medium text-muted-foreground">Email</Label>}
-                                    <Input id="email" type="email" placeholder="jan@kowalski.pl" required className="h-12 md:h-11 px-4 rounded-lg border border-border/60 focus-visible:ring-1 focus-visible:ring-primary/50 transition-all touch-manipulation" />
-                                </div>
-                            </div>
-                            <div className="space-y-2">
-                                {showLabels && <Label htmlFor="phone" className="text-sm font-medium text-muted-foreground">Telefon (opcjonalnie)</Label>}
-                                <Input id="phone" type="tel" placeholder="+48 123 456 789" className="h-12 md:h-11 px-4 rounded-lg border border-border/60 focus-visible:ring-1 focus-visible:ring-primary/50 transition-all touch-manipulation" />
-                            </div>
-                            <div className="space-y-2">
-                                {showLabels && <Label htmlFor="message" className="text-sm font-medium text-muted-foreground">Szczegóły pojazdu</Label>}
-                                <Textarea 
-                                    id="message" 
-                                    placeholder="Mercedes GLC, od 2020, Budżet do 250 000 PLN&#10;Wyposażenie: AMG, Panorama, Hak..."
-                                    className="min-h-[120px] px-4 py-3 rounded-lg border border-border/60 focus-visible:ring-1 focus-visible:ring-primary/50 transition-all resize-none touch-manipulation text-sm leading-relaxed"
-                                    required
-                                />
-                            </div>
-                        </>
-                    ) : (
-                        <>
-                            <div className="grid md:grid-cols-2 gap-4">
-                                <div className="space-y-2">
-                                    {showLabels && <Label htmlFor="name" className="text-sm font-medium text-muted-foreground">Imię i Nazwisko</Label>}
-                                    <Input id="name" placeholder="Jan Kowalski" required className="h-12 md:h-11 px-4 rounded-lg border border-border/60 focus-visible:ring-1 focus-visible:ring-primary/50 transition-all touch-manipulation" />
-                                </div>
-                                <div className="space-y-2">
-                                    {showLabels && <Label htmlFor="email" className="text-sm font-medium text-muted-foreground">Email</Label>}
-                                    <Input id="email" type="email" placeholder="jan@kowalski.pl" required className="h-12 md:h-11 px-4 rounded-lg border border-border/60 focus-visible:ring-1 focus-visible:ring-primary/50 transition-all touch-manipulation" />
-                                </div>
-                            </div>
-                            <div className="space-y-2">
-                                {showLabels && <Label htmlFor="phone" className="text-sm font-medium text-muted-foreground">Telefon (opcjonalnie)</Label>}
-                                <Input id="phone" type="tel" placeholder="+48 123 456 789" className="h-12 md:h-11 px-4 rounded-lg border border-border/60 focus-visible:ring-1 focus-visible:ring-primary/50 transition-all touch-manipulation" />
-                            </div>
-                            <div className="space-y-2">
-                                {showLabels && <Label htmlFor="message" className="text-sm font-medium text-muted-foreground">{mode === "weryfikacja" ? "Link do ogłoszenia" : "Wiadomość"}</Label>}
-                                <Textarea 
-                                    id="message" 
-                                    placeholder={mode === "weryfikacja" ? "mobile.de/autoscout24 link + dodatkowe informacje..." : "Dzień dobry, proszę o kontakt w sprawie..."}
-                                    className="min-h-[120px] px-4 py-3 rounded-lg border border-border/60 focus-visible:ring-1 focus-visible:ring-primary/50 transition-all resize-none touch-manipulation text-sm leading-relaxed"
-                                    required
-                                />
-                            </div>
-                        </>
-                    )}
+                    <div className="grid md:grid-cols-2 gap-4">
+                        <div className="space-y-2">
+                            {showLabels && <Label htmlFor="name" className="text-sm font-medium text-muted-foreground">Imię i Nazwisko</Label>}
+                            <Input id="name" placeholder="Jan Kowalski" required className="h-12 md:h-11 px-4 rounded-lg border border-border/60 focus-visible:ring-1 focus-visible:ring-primary/50 transition-all touch-manipulation" />
+                        </div>
+                        <div className="space-y-2">
+                            {showLabels && <Label htmlFor="email" className="text-sm font-medium text-muted-foreground">Email</Label>}
+                            <Input id="email" type="email" placeholder="jan@kowalski.pl" required className="h-12 md:h-11 px-4 rounded-lg border border-border/60 focus-visible:ring-1 focus-visible:ring-primary/50 transition-all touch-manipulation" />
+                        </div>
+                    </div>
+                    <div className="space-y-2">
+                        {showLabels && <Label htmlFor="phone" className="text-sm font-medium text-muted-foreground">Telefon (opcjonalnie)</Label>}
+                        <Input id="phone" type="tel" placeholder="+48 123 456 789" className="h-12 md:h-11 px-4 rounded-lg border border-border/60 focus-visible:ring-1 focus-visible:ring-primary/50 transition-all touch-manipulation" />
+                    </div>
+                    <div className="space-y-2">
+                        {showLabels && <Label htmlFor="message" className="text-sm font-medium text-muted-foreground">
+                            {mode === "search" ? "Szczegóły pojazdu" : mode === "weryfikacja" ? "Link do ogłoszenia" : "Wiadomość"}
+                        </Label>}
+                        <Textarea 
+                            id="message" 
+                            placeholder={
+                                mode === "search" 
+                                    ? "Mercedes GLC, od 2020, Budżet do 250 000 PLN&#10;Wyposażenie: AMG, Panorama, Hak..."
+                                    : mode === "weryfikacja" 
+                                        ? "mobile.de/autoscout24 link + dodatkowe informacje..."
+                                        : "Dzień dobry, proszę o kontakt w sprawie..."
+                            }
+                            className="min-h-[120px] px-4 py-3 rounded-lg border border-border/60 focus-visible:ring-1 focus-visible:ring-primary/50 transition-all resize-none touch-manipulation text-sm leading-relaxed"
+                            required
+                        />
+                    </div>
 
                     <Button
                         type="submit"

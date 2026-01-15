@@ -44,9 +44,9 @@ export function Calculator() {
     }
 
     return (
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-start relative z-10">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-stretch relative z-10">
             {/* Inputs */}
-            <Card className="h-fit border-2 border-primary/10 shadow-lg lg:shadow-xl rounded-2xl lg:rounded-[2rem] overflow-hidden bg-card text-card-foreground transition-all duration-500 hover:border-primary/30">
+            <Card className="flex flex-col border-2 border-primary/10 shadow-lg lg:shadow-xl rounded-2xl lg:rounded-[2rem] overflow-hidden bg-card text-card-foreground transition-all duration-500 hover:border-primary/30">
                 <CardHeader className="bg-muted/50 border-b border-border p-4 sm:p-6 md:p-8">
                     <CardTitle className="flex items-center gap-3 sm:gap-4 text-lg sm:text-xl md:text-2xl font-black uppercase tracking-tight">
                         <div className="p-2 sm:p-3 rounded-xl sm:rounded-2xl bg-primary/10 border border-primary/20">
@@ -58,7 +58,7 @@ export function Calculator() {
                         Skonfiguruj dane swojego pojazdu.
                     </CardDescription>
                 </CardHeader>
-                <CardContent className="p-4 sm:p-5 md:p-6 space-y-3 sm:space-y-4 md:space-y-5">
+                <CardContent className="flex-1 p-4 sm:p-5 md:p-6 space-y-3 sm:space-y-4 md:space-y-5">
                     <div className="grid gap-3 sm:gap-4 sm:grid-cols-2">
                         <div className="space-y-3">
                             <Label htmlFor="price" className="text-xs font-bold uppercase tracking-[0.2em] text-primary/80 ml-1">Cena (EUR)</Label>
@@ -124,13 +124,13 @@ export function Calculator() {
             </Card>
 
             {/* Results */}
-            <div className="h-fit space-y-6 lg:space-y-8">
-                <Card className="border-2 border-primary/10 shadow-lg lg:shadow-xl rounded-2xl lg:rounded-[2rem] overflow-hidden bg-card text-card-foreground transition-all duration-500 hover:border-primary/30">
+            <div className="flex flex-col space-y-6 lg:space-y-8">
+                <Card className="flex-1 flex flex-col border-2 border-primary/10 shadow-lg lg:shadow-xl rounded-2xl lg:rounded-[2rem] overflow-hidden bg-card text-card-foreground transition-all duration-500 hover:border-primary/30">
                     <CardHeader className="p-6 sm:p-7 md:p-8 border-b border-border bg-muted/50">
                         <CardTitle className="text-lg sm:text-xl md:text-2xl font-black uppercase tracking-tighter">Wstępna Wycena</CardTitle>
                         <CardDescription className="text-muted-foreground font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs">Bez kosztów transportu (wycena indywidualna).</CardDescription>
                     </CardHeader>
-                    <CardContent className="p-6 sm:p-7 md:p-8 space-y-5 sm:space-y-6 md:space-y-8">
+                    <CardContent className="flex-1 p-6 sm:p-7 md:p-8 space-y-5 sm:space-y-6 md:space-y-8">
                         <div className="bg-muted dark:bg-white/5 rounded-xl sm:rounded-[1.5rem] md:rounded-[2.5rem] border border-border dark:border-white/10 p-6 sm:p-7 md:p-8 flex flex-col items-center justify-center text-center space-y-2 sm:space-y-3 relative overflow-hidden group">
                             <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
                             <span className="text-[10px] md:text-xs text-primary uppercase font-bold tracking-[0.3em]">Cena Całkowita w Kraju</span>
