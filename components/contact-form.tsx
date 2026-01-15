@@ -69,7 +69,7 @@ export function ContactForm({
     }
 
     return (
-        <Card className={`w-full max-w-2xl mx-auto bg-card backdrop-blur-2xl border-2 border-primary/20 shadow-xl rounded-3xl overflow-hidden ${className}`}>
+        <Card className={`w-full max-w-2xl mx-auto bg-card/80 backdrop-blur-2xl border-2 border-primary/15 shadow-xl rounded-3xl overflow-hidden ${className}`}>
             <CardHeader className="bg-primary px-4 py-4 sm:px-6 sm:py-6 text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-6 sm:p-8 opacity-10 rotate-12 bg-white rounded-full translate-x-8 sm:translate-x-12 -translate-y-8 sm:-translate-y-12 w-32 sm:w-48 h-32 sm:h-48 pointer-events-none" />
                 <CardTitle className="text-xl sm:text-2xl md:text-4xl font-black uppercase tracking-tighter flex items-center gap-2 sm:gap-3 relative z-10 drop-shadow-md">
@@ -104,7 +104,7 @@ export function ContactForm({
                             id="message" 
                             placeholder={
                                 mode === "search" 
-                                    ? "Mercedes GLC, od 2020, Budżet do 250 000 PLN&#10;Wyposażenie: AMG, Panorama, Hak..."
+                                    ? "Mercedes GLC, od 2020, Budżet do 250 000 PLN\nWyposażenie: AMG, Panorama, Hak..."
                                     : mode === "weryfikacja" 
                                         ? "mobile.de/autoscout24 link + dodatkowe informacje..."
                                         : "Dzień dobry, proszę o kontakt w sprawie..."

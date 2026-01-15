@@ -207,7 +207,7 @@ export default function VerificationPage() {
                                         { title: "AVILOO (EV/Hybrid)", desc: "Certyfikowany test stanu zdrowia baterii (SoH). Kluczowy przy autach elektrycznych." }
                                     ].map((item, idx) => (
                                         <li key={idx} className="flex items-start gap-4 group/item">
-                                            <div className="bg-primary text-primary-foreground font-black p-1 rounded-lg h-8 w-8 flex items-center justify-center shrink-0 text-xs shadow-md group-hover/item:scale-110 transition-transform font-sans">0{idx + 1}</div>
+                                            <div className="bg-primary text-white font-black p-1 rounded-lg h-8 w-8 flex items-center justify-center shrink-0 text-xs shadow-md group-hover/item:scale-110 transition-transform font-sans">0{idx + 1}</div>
                                             <div>
                                                 <h4 className="font-black text-foreground uppercase tracking-tight mb-1 group-hover/item:text-primary transition-colors text-base">{item.title}</h4>
                                                 <p className="text-sm text-muted-foreground leading-relaxed font-bold">{item.desc}</p>
@@ -220,9 +220,9 @@ export default function VerificationPage() {
                     </section>
 
                     {/* Pricing Grid */}
-                    <div className="grid lg:grid-cols-2 gap-8 items-stretch pt-12">
+                    <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch pt-12">
                         {/* Package 1 */}
-                        <div className="bg-card text-card-foreground p-8 rounded-2xl shadow-2xl relative overflow-hidden flex flex-col justify-between border border-border min-h-[500px]">
+                        <div className="bg-card/80 backdrop-blur-sm text-card-foreground p-6 md:p-8 rounded-2xl shadow-2xl relative overflow-hidden flex flex-col justify-between border border-primary/15 min-h-[500px] md:min-h-[450px] lg:min-h-[500px]">
                             <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-8 py-3 font-black text-xs uppercase tracking-widest rounded-bl-3xl z-10">Najczęściej wybierany</div>
                             <div className="space-y-8 relative z-10">
                                 <h3 className="text-2xl font-black uppercase tracking-tight flex items-center text-foreground">
@@ -252,13 +252,13 @@ export default function VerificationPage() {
                                         <div className="text-xs text-muted-foreground font-bold uppercase tracking-widest">Koszt ryczałtowy</div>
                                         <div className="text-5xl font-black text-foreground tracking-tighter">250 €</div>
                                     </div>
-                                    <a href="#form" className="bg-primary hover:bg-white hover:text-black transition-all px-8 py-4 rounded-xl font-black uppercase tracking-widest text-xs">Zamów teraz</a>
+                                    <a href="#form" className="bg-primary hover:bg-white hover:text-black transition-all px-6 md:px-8 py-3 md:py-4 rounded-xl font-black uppercase tracking-widest text-xs text-white">Zamów teraz</a>
                                 </div>
                             </div>
                         </div>
 
                         {/* Package 2 */}
-                        <div className="bg-card text-card-foreground p-8 rounded-2xl shadow-xl flex flex-col justify-between border border-border min-h-[500px]">
+                        <div className="bg-card/80 backdrop-blur-sm text-card-foreground p-6 md:p-8 rounded-2xl shadow-xl flex flex-col justify-between border border-primary/15 min-h-[500px] md:min-h-[450px] lg:min-h-[500px]">
                             <div className="space-y-8">
                                 <h3 className="text-2xl font-black uppercase tracking-tight flex items-center text-foreground">
                                     <Globe className="mr-3 h-8 w-8 text-primary" /> Pozostałe Regiony DE
@@ -284,7 +284,7 @@ export default function VerificationPage() {
                                     <div className="text-xs text-muted-foreground font-bold uppercase tracking-widest">Wycena indywidualna</div>
                                     <div className="text-3xl font-black text-foreground tracking-tighter uppercase whitespace-nowrap">Kontakt</div>
                                 </div>
-                                <a href="#form" className="border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all px-8 py-4 rounded-xl font-black uppercase tracking-widest text-xs">Zapytaj o cenę</a>
+                                <a href="#form" className="border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all px-6 md:px-8 py-3 md:py-4 rounded-xl font-black uppercase tracking-widest text-xs">Zapytaj o cenę</a>
                             </div>
                         </div>
                     </div>

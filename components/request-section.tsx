@@ -38,7 +38,7 @@ export function RequestSection() {
                                 { title: "Otrzymujesz propozycje", subtitle: "Tylko egzemplarze godne zakupu" }
                             ].map((step, idx) => (
                                 <div key={idx} className="flex items-center gap-6 group relative">
-                                    <div className="h-12 w-12 rounded-2xl bg-primary text-slate-950 flex items-center justify-center font-black text-xl shadow-[0_10px_20px_-5px_rgba(245,158,11,0.5)] border-2 border-primary/20 shrink-0 z-10 transition-transform group-hover:scale-110">
+                                    <div className="h-12 w-12 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-xl shadow-[0_10px_20px_-5px_rgba(245,158,11,0.5)] border-2 border-primary/20 shrink-0 z-10 transition-transform group-hover:scale-110">
                                         {idx + 1}
                                     </div>
                                     <div className="space-y-1">
