@@ -258,3 +258,30 @@
     outline-offset: 2px;
   }
 }
+/* --- Premium Card System --- */
+@layer components {
+  .premium-card {
+    @apply relative overflow-hidden transition-all duration-300 border border-border/50 rounded-2xl md:rounded-[2.5rem];
+    @apply bg-card/60 backdrop-blur-md md:backdrop-blur-sm;
+  }
+
+  .premium-card:hover {
+    @apply border-primary/50 shadow-lg shadow-primary/5 -translate-y-1;
+  }
+
+  .premium-card-border-line {
+    @apply absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent scale-x-0 transition-transform duration-500 rounded-full;
+  }
+
+  .premium-card:hover .premium-card-border-line {
+    @apply scale-x-100;
+  }
+
+  .premium-card-icon {
+    @apply w-10 h-10 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center text-primary transition-all duration-500 shadow-lg shadow-primary/5;
+  }
+
+  .premium-card:hover .premium-card-icon {
+    @apply bg-primary text-white;
+  }
+}
