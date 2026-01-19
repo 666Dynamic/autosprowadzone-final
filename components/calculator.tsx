@@ -129,46 +129,50 @@ export function Calculator() {
                     <CardTitle className="text-lg sm:text-xl md:text-2xl font-black uppercase tracking-tighter">Wstępna Wycena</CardTitle>
                     <CardDescription className="text-muted-foreground font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs">Bez kosztów transportu (wycena indywidualna).</CardDescription>
                 </CardHeader>
-                    <CardContent className="flex-1 p-6 sm:p-7 md:p-8 space-y-5 sm:space-y-6 md:space-y-8">
-                        <div className="bg-muted dark:bg-white/5 rounded-xl sm:rounded-[1.5rem] md:rounded-[2.5rem] border border-border dark:border-white/10 p-6 sm:p-7 md:p-8 flex flex-col items-center justify-center text-center space-y-2 sm:space-y-3 relative overflow-hidden group">
-                            <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
-                            <span className="text-[10px] md:text-xs text-primary uppercase font-bold tracking-[0.3em]">Cena Całkowita w Kraju</span>
-                            <span className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground tabular-nums tracking-tighter">
-                                {formatCurrency(totalCost)}
-                            </span>
-                            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-muted text-[10px] font-bold uppercase tracking-widest text-muted-foreground border border-border dark:bg-white/10 dark:text-white/60 dark:border-white/10">
-                                <RefreshCcw className="w-3 h-3 text-primary animate-spin-slow" /> Kurs: {exchangeRate} PLN
-                            </div>
-                        </div>
+                <CardContent className="flex-1 p-6 sm:p-7 md:p-8 space-y-5 sm:space-y-6 md:space-y-8">
+                    {/* Total Price Card - Restored "Pop" */}
+                    <div className="bg-gradient-to-br from-background to-muted border-2 border-primary/20 rounded-xl sm:rounded-[1.5rem] md:rounded-[2.5rem] p-6 sm:p-7 md:p-8 flex flex-col items-center justify-center text-center space-y-2 sm:space-y-3 relative overflow-hidden group shadow-lg shadow-primary/5">
+                        <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50" />
+                        <div className="absolute top-0 right-0 p-12 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
 
-                        <div className="space-y-2">
-                            <Table>
-                                <TableBody>
-                                    <TableRow className="hover:bg-muted/50 transition-colors border-none group">
-                                        <TableCell className="text-[10px] md:text-sm font-bold py-3 text-muted-foreground group-hover:text-foreground uppercase tracking-wider transition-colors">Cena Auta ({eurPrice} EUR)</TableCell>
-                                        <TableCell className="text-right text-sm md:text-base font-black text-foreground py-3">{formatCurrency(pricePln)}</TableCell>
-                                    </TableRow>
-                                    <TableRow className="hover:bg-muted/50 transition-colors border-none group">
-                                        <TableCell className="text-[10px] md:text-sm font-bold py-3 text-muted-foreground group-hover:text-foreground uppercase tracking-wider transition-colors">Podatek Akcyzowy ({isLargeEngine ? "18.6%" : "3.1%"})</TableCell>
-                                        <TableCell className="text-right text-sm md:text-base font-black text-foreground py-3">{formatCurrency(excise)}</TableCell>
-                                    </TableRow>
-                                    <TableRow className="hover:bg-muted/50 transition-colors border-none group">
-                                        <TableCell className="text-[10px] md:text-sm font-bold py-3 text-muted-foreground group-hover:text-foreground uppercase tracking-wider transition-colors">Badanie techniczne</TableCell>
-                                        <TableCell className="text-right text-sm md:text-base font-black text-foreground py-3">{formatCurrency(inspection)}</TableCell>
-                                    </TableRow>
-                                    <TableRow className="hover:bg-muted/50 transition-colors border-none group">
-                                        <TableCell className="text-[10px] md:text-sm font-bold py-3 text-muted-foreground group-hover:text-foreground uppercase tracking-wider transition-colors">Tłumaczenia i rejestracja</TableCell>
-                                        <TableCell className="text-right text-sm md:text-base font-black text-foreground py-3">{formatCurrency(TRANSLATION + registration)}</TableCell>
-                                    </TableRow>
-                                    <TableRow className="border-none bg-primary/20 rounded-xl md:rounded-2xl">
-                                        <TableCell className="text-[10px] font-black py-4 text-primary uppercase tracking-[0.2em] pl-4 md:pl-6 italic">Prowizja serwisu</TableCell>
-                                        <TableCell className="text-right py-4 font-black text-lg md:text-xl text-primary pr-4 md:pr-6">{formatCurrency(COMMISSION)}</TableCell>
-                                    </TableRow>
-                                </TableBody>
-                            </Table>
+                        <span className="text-[10px] md:text-xs text-muted-foreground uppercase font-black tracking-[0.3em] relative z-10">Cena Całkowita w Kraju</span>
+                        <span className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground tabular-nums tracking-tighter relative z-10 drop-shadow-sm">
+                            {formatCurrency(totalCost)}
+                        </span>
+                        <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-background/50 backdrop-blur-sm text-[10px] font-bold uppercase tracking-widest text-muted-foreground border border-border/50 relative z-10">
+                            <RefreshCcw className="w-3 h-3 text-primary animate-spin-slow" /> Kurs: {exchangeRate} PLN
                         </div>
-                    </CardContent>
-                </Card>
+                    </div>
+
+                    <div className="space-y-2">
+                        <Table>
+                            <TableBody>
+                                <TableRow className="hover:bg-muted/50 transition-colors border-none group">
+                                    <TableCell className="text-[10px] md:text-sm font-bold py-3 text-muted-foreground group-hover:text-foreground uppercase tracking-wider transition-colors">Cena Auta ({eurPrice} EUR)</TableCell>
+                                    <TableCell className="text-right text-sm md:text-base font-black text-foreground py-3">{formatCurrency(pricePln)}</TableCell>
+                                </TableRow>
+                                <TableRow className="hover:bg-muted/50 transition-colors border-none group">
+                                    <TableCell className="text-[10px] md:text-sm font-bold py-3 text-muted-foreground group-hover:text-foreground uppercase tracking-wider transition-colors">Podatek Akcyzowy ({isLargeEngine ? "18.6%" : "3.1%"})</TableCell>
+                                    <TableCell className="text-right text-sm md:text-base font-black text-foreground py-3">{formatCurrency(excise)}</TableCell>
+                                </TableRow>
+                                <TableRow className="hover:bg-muted/50 transition-colors border-none group">
+                                    <TableCell className="text-[10px] md:text-sm font-bold py-3 text-muted-foreground group-hover:text-foreground uppercase tracking-wider transition-colors">Badanie techniczne</TableCell>
+                                    <TableCell className="text-right text-sm md:text-base font-black text-foreground py-3">{formatCurrency(inspection)}</TableCell>
+                                </TableRow>
+                                <TableRow className="hover:bg-muted/50 transition-colors border-none group">
+                                    <TableCell className="text-[10px] md:text-sm font-bold py-3 text-muted-foreground group-hover:text-foreground uppercase tracking-wider transition-colors">Tłumaczenia i rejestracja</TableCell>
+                                    <TableCell className="text-right text-sm md:text-base font-black text-foreground py-3">{formatCurrency(TRANSLATION + registration)}</TableCell>
+                                </TableRow>
+                                {/* Commission - Toned Down */}
+                                <TableRow className="border-t border-border/50">
+                                    <TableCell className="text-[10px] md:text-sm font-bold py-4 text-primary uppercase tracking-wider pl-4">Prowizja serwisu</TableCell>
+                                    <TableCell className="text-right py-4 font-black text-lg text-primary pr-4">{formatCurrency(COMMISSION)}</TableCell>
+                                </TableRow>
+                            </TableBody>
+                        </Table>
+                    </div>
+                </CardContent>
+            </Card>
 
             {/* Buttons and info section outside grid */}
             <div className="col-span-full mt-8 space-y-6">

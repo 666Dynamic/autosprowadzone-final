@@ -44,7 +44,7 @@ const steps = [
 
 export function ProcessSection() {
     return (
-        <section id="process-section" className="py-24 md:py-32 bg-background relative overflow-hidden">
+        <section id="process-section" className="py-24 md:py-32 bg-transparent relative overflow-hidden">
             <div className="container mx-auto px-4 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -52,7 +52,7 @@ export function ProcessSection() {
                     viewport={{ once: true }}
                     className="text-center mb-20 max-w-4xl mx-auto"
                 >
-                    <div className="inline-block px-4 py-1.5 mb-6 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-black uppercase tracking-widest">
+                    <div className="inline-block px-4 py-1.5 mb-6 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-black uppercase tracking-widest bg-background/50 backdrop-blur-sm">
                         Proces Zakupu
                     </div>
                     <h2 className="text-2xl md:text-4xl font-black mb-6 text-foreground tracking-tighter uppercase leading-none">
@@ -74,7 +74,7 @@ export function ProcessSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ delay: idx * 0.05, duration: 0.4, ease: "easeOut" }}
-                            className="bg-card border border-border p-4 sm:p-6 md:p-10 rounded-xl sm:rounded-2xl md:rounded-[2.5rem] hover:border-primary hover:shadow-lg transition-all duration-200 group relative overflow-hidden min-h-[200px] sm:min-h-[240px] md:min-h-[280px]"
+                            className="bg-card/80 backdrop-blur-sm border border-border p-4 sm:p-6 md:p-10 rounded-xl sm:rounded-2xl md:rounded-[2.5rem] hover:border-primary hover:shadow-lg transition-all duration-200 group relative overflow-hidden min-h-[200px] sm:min-h-[240px] md:min-h-[280px]"
                         >
                             {/* Background Number */}
                             <div className="absolute -top-2 -right-2 text-6xl md:text-9xl font-black text-primary/5 select-none group-hover:text-primary/10 transition-colors pointer-events-none">

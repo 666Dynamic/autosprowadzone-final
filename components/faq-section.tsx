@@ -34,11 +34,23 @@ const faqItems = [
         question: "Jakie są dodatkowe koszty przy zakupie na aukcji?",
         answer: "Do wylicytowanej kwoty netto należy doliczyć tzw. Aufgeld (prowizję domu aukcyjnego - ok. 3.5%) oraz Exportaufgeld (opłatę za dokumenty eksportowe - ok. 140€). Wszystkie te koszty są jawne i przedstawiamy je przed licytacją.",
     },
+    {
+        question: "Czy mogę zrezygnować z zakupu po wygranej aukcji?",
+        answer: "Wygrana aukcja jest prawnie wiążąca. Rezygnacja wiąże się z karami umownymi naliczanymi przez dom aukcyjny (zazwyczaj ok. 10% wartości pojazdu). Dlatego licytujemy tylko sprawdzone samochody, co do których jesteś pewien.",
+    },
+    {
+        question: "Czy pomagacie z akcyzą i rejestracją w Polsce?",
+        answer: "Tak. Oferujemy kompleksową obsługę. Przygotowujemy komplet dokumentów do Wydziału Komunikacji, tłumaczenia oraz pomagamy w opłaceniu akcyzy. Możemy dostarczyć auto 'pod dom', gotowe do rejestracji.",
+    },
+    {
+        question: "Jaki jest całkowity czas realizacji zamówienia?",
+        answer: "Od momentu wygrania licytacji do dostarczenia auta pod Twój dom mija zazwyczaj od 7 do 14 dni. Zależy to od szybkości księgowania przelewów międzynarodowych oraz dostępności dokumentów wyrejestrowania (Fahrzeugbrief) u niemieckiego sprzedawcy.",
+    },
 ]
 
 export function FaqSection() {
     return (
-        <section className="py-20 bg-background relative overflow-hidden">
+        <section className="py-20 bg-transparent relative overflow-hidden">
             {/* Subtle background glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.03)_0%,transparent_70%)] pointer-events-none" />
 

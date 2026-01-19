@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { sendContactEmail } from "@/app/actions";
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -26,13 +27,31 @@ export function ContactForm({
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [isSuccess, setIsSuccess] = useState(false)
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         setIsSubmitting(true)
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500))
-        setIsSubmitting(false)
-        setIsSuccess(true)
+
+        const formData = new FormData(e.currentTarget)
+        // Ensure 'mode' is in formData if it's not present as a field
+        if (!formData.get("mode")) {
+            formData.append("mode", mode)
+        }
+
+        try {
+            const result = await sendContactEmail(formData)
+
+            if (result.success) {
+                setIsSuccess(true)
+                // Optional: Reset form here if needed, but we are switching view to success message
+            } else {
+                alert("Wystąpił błąd podczas wysyłania wiadomości: " + (result.error || "Nieznany błąd"))
+            }
+        } catch (error) {
+            console.error("Critical error sending email:", error)
+            alert("Wystąpił błąd krytyczny. Spróbuj ponownie.")
+        } finally {
+            setIsSubmitting(false)
+        }
     }
 
     if (isSuccess) {
@@ -85,27 +104,28 @@ export function ContactForm({
                     <div className="grid md:grid-cols-2 gap-4">
                         <div className="space-y-2">
                             {showLabels && <Label htmlFor="name" className="text-sm font-medium text-muted-foreground">Imię i Nazwisko</Label>}
-                            <Input id="name" placeholder="Jan Kowalski" required className="h-12 md:h-11 px-4 rounded-lg border border-border bg-background focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary transition-all touch-manipulation hover:border-border/80" />
+                            <Input id="name" name="name" placeholder="Jan Kowalski" required className="h-12 md:h-11 px-4 rounded-lg border border-border bg-background focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary transition-all touch-manipulation hover:border-border/80" />
                         </div>
                         <div className="space-y-2">
                             {showLabels && <Label htmlFor="email" className="text-sm font-medium text-muted-foreground">Email</Label>}
-                            <Input id="email" type="email" placeholder="jan@kowalski.pl" required className="h-12 md:h-11 px-4 rounded-lg border border-border bg-background focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary transition-all touch-manipulation hover:border-border/80" />
+                            <Input id="email" name="email" type="email" placeholder="jan@kowalski.pl" required className="h-12 md:h-11 px-4 rounded-lg border border-border bg-background focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary transition-all touch-manipulation hover:border-border/80" />
                         </div>
                     </div>
                     <div className="space-y-2">
                         {showLabels && <Label htmlFor="phone" className="text-sm font-medium text-muted-foreground">Telefon (opcjonalnie)</Label>}
-                        <Input id="phone" type="tel" placeholder="+48 123 456 789" className="h-12 md:h-11 px-4 rounded-lg border border-border bg-background focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary transition-all touch-manipulation hover:border-border/80" />
+                        <Input id="phone" name="phone" type="tel" placeholder="+48 123 456 789" className="h-12 md:h-11 px-4 rounded-lg border border-border bg-background focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary transition-all touch-manipulation hover:border-border/80" />
                     </div>
                     <div className="space-y-2">
                         {showLabels && <Label htmlFor="message" className="text-sm font-medium text-muted-foreground">
                             {mode === "search" ? "Szczegóły pojazdu" : mode === "weryfikacja" ? "Link do ogłoszenia" : "Wiadomość"}
                         </Label>}
-                        <Textarea 
-                            id="message" 
+                        <Textarea
+                            id="message"
+                            name="message"
                             placeholder={
-                                mode === "search" 
+                                mode === "search"
                                     ? "Mercedes GLC, od 2020, Budżet do 250 000 PLN\nWyposażenie: AMG, Panorama, Hak..."
-                                    : mode === "weryfikacja" 
+                                    : mode === "weryfikacja"
                                         ? "mobile.de/autoscout24 link + dodatkowe informacje..."
                                         : "Dzień dobry, proszę o kontakt w sprawie..."
                             }

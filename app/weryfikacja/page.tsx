@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function VerificationPage() {
     return (
-        <div className="bg-background">
+        <div className="bg-transparent">
             <div className="container mx-auto px-4 md:px-8 py-12 md:py-24">
                 <div className="max-w-6xl mx-auto space-y-24">
 
@@ -222,11 +222,11 @@ export default function VerificationPage() {
                     {/* Pricing Grid */}
                     <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch pt-12">
                         {/* Package 1 */}
-                        <div className="bg-card/80 backdrop-blur-sm text-card-foreground p-6 md:p-8 rounded-2xl shadow-2xl relative overflow-hidden flex flex-col justify-between border border-border min-h-[500px] md:min-h-[450px] lg:min-h-[500px]">
+                        <div className="bg-card/80 backdrop-blur-sm text-card-foreground p-6 md:p-8 rounded-[2.5rem] shadow-2xl relative overflow-hidden flex flex-col justify-between border border-border min-h-[500px] md:min-h-[450px] lg:min-h-[500px]">
                             <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-3 md:px-6 lg:px-8 py-2 md:py-3 font-black text-[10px] md:text-xs uppercase tracking-widest rounded-bl-2xl md:rounded-bl-3xl z-10 max-w-[60%] text-center leading-tight">Najczęściej wybierany</div>
                             <div className="space-y-4 md:space-y-5 relative z-10 pt-4 md:pt-3">
                                 <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight flex items-start md:items-center text-foreground flex-col md:flex-row gap-2 md:gap-3">
-                                    <MapPin className="h-6 md:h-8 w-6 md:w-8 text-primary shrink-0" /> 
+                                    <MapPin className="h-6 md:h-8 w-6 md:w-8 text-primary shrink-0" />
                                     <span>Region Bremen (Baza)</span>
                                 </h3>
                                 <p className="text-muted-foreground text-sm font-bold uppercase tracking-widest leading-tight">Obszar do 100km od Osterholz-Scharmbeck</p>
@@ -259,10 +259,10 @@ export default function VerificationPage() {
                         </div>
 
                         {/* Package 2 */}
-                        <div className="bg-card/80 backdrop-blur-sm text-card-foreground p-6 md:p-8 rounded-2xl shadow-xl flex flex-col justify-between border border-border min-h-[500px] md:min-h-[450px] lg:min-h-[500px]">
+                        <div className="bg-card/80 backdrop-blur-sm text-card-foreground p-6 md:p-8 rounded-[2.5rem] shadow-xl flex flex-col justify-between border border-border min-h-[500px] md:min-h-[450px] lg:min-h-[500px]">
                             <div className="space-y-8">
                                 <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight flex items-start md:items-center text-foreground flex-col md:flex-row gap-2 md:gap-3">
-                                    <Globe className="h-6 md:h-8 w-6 md:w-8 text-primary shrink-0" /> 
+                                    <Globe className="h-6 md:h-8 w-6 md:w-8 text-primary shrink-0" />
                                     <span>Pozostałe Regiony DE</span>
                                 </h3>
                                 <p className="text-muted-foreground text-sm font-bold uppercase tracking-widest leading-tight">Berlin, Hamburg, Monachium i okolice</p>

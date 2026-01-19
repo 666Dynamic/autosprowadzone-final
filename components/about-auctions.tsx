@@ -115,7 +115,7 @@ export function AboutAuctions() {
     ]
 
     return (
-        <section className="py-16 md:py-32 bg-background text-foreground relative overflow-hidden">
+        <section className="py-16 md:py-32 bg-transparent text-foreground relative overflow-hidden">
             {/* Ambient Background Glows - Optimized Layout & Performance */}
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
                 {/* Static blurred blobs instead of animated ones for better mobile perf */}

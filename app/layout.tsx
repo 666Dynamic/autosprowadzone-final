@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { CookieBanner } from "@/components/cookie-banner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +23,13 @@ export const metadata: Metadata = {
     template: "%s | autosprowadzone.pl",
   },
   description: "Sprowadzamy auta z Niemiec z aukcji B2B i od dealerów. Niemiecka spółka, pewna historia, transport door-to-door. Sprawdź naszą ofertę weryfikacji i importu!",
-  keywords: ["weryfikacja aut niemcy", "import aut z niemiec", "aukcje b2b auta", "autosprowadzone", "sprowadzanie aut", "inspekcja auta niemcy"],
+  keywords: [
+    "sprowadzanie aut z niemiec", "auta z niemiec aukcje", "licytacje samochodowe niemcy", "auto import niemcy", "sprowadzanie aut na zamówienie",
+    "aukcje b2b auta", "weryfikacja aut niemcy", "inspekcja auta niemcy", "auta poleasingowe niemcy", "import aut z niemiec procedura",
+    "kalkulator akcyzy 2026", "bca auctions niemcy", "auto1 opinie", "transport aut z niemiec", "rejestracja auta z niemiec koszt",
+    "licytacje komornicze niemcy", "aukcje samochodowe online", "bezpieczny import aut", "sprowadzanie aut z niemiec olx", "auta uszkodzone niemcy",
+    "import aut z zagranicy", "firma sprowadzająca auta", "opłaty celne auto z niemiec", "samochody z niemiec na zamówienie"
+  ],
   authors: [{ name: "autosprowadzone.pl" }],
   creator: "autosprowadzone.pl",
   openGraph: {
@@ -33,9 +40,7 @@ export const metadata: Metadata = {
     description: "Bezpieczny import aut z Niemiec. Dostęp do aukcji B2B (BCA, Auto1). Weryfikacja techniczna na miejscu.",
     siteName: "autosprowadzone.pl",
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
+
 };
 
 const jsonLd = {
@@ -91,6 +96,7 @@ export default function RootLayout({
           <div className="flex min-h-screen flex-col">
             <Navbar />
             <main className="flex-1">{children}</main>
+            <CookieBanner />
             <Footer />
           </div>
         </ThemeProvider>

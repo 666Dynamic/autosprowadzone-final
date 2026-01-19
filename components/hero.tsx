@@ -6,9 +6,9 @@ import Link from "next/link"
 
 export function Hero() {
     return (
-        <section className="relative overflow-hidden bg-background pt-20 md:pt-24 pb-24 lg:pt-32 lg:pb-32 min-h-[80vh] flex items-center">
+        <section className="relative overflow-hidden bg-transparent pt-20 md:pt-24 pb-24 lg:pt-32 lg:pb-32 min-h-[80vh] flex items-center">
             {/* Background Video - Only video, no images */}
-            <div className="absolute inset-0 z-0 bg-background dark:bg-slate-950">
+            <div className="absolute inset-0 z-0 bg-transparent dark:bg-transparent">
                 <video
                     autoPlay
                     loop

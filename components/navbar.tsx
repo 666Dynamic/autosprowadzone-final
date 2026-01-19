@@ -4,10 +4,11 @@ import * as React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
-import { Menu, X, CarFront } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/mode-toggle"
 import { motion, AnimatePresence } from "framer-motion"
+import { Logo } from "@/components/logo"
 
 const navItems = [
     { name: "Strona Główna", href: "/" },
@@ -27,9 +28,9 @@ export function Navbar() {
         <nav className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="container mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
                 {/* Logo */}
-                <Link href="/" className="flex items-center space-x-2">
-                    <CarFront className="h-6 w-6 text-primary" />
-                    <span className="font-black text-lg tracking-tight">autosprowadzone.pl</span>
+                {/* Logo */}
+                <Link href="/">
+                    <Logo />
                 </Link>
 
                 {/* Desktop Nav */}
