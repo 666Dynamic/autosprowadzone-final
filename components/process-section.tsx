@@ -1,6 +1,7 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { useEffect, useState } from "react"
+import { motion, useReducedMotion } from "framer-motion"
 import { Search, MonitorCheck, FileSignature, Wallet, Gavel, Truck } from "lucide-react"
 
 const steps = [
@@ -43,11 +44,28 @@ const steps = [
 ]
 
 export function ProcessSection() {
+    const prefersReduced = useReducedMotion()
+    const [isMobile, setIsMobile] = useState(true)
+
+    useEffect(() => {
+        const mobile = typeof window !== "undefined" && (window.innerWidth < 768 || (navigator.maxTouchPoints && navigator.maxTouchPoints > 0))
+        setIsMobile(mobile)
+
+        function onResize() {
+            setIsMobile(window.innerWidth < 768)
+        }
+
+        window.addEventListener("resize", onResize)
+        return () => window.removeEventListener("resize", onResize)
+    }, [])
+
+    const reduceMotion = prefersReduced || isMobile
+
     return (
         <section id="process-section" className="py-24 md:py-32 relative overflow-hidden">
             <div className="container mx-auto px-4 relative z-10">
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={reduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-center mb-20 max-w-4xl mx-auto [will-change:transform,opacity]"
@@ -66,38 +84,39 @@ export function ProcessSection() {
                 </motion.div>
 
                 {/* Grid Layout - Clean & Consistent */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                    {steps.map((step, idx) => (
-                        <motion.div
-                            key={idx}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-50px" }}
-                            transition={{
-                                delay: idx * 0.05,
-                                duration: 0.4,
-                                ease: [0.21, 0.47, 0.32, 0.98] // Custom cubic-bezier for smoother feel
-                            }}
-                            className="bg-card/95 md:bg-card/80 md:backdrop-blur-sm border border-border p-4 sm:p-6 md:p-10 rounded-xl sm:rounded-2xl md:rounded-[2.5rem] hover:border-primary hover:shadow-lg transition-all duration-300 group relative overflow-hidden min-h-[200px] sm:min-h-[240px] md:min-h-[280px] will-change-transform"
-                        >
-                            {/* Background Number */}
-                            <div className="absolute -top-2 -right-2 text-6xl md:text-9xl font-black text-primary/5 select-none group-hover:text-primary/10 transition-colors pointer-events-none">
-                                {step.id}
-                            </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    {steps.map((step, idx) => {
+                        const itemInitial = reduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 0 }
+                        const itemTransition = reduceMotion ? {} : { delay: idx * 0.05, duration: 0.5, ease: "easeOut" }
 
-                            <div className="relative z-10 transition-transform duration-300 group-hover:-translate-y-1">
-                                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-lg sm:rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center mb-3 sm:mb-4 md:mb-8 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300 shadow-xs md:shadow-sm">
-                                    <step.icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
+                        return (
+                            <motion.div
+                                key={idx}
+                                initial={itemInitial}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-10px" }}
+                                transition={itemTransition}
+                                className="bg-card/95 md:bg-card/80 md:backdrop-blur-sm border border-border p-5 sm:p-8 md:p-10 rounded-2xl md:rounded-[2.5rem] hover:border-primary/50 md:hover:border-primary hover:shadow-xl transition-all duration-300 group relative overflow-hidden min-h-[180px] sm:min-h-[220px] md:min-h-[280px] transform-gpu"
+                            >
+                                {/* Background Number */}
+                                <div className="absolute -top-2 -right-2 text-6xl md:text-9xl font-black text-primary/5 select-none md:group-hover:text-primary/10 transition-colors pointer-events-none">
+                                    {step.id}
                                 </div>
-                                <h3 className="text-lg sm:text-xl md:text-2xl font-black uppercase tracking-tight text-foreground mb-2 sm:mb-3 md:mb-4 group-hover:text-primary transition-colors leading-tight">
-                                    {step.title}
-                                </h3>
-                                <p className="text-xs sm:text-sm md:text-base text-muted-foreground font-medium leading-relaxed">
-                                    {step.description}
-                                </p>
-                            </div>
-                        </motion.div>
-                    ))}
+
+                                <div className="relative z-10 transition-transform duration-300 md:group-hover:-translate-y-1">
+                                    <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center mb-4 md:mb-8 text-primary md:group-hover:bg-primary md:group-hover:text-white transition-colors duration-300 shadow-sm">
+                                        <step.icon className="w-6 h-6 md:w-8 md:h-8" />
+                                    </div>
+                                    <h3 className="text-lg sm:text-xl md:text-2xl font-black uppercase tracking-tight text-foreground mb-3 md:mb-4 md:group-hover:text-primary transition-colors leading-tight">
+                                        {step.title}
+                                    </h3>
+                                    <p className="text-xs sm:text-sm md:text-base text-muted-foreground font-medium leading-relaxed">
+                                        {step.description}
+                                    </p>
+                                </div>
+                            </motion.div>
+                        )
+                    })}
                 </div>
             </div>
         </section>
