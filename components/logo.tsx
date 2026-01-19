@@ -5,24 +5,24 @@ export function Logo({ className }: { className?: string }) {
         <div className={`relative flex items-center ${className}`}>
             {/* Simple, clean text-based logo with icon if we had the SVG, but for now robust text */}
             <div className="flex items-center gap-2">
-                <div className="bg-gradient-to-br from-primary/20 to-primary/5 p-2 rounded-xl border border-primary/20 shadow-sm">
+                <div className="bg-primary p-2 rounded-lg shadow-[0_0_15px_rgba(245,158,11,0.3)]">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        strokeWidth="2"
+                        strokeWidth="2.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="w-5 h-5 text-primary"
+                        className="w-5 h-5 text-white"
                     >
-                        <path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.53-.9L14.6 6a2.25 2.25 0 0 0-2-.75H11.4a2.25 2.25 0 0 0-2 .75L2.53 11.95a1 1 0 0 0-.53.9V16h3" />
-                        <path d="M16 16v2a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2" />
-                        <path d="M6 9h12" />
+                        <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
+                        <circle cx="7" cy="17" r="2" />
+                        <circle cx="17" cy="17" r="2" />
                     </svg>
                 </div>
-                <span className="font-black text-xl tracking-tight text-foreground">
-                    auto<span className="text-primary">sprowadzone</span>.pl
+                <span className="font-extrabold text-2xl tracking-tighter text-foreground uppercase italic scale-y-110 origin-bottom">
+                    auto<span className="text-primary not-italic">sprowadzone</span>
                 </span>
             </div>
         </div>
