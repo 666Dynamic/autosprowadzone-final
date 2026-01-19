@@ -50,7 +50,7 @@ const faqItems = [
 
 export function FaqSection() {
     return (
-        <section className="py-20 bg-secondary/5 relative overflow-hidden">
+        <section className="py-20 relative overflow-hidden">
             {/* Subtle background glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.03)_0%,transparent_70%)] pointer-events-none" />
 

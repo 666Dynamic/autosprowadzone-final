@@ -116,13 +116,14 @@
 
     /* Premium Background with Visible Texture - Apple/Stripe Style */
     background-color: var(--background);
-    /* Balanced wash (85% opacity) - Grid is subtle but visible */
+    /* Balanced wash - Grid is subtle but visible */
     background-image:
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
-      radial-gradient(circle at 10% 0%, rgba(245, 158, 11, 0.18) 0%, transparent 35%),
-      radial-gradient(circle at 90% 100%, rgba(245, 158, 11, 0.12) 0%, transparent 40%),
-      radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.03) 0%, transparent 50%),
-      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      radial-gradient(circle at 10% 0%, rgba(245, 158, 11, 0.03) 0%, transparent 35%),
+      radial-gradient(circle at 90% 100%, rgba(245, 158, 11, 0.02) 0%, transparent 40%),
+      radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.01) 0%, transparent 50%),
+      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.005'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+    background-attachment: fixed;
 
     /* Prevent horizontal scroll on mobile */
     overscroll-behavior-x: none;
@@ -134,11 +135,11 @@
 
   .dark body {
     background-image:
-      linear-gradient(to bottom, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)),
-      radial-gradient(circle at 10% 0%, rgba(245, 158, 11, 0.22) 0%, transparent 35%),
-      radial-gradient(circle at 90% 100%, rgba(245, 158, 11, 0.15) 0%, transparent 40%),
-      radial-gradient(circle at 50% 50%, rgba(2, 6, 23, 0.5) 0%, transparent 50%),
-      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      radial-gradient(circle at 10% 0%, rgba(245, 158, 11, 0.04) 0%, transparent 35%),
+      radial-gradient(circle at 90% 100%, rgba(245, 158, 11, 0.02) 0%, transparent 40%),
+      radial-gradient(circle at 50% 50%, rgba(2, 6, 23, 0.15) 0%, transparent 50%),
+      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.005'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
   }
 
   /* Global cursor and transition utilities */

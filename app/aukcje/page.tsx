@@ -44,9 +44,9 @@ const partners = [
 
 export default function AuctionsPage() {
     return (
-        <div className="bg-background">
+        <div>
             {/* Hero Section */}
-            <section className="relative py-24 md:py-32 overflow-hidden bg-background">
+            <section className="relative py-24 md:py-32 overflow-hidden">
                 <div className="absolute inset-0 bg-primary/5 blur-3xl rounded-full translate-y-1/2 -translate-x-1/2 w-[600px] h-[600px] pointer-events-none" />
                 <div className="container mx-auto px-4 md:px-8 relative z-10">
                     <div className="max-w-4xl text-center md:text-left">
@@ -132,7 +132,7 @@ export default function AuctionsPage() {
             </section>
 
             {/* Expertise: What we check */}
-            <section className="py-24 bg-background border-b border-border">
+            <section className="py-24 border-b border-border">
                 <div className="container mx-auto px-4 md:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter text-foreground mb-4">Bezpieczny Zakup: <span className="text-primary italic">Co weryfikujemy?</span></h2>
@@ -181,7 +181,7 @@ export default function AuctionsPage() {
             </section>
 
             {/* Profitability & Risks */}
-            <section className="py-24 bg-background">
+            <section className="py-24">
                 <div className="container mx-auto px-4 md:px-8">
                     <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
                         {/* Why it pays off */}
@@ -264,7 +264,7 @@ export default function AuctionsPage() {
             </section>
 
             {/* Main Platforms with Fees */}
-            <section className="py-24 bg-background">
+            <section className="py-24">
                 <div className="container mx-auto px-4 md:px-8">
                     <div className="text-center mb-16 space-y-4">
                         <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter text-foreground">Główni Partnerzy <span className="text-primary italic">B2B</span></h2>
@@ -308,7 +308,7 @@ export default function AuctionsPage() {
             </section>
 
             {/* More Platforms List */}
-            <section className="py-16 bg-background text-foreground">
+            <section className="py-16 text-foreground">
                 <div className="container mx-auto px-4 md:px-8">
                     <div className="text-center mb-12">
                         <h3 className="text-2xl md:text-4xl font-black uppercase tracking-tighter italic">I ponad 30 innych portali</h3>
