@@ -177,12 +177,12 @@ export function Calculator() {
                                 </TableRow>
                                 <TableRow className="hover:bg-muted/50 transition-colors border-none group">
                                     <TableCell className="text-[10px] md:text-sm font-bold py-3 text-muted-foreground group-hover:text-foreground uppercase tracking-wider transition-colors">Tłumaczenia i rejestracja</TableCell>
-                                    <TableCell className="text-right text-sm md:text-base font-black text-foreground py-3">{formatCurrency(TRANSLATION + registration)}</TableCell>
+                                    <TableCell className="text-right text-sm md:text-base font-black text-foreground py-3">{formatCurrency(CALCULATOR_CONFIG.TRANSLATION + registration)}</TableCell>
                                 </TableRow>
                                 {/* Commission - Toned Down */}
                                 <TableRow className="border-t border-border/50">
                                     <TableCell className="text-[10px] md:text-sm font-bold py-4 text-primary uppercase tracking-wider pl-4">Prowizja serwisu</TableCell>
-                                    <TableCell className="text-right py-4 font-black text-lg text-primary pr-4">{formatCurrency(COMMISSION)}</TableCell>
+                                    <TableCell className="text-right py-4 font-black text-lg text-primary pr-4">{formatCurrency(CALCULATOR_CONFIG.COMMISSION)}</TableCell>
                                 </TableRow>
                             </TableBody>
                         </Table>

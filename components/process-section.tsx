@@ -48,8 +48,11 @@ export function ProcessSection() {
     const [isMobile, setIsMobile] = useState(true)
 
     useEffect(() => {
-        const mobile = typeof window !== "undefined" && (window.innerWidth < 768 || (navigator.maxTouchPoints && navigator.maxTouchPoints > 0))
-        setIsMobile(mobile)
+        const mobile = typeof window !== "undefined" && (
+            window.innerWidth < 768 || 
+            (navigator.maxTouchPoints !== undefined && navigator.maxTouchPoints > 0)
+        )
+        setIsMobile(Boolean(mobile))
 
         function onResize() {
             setIsMobile(window.innerWidth < 768)
@@ -87,7 +90,11 @@ export function ProcessSection() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     {steps.map((step, idx) => {
                         const itemInitial = reduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 0 }
-                        const itemTransition = reduceMotion ? {} : { delay: idx * 0.05, duration: 0.5, ease: "easeOut" }
+                        const itemTransition = reduceMotion ? undefined : { 
+                            delay: idx * 0.05, 
+                            duration: 0.5, 
+                            ease: [0.21, 0.47, 0.32, 0.98] as const
+                        }
 
                         return (
                             <motion.div

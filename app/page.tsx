@@ -1,3 +1,5 @@
+"use client"
+
 import { FeaturesSection } from "@/components/features-section"
 import { Hero } from "@/components/hero"
 import { LogoCloud } from "@/components/logo-cloud"
