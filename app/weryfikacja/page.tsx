@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function VerificationPage() {
     return (
-        <div className="bg-transparent">
+        <div className="bg-background">
             <div className="container mx-auto px-4 md:px-8 py-12 md:py-24">
                 <div className="max-w-6xl mx-auto space-y-24">
 

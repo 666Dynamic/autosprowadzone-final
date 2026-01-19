@@ -18,7 +18,7 @@ const logos = [
 
 export function LogoCloud() {
     return (
-        <section className="py-12 border-y border-border bg-transparent overflow-hidden">
+        <section className="py-12 border-y border-border bg-background overflow-hidden">
             <div className="container mx-auto px-4 md:px-8 mb-8">
                 <p className="text-center text-sm font-black text-muted-foreground uppercase tracking-[0.2em]">
                     Dostęp do największych platform aukcyjnych w Europie

@@ -49,7 +49,9 @@ export function Navbar() {
                     ))}
                     <ModeToggle />
                     <Link href="#zlecenie">
-                        <Button className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-10 px-4 font-bold rounded-lg">Wyceń Import</Button>
+                        <Button className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-10 px-4 font-bold rounded-lg">
+                            Wyceń Import
+                        </Button>
                     </Link>
                 </div>
 

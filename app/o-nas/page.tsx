@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 
 export const metadata = {
     title: "O Nas | autosprowadzone.pl",
-    description: "Poznaj Miami Autocenter GmbH. Twój zaufany partner w imporcie aut z Niemiec. Lukas Kaminski & Damian Kierzek.",
+    description: "Poznaj Miami Autocenter GmbH. Twój zaufany partner w imporcie aut z Niemiec. Lukas & Damian.",
 }
 
 export default function AboutPage() {
@@ -50,7 +50,7 @@ export default function AboutPage() {
                         <h2 className="text-3xl font-black uppercase tracking-tight">Kto za tym stoi?</h2>
                         <div className="prose dark:prose-invert text-muted-foreground">
                             <p>
-                                Za sukcesem <strong>autosprowadzone.pl</strong> stoją <strong>Lukas Kaminski</strong> oraz <strong>Damian Kierzek</strong>.
+                                Za sukcesem <strong>autosprowadzone.pl</strong> stoją <strong>Lukas</strong> oraz <strong>Damian</strong>.
                                 Połączyliśmy naszą pasję do motoryzacji z wiedzą na temat niemieckiego rynku, aby stworzyć usługę, której sami brakowało nam na rynku.
                             </p>
                             <p>
@@ -75,11 +75,11 @@ export default function AboutPage() {
                                 </p>
                                 <div className="flex gap-4 pt-4 border-t border-border/50">
                                     <div>
-                                        <div className="font-black text-foreground">Lukas Kaminski</div>
+                                        <div className="font-black text-foreground">Lukas</div>
                                         <div className="text-xs text-muted-foreground uppercase">Co-Founder</div>
                                     </div>
                                     <div>
-                                        <div className="font-black text-foreground">Damian Kierzek</div>
+                                        <div className="font-black text-foreground">Damian</div>
                                         <div className="text-xs text-muted-foreground uppercase">Co-Founder</div>
                                     </div>
                                 </div>

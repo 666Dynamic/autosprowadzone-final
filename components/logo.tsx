@@ -1,29 +1,20 @@
-
-
 export function Logo({ className }: { className?: string }) {
     return (
-        <div className={`relative flex items-center ${className}`}>
-            {/* Simple, clean text-based logo with icon if we had the SVG, but for now robust text */}
-            <div className="flex items-center gap-2">
-                <div className="bg-primary p-2 rounded-lg shadow-[0_0_15px_rgba(245,158,11,0.3)]">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="w-5 h-5 text-white"
-                    >
-                        <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
-                        <circle cx="7" cy="17" r="2" />
-                        <circle cx="17" cy="17" r="2" />
-                    </svg>
+        <div className={`flex items-center gap-2.5 ${className}`}>
+            {/* Speed Shield Icon - Shrunk for better balance */}
+            <div className="relative w-8 h-8 flex items-center justify-center bg-primary rounded-lg rotate-3 hover:rotate-0 transition-all duration-300 shadow-[0_4px_15px_rgba(245,158,11,0.3)] group shrink-0">
+                <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg" />
+                <div className="flex items-center gap-0.5 skew-x-[-15deg] relative z-10">
+                    <div className="w-0.5 h-3 bg-white/40 rounded-full" />
+                    <div className="w-1 h-5 bg-white rounded-full shadow-[0_0_6px_rgba(255,255,255,0.4)]" />
+                    <div className="w-0.5 h-3 bg-white/40 rounded-full" />
                 </div>
-                <span className="font-extrabold text-2xl tracking-tighter text-foreground uppercase italic scale-y-110 origin-bottom">
-                    auto<span className="text-primary not-italic">sprowadzone</span>
-                </span>
+            </div>
+
+            {/* Unified Wordmark */}
+            <div className="flex items-baseline tracking-tighter uppercase font-extrabold select-none whitespace-nowrap">
+                <span className="text-[1.35rem] leading-none text-foreground">auto</span>
+                <span className="text-[1.35rem] leading-none text-primary italic">sprowadzone</span>
             </div>
         </div>
     )
