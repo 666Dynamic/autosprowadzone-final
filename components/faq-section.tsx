@@ -48,7 +48,11 @@ const faqItems = [
     },
 ]
 
-export function FaqSection() {
+interface FaqSectionProps {
+    limit?: number
+}
+
+export function FaqSection({ limit }: FaqSectionProps) {
     return (
         <section className="py-20 relative overflow-hidden">
             {/* Subtle background glow */}
@@ -59,7 +63,7 @@ export function FaqSection() {
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
                         FAQ
                     </div>
-                    <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter leading-none text-foreground">
+                    <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter leading-none text-foreground">
                         Częste <span className="text-primary italic">Pytania</span>
                     </h2>
                     <p className="text-lg text-muted-foreground font-medium max-w-xl mx-auto">
@@ -69,7 +73,7 @@ export function FaqSection() {
 
                 <div className="space-y-3">
                     <Accordion type="single" collapsible className="w-full">
-                        {faqItems.map((item, idx) => (
+                        {faqItems.slice(0, limit || faqItems.length).map((item, idx) => (
                             <AccordionItem
                                 key={idx}
                                 value={`item-${idx}`}
@@ -88,6 +92,16 @@ export function FaqSection() {
                         ))}
                     </Accordion>
                 </div>
+
+                {limit && limit < faqItems.length && (
+                    <div className="mt-8 text-center">
+                        <Link href="/faq">
+                            <Button className="bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-all h-12 px-8 rounded-xl font-bold border-2 border-primary/20 hover:border-primary shadow-lg">
+                                Zobacz więcej FAQ
+                            </Button>
+                        </Link>
+                    </div>
+                )}
 
                 <div className="mt-16 text-center pt-8 border-t border-border/30">
                     <div className="inline-flex flex-col sm:flex-row items-center gap-6 bg-muted/50 p-6 rounded-[2rem] border border-border">

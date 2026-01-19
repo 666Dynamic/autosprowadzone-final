@@ -44,13 +44,14 @@ export function Calculator() {
     const totalCost = pricePln + excise + inspection + CALCULATOR_CONFIG.TRANSLATION + registration + CALCULATOR_CONFIG.COMMISSION
 
     return (
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-stretch relative z-10">
+        <div className="w-full overflow-x-hidden">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-start relative z-10 max-w-full">
             {/* Inputs */}
-            <Card className="min-h-[600px] flex flex-col border border-primary/10 shadow-lg lg:shadow-xl rounded-2xl lg:rounded-[2rem] overflow-hidden bg-card text-card-foreground transition-all duration-500 hover:border-primary/30">
-                <CardHeader className="bg-muted/50 border-b border-border p-4 sm:p-6 md:p-8">
-                    <CardTitle className="flex items-center gap-3 sm:gap-4 text-lg sm:text-xl md:text-2xl font-black uppercase tracking-tight">
-                        <div className="p-2 sm:p-3 rounded-xl sm:rounded-2xl bg-primary/10 border border-primary/20">
-                            <CalculatorIcon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
+            <Card className="flex flex-col border-2 border-primary/20 shadow-lg rounded-2xl overflow-hidden bg-card/50 backdrop-blur-sm text-card-foreground transition-all duration-300 hover:border-primary/30 hover:shadow-xl">
+                <CardHeader className="bg-muted/30 border-b border-border p-6 md:p-8">
+                    <CardTitle className="flex items-center gap-3 text-xl md:text-2xl font-black uppercase tracking-tight">
+                        <div className="p-2 rounded-xl bg-primary/10 border border-primary/20">
+                            <CalculatorIcon className="h-5 w-5 text-primary" />
                         </div>
                         Parametry Importu
                     </CardTitle>
@@ -58,9 +59,9 @@ export function Calculator() {
                         Skonfiguruj dane swojego pojazdu.
                     </CardDescription>
                 </CardHeader>
-                <CardContent className="flex-1 p-4 sm:p-5 md:p-6 space-y-3 sm:space-y-4 md:space-y-5">
-                    <div className="grid gap-3 sm:gap-4 sm:grid-cols-2">
-                        <div className="space-y-3">
+                <CardContent className="flex-1 p-6 md:p-8 space-y-4">
+                    <div className="grid gap-4 sm:grid-cols-2">
+                        <div className="space-y-2">
                             <Label htmlFor="price" className="text-xs font-bold uppercase tracking-[0.2em] text-primary/80 ml-1">Cena (EUR)</Label>
                             <div className="relative group">
                                 <Input
@@ -71,12 +72,12 @@ export function Calculator() {
                                     value={eurPrice}
                                     onChange={(e) => handlePriceChange(e.target.value)}
                                     aria-label="Cena pojazdu w euro"
-                                    className="relative h-12 sm:h-14 text-lg sm:text-xl font-bold rounded-xl sm:rounded-2xl border border-border bg-background focus-visible:ring-2 focus-visible:ring-primary focus-visible:border-primary transition-all pr-12 hover:border-border/80"
+                                    className="relative h-11 text-base font-bold rounded-xl border border-border bg-background focus-visible:ring-2 focus-visible:ring-primary focus-visible:border-primary transition-all pr-12 hover:border-border/80"
                                 />
-                                <div className="absolute right-5 top-1/2 -translate-y-1/2 text-primary font-black text-lg" aria-hidden="true">€</div>
+                                <div className="absolute right-4 top-1/2 -translate-y-1/2 text-primary font-black text-base" aria-hidden="true">€</div>
                             </div>
                         </div>
-                        <div className="space-y-3">
+                        <div className="space-y-2">
                             <Label htmlFor="rate" className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground ml-1">Kurs EUR (PLN)</Label>
                             <div className="relative group">
                                 <Input
@@ -88,14 +89,14 @@ export function Calculator() {
                                     value={exchangeRate}
                                     onChange={(e) => handleExchangeRateChange(e.target.value)}
                                     aria-label="Kurs wymiany euro na złoty"
-                                    className="relative h-12 sm:h-14 text-lg sm:text-xl font-bold rounded-xl sm:rounded-2xl border border-border bg-background focus-visible:ring-2 focus-visible:ring-primary focus-visible:border-primary transition-all pr-12 hover:border-border/80"
+                                    className="relative h-11 text-base font-bold rounded-xl border border-border bg-background focus-visible:ring-2 focus-visible:ring-primary focus-visible:border-primary transition-all pr-12 hover:border-border/80"
                                 />
-                                <div className="absolute right-5 top-1/2 -translate-y-1/2 text-muted-foreground/50 font-bold" aria-hidden="true">zł</div>
+                                <div className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground/50 font-bold text-sm" aria-hidden="true">zł</div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="space-y-2 sm:space-y-3">
+                    <div className="space-y-3">
                         <Label className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground ml-1">Szczegóły pojazdu</Label>
                         <div className="grid gap-2">
                             {[
@@ -117,12 +118,12 @@ export function Calculator() {
                                             item.set(!item.checked)
                                         }
                                     }}
-                                    className={`group flex items-center space-x-3 sm:space-x-4 p-3 sm:p-3.5 md:p-4 rounded-xl sm:rounded-2xl border transition-all cursor-pointer select-none touch-manipulation min-h-[48px] sm:min-h-[56px] focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 outline-none ${item.checked
+                                    className={`group flex items-center space-x-3 p-3.5 rounded-xl border transition-all cursor-pointer select-none touch-manipulation min-h-[52px] focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 outline-none ${item.checked
                                         ? "border-primary/50 bg-primary/5 shadow-md shadow-primary/5"
                                         : "border-border bg-card hover:bg-muted/50 hover:border-primary/20"
                                         }`}
                                 >
-                                    <div className={`h-5 w-5 sm:h-6 sm:w-6 rounded-md sm:rounded-lg border flex items-center justify-center transition-all ${item.checked ? "bg-primary border-primary" : "border-muted-foreground/30"
+                                    <div className={`h-5 w-5 rounded-md border flex items-center justify-center transition-all ${item.checked ? "bg-primary border-primary" : "border-muted-foreground/30"
                                         }`}>
                                         {item.checked && <div className="h-2 w-2 bg-white rounded-full animate-pulse" />}
                                     </div>
@@ -140,18 +141,18 @@ export function Calculator() {
             </Card>
 
             {/* Results */}
-            <Card className="min-h-[600px] flex flex-col border border-primary/10 shadow-lg lg:shadow-xl rounded-2xl lg:rounded-[2rem] overflow-hidden bg-card text-card-foreground transition-all duration-500 hover:border-primary/30">
-                <CardHeader className="p-6 sm:p-7 md:p-8 border-b border-border bg-muted/50">
-                    <CardTitle className="text-lg sm:text-xl md:text-2xl font-black uppercase tracking-tighter">Wstępna Wycena</CardTitle>
-                    <CardDescription className="text-muted-foreground font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs">Bez kosztów transportu (wycena indywidualna).</CardDescription>
+            <Card className="flex flex-col border-2 border-primary/20 shadow-lg rounded-2xl overflow-hidden bg-card/50 backdrop-blur-sm text-card-foreground transition-all duration-300 hover:border-primary/30 hover:shadow-xl">
+                <CardHeader className="p-6 md:p-8 border-b border-border bg-muted/30">
+                    <CardTitle className="text-xl md:text-2xl font-black uppercase tracking-tighter">Wstępna Wycena</CardTitle>
+                    <CardDescription className="text-muted-foreground font-bold uppercase tracking-[0.2em] text-xs">Bez kosztów transportu (wycena indywidualna).</CardDescription>
                 </CardHeader>
-                <CardContent className="flex-1 p-6 sm:p-7 md:p-8 space-y-5 sm:space-y-6 md:space-y-8">
+                <CardContent className="flex-1 p-6 md:p-8 space-y-5">
                     {/* Total Price Card - Restored "Pop" */}
-                    <div className="bg-gradient-to-br from-background to-muted border-2 border-primary/20 rounded-xl sm:rounded-[1.5rem] md:rounded-[2.5rem] p-6 sm:p-7 md:p-8 flex flex-col items-center justify-center text-center space-y-2 sm:space-y-3 relative overflow-hidden group shadow-lg shadow-primary/5">
+                    <div className="bg-gradient-to-br from-background to-muted border-2 border-primary/20 rounded-2xl p-6 md:p-8 flex flex-col items-center justify-center text-center space-y-2 relative overflow-hidden group shadow-lg shadow-primary/5">
                         <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50" />
                         <div className="absolute top-0 right-0 p-12 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
 
-                        <span className="text-[10px] md:text-xs text-muted-foreground uppercase font-black tracking-[0.3em] relative z-10">Cena Całkowita w Kraju</span>
+                        <span className="text-[10px] md:text-xs text-muted-foreground uppercase font-black tracking-wider md:tracking-[0.3em] relative z-10">Cena Całkowita w Kraju</span>
                         <span className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground tabular-nums tracking-tighter relative z-10 drop-shadow-sm">
                             {formatCurrency(totalCost)}
                         </span>
@@ -181,8 +182,8 @@ export function Calculator() {
                                 </TableRow>
                                 {/* Commission - Toned Down */}
                                 <TableRow className="border-t border-border/50">
-                                    <TableCell className="text-[10px] md:text-sm font-bold py-4 text-primary uppercase tracking-wider pl-4">Prowizja serwisu</TableCell>
-                                    <TableCell className="text-right py-4 font-black text-lg text-primary pr-4">{formatCurrency(CALCULATOR_CONFIG.COMMISSION)}</TableCell>
+                                    <TableCell className="text-[10px] md:text-sm font-bold py-4 text-primary uppercase tracking-wider">Prowizja serwisu</TableCell>
+                                    <TableCell className="text-right py-4 font-black text-lg text-primary">{formatCurrency(CALCULATOR_CONFIG.COMMISSION)}</TableCell>
                                 </TableRow>
                             </TableBody>
                         </Table>
@@ -192,8 +193,8 @@ export function Calculator() {
 
             {/* Buttons and info section outside grid */}
             <div className="col-span-full mt-8 space-y-6">
-                <div className="bg-muted border border-border rounded-[2rem] p-6 text-center space-y-2 relative overflow-hidden group hover:border-primary/20 transition-all max-w-2xl mx-auto">
-                    <p className="text-xs font-bold text-primary uppercase tracking-[0.3em] mb-1">Logistyka i Transport</p>
+                <div className="bg-muted/50 border border-border rounded-xl p-6 text-center space-y-2 relative overflow-hidden group hover:border-primary/20 transition-all max-w-2xl mx-auto">
+                    <p className="text-xs font-bold text-primary uppercase tracking-wider md:tracking-[0.3em] mb-1">Logistyka i Transport</p>
                     <p className="text-sm text-muted-foreground leading-relaxed italic max-w-sm mx-auto">
                         Transport wyceniamy indywidualnie w zależności od odległości we Francji lub Niemczech. Koszt zazwyczaj mieści się w granicach <span className="text-foreground font-bold">1500 - 3500 zł</span>.
                     </p>
@@ -202,16 +203,17 @@ export function Calculator() {
                 <div className="max-w-2xl mx-auto space-y-4">
                     <Button
                         onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-12 font-bold rounded-lg shadow-lg"
+                        className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-11 font-bold rounded-lg shadow-lg"
                     >
                         <span>Zamów Weryfikację</span>
                         <ArrowRight className="ml-3 h-5 w-5" />
                     </Button>
-                    <p className="text-xs text-center text-muted-foreground font-bold uppercase tracking-[0.3em]">
+                    <p className="text-xs text-center text-muted-foreground font-bold uppercase tracking-wider md:tracking-[0.3em]">
                         * Powyższa kalkulacja ma charakter szacunkowy.
                     </p>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

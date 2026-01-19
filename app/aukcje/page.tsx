@@ -53,7 +53,7 @@ export default function AuctionsPage() {
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold uppercase tracking-wider mb-8">
                             Verified Broker Access
                         </div>
-                        <h1 className="text-3xl md:text-5xl lg:text-7xl font-black text-foreground leading-none uppercase tracking-tighter mb-8 italic">
+                        <h1 className="text-3xl md:text-4xl lg:text-6xl font-black text-foreground leading-none uppercase tracking-tighter mb-8 italic">
                             AUKCJE <br />
                             <span className="text-primary not-italic">EUROPEJSKIE</span>
                         </h1>
@@ -72,14 +72,14 @@ export default function AuctionsPage() {
             </section>
 
             {/* How B2B Auctions Work */}
-            <section className="py-24 bg-secondary/10 overflow-hidden relative">
+            <section className="py-24 overflow-hidden relative">
                 <div className="container mx-auto px-4 md:px-8">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div className="space-y-8">
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
                                 Profesjonalny Rynek
                             </div>
-                            <h2 className="text-2xl md:text-4xl lg:text-5xl font-black uppercase tracking-tighter leading-none text-foreground">
+                            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter leading-none text-foreground">
                                 Czym są <span className="text-primary italic">Aukcje B2B?</span>
                             </h2>
                             <p className="text-base text-muted-foreground font-medium leading-relaxed">
@@ -142,7 +142,7 @@ export default function AuctionsPage() {
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
-                        <div className="p-8 bg-secondary/20 rounded-[2.5rem] border border-border/50 space-y-4">
+                        <div className="p-8 bg-secondary/10 backdrop-blur-sm rounded-[2.5rem] border border-border/50 space-y-4">
                             <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary"><Search className="w-6 h-6" /></div>
                             <h3 className="font-black uppercase text-xl text-foreground tracking-tight">Dogłębna Weryfikacja</h3>
                             <ul className="space-y-3 text-sm text-muted-foreground font-medium">
@@ -152,7 +152,7 @@ export default function AuctionsPage() {
                                 <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-primary shrink-0" /> Sprawdzenie historii szkód ubezpieczeniowych</li>
                             </ul>
                         </div>
-                        <div className="p-8 bg-secondary/20 rounded-[2.5rem] border border-border/50 space-y-4">
+                        <div className="p-8 bg-secondary/10 backdrop-blur-sm rounded-[2.5rem] border border-border/50 space-y-4">
                             <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary"><AlertTriangle className="w-6 h-6" /></div>
                             <h3 className="font-black uppercase text-xl text-foreground tracking-tight">Ostrzegamy przed ryzykiem</h3>
                             <p className="text-sm text-muted-foreground leading-relaxed italic">
@@ -164,7 +164,7 @@ export default function AuctionsPage() {
                                 <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-primary shrink-0" /> Sprawdzamy wiarygodność wystawcy</li>
                             </ul>
                         </div>
-                        <div className="p-8 bg-secondary/20 rounded-[2.5rem] border border-border/50 space-y-4">
+                        <div className="p-8 bg-secondary/10 backdrop-blur-sm rounded-[2.5rem] border border-border/50 space-y-4">
                             <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary"><Handshake className="w-6 h-6" /></div>
                             <h3 className="font-black uppercase text-xl text-foreground tracking-tight">Relacje i Kontakt</h3>
                             <p className="text-sm text-muted-foreground leading-relaxed">
@@ -185,7 +185,7 @@ export default function AuctionsPage() {
                 <div className="container mx-auto px-4 md:px-8">
                     <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
                         {/* Why it pays off */}
-                        <div className="p-8 md:p-12 bg-card rounded-[3rem] border border-emerald-500/20 shadow-[0_32px_64px_-12px_rgba(16,185,129,0.1)] space-y-8 relative overflow-hidden group hover:border-emerald-500/40 transition-all">
+                        <div className="p-8 md:p-12 bg-card/50 backdrop-blur-sm rounded-[3rem] border border-emerald-500/20 shadow-[0_32px_64px_-12px_rgba(16,185,129,0.1)] space-y-8 relative overflow-hidden group hover:border-emerald-500/40 transition-all">
                             <div className="absolute -top-12 -right-12 w-48 h-48 bg-emerald-500/5 blur-[80px] rounded-full group-hover:bg-emerald-500/10 transition-colors" />
                             <div className="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-600 dark:text-emerald-400 transform group-hover:rotate-6 transition-transform">
                                 <TrendingUp className="w-8 h-8" />
@@ -223,7 +223,7 @@ export default function AuctionsPage() {
                         </div>
 
                         {/* Risks & Protection */}
-                        <div className="p-8 md:p-12 bg-card rounded-[3rem] border border-amber-500/20 shadow-[0_32px_64px_-12px_rgba(245,158,11,0.1)] space-y-8 relative overflow-hidden group hover:border-amber-500/40 transition-all">
+                        <div className="p-8 md:p-12 bg-card/50 backdrop-blur-sm rounded-[3rem] border border-amber-500/20 shadow-[0_32px_64px_-12px_rgba(245,158,11,0.1)] space-y-8 relative overflow-hidden group hover:border-amber-500/40 transition-all">
                             <div className="absolute -top-12 -right-12 w-48 h-48 bg-amber-500/5 blur-[80px] rounded-full group-hover:bg-amber-500/10 transition-colors" />
                             <div className="w-16 h-16 bg-amber-500/10 rounded-2xl flex items-center justify-center text-amber-600 dark:text-amber-400 transform group-hover:-rotate-6 transition-transform">
                                 <ShieldCheck className="w-8 h-8" />
@@ -326,19 +326,19 @@ export default function AuctionsPage() {
             </section>
 
             {/* Price Transparency Warning */}
-            <section className="py-24 bg-secondary/10">
+            <section className="py-24">
                 <div className="container mx-auto px-4 md:px-8">
-                    <div className="max-w-4xl mx-auto bg-card border border-border rounded-[2rem] md:rounded-[3rem] p-6 md:p-16 space-y-8 shadow-2xl">
+                    <div className="max-w-3xl mx-auto bg-card/50 backdrop-blur-sm border-2 border-primary/20 rounded-2xl p-6 md:p-10 space-y-6 shadow-xl">
                         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 text-primary text-center sm:text-left">
-                            <Scale className="w-10 h-10 md:w-12 md:h-12" />
-                            <h2 className="text-2xl md:text-5xl font-black uppercase tracking-tighter text-foreground leading-[0.9]">Transparentne <span className="italic">Rozliczenie</span></h2>
+                            <Scale className="w-10 h-10 shrink-0" />
+                            <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter text-foreground leading-tight">Transparentne <span className="italic">Rozliczenie</span></h2>
                         </div>
                         <p className="text-sm md:text-base text-muted-foreground font-medium text-center sm:text-left leading-relaxed">
                             Kupując na aukcji B2B, finalna cena składa się z kilku elementów. Pomożemy Ci skalkulować wszystko przed licytacją, abyś wiedział, czy zakup jest opłacalny.
                         </p>
-                        <div className="grid lg:grid-cols-2 gap-8">
+                        <div className="grid lg:grid-cols-2 gap-6">
                             <div className="space-y-4">
-                                <div className="p-6 md:p-8 bg-black/5 dark:bg-white/5 rounded-[1.5rem] md:rounded-[2.5rem] border-2 border-primary/20 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] relative overflow-hidden">
+                                <div className="p-6 md:p-8 bg-black/5 dark:bg-white/5 rounded-2xl border-2 border-primary/20 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] relative overflow-hidden">
                                     <div className="absolute top-0 right-0 p-4">
                                         <Zap className="w-5 h-5 text-primary/30 animate-pulse" />
                                     </div>

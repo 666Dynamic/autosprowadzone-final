@@ -11,7 +11,8 @@ import { ArrowRight, AlertTriangle } from "lucide-react"
 
 export default function CalculatorPage() {
     return (
-        <div className="w-full mx-auto max-w-6xl px-4 md:px-8 py-12 md:py-20 overflow-x-hidden">
+        <div className="w-full overflow-x-hidden">
+        <div className="w-full mx-auto max-w-6xl px-4 md:px-8 py-12 md:py-20">
             <div className="max-w-4xl mx-auto mb-12 text-center">
                 <h1 className="text-3xl md:text-4xl font-black mb-6 uppercase tracking-tighter italic">Kalkulator <span className="text-primary not-italic">Kosztów Importu</span></h1>
                 <p className="text-lg text-muted-foreground font-medium max-w-2xl mx-auto">
@@ -27,7 +28,7 @@ export default function CalculatorPage() {
                 <div className="hidden md:block absolute top-0 -left-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10" />
                 <div className="hidden md:block absolute bottom-0 -right-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl -z-10" />
 
-                <div className="grid md:grid-cols-2 gap-16 items-start text-foreground">
+                <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start text-foreground">
                     <div className="space-y-12 bg-transparent">
                         <h2 className="text-3xl md:text-4xl font-black tracking-tighter uppercase italic leading-none">
                             Koszt sprowadzenia <br />
@@ -67,7 +68,7 @@ export default function CalculatorPage() {
                                     <span className="w-10 h-10 rounded-xl bg-muted flex items-center justify-center text-muted-foreground text-sm font-black italic border border-border">02</span>
                                     Transport i Logistyka
                                 </h3>
-                                <div className="bg-muted border border-border p-8 rounded-[2.5rem] group-hover:border-primary/20 transition-all">
+                                <div className="bg-muted border border-border p-6 md:p-8 rounded-2xl md:rounded-[2.5rem] group-hover:border-primary/20 transition-all">
                                     <p className="text-base text-muted-foreground leading-relaxed m-0 italic font-medium">
                                         Koszt transportu lawetą zależy od odległości. Średnio z zachodnich Niemiec to ok. <span className="text-foreground font-bold not-italic underline decoration-primary/30 underline-offset-4">2000-3000 zł</span>. Przy powrocie "na kołach" dolicz tablice zjazdowe (ok. 150-250 EUR).
                                     </p>
@@ -76,7 +77,7 @@ export default function CalculatorPage() {
                         </div>
                     </div>
 
-                    <div className="bg-card p-10 md:p-12 rounded-[3.5rem] border border-border shadow-xl relative overflow-hidden group">
+                    <div className="bg-card p-6 md:p-10 rounded-2xl md:rounded-[2.5rem] border border-border shadow-xl relative overflow-hidden group">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -mr-16 -mt-16" />
 
                         <h2 className="text-2xl font-black mb-12 text-foreground uppercase tracking-tight flex items-center gap-4">
@@ -116,8 +117,8 @@ export default function CalculatorPage() {
                             ))}
                         </div>
 
-                        <div className="mt-12 pt-8 border-t border-border flex items-start gap-4 -mx-4 md:-mx-12 p-8 mb--12 bg-muted/30">
-                            <div className="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center shrink-0 border border-orange-500/20">
+                        <div className="mt-12 pt-8 border-t border-border flex items-start gap-4 px-2 md:-mx-12 p-8 mb--12 bg-muted/30">
+                            <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-orange-500/10 flex items-center justify-center shrink-0 border border-orange-500/20">
                                 <AlertTriangle className="w-5 h-5 text-orange-500" />
                             </div>
                             <p className="text-xs font-bold text-muted-foreground italic leading-relaxed m-0 uppercase tracking-widest">
@@ -127,7 +128,7 @@ export default function CalculatorPage() {
                     </div>
                 </div>
 
-                <div className="bg-primary text-primary-foreground p-8 rounded-3xl border-2 border-primary/20 mt-32 relative overflow-hidden group shadow-2xl shadow-primary/20">
+                <div className="bg-primary text-primary-foreground p-6 md:p-10 rounded-2xl md:rounded-3xl border-2 border-primary/20 mt-32 relative overflow-hidden group shadow-2xl shadow-primary/20">
                     <div className="absolute top-0 right-0 p-8 transform group-hover:scale-110 transition-transform duration-500">
                         <ArrowRight className="w-48 h-48 text-white opacity-10 -rotate-45" />
                     </div>
@@ -148,6 +149,7 @@ export default function CalculatorPage() {
                 </div>
                 <ContactForm mode="simple" title="Zapytaj o wycenę" description="Nasz ekspert pomoże Ci skalkulować opłacalność sprowadzenia danego egzemplarza." />
             </div>
+        </div>
         </div>
     )
 }

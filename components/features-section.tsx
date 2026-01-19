@@ -38,13 +38,13 @@ export function FeaturesSection() {
                     {features.map((feature, idx) => (
                         <div
                             key={idx}
-                            className="bg-background/80 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-[2rem] md:rounded-2xl border border-primary/20 shadow-sm hover:shadow-lg hover:shadow-primary/10 hover:scale-[1.01] sm:hover:scale-[1.02] md:hover:scale-105 hover:border-primary/40 transition-all duration-300"
+                            className="bg-card/50 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-primary/20 shadow-sm hover:shadow-lg hover:shadow-primary/10 hover:scale-[1.02] hover:border-primary/40 transition-all duration-300"
                         >
-                            <div className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 bg-primary/20 border border-primary/30 rounded-lg sm:rounded-xl flex items-center justify-center mb-4 sm:mb-5 md:mb-6 text-primary">
-                                <feature.icon className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
+                            <div className="h-12 w-12 bg-primary/20 border border-primary/30 rounded-xl flex items-center justify-center mb-5 text-primary">
+                                <feature.icon className="h-6 w-6" />
                             </div>
-                            <h3 className="text-lg sm:text-xl font-black uppercase tracking-tight mb-2 sm:mb-3">{feature.title}</h3>
-                            <p className="text-xs sm:text-sm md:text-base leading-relaxed text-muted-foreground font-medium">
+                            <h3 className="text-xl font-black uppercase tracking-tight mb-3">{feature.title}</h3>
+                            <p className="text-sm leading-relaxed text-muted-foreground font-medium">
                                 {feature.description}
                             </p>
                         </div>

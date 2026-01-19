@@ -20,7 +20,7 @@ export function RequestSection() {
                             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
                                 <Sparkles className="w-3.5 h-3.5" /> Twoje Auto Czeka
                             </div>
-                            <h2 className="text-3xl md:text-5xl lg:text-7xl font-black leading-none uppercase tracking-tighter text-foreground italic">
+                            <h2 className="text-3xl md:text-4xl lg:text-6xl font-black leading-none uppercase tracking-tighter text-foreground italic">
                                 Czego dokładnie <br /><span className="text-primary not-italic">szukasz?</span>
                             </h2>
                             <p className="text-base text-muted-foreground font-medium leading-relaxed max-w-xl">

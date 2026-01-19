@@ -20,7 +20,7 @@ export default function Home() {
       <ProcessSection />
       <TestimonialsSection />
       <RequestSection />
-      <FaqSection />
+      <FaqSection limit={5} />
       <SeoFooter />
     </div>
   )

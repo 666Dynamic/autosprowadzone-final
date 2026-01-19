@@ -183,7 +183,7 @@ export function AboutAuctions() {
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
                             <Sparkles className="w-3 h-3" /> Ekskluzywny Dostęp B2B
                         </div>
-                        <h2 className="text-2xl md:text-4xl font-black leading-[1.1] text-foreground uppercase tracking-tighter">
+                        <h2 className="text-3xl md:text-4xl font-black leading-tight text-foreground uppercase tracking-tighter">
                             Ekskluzywny <br />
                             <span className="text-primary italic">Dostęp B2B</span>
                         </h2>
