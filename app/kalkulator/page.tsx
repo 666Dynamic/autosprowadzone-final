@@ -77,15 +77,15 @@ export default function CalculatorPage() {
                         </div>
                     </div>
 
-                    <div className="bg-card p-6 md:p-10 rounded-2xl md:rounded-[2.5rem] border border-border shadow-xl relative overflow-hidden group">
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -mr-16 -mt-16" />
+                    <div className="bg-card p-5 md:p-6 rounded-2xl md:rounded-2xl border border-border shadow-xl relative overflow-hidden group">
+                        <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full blur-3xl -mr-12 -mt-12" />
 
-                        <h2 className="text-2xl font-black mb-12 text-foreground uppercase tracking-tight flex items-center gap-4">
-                            Procedura i Dokumenty
-                            <ArrowRight className="w-6 h-6 text-primary animate-pulse" />
+                        <h2 className="text-xl md:text-2xl font-black mb-8 text-foreground uppercase tracking-tight flex items-center justify-between">
+                            <span>Procedura i Dokumenty</span>
+                            <ArrowRight className="w-5 h-5 text-primary animate-pulse shrink-0" />
                         </h2>
 
-                        <div className="space-y-12 relative">
+                        <div className="space-y-8 relative">
                             <div className="absolute left-[3px] top-2 bottom-2 w-0.5 bg-border -z-0" />
 
                             {[
@@ -117,11 +117,11 @@ export default function CalculatorPage() {
                             ))}
                         </div>
 
-                        <div className="mt-12 pt-8 border-t border-border flex items-start gap-4 px-2 md:-mx-12 p-8 mb--12 bg-muted/30">
-                            <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-orange-500/10 flex items-center justify-center shrink-0 border border-orange-500/20">
-                                <AlertTriangle className="w-5 h-5 text-orange-500" />
+                        <div className="mt-8 pt-6 border-t border-border flex items-start gap-3 px-2 p-5 bg-muted/30 rounded-lg">
+                            <div className="w-7 h-7 rounded-lg bg-orange-500/10 flex items-center justify-center shrink-0 border border-orange-500/20">
+                                <AlertTriangle className="w-4 h-4 text-orange-500" />
                             </div>
-                            <p className="text-xs font-bold text-muted-foreground italic leading-relaxed m-0 uppercase tracking-widest">
+                            <p className="text-xs font-bold text-muted-foreground italic leading-relaxed m-0 uppercase tracking-wider">
                                 Uwaga: Import z poza UE (np. Szwajcaria, USA) to dodatkowe <span className="text-foreground font-black">Cło (10%)</span> oraz <span className="text-foreground font-black">Podatek VAT (23%)</span>.
                             </p>
                         </div>

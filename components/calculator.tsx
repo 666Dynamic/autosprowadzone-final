@@ -45,17 +45,17 @@ export function Calculator() {
 
     return (
         <div className="w-full overflow-x-hidden">
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-start relative z-10 max-w-full">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-stretch relative z-10 max-w-full">
             {/* Inputs */}
             <Card className="flex flex-col border-2 border-primary/20 shadow-lg rounded-2xl overflow-hidden bg-card/50 backdrop-blur-sm text-card-foreground transition-all duration-300 hover:border-primary/30 hover:shadow-xl">
-                <CardHeader className="bg-muted/30 border-b border-border p-6 md:p-8">
+                <CardHeader className="bg-muted/30 border-b border-border p-6 md:p-8 min-h-[100px] flex flex-col justify-center">
                     <CardTitle className="flex items-center gap-3 text-xl md:text-2xl font-black uppercase tracking-tight">
                         <div className="p-2 rounded-xl bg-primary/10 border border-primary/20">
                             <CalculatorIcon className="h-5 w-5 text-primary" />
                         </div>
                         Parametry Importu
                     </CardTitle>
-                    <CardDescription className="text-muted-foreground text-xs font-bold uppercase tracking-[0.2em] mt-1">
+                    <CardDescription className="text-muted-foreground text-xs font-bold uppercase tracking-[0.2em] mt-2">
                         Skonfiguruj dane swojego pojazdu.
                     </CardDescription>
                 </CardHeader>
@@ -142,9 +142,9 @@ export function Calculator() {
 
             {/* Results */}
             <Card className="flex flex-col border-2 border-primary/20 shadow-lg rounded-2xl overflow-hidden bg-card/50 backdrop-blur-sm text-card-foreground transition-all duration-300 hover:border-primary/30 hover:shadow-xl">
-                <CardHeader className="p-6 md:p-8 border-b border-border bg-muted/30">
+                <CardHeader className="p-6 md:p-8 border-b border-border bg-muted/30 min-h-[100px] flex flex-col justify-center">
                     <CardTitle className="text-xl md:text-2xl font-black uppercase tracking-tighter">Wstępna Wycena</CardTitle>
-                    <CardDescription className="text-muted-foreground font-bold uppercase tracking-[0.2em] text-xs">Bez kosztów transportu (wycena indywidualna).</CardDescription>
+                    <CardDescription className="text-muted-foreground font-bold uppercase tracking-[0.2em] text-xs mt-2">Bez kosztów transportu (wycena indywidualna).</CardDescription>
                 </CardHeader>
                 <CardContent className="flex-1 p-6 md:p-8 space-y-5">
                     {/* Total Price Card - Restored "Pop" */}
