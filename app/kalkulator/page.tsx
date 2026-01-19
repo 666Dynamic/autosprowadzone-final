@@ -11,7 +11,7 @@ import { ArrowRight, AlertTriangle } from "lucide-react"
 
 export default function CalculatorPage() {
     return (
-        <div className="w-full mx-auto max-w-6xl px-4 md:px-8 py-12 md:py-20">
+        <div className="w-full mx-auto max-w-6xl px-4 md:px-8 py-12 md:py-20 overflow-x-hidden">
             <div className="max-w-4xl mx-auto mb-12 text-center">
                 <h1 className="text-3xl md:text-4xl font-black mb-6 uppercase tracking-tighter italic">Kalkulator <span className="text-primary not-italic">Kosztów Importu</span></h1>
                 <p className="text-lg text-muted-foreground font-medium max-w-2xl mx-auto">
