@@ -28,7 +28,7 @@ export default function CalculatorPage() {
                 <div className="hidden md:block absolute bottom-0 -right-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl -z-10" />
 
                 <div className="grid md:grid-cols-2 gap-16 items-start text-foreground">
-                    <div className="space-y-12">
+                    <div className="space-y-12 bg-transparent">
                         <h2 className="text-3xl md:text-4xl font-black tracking-tighter uppercase italic leading-none">
                             Koszt sprowadzenia <br />
                             <span className="text-primary not-italic">Niemcy / UE</span>
@@ -76,7 +76,7 @@ export default function CalculatorPage() {
                         </div>
                     </div>
 
-                    <div className="bg-card p-10 md:p-12 rounded-[3.5rem] border border-border shadow-2xl relative overflow-hidden group">
+                    <div className="bg-card p-10 md:p-12 rounded-[3.5rem] border border-border shadow-xl relative overflow-hidden group">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -mr-16 -mt-16" />
 
                         <h2 className="text-2xl font-black mb-12 text-foreground uppercase tracking-tight flex items-center gap-4">
