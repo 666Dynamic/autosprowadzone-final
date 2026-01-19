@@ -50,7 +50,7 @@ export function ProcessSection() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-20 max-w-4xl mx-auto"
+                    className="text-center mb-20 max-w-4xl mx-auto [will-change:transform,opacity]"
                 >
                     <div className="inline-block px-4 py-1.5 mb-6 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-black uppercase tracking-widest bg-background/50 backdrop-blur-sm">
                         Proces Zakupu
@@ -72,16 +72,20 @@ export function ProcessSection() {
                             key={idx}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
-                            transition={{ delay: idx * 0.05, duration: 0.4, ease: "easeOut" }}
-                            className="bg-card/80 backdrop-blur-sm border border-border p-4 sm:p-6 md:p-10 rounded-xl sm:rounded-2xl md:rounded-[2.5rem] hover:border-primary hover:shadow-lg transition-all duration-200 group relative overflow-hidden min-h-[200px] sm:min-h-[240px] md:min-h-[280px]"
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{
+                                delay: idx * 0.05,
+                                duration: 0.4,
+                                ease: [0.21, 0.47, 0.32, 0.98] // Custom cubic-bezier for smoother feel
+                            }}
+                            className="bg-card/95 md:bg-card/80 md:backdrop-blur-sm border border-border p-4 sm:p-6 md:p-10 rounded-xl sm:rounded-2xl md:rounded-[2.5rem] hover:border-primary hover:shadow-lg transition-all duration-300 group relative overflow-hidden min-h-[200px] sm:min-h-[240px] md:min-h-[280px] will-change-transform"
                         >
                             {/* Background Number */}
                             <div className="absolute -top-2 -right-2 text-6xl md:text-9xl font-black text-primary/5 select-none group-hover:text-primary/10 transition-colors pointer-events-none">
                                 {step.id}
                             </div>
 
-                            <div className="relative z-10">
+                            <div className="relative z-10 transition-transform duration-300 group-hover:-translate-y-1">
                                 <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-lg sm:rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center mb-3 sm:mb-4 md:mb-8 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300 shadow-xs md:shadow-sm">
                                     <step.icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
                                 </div>
