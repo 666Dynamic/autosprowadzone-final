@@ -23,9 +23,9 @@ export default function CalculatorPage() {
             <Calculator />
 
             <div className="mt-32 max-w-6xl mx-auto relative px-4">
-                {/* Decorative background elements */}
-                <div className="absolute top-0 -left-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10" />
-                <div className="absolute bottom-0 -right-20 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl -z-10" />
+                {/* Decorative background elements (hide on mobile; unify color) */}
+                <div className="hidden md:block absolute top-0 -left-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10" />
+                <div className="hidden md:block absolute bottom-0 -right-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl -z-10" />
 
                 <div className="grid md:grid-cols-2 gap-16 items-start text-foreground">
                     <div className="space-y-12">
