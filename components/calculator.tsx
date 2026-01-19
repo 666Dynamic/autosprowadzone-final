@@ -7,41 +7,41 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button"
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table"
 import { Calculator as CalculatorIcon, ArrowRight, RefreshCcw } from "lucide-react"
+import { CALCULATOR_CONFIG, validatePrice, validateExchangeRate, formatCurrency } from "@/lib/calculator-constants"
 
 export function Calculator() {
-    // State
+    // State with validation
     const [eurPrice, setEurPrice] = useState<number>(10000)
-    const [exchangeRate, setExchangeRate] = useState<number>(4.21)
+    const [exchangeRate, setExchangeRate] = useState<number>(CALCULATOR_CONFIG.DEFAULT_EXCHANGE_RATE)
     const [isLargeEngine, setIsLargeEngine] = useState<boolean>(false)
     const [isLpg, setIsLpg] = useState<boolean>(false)
     const [isAccident, setIsAccident] = useState<boolean>(false)
     const [isIndividualPlates, setIsIndividualPlates] = useState<boolean>(false)
 
-    // Constants
-    const COMMISSION = 2500
-    const TRANSLATION = 250
-    const REGISTRATION_STD = 161.50
-    const REGISTRATION_IND = 1080
-    const INSPECTION_BASE = 98
-    const INSPECTION_LPG = 63
-    const INSPECTION_ACCIDENT = 94
-
-    // Calculations
-    const pricePln = eurPrice * exchangeRate
-
-    const exciseRate = isLargeEngine ? 0.186 : 0.031
-    const excise = pricePln * exciseRate
-
-    const inspection = INSPECTION_BASE + (isLpg ? INSPECTION_LPG : 0) + (isAccident ? INSPECTION_ACCIDENT : 0)
-
-    const registration = isIndividualPlates ? REGISTRATION_IND : REGISTRATION_STD
-
-    // Transport is now separate
-    const totalCost = pricePln + excise + inspection + TRANSLATION + registration + COMMISSION
-
-    const formatCurrency = (val: number) => {
-        return new Intl.NumberFormat('pl-PL', { style: 'currency', currency: 'PLN' }).format(val)
+    // Handlers with validation
+    const handlePriceChange = (value: string) => {
+        const numValue = Number(value)
+        if (value === '' || validatePrice(numValue)) {
+            setEurPrice(numValue || CALCULATOR_CONFIG.MIN_PRICE_EUR)
+        }
     }
+
+    const handleExchangeRateChange = (value: string) => {
+        const numValue = Number(value)
+        if (value === '' || validateExchangeRate(numValue)) {
+            setExchangeRate(numValue || CALCULATOR_CONFIG.DEFAULT_EXCHANGE_RATE)
+        }
+    }
+
+    // Calculations using constants
+    const pricePln = eurPrice * exchangeRate
+    const exciseRate = isLargeEngine ? CALCULATOR_CONFIG.AKC_RATE_HIGH : CALCULATOR_CONFIG.AKC_RATE_LOW
+    const excise = pricePln * exciseRate
+    const inspection = CALCULATOR_CONFIG.INSPECTION_BASE + 
+        (isLpg ? CALCULATOR_CONFIG.INSPECTION_LPG : 0) + 
+        (isAccident ? CALCULATOR_CONFIG.INSPECTION_ACCIDENT : 0)
+    const registration = isIndividualPlates ? CALCULATOR_CONFIG.REGISTRATION_INDIVIDUAL : CALCULATOR_CONFIG.REGISTRATION_STANDARD
+    const totalCost = pricePln + excise + inspection + CALCULATOR_CONFIG.TRANSLATION + registration + CALCULATOR_CONFIG.COMMISSION
 
     return (
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-stretch relative z-10">
@@ -66,11 +66,14 @@ export function Calculator() {
                                 <Input
                                     id="price"
                                     type="number"
+                                    min={CALCULATOR_CONFIG.MIN_PRICE_EUR}
+                                    max={CALCULATOR_CONFIG.MAX_PRICE_EUR}
                                     value={eurPrice}
-                                    onChange={(e) => setEurPrice(Number(e.target.value))}
-                                    className="relative h-12 sm:h-14 text-lg sm:text-xl font-bold rounded-xl sm:rounded-2xl border border-border bg-background focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary transition-all pr-12 hover:border-border/80"
+                                    onChange={(e) => handlePriceChange(e.target.value)}
+                                    aria-label="Cena pojazdu w euro"
+                                    className="relative h-12 sm:h-14 text-lg sm:text-xl font-bold rounded-xl sm:rounded-2xl border border-border bg-background focus-visible:ring-2 focus-visible:ring-primary focus-visible:border-primary transition-all pr-12 hover:border-border/80"
                                 />
-                                <div className="absolute right-5 top-1/2 -translate-y-1/2 text-primary font-black text-lg">€</div>
+                                <div className="absolute right-5 top-1/2 -translate-y-1/2 text-primary font-black text-lg" aria-hidden="true">€</div>
                             </div>
                         </div>
                         <div className="space-y-3">
@@ -80,11 +83,14 @@ export function Calculator() {
                                     id="rate"
                                     type="number"
                                     step="0.01"
+                                    min="1"
+                                    max="10"
                                     value={exchangeRate}
-                                    onChange={(e) => setExchangeRate(Number(e.target.value))}
-                                    className="relative h-12 sm:h-14 text-lg sm:text-xl font-bold rounded-xl sm:rounded-2xl border border-border bg-background focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary transition-all pr-12 hover:border-border/80"
+                                    onChange={(e) => handleExchangeRateChange(e.target.value)}
+                                    aria-label="Kurs wymiany euro na złoty"
+                                    className="relative h-12 sm:h-14 text-lg sm:text-xl font-bold rounded-xl sm:rounded-2xl border border-border bg-background focus-visible:ring-2 focus-visible:ring-primary focus-visible:border-primary transition-all pr-12 hover:border-border/80"
                                 />
-                                <div className="absolute right-5 top-1/2 -translate-y-1/2 text-muted-foreground/50 font-bold">zł</div>
+                                <div className="absolute right-5 top-1/2 -translate-y-1/2 text-muted-foreground/50 font-bold" aria-hidden="true">zł</div>
                             </div>
                         </div>
                     </div>
@@ -101,7 +107,17 @@ export function Calculator() {
                                 <div
                                     key={item.id}
                                     onClick={() => item.set(!item.checked)}
-                                    className={`group flex items-center space-x-3 sm:space-x-4 p-3 sm:p-3.5 md:p-4 rounded-xl sm:rounded-2xl border transition-all cursor-pointer select-none touch-manipulation min-h-[48px] sm:min-h-[56px] ${item.checked
+                                    role="checkbox"
+                                    aria-checked={item.checked}
+                                    aria-label={item.label}
+                                    tabIndex={0}
+                                    onKeyDown={(e) => {
+                                        if (e.key === 'Enter' || e.key === ' ') {
+                                            e.preventDefault()
+                                            item.set(!item.checked)
+                                        }
+                                    }}
+                                    className={`group flex items-center space-x-3 sm:space-x-4 p-3 sm:p-3.5 md:p-4 rounded-xl sm:rounded-2xl border transition-all cursor-pointer select-none touch-manipulation min-h-[48px] sm:min-h-[56px] focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 outline-none ${item.checked
                                         ? "border-primary/50 bg-primary/5 shadow-md shadow-primary/5"
                                         : "border-border bg-card hover:bg-muted/50 hover:border-primary/20"
                                         }`}

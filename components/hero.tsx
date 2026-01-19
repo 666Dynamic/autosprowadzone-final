@@ -39,24 +39,24 @@ export function Hero() {
                         Zaufany Pośrednik
                     </div>
 
-                    <h1 className="text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter leading-[0.9] uppercase italic">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tighter leading-[0.9] uppercase italic">
                         Sprowadzamy Auta na <br className="hidden sm:inline" />
                         <span className="text-primary not-italic drop-shadow-[0_2px_8px_rgba(0,0,0,0.15)]">Indywidualne Zamówienie</span>
                     </h1>
 
-                    <p className="text-sm md:text-lg text-muted-foreground max-w-2xl leading-relaxed px-2 md:px-0">
+                    <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed px-2 md:px-0">
                         Twój osobisty broker w Niemczech. Pozyskujemy auta z pewnych źródeł: licytacje B2B, floty bankowe oraz sprawdzeni dealerzy. Pełna weryfikacja i dostawa pod dom.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 md:gap-4 w-full sm:w-auto px-4 md:px-0">
                         <Link href="#request-section">
-                            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all w-full sm:w-auto h-14 md:h-14 px-8 font-bold rounded-lg shadow-lg [text-shadow:0_1px_2px_rgba(0,0,0,0.2)] min-h-[56px] touch-manipulation">
+                            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 transition-all w-full sm:w-auto h-14 md:h-14 px-8 font-bold rounded-lg shadow-lg [text-shadow:0_1px_2px_rgba(0,0,0,0.2)] min-h-[56px] touch-manipulation" aria-label="Zamów bezpłatną wycenę importu auta">
                                 Zamów bezpłatną wycenę
                                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                             </Button>
                         </Link>
                         <Link href="#process-section">
-                            <Button size="lg" variant="outline" className="bg-accent/10 text-accent hover:bg-accent/20 transition-all border border-accent w-full sm:w-auto h-14 md:h-14 px-8 font-bold rounded-lg min-h-[56px] touch-manipulation">
+                            <Button size="lg" variant="outline" className="bg-accent/10 text-accent hover:bg-accent/20 focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 transition-all border border-accent w-full sm:w-auto h-14 md:h-14 px-8 font-bold rounded-lg min-h-[56px] touch-manipulation" aria-label="Zobacz proces importu auta">
                                 Zobacz jak to działa
                             </Button>
                         </Link>

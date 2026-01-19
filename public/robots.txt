@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://autosprowadzone.pl/sitemap.xml
+
+# Crawl-delay (optional, adjust if needed)
+Crawl-delay: 1
+
+# Disallow admin or private paths if any
+# Disallow: /api/
+# Disallow: /_next/static/

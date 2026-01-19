@@ -60,7 +60,10 @@ export function Navbar() {
                     <ModeToggle />
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="p-2 text-muted-foreground hover:text-primary transition-colors"
+                        aria-label={isOpen ? "Zamknij menu" : "Otwórz menu"}
+                        aria-expanded={isOpen}
+                        aria-controls="mobile-menu"
+                        className="p-2 text-muted-foreground hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-lg outline-none"
                     >
                         {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
                     </button>
@@ -71,6 +74,7 @@ export function Navbar() {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
+                        id="mobile-menu"
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
