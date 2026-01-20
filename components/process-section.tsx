@@ -105,8 +105,8 @@ export function ProcessSection() {
                                 key={idx}
                                 initial={itemInitial}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: "-10px" }}
-                                transition={itemTransition}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ ...itemTransition, delay: idx * 0.025 }}
                                 className="bg-card/95 md:bg-card/80 md:backdrop-blur-sm border border-border p-5 sm:p-8 md:p-10 rounded-2xl md:rounded-[2.5rem] hover:border-primary/50 md:hover:border-primary hover:shadow-xl transition-all duration-300 group relative overflow-hidden min-h-[180px] sm:min-h-[220px] md:min-h-[280px] transform-gpu"
                             >
                                 {/* Background Number */}

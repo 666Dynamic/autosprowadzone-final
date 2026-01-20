@@ -46,7 +46,7 @@ export function FeaturesSection() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: idx * 0.05, duration: 0.3 }}
+                            transition={{ delay: idx * 0.025, duration: 0.25 }}
                             className="bg-card/50 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-primary/20 shadow-sm hover:shadow-lg hover:shadow-primary/10 md:hover:scale-[1.02] hover:border-primary/40 transition-all duration-300 will-change-transform"
                         >
                             <div className="h-12 w-12 bg-primary/20 border border-primary/30 rounded-xl flex items-center justify-center mb-5 text-primary">
