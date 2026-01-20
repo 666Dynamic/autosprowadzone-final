@@ -21,7 +21,7 @@ const nextConfig: NextConfig = {
   
   // Experimental features dla wydajności
   experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
+    optimizePackageImports: ['lucide-react', 'framer-motion', '@radix-ui/react-accordion', '@radix-ui/react-checkbox', '@radix-ui/react-dropdown-menu'],
   },
 };
 

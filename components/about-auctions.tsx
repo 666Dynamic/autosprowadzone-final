@@ -17,14 +17,14 @@ export function AboutAuctions() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
     const images = useMemo(() => [
-        "/audi/max-AD55987_01bdb54e3e0af8794c16fffcbf2ca28d.jpg",
-        "/audi/max-AD55987_2d6cf1cc4d29426a8dc28267a693307d.jpg",
-        "/audi/max-AD55987_339081aa4a32ad5ea2581b0a9375e908.jpg",
-        "/audi/max-AD55987_7f553c1a461f10b679137e7a4f991b02.jpg",
-        "/audi/max-AD55987_ca66144394b467109c133464308a30c5.jpg",
-        "/audi/max-AD55987_dbedf5b7e4de4bc9977b9c004db8622c.jpg",
-        "/audi/max-AD55987_dfb80e1c658ec4aaa94a866e2f02f8a7.jpg",
-        "/audi/max-AD55987_ee56ff1e3170932847ff99740f2fd3f6.jpg"
+        "/audi/max-AD55987_01bdb54e3e0af8794c16fffcbf2ca28d.webp",
+        "/audi/max-AD55987_2d6cf1cc4d29426a8dc28267a693307d.webp",
+        "/audi/max-AD55987_339081aa4a32ad5ea2581b0a9375e908.webp",
+        "/audi/max-AD55987_7f553c1a461f10b679137e7a4f991b02.webp",
+        "/audi/max-AD55987_ca66144394b467109c133464308a30c5.webp",
+        "/audi/max-AD55987_dbedf5b7e4de4bc9977b9c004db8622c.webp",
+        "/audi/max-AD55987_dfb80e1c658ec4aaa94a866e2f02f8a7.webp",
+        "/audi/max-AD55987_ee56ff1e3170932847ff99740f2fd3f6.webp"
     ], [])
 
     useEffect(() => {
@@ -129,7 +129,7 @@ export function AboutAuctions() {
 
                 {/* Floating Particles - Reduced count for mobile via hidden/block classes or JS logic */}
                 <div className="hidden md:block">
-                    {[...Array(8)].map((_, i) => (
+                    {[...Array(4)].map((_, i) => (
                         <motion.div
                             key={i}
                             className="absolute w-1 h-1 bg-primary/40 rounded-full"
@@ -155,7 +155,7 @@ export function AboutAuctions() {
             <AnimatePresence>
                 {isFinished && (
                     <div className="absolute inset-0 pointer-events-none z-50 overflow-hidden">
-                        {[...Array(20)].map((_, i) => ( // Reduced from 50 to 20
+                        {[...Array(12)].map((_, i) => (
                             <motion.div
                                 key={i}
                                 initial={{ top: "50%", left: "50%", scale: 0, opacity: 1 }}
@@ -173,7 +173,7 @@ export function AboutAuctions() {
                                     ease: "easeOut",
                                 }}
                                 className={`absolute w-1.5 h-1.5 rounded-full ${["bg-primary/80", "bg-yellow-400/80", "bg-white/80"][Math.floor(Math.random() * 3)]
-                                    } blur-[0.5px]`} // Reduced blur radius
+                                    } blur-[0.5px]`}
                             />
                         ))}
                     </div>
