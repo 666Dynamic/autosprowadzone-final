@@ -57,6 +57,10 @@ export function FaqSection({ limit }: FaqSectionProps) {
         <section className="py-16 md:py-24 relative overflow-hidden">
             {/* Subtle background glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.03)_0%,transparent_70%)] pointer-events-none" />
+            
+            {/* Smooth fade transitions top and bottom */}
+            <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-background via-background/60 to-transparent pointer-events-none z-20" />
+            <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background via-background/60 to-transparent pointer-events-none z-20" />
 
             <div className="container mx-auto px-4 md:px-8 max-w-3xl relative z-10">
                 <div className="text-center mb-16 space-y-4">

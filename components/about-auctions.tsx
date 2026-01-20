@@ -121,6 +121,10 @@ export function AboutAuctions() {
                 {/* Static blurred blobs instead of animated ones for better mobile perf */}
                 <div className="absolute top-1/2 left-1/4 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-primary/20 rounded-full blur-[80px] md:blur-[120px] opacity-20 -translate-y-1/2 -translate-x-1/2 transform-gpu" />
                 <div className="absolute bottom-0 right-0 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-blue-500/10 rounded-full blur-[80px] md:blur-[120px] opacity-20 transform-gpu" />
+                
+                {/* Smooth fade transitions top and bottom */}
+                <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-background via-background/60 to-transparent z-10" />
+                <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background via-background/60 to-transparent z-10" />
 
                 {/* Floating Particles - Reduced count for mobile via hidden/block classes or JS logic */}
                 <div className="hidden md:block">

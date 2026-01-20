@@ -48,6 +48,11 @@ export default function AuctionsPage() {
             {/* Hero Section */}
             <section className="relative py-24 md:py-32 overflow-hidden">
                 <div className="absolute inset-0 bg-primary/5 blur-3xl rounded-full translate-y-1/2 -translate-x-1/2 w-[600px] h-[600px] pointer-events-none" />
+                
+                {/* Smooth fade transitions top and bottom */}
+                <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-background via-background/60 to-transparent pointer-events-none z-20" />
+                <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background via-background/60 to-transparent pointer-events-none z-20" />
+                
                 <div className="container mx-auto px-4 md:px-8 relative z-10">
                     <div className="max-w-4xl text-center md:text-left">
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold uppercase tracking-wider mb-8">
@@ -73,6 +78,10 @@ export default function AuctionsPage() {
 
             {/* How B2B Auctions Work */}
             <section className="py-24 overflow-hidden relative">
+                {/* Smooth fade transitions top and bottom */}
+                <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-background via-background/60 to-transparent pointer-events-none z-20" />
+                <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background via-background/60 to-transparent pointer-events-none z-20" />
+                
                 <div className="container mx-auto px-4 md:px-8">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div className="space-y-8">

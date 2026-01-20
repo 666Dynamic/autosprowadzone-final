@@ -3,7 +3,9 @@ import Link from "next/link"
 
 export function SeoFooter() {
     return (
-        <section className="bg-slate-950 py-12 border-t border-slate-900">
+        <section className="bg-slate-950 py-12 relative">
+            {/* Smooth fade transition top */}
+            <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background via-background/60 to-transparent pointer-events-none z-10" />
             <div className="container mx-auto px-4 md:px-8">
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                     <div>

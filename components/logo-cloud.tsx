@@ -18,8 +18,12 @@ const logos = [
 
 export function LogoCloud() {
     return (
-        <section className="py-12 border-y border-border overflow-hidden">
-            <div className="container mx-auto px-4 md:px-8 mb-8">
+        <section className="py-12 overflow-hidden relative">
+            {/* Smooth fade transitions top and bottom */}
+            <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-background via-background/60 to-transparent pointer-events-none z-10" />
+            <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background via-background/60 to-transparent pointer-events-none z-10" />
+            
+            <div className="container mx-auto px-4 md:px-8 mb-8 relative z-20">
                 <p className="text-center text-sm font-black text-muted-foreground uppercase tracking-[0.2em]">
                     Dostęp do największych platform aukcyjnych w Europie
                 </p>

@@ -27,6 +27,10 @@ const testimonials = [
 export function TestimonialsSection() {
     return (
         <section className="py-16 md:py-24 relative overflow-hidden">
+            {/* Smooth fade transitions top and bottom */}
+            <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-background via-background/60 to-transparent pointer-events-none z-20" />
+            <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background via-background/60 to-transparent pointer-events-none z-20" />
+            
             <div className="container mx-auto px-4 md:px-8 relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-3xl md:text-4xl font-black mb-4 uppercase tracking-tighter italic">Co mówią <span className="text-primary not-italic">nasi klienci?</span></h2>
@@ -42,8 +46,8 @@ export function TestimonialsSection() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: idx * 0.1, duration: 0.5 }}
-                            className="bg-card/50 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-border/50 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all relative flex flex-col"
+                            transition={{ delay: idx * 0.05, duration: 0.3 }}
+                            className="bg-card/50 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-border/50 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all relative flex flex-col will-change-transform"
                         >
                             <Quote className="absolute top-3 right-3 sm:top-4 sm:right-4 h-6 w-6 sm:h-8 sm:w-8 text-primary/10" />
                             <div className="flex gap-1 mb-4 text-amber-500">
