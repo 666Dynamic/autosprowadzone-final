@@ -20,20 +20,20 @@ export function HeroForm() {
 
                     <div className="space-y-2">
                         <Label htmlFor="make">Marka i Model</Label>
-                        <Input id="make" placeholder="np. BMW Seria 3, Audi A4" className="h-12 md:h-11 touch-manipulation" />
+                        <Input id="make" placeholder="np. BMW Seria 3, Audi A4" className="h-12 touch-manipulation" />
                     </div>
 
                     <div className="space-y-2">
                         <Label htmlFor="year">Rocznik (od)</Label>
-                        <Input id="year" type="number" placeholder="np. 2020" className="h-12 md:h-11 touch-manipulation" />
+                        <Input id="year" type="number" placeholder="np. 2020" className="h-12 touch-manipulation" />
                     </div>
 
                     <div className="space-y-2">
                         <Label htmlFor="budget">Budżet (PLN)</Label>
-                        <Input id="budget" type="number" placeholder="do 150 000" className="h-12 md:h-11 touch-manipulation" />
+                        <Input id="budget" type="number" placeholder="do 150 000" className="h-12 touch-manipulation" />
                     </div>
 
-                    <Button size="lg" className="h-12 md:h-11 w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold shadow-lg shadow-accent/20 touch-manipulation min-h-[48px]">
+                    <Button size="lg" className="h-12 w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold shadow-lg shadow-accent/20 touch-manipulation min-h-[48px]">
                         Wyceń Import <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
 

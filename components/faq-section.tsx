@@ -54,7 +54,7 @@ interface FaqSectionProps {
 
 export function FaqSection({ limit }: FaqSectionProps) {
     return (
-        <section className="py-20 relative overflow-hidden">
+        <section className="py-16 md:py-24 relative overflow-hidden">
             {/* Subtle background glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.03)_0%,transparent_70%)] pointer-events-none" />
 
@@ -79,7 +79,7 @@ export function FaqSection({ limit }: FaqSectionProps) {
                                 value={`item-${idx}`}
                                 className="border border-border/50 rounded-2xl mb-3 px-6 bg-card/50 hover:border-primary/30 transition-all overflow-hidden touch-manipulation"
                             >
-                                <AccordionTrigger className="text-left font-black uppercase tracking-tight text-sm hover:no-underline py-6 md:py-5 min-h-[60px] touch-manipulation">
+                                <AccordionTrigger className="text-left font-black uppercase tracking-tight text-sm hover:no-underline py-6 min-h-[60px] touch-manipulation">
                                     <span className="flex items-center gap-4">
                                         <span className="text-primary font-black opacity-40 text-base">0{idx + 1}</span>
                                         <span className="text-left leading-tight">{item.question}</span>

@@ -1,6 +1,7 @@
 "use client"
 
 import { Star, Quote } from "lucide-react"
+import { motion } from "framer-motion"
 
 const testimonials = [
     {
@@ -36,8 +37,12 @@ export function TestimonialsSection() {
 
                 <div className="grid md:grid-cols-3 gap-8">
                     {testimonials.map((testimonial, idx) => (
-                        <div
+                        <motion.div
                             key={idx}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: idx * 0.1, duration: 0.5 }}
                             className="bg-card/50 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-border/50 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all relative flex flex-col"
                         >
                             <Quote className="absolute top-3 right-3 sm:top-4 sm:right-4 h-6 w-6 sm:h-8 sm:w-8 text-primary/10" />
@@ -54,7 +59,7 @@ export function TestimonialsSection() {
                                 </div>
                                 <span>{testimonial.date}</span>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>

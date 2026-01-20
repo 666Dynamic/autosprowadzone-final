@@ -44,11 +44,12 @@ export function ContactForm({
                 setIsSuccess(true)
                 // Optional: Reset form here if needed, but we are switching view to success message
             } else {
-                alert("Wystąpił błąd podczas wysyłania wiadomości: " + (result.error || "Nieznany błąd"))
+                console.error("Error sending email:", result.error)
+                // Could add toast notification here in future
             }
         } catch (error) {
             console.error("Critical error sending email:", error)
-            alert("Wystąpił błąd krytyczny. Spróbuj ponownie.")
+            // Error will be shown via form validation or success state
         } finally {
             setIsSubmitting(false)
         }
@@ -104,16 +105,16 @@ export function ContactForm({
                     <div className="grid md:grid-cols-2 gap-4">
                         <div className="space-y-2">
                             {showLabels && <Label htmlFor="name" className="text-sm font-medium text-muted-foreground">Imię i Nazwisko</Label>}
-                            <Input id="name" name="name" placeholder="Jan Kowalski" required className="h-12 md:h-11 px-4 rounded-lg border border-border bg-background focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary transition-all touch-manipulation hover:border-border/80" />
+                            <Input id="name" name="name" placeholder="Jan Kowalski" required className="h-12 px-4 rounded-lg border border-border bg-background focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary transition-all touch-manipulation hover:border-border/80" />
                         </div>
                         <div className="space-y-2">
                             {showLabels && <Label htmlFor="email" className="text-sm font-medium text-muted-foreground">Email</Label>}
-                            <Input id="email" name="email" type="email" placeholder="jan@kowalski.pl" required className="h-12 md:h-11 px-4 rounded-lg border border-border bg-background focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary transition-all touch-manipulation hover:border-border/80" />
+                            <Input id="email" name="email" type="email" placeholder="jan@kowalski.pl" required className="h-12 px-4 rounded-lg border border-border bg-background focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary transition-all touch-manipulation hover:border-border/80" />
                         </div>
                     </div>
                     <div className="space-y-2">
                         {showLabels && <Label htmlFor="phone" className="text-sm font-medium text-muted-foreground">Telefon (opcjonalnie)</Label>}
-                        <Input id="phone" name="phone" type="tel" placeholder="+48 123 456 789" className="h-12 md:h-11 px-4 rounded-lg border border-border bg-background focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary transition-all touch-manipulation hover:border-border/80" />
+                        <Input id="phone" name="phone" type="tel" placeholder="+48 123 456 789" className="h-12 px-4 rounded-lg border border-border bg-background focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary transition-all touch-manipulation hover:border-border/80" />
                     </div>
                     <div className="space-y-2">
                         {showLabels && <Label htmlFor="message" className="text-sm font-medium text-muted-foreground">

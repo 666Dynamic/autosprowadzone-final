@@ -1,6 +1,7 @@
 "use client"
 
 import { ShieldCheck, Gavel, FileCheck } from "lucide-react"
+import { motion } from "framer-motion"
 
 const features = [
     {
@@ -36,8 +37,12 @@ export function FeaturesSection() {
 
                 <div className="grid md:grid-cols-3 gap-8 text-foreground">
                     {features.map((feature, idx) => (
-                        <div
+                        <motion.div
                             key={idx}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: idx * 0.1, duration: 0.5 }}
                             className="bg-card/50 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-primary/20 shadow-sm hover:shadow-lg hover:shadow-primary/10 hover:scale-[1.02] hover:border-primary/40 transition-all duration-300"
                         >
                             <div className="h-12 w-12 bg-primary/20 border border-primary/30 rounded-xl flex items-center justify-center mb-5 text-primary">
@@ -47,7 +52,7 @@ export function FeaturesSection() {
                             <p className="text-sm leading-relaxed text-muted-foreground font-medium">
                                 {feature.description}
                             </p>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>

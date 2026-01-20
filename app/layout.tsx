@@ -40,7 +40,12 @@ export const metadata: Metadata = {
     description: "Bezpieczny import aut z Niemiec. Dostęp do aukcji B2B (BCA, Auto1). Weryfikacja techniczna na miejscu.",
     siteName: "autosprowadzone.pl",
   },
-
+  alternates: {
+    canonical: "https://autosprowadzone.pl",
+    languages: {
+      'pl': "https://autosprowadzone.pl",
+    },
+  },
 };
 
 const jsonLd = {
@@ -48,21 +53,32 @@ const jsonLd = {
   "@type": "Organization",
   "name": "autosprowadzone.pl",
   "url": "https://autosprowadzone.pl",
-  "logo": "https://autosprowadzone.pl/logo.png", // Placeholder
+  "logo": "https://autosprowadzone.pl/logo.svg",
   "description": "Profesjonalny import samochodów z Niemiec oraz weryfikacja stanu technicznego pojazdów na terenie Niemiec.",
   "address": {
     "@type": "PostalAddress",
     "addressCountry": "DE",
-    // Placeholder details, can be updated by user later or if I find them in other files
-    "addressLocality": "Bremen",
+    "addressLocality": "Osterholz-Scharmbeck",
   },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+48 000 000 000", // Placeholder
-    "contactType": "customer service",
-    "areaServed": ["PL", "DE"],
-    "availableLanguage": ["Polish", "German"]
-  }
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+49 156 79264391",
+      "contactType": "customer service",
+      "areaServed": ["PL", "DE"],
+      "availableLanguage": ["Polish", "German"]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+48 780 010 848",
+      "contactType": "customer service",
+      "areaServed": "PL",
+      "availableLanguage": "Polish"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/autosprowadzone/"
+  ]
 }
 
 export const viewport = {
@@ -87,7 +103,10 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="format-detection" content="telephone=no" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -104,7 +123,7 @@ export default function RootLayout({
         >
           <div className="flex min-h-screen flex-col overflow-x-hidden">
             <Navbar />
-            <main className="flex-1 overflow-x-hidden">{children}</main>
+            <main className="flex-1 overflow-x-hidden pt-16">{children}</main>
             <CookieBanner />
             <Footer />
           </div>
