@@ -3,7 +3,7 @@ import { Logo } from "@/components/logo"
 
 export function Footer() {
     return (
-        <footer className="w-full border-t border-slate-900 bg-slate-950 py-12 md:py-16">
+        <footer className="w-full border-t border-slate-800 bg-gradient-to-b from-slate-900 to-slate-950 py-12 md:py-16">
             <div className="container mx-auto px-4 md:px-8 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                 <div className="flex flex-col space-y-4">
                     <Link href="/">
@@ -20,6 +20,7 @@ export function Footer() {
                     <Link href="/weryfikacja" className="text-sm text-slate-400 hover:text-primary">Weryfikacja Aut</Link>
                     <Link href="/kalkulator" className="text-sm text-slate-400 hover:text-primary">Kalkulator</Link>
                     <Link href="/polityka-prywatnosci" className="text-sm text-slate-400 hover:text-primary">Polityka Prywatności</Link>
+                    <Link href="/regulamin" className="text-sm text-slate-400 hover:text-primary">Regulamin</Link>
                 </div>
 
                 <div className="flex flex-col space-y-3">
@@ -34,24 +35,24 @@ export function Footer() {
                 <div className="flex flex-col space-y-3">
                     <h3 className="font-black text-white">Kontakt</h3>
                     <div className="flex flex-col gap-2">
-                        <span className="text-sm text-slate-400 hover:text-primary transition-colors flex items-center gap-3">
+                        <a href="tel:+4915679264391" className="text-sm text-slate-400 hover:text-primary transition-colors flex items-center gap-3">
                             <span className="text-lg leading-none">🇩🇪</span>
                             <div>
                                 <span className="font-bold text-xs uppercase tracking-wider block text-slate-500 mb-0.5">Tel / WhatsApp</span>
                                 <span className="font-medium">+49 156 79264391</span>
                             </div>
-                        </span>
-                        <span className="text-sm text-slate-400 hover:text-primary transition-colors flex items-center gap-3">
+                        </a>
+                        <a href="tel:+48780010848" className="text-sm text-slate-400 hover:text-primary transition-colors flex items-center gap-3">
                             <span className="text-lg leading-none">🇵🇱</span>
                             <div>
                                 <span className="font-bold text-xs uppercase tracking-wider block text-slate-500 mb-0.5">Tel / WhatsApp</span>
                                 <span className="font-medium">+48 780 010 848</span>
                             </div>
-                        </span>
+                        </a>
                     </div>
-                    <span className="text-sm text-slate-400 hover:text-primary transition-colors mt-2 block">
+                    <a href="mailto:autosprowadzone@gmail.com" className="text-sm text-slate-400 hover:text-primary transition-colors mt-2 block">
                         autosprowadzone@gmail.com
-                    </span>
+                    </a>
                     <div className="flex gap-4 mt-4">
                         <a href="https://www.facebook.com/autosprowadzone/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#1877F2] transition-colors">
                             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" /></svg>
@@ -62,7 +63,7 @@ export function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="container mx-auto px-4 md:px-8 mt-12 pt-8 border-t border-slate-900 text-center text-xs text-slate-500 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="container mx-auto px-4 md:px-8 mt-12 pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col md:flex-row justify-between items-center gap-4">
                 <span>© {new Date().getFullYear()} autosprowadzone.pl represented by Miami Autocenter GmbH. Wszelkie prawa zastrzeżone.</span>
                 <span>Amtsgericht Walsrode HRB 211101</span>
             </div>

@@ -207,7 +207,7 @@ export default function AuctionsPage() {
                                     </div>
                                     <div>
                                         <h4 className="font-bold uppercase text-xs text-foreground tracking-tight mb-1">Cena Poniżej Rynku (Hurtowa)</h4>
-                                        <p className="text-sm text-muted-foreground leading-relaxed font-medium">Auta na aukcjach B2B są wystawiane po cenach hurtowych. Omijasz marżę handlarza (zwykle 2,000-5,000 EUR) oraz koszty ekspozycji w salonie. Wylicytowane auto jest często 15-20% tańsze niż na portalu mobile.de.</p>
+                                        <p className="text-sm text-muted-foreground leading-relaxed font-medium">Auta na aukcjach B2B są wystawiane po cenach hurtowych. Omijasz marżę handlarza (zwykle 2,000-5,000 EUR) oraz koszty ekspozycji w salonie. Wylicytowane auto jest często 20-30% tańsze niż na portalu mobile.de czy polskich ogłoszeniach.</p>
                                     </div>
                                 </li>
                                 <li className="flex gap-4">

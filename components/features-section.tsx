@@ -59,6 +59,8 @@ export function FeaturesSection() {
                         </motion.div>
                     ))}
                 </div>
+
+                
             </div>
         </section>
     )

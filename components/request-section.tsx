@@ -30,6 +30,11 @@ export function RequestSection() {
                             <p className="text-base text-muted-foreground font-medium leading-relaxed max-w-xl">
                                 Twoje zlecenie trafia bezpośrednio do eksperta na rynku DE. Przeszukujemy systemy pod kątem aut ze sprawdzoną historią i wysyłamy Ci propozycje godne zakupu.
                             </p>
+                            <div className="text-xs font-black uppercase tracking-widest text-muted-foreground">
+                                <a href="/kalkulator" className="underline decoration-primary/30 underline-offset-4 hover:text-primary">Sprawdź koszty w kalkulatorze</a>
+                                <span className="mx-2 opacity-40">•</span>
+                                <a href="/faq" className="underline decoration-primary/30 underline-offset-4 hover:text-primary">Najczęstsze pytania (FAQ)</a>
+                            </div>
                         </div>
 
                         <div className="space-y-8 relative">

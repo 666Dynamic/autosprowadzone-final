@@ -64,6 +64,12 @@ export function Hero() {
                         </Link>
                     </div>
 
+                    {/* Value + pricing clarity */}
+                    <div className="mt-2 text-[11px] md:text-xs text-muted-foreground font-bold uppercase tracking-widest">
+                        Stała prowizja: <span className="text-foreground">2500 zł</span> • Typowa oszczędność vs portale: <span className="text-foreground">20–30%</span>.
+                        <Link href="/kalkulator" className="ml-2 underline decoration-primary/30 underline-offset-4 hover:text-primary">Zobacz kalkulację</Link>
+                    </div>
+
                     <div className="flex flex-col min-[420px]:flex-row flex-wrap items-center justify-center gap-y-4 gap-x-6 md:gap-8 pt-6 md:pt-8 text-xs md:text-sm text-foreground font-bold uppercase tracking-widest">
                         <div className="flex items-center gap-2">
                             <CheckCircle2 className="h-4 w-4 md:h-5 md:w-5 text-primary" />

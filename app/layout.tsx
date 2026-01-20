@@ -54,7 +54,7 @@ const jsonLd = {
   "@type": "Organization",
   "name": "autosprowadzone.pl",
   "url": "https://autosprowadzone.pl",
-  "logo": "https://autosprowadzone.pl/logo.svg",
+  "logo": "https://autosprowadzone.pl/icon.svg",
   "description": "Profesjonalny import samochodów z Niemiec oraz weryfikacja stanu technicznego pojazdów na terenie Niemiec.",
   "address": {
     "@type": "PostalAddress",
@@ -82,6 +82,25 @@ const jsonLd = {
   ]
 }
 
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Import aut z Niemiec i aukcje B2B",
+  "provider": {
+    "@type": "Organization",
+    "name": "autosprowadzone.pl"
+  },
+  "areaServed": ["PL"],
+  "serviceType": "Sprowadzanie samochodów z Niemiec, weryfikacja pojazdu, logistyka",
+  "offers": {
+    "@type": "Offer",
+    "price": "2500",
+    "priceCurrency": "PLN",
+    "url": "https://autosprowadzone.pl/kontakt",
+    "availability": "https://schema.org/InStock"
+  }
+}
+
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -104,9 +123,8 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="format-detection" content="telephone=no" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/icon-192.png" />
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body
@@ -115,6 +133,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
         />
         <ThemeProvider
           attribute="class"

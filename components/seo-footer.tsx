@@ -11,7 +11,7 @@ export function SeoFooter() {
                     <div>
                         <h4 className="font-bold text-foreground mb-4 uppercase tracking-wider text-sm">Lokalizacje Importu</h4>
                         <ul className="space-y-2 text-xs text-muted-foreground">
-                            <li><Link href="/w-budowie" className="hover:text-primary transition-colors">Sprowadzanie aut z Niemiec</Link></li>
+                            <li><Link href="/aukcje" className="hover:text-primary transition-colors">Sprowadzanie aut z Niemiec</Link></li>
                             <li><Link href="/w-budowie" className="hover:text-primary transition-colors">Import aut z Belgii</Link></li>
                             <li><Link href="/w-budowie" className="hover:text-primary transition-colors">Auta z Holandii</Link></li>
                             <li><Link href="/w-budowie" className="hover:text-primary transition-colors">Licytacje Szwajcaria</Link></li>
@@ -29,8 +29,8 @@ export function SeoFooter() {
                     <div>
                         <h4 className="font-bold text-foreground mb-4 uppercase tracking-wider text-sm">Partnerzy Aukcyjni</h4>
                         <ul className="space-y-2 text-xs text-muted-foreground">
-                            <li><Link href="/w-budowie" className="hover:text-primary transition-colors">BCA Auctions</Link></li>
-                            <li><Link href="/w-budowie" className="hover:text-primary transition-colors">AUTO1.com</Link></li>
+                            <li><Link href="/blog/bca-europe-przewodnik" className="hover:text-primary transition-colors">BCA Auctions</Link></li>
+                            <li><Link href="/blog/auto1-jak-licytowac" className="hover:text-primary transition-colors">AUTO1.com</Link></li>
                             <li><Link href="/w-budowie" className="hover:text-primary transition-colors">Autorola</Link></li>
                             <li><Link href="/w-budowie" className="hover:text-primary transition-colors">Adesa / Openlane</Link></li>
                         </ul>

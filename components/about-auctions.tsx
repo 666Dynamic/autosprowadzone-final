@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { ArrowRight, Fuel, Gauge, Calendar, ShieldCheck, Euro, Zap, Activity, Sparkles, Clock, MapPin, Camera } from "lucide-react"
 import Link from "next/link"
 import { useState, useEffect, useMemo } from "react"
+import Image from "next/image"
 
 export function AboutAuctions() {
     const [price, setPrice] = useState(18658)
@@ -210,7 +211,7 @@ export function AboutAuctions() {
                                     <div className="p-3 rounded-2xl text-primary shrink-0 border shadow-sm bg-muted border-border dark:bg-white/5 dark:border-white/10"><Euro className="w-6 h-6" /></div>
                                     <div>
                                         <h4 className="font-black text-foreground uppercase tracking-tight text-base">Ceny bez marży handlarza</h4>
-                                        <p className="text-sm text-muted-foreground">Kupujesz w cenach netto/brutto prosto z aukcji. Realne oszczędności sięgają od <span className="text-foreground font-bold italic">15% do nawet 25%</span>.</p>
+                                        <p className="text-sm text-muted-foreground">Kupujesz w cenach netto/brutto prosto z aukcji. Realne oszczędności sięgają od <span className="text-foreground font-bold italic">20% do nawet 30%</span> w porównaniu do polskich portali.</p>
                                     </div>
                                 </div>
                             </div>
@@ -273,19 +274,23 @@ export function AboutAuctions() {
                                         {/* Image Area */}
                                         <div className="lg:w-[45%] bg-slate-100 relative overflow-hidden h-[200px] sm:h-[250px] md:h-[300px] lg:h-auto">
                                             <AnimatePresence mode="wait">
-                                                <motion.img
+                                                <motion.div
                                                     key={currentImageIndex}
-                                                    src={images[currentImageIndex]}
-                                                    alt="Audi Q5 Auction"
-                                                    loading="lazy"
-                                                    decoding="async"
-                                                    sizes="(min-width: 1024px) 45vw, 100vw"
-                                                    initial={{ opacity: 0, scale: 1.1 }}
+                                                    initial={{ opacity: 0, scale: 1.05 }}
                                                     animate={{ opacity: 1, scale: 1 }}
                                                     exit={{ opacity: 0 }}
-                                                    transition={{ duration: 0.5 }}
-                                                    className="w-full h-full object-cover"
-                                                />
+                                                    transition={{ duration: 0.4 }}
+                                                    className="absolute inset-0"
+                                                >
+                                                    <Image
+                                                        src={images[currentImageIndex]}
+                                                        alt="Audi Q5 Auction"
+                                                        fill
+                                                        sizes="(min-width: 1024px) 45vw, 100vw"
+                                                        priority={false}
+                                                        className="object-cover"
+                                                    />
+                                                </motion.div>
                                             </AnimatePresence>
                                             <div className="absolute bottom-4 left-4 flex gap-1">
                                                 {images.map((_, i) => (

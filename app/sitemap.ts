@@ -12,6 +12,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 1,
         },
         {
+            url: `${baseUrl}/aukcje`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
+            url: `${baseUrl}/kalkulator`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.7,
+        },
+        {
             url: `${baseUrl}/weryfikacja`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
@@ -28,6 +40,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.6,
+        },
+        {
+            url: `${baseUrl}/o-nas`,
+            lastModified: new Date(),
+            changeFrequency: 'yearly',
+            priority: 0.4,
+        },
+        {
+            url: `${baseUrl}/polityka-prywatnosci`,
+            lastModified: new Date(),
+            changeFrequency: 'yearly',
+            priority: 0.2,
+        },
+        {
+            url: `${baseUrl}/regulamin`,
+            lastModified: new Date(),
+            changeFrequency: 'yearly',
+            priority: 0.2,
         },
         {
             url: `${baseUrl}/blog`,

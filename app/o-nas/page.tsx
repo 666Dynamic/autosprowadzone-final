@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { CheckCircle2, Building2, Users, Trophy } from "lucide-react"
+import { CheckCircle2, Building2, Trophy } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
@@ -29,12 +29,11 @@ export default function AboutPage() {
                 </div>
 
                 {/* Stats / Trust Markers */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-24">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-24">
                     {[
-                        { icon: Trophy, label: "Lata doświadczenia", value: "10+" },
-                        { icon: Users, label: "Zadowolonych Klientów", value: "500+" },
-                        { icon: Building2, label: "Legalna Firma GmbH", value: "100%" },
-                        { icon: CheckCircle2, label: "Skuteczność Licytacji", value: "98%" },
+                        { icon: Building2, label: "Niemiecka Spółka GmbH", value: "HRB 211101" },
+                        { icon: Trophy, label: "Dostęp do Platform B2B", value: "40+" },
+                        { icon: CheckCircle2, label: "Stała Prowizja", value: "2500 PLN" },
                     ].map((stat, i) => (
                         <div key={i} className="p-6 bg-card border border-border rounded-3xl text-center">
                             <stat.icon className="w-8 h-8 mx-auto mb-4 text-primary" />
@@ -92,7 +91,7 @@ export default function AboutPage() {
                 <div className="bg-primary/5 border border-primary/20 rounded-[3rem] p-8 md:p-16 text-center space-y-8">
                     <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">Gotowy na swoje <br />nowe auto?</h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Nie przepłacaj u handlarza. Zleć nam import i oszczędź nawet do 30% wartości pojazdu.
+                        Nie przepłacaj u handlarza. Zleć nam import i oszczędź 20-30% wartości pojazdu w porównaniu do polskich portali.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link href="/kontakt">

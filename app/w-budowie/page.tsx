@@ -1,6 +1,12 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft, Clock } from "lucide-react"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "Strona w budowie | autosprowadzone.pl",
+    robots: { index: false, follow: false },
+}
 
 export default function UnderConstruction() {
     return (

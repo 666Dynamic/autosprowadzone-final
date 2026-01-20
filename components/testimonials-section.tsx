@@ -33,9 +33,9 @@ export function TestimonialsSection() {
             
             <div className="container mx-auto px-4 md:px-8 relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="text-3xl md:text-4xl font-black mb-4 uppercase tracking-tighter italic">Co mówią <span className="text-primary not-italic">nasi klienci?</span></h2>
+                    <h2 className="text-3xl md:text-4xl font-black mb-4 uppercase tracking-tighter italic">Dlaczego <span className="text-primary not-italic">autosprowadzone.pl?</span></h2>
                     <p className="text-lg text-muted-foreground font-medium">
-                        Setki sprowadzonych aut i zadowolonych kierowców. Dołącz do nich.
+                        Twój dostęp do świata dealerskiego. Kupuj mądrze, oszczędzaj realnie.
                     </p>
                 </div>
 
