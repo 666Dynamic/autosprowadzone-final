@@ -47,7 +47,7 @@ export function TestimonialsSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.025, duration: 0.25 }}
-                            className="bg-card/50 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-border/50 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all relative flex flex-col will-change-transform"
+                            className="bg-card/50 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-border/50 shadow-sm hover:shadow-lg hover:border-primary/30 transition-shadow relative flex flex-col" style={{ backfaceVisibility: 'hidden' }}
                         >
                             <Quote className="absolute top-3 right-3 sm:top-4 sm:right-4 h-6 w-6 sm:h-8 sm:w-8 text-primary/10" />
                             <div className="flex gap-1 mb-4 text-amber-500">

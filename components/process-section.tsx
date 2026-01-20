@@ -107,14 +107,14 @@ export function ProcessSection() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-50px" }}
                                 transition={{ ...itemTransition, delay: idx * 0.025 }}
-                                className="bg-card/95 md:bg-card/80 md:backdrop-blur-sm border border-border p-5 sm:p-8 md:p-10 rounded-2xl md:rounded-[2.5rem] hover:border-primary/50 md:hover:border-primary hover:shadow-xl transition-all duration-300 group relative overflow-hidden min-h-[180px] sm:min-h-[220px] md:min-h-[280px] transform-gpu"
+                                className="bg-card/95 md:bg-card/80 md:backdrop-blur-sm border border-border p-5 sm:p-8 md:p-10 rounded-2xl md:rounded-[2.5rem] hover:border-primary/50 md:hover:border-primary hover:shadow-xl transition-shadow duration-300 group relative overflow-hidden min-h-[180px] sm:min-h-[220px] md:min-h-[280px]" style={{ backfaceVisibility: 'hidden' }}
                             >
                                 {/* Background Number */}
                                 <div className="absolute -top-2 -right-2 text-6xl md:text-9xl font-black text-primary/5 select-none md:group-hover:text-primary/10 transition-colors pointer-events-none">
                                     {step.id}
                                 </div>
 
-                                <div className="relative z-10 transition-transform duration-300 md:group-hover:-translate-y-1">
+                                <div className="relative z-10 transition-colors duration-300 md:group-hover:text-primary">
                                     <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center mb-4 md:mb-8 text-primary md:group-hover:bg-primary md:group-hover:text-white transition-colors duration-300 shadow-sm">
                                         <step.icon className="w-6 h-6 md:w-8 md:h-8" />
                                     </div>

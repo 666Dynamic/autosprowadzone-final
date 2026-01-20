@@ -47,7 +47,7 @@ export function FeaturesSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.025, duration: 0.25 }}
-                            className="bg-card/50 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-primary/20 shadow-sm hover:shadow-lg hover:shadow-primary/10 md:hover:scale-[1.02] hover:border-primary/40 transition-all duration-300 will-change-transform"
+                            className="bg-card/50 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-primary/20 shadow-sm hover:shadow-lg hover:shadow-primary/10 transition-shadow duration-300" style={{ backfaceVisibility: 'hidden' }}
                         >
                             <div className="h-12 w-12 bg-primary/20 border border-primary/30 rounded-xl flex items-center justify-center mb-5 text-primary">
                                 <feature.icon className="h-6 w-6" />
