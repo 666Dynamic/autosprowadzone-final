@@ -8,7 +8,6 @@ import { RequestSection } from "@/components/request-section"
 import { ProcessSection } from "@/components/process-section"
 import { FaqSection } from "@/components/faq-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
-import { SeoFooter } from "@/components/seo-footer"
 
 export default function Home() {
   return (
@@ -21,7 +20,6 @@ export default function Home() {
       <TestimonialsSection />
       <RequestSection />
       <FaqSection limit={5} />
-      <SeoFooter />
     </div>
   )
 }

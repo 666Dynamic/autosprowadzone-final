@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { SeoFooter } from "@/components/seo-footer";
 import { CookieBanner } from "@/components/cookie-banner";
 
 const geistSans = Geist({
@@ -125,6 +126,7 @@ export default function RootLayout({
             <Navbar />
             <main className="flex-1 overflow-x-hidden pt-16">{children}</main>
             <CookieBanner />
+            <SeoFooter />
             <Footer />
           </div>
         </ThemeProvider>

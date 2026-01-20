@@ -12,8 +12,8 @@ export function RequestSection() {
             <div className="absolute top-1/4 left-1/4 w-px h-1/2 bg-gradient-to-b from-transparent via-primary/20 to-transparent pointer-events-none" />
             
             {/* Smooth fade transitions top and bottom */}
-            <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-background via-background/60 to-transparent pointer-events-none z-20" />
-            <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background via-background/60 to-transparent pointer-events-none z-20" />
+            <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-background via-background/60 to-transparent pointer-events-none z-0" />
+            <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background via-background/60 to-transparent pointer-events-none z-0" />
 
             <div className="container px-4 md:px-8 relative z-10 mx-auto">
                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">

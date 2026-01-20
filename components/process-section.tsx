@@ -67,8 +67,8 @@ export function ProcessSection() {
     return (
         <section id="process-section" className="py-24 md:py-32 relative overflow-hidden">
             {/* Smooth fade transitions top and bottom */}
-            <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-background via-background/60 to-transparent pointer-events-none z-20" />
-            <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background via-background/60 to-transparent pointer-events-none z-20" />
+            <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-background via-background/60 to-transparent pointer-events-none z-0" />
+            <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background via-background/60 to-transparent pointer-events-none z-0" />
             
             <div className="container mx-auto px-4 relative z-10">
                 <motion.div
