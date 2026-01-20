@@ -288,6 +288,8 @@ export function AboutAuctions() {
                                                         fill
                                                         sizes="(min-width: 1024px) 45vw, 100vw"
                                                         priority={false}
+                                                        loading="lazy"
+                                                        quality={75}
                                                         className="object-cover"
                                                     />
                                                 </motion.div>
