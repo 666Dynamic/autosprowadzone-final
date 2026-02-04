@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     }
 
     return {
-        title: `${post.title} | autosprowadzone.pl`,
+        title: `${post.title} | SprowadzoneAuto.pl`,
         description: post.excerpt,
         openGraph: {
             title: post.title,
@@ -45,7 +45,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         notFound()
     }
 
-    const baseUrl = "https://autosprowadzone.pl"
+    const baseUrl = "https://sprowadzoneauto.pl"
     const postUrl = `${baseUrl}/blog/${post.slug}`
     const breadcrumbJsonLd = {
         "@context": "https://schema.org",
@@ -79,7 +79,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         },
         "publisher": {
             "@type": "Organization",
-            "name": "autosprowadzone.pl",
+            "name": "SprowadzoneAuto.pl",
             "logo": {
                 "@type": "ImageObject",
                 "url": `${baseUrl}/icon.svg`
@@ -87,7 +87,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         },
         "author": {
             "@type": "Organization",
-            "name": "autosprowadzone.pl"
+            "name": "SprowadzoneAuto.pl"
         },
         "description": post.excerpt
     }

@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { posts } from '@/lib/blog'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://autosprowadzone.pl'
+    const baseUrl = 'https://sprowadzoneauto.pl'
 
     return [
         {

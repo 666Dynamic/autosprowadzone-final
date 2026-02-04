@@ -5,7 +5,7 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Aukcje Samochodowe z Europy B2B | Tanie Auta Poleasingowe | autosprowadzone.pl",
+    title: "Aukcje Samochodowe z Europy B2B | Tanie Auta Poleasingowe | SprowadzoneAuto.pl",
     description: "Zyskaj dostęp do BCA, AUTO1 i 40+ zamkniętych platform aukcyjnych w całej Europie. Sprawdź, jak kupić auto poleasingowe 20% taniej niż na portalach. Ekspercka weryfikacja i transport.",
 }
 

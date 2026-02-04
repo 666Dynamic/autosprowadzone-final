@@ -1,6 +1,6 @@
 {
-  "name": "autosprowadzone.pl - Import Aut z Niemiec",
-  "short_name": "autosprowadzone",
+  "name": "SprowadzoneAuto.pl - Import Aut z Niemiec",
+  "short_name": "SprowadzoneAuto",
   "description": "Profesjonalny import samochodów z Niemiec. Dostęp do aukcji B2B, weryfikacja, transport door-to-door.",
   "start_url": "/",
   "display": "standalone",

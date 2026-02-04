@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Polityka Prywatności i Impressum | autosprowadzone.pl",
+    title: "Polityka Prywatności i Impressum | SprowadzoneAuto.pl",
     description: "Informacje o administratorze danych, polityce prywatności i danych firmy Miami Autocenter GmbH (Impressum).",
 }
 

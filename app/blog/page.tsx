@@ -4,7 +4,7 @@ import { Metadata } from "next"
 import { ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
-    title: "Blog - Poradnik Importera | autosprowadzone.pl",
+    title: "Blog - Poradnik Importera | SprowadzoneAuto.pl",
     description: "Artykuły i porady dotyczące sprowadzania samochodów z Niemiec, Belgii i Holandii.",
 }
 

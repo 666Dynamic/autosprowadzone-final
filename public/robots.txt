@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://autosprowadzone.pl/sitemap.xml
+Sitemap: https://sprowadzoneauto.pl/sitemap.xml
 
 # Crawl-delay (optional, adjust if needed)
 Crawl-delay: 1

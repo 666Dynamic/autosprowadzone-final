@@ -3,7 +3,7 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Podgląd logo (test) | autosprowadzone.pl",
+    title: "Podgląd logo (test) | SprowadzoneAuto.pl",
     robots: { index: false, follow: false },
 }
 
@@ -63,7 +63,7 @@ export default function LogosPreview() {
         <div className="min-h-screen bg-background p-10 font-sans">
             <div className="max-w-4xl mx-auto space-y-20">
                 <div className="space-y-4 text-center">
-                    <h1 className="text-4xl font-bold tracking-tight">Propozycje Logo dla autosprowadzone.pl</h1>
+                    <h1 className="text-4xl font-bold tracking-tight">Propozycje Logo dla SprowadzoneAuto.pl</h1>
                     <p className="text-muted-foreground text-lg">Wybierz wersję, która najlepiej oddaje charakter Twojej marki.</p>
                 </div>
 

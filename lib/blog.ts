@@ -349,7 +349,7 @@ export const posts: Post[] = [
             <h3>Najczęstsze pytania o AUTO1</h3>
 
             <h4>Czy mogę sam licytować na AUTO1?</h4>
-            <p><strong>Nie.</strong> AUTO1 wymaga licencji dealera (NIP firmowy + KRS lub CEIDG). Dla osób prywatnych jedyna opcja to pośrednik (jak autosprowadzone.pl). Nasza prowizja: <strong>2,500 PLN</strong> – zajmujemy się licytacją, transportem, dokumentami i dostawą pod dom.</p>
+            <p><strong>Nie.</strong> AUTO1 wymaga licencji dealera (NIP firmowy + KRS lub CEIDG). Dla osób prywatnych jedyna opcja to pośrednik (jak SprowadzoneAuto.pl). Nasza prowizja: <strong>2,500 PLN</strong> – zajmujemy się licytacją, transportem, dokumentami i dostawą pod dom.</p>
 
             <h4>Czy auta z AUTO1 są pewne?</h4>
             <p>To zależy od <strong>Grade</strong>:</p>

@@ -18,10 +18,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://autosprowadzone.pl'),
+  metadataBase: new URL('https://sprowadzoneauto.pl'),
   title: {
-    default: "Auta z Niemiec - Aukcje B2B, Import, Weryfikacja | autosprowadzone.pl",
-    template: "%s | autosprowadzone.pl",
+    default: "Auta z Niemiec - Aukcje B2B, Import, Weryfikacja | SprowadzoneAuto.pl",
+    template: "%s | SprowadzoneAuto.pl",
   },
   description: "Sprowadzamy auta z Niemiec z aukcji B2B i od dealerów. Niemiecka spółka, pewna historia, transport door-to-door. Sprawdź naszą ofertę weryfikacji i importu!",
   keywords: [
@@ -31,20 +31,20 @@ export const metadata: Metadata = {
     "licytacje komornicze niemcy", "aukcje samochodowe online", "bezpieczny import aut", "sprowadzanie aut z niemiec olx", "auta uszkodzone niemcy",
     "import aut z zagranicy", "firma sprowadzająca auta", "opłaty celne auto z niemiec", "samochody z niemiec na zamówienie"
   ],
-  authors: [{ name: "autosprowadzone.pl" }],
-  creator: "autosprowadzone.pl",
+  authors: [{ name: "SprowadzoneAuto.pl" }],
+  creator: "SprowadzoneAuto.pl",
   openGraph: {
     type: "website",
     locale: "pl_PL",
-    url: "https://autosprowadzone.pl",
-    title: "Auta z Niemiec - Aukcje B2B, Import, Weryfikacja | autosprowadzone.pl",
+    url: "https://sprowadzoneauto.pl",
+    title: "Auta z Niemiec - Aukcje B2B, Import, Weryfikacja | SprowadzoneAuto.pl",
     description: "Bezpieczny import aut z Niemiec. Dostęp do aukcji B2B (BCA, Auto1). Weryfikacja techniczna na miejscu.",
-    siteName: "autosprowadzone.pl",
+    siteName: "SprowadzoneAuto.pl",
   },
   alternates: {
-    canonical: "https://autosprowadzone.pl",
+    canonical: "https://sprowadzoneauto.pl",
     languages: {
-      'pl': "https://autosprowadzone.pl",
+      'pl': "https://sprowadzoneauto.pl",
     },
   },
 };
@@ -52,9 +52,9 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "autosprowadzone.pl",
-  "url": "https://autosprowadzone.pl",
-  "logo": "https://autosprowadzone.pl/icon.svg",
+  "name": "SprowadzoneAuto.pl",
+  "url": "https://sprowadzoneauto.pl",
+  "logo": "https://sprowadzoneauto.pl/icon.svg",
   "description": "Profesjonalny import samochodów z Niemiec oraz weryfikacja stanu technicznego pojazdów na terenie Niemiec.",
   "address": {
     "@type": "PostalAddress",
@@ -78,7 +78,7 @@ const jsonLd = {
     }
   ],
   "sameAs": [
-    "https://www.facebook.com/autosprowadzone/"
+    "https://www.facebook.com/sprowadzoneauto/"
   ]
 }
 
@@ -88,7 +88,7 @@ const serviceJsonLd = {
   "name": "Import aut z Niemiec i aukcje B2B",
   "provider": {
     "@type": "Organization",
-    "name": "autosprowadzone.pl"
+    "name": "SprowadzoneAuto.pl"
   },
   "areaServed": ["PL"],
   "serviceType": "Sprowadzanie samochodów z Niemiec, weryfikacja pojazdu, logistyka",
@@ -96,7 +96,7 @@ const serviceJsonLd = {
     "@type": "Offer",
     "price": "2500",
     "priceCurrency": "PLN",
-    "url": "https://autosprowadzone.pl/kontakt",
+    "url": "https://sprowadzoneauto.pl/kontakt",
     "availability": "https://schema.org/InStock"
   }
 }

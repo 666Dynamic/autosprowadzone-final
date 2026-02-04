@@ -1,4 +1,4 @@
-# ✅ POPRAWKI ZAKOŃCZONE - autosprowadzone.pl
+# ✅ POPRAWKI ZAKOŃCZONE - SprowadzoneAuto.pl
 
 ## 📊 Wynik końcowy: **95/100** (było 81/100)
 

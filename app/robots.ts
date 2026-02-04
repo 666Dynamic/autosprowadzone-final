@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
                 disallow: ['/private/', '/w-budowie', '/test-logos'],
             },
         ],
-        sitemap: 'https://autosprowadzone.pl/sitemap.xml',
+        sitemap: 'https://sprowadzoneauto.pl/sitemap.xml',
     }
 }

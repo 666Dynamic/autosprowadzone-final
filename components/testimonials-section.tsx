@@ -19,7 +19,7 @@ const testimonials = [
     {
         name: "Anna S.",
         location: "Poznań",
-        text: "Bardzo profesjonalne podejście. Obawiałam się zakupu auta z zagranicy, ale panowie z autosprowadzone wszystko załatwili. Auto pod domem po 5 dniach.",
+        text: "Bardzo profesjonalne podejście. Obawiałam się zakupu auta z zagranicy, ale panowie z SprowadzoneAuto wszystko załatwili. Auto pod domem po 5 dniach.",
         date: "3 tygodnie temu",
     },
 ]
@@ -33,7 +33,7 @@ export function TestimonialsSection() {
             
             <div className="container mx-auto px-4 md:px-8 relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="text-3xl md:text-4xl font-black mb-4 uppercase tracking-tighter italic">Dlaczego <span className="text-primary not-italic">autosprowadzone.pl?</span></h2>
+                    <h2 className="text-3xl md:text-4xl font-black mb-4 uppercase tracking-tighter italic">Dlaczego <span className="text-primary not-italic">SprowadzoneAuto.pl?</span></h2>
                     <p className="text-lg text-muted-foreground font-medium">
                         Twój dostęp do świata dealerskiego. Kupuj mądrze, oszczędzaj realnie.
                     </p>

@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 export const metadata = {
-    title: "O Nas | autosprowadzone.pl",
+    title: "O Nas | SprowadzoneAuto.pl",
     description: "Poznaj Miami Autocenter GmbH. Twój zaufany partner w imporcie aut z Niemiec. Lukas & Damian.",
 }
 
@@ -49,7 +49,7 @@ export default function AboutPage() {
                         <h2 className="text-3xl font-black uppercase tracking-tight">Kto za tym stoi?</h2>
                         <div className="prose dark:prose-invert text-muted-foreground">
                             <p>
-                                Za sukcesem <strong>autosprowadzone.pl</strong> stoją <strong>Lukas</strong> oraz <strong>Damian</strong>.
+                                Za sukcesem <strong>SprowadzoneAuto.pl</strong> stoją <strong>Lukas</strong> oraz <strong>Damian</strong>.
                                 Połączyliśmy naszą pasję do motoryzacji z wiedzą na temat niemieckiego rynku, aby stworzyć usługę, której sami brakowało nam na rynku.
                             </p>
                             <p>

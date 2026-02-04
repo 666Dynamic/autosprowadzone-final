@@ -1,4 +1,4 @@
-# Autosprowadzone.pl 🚗
+# SprowadzoneAuto.pl 🚗
 
 Profesjonalna platforma do importu samochodów z aukcji B2B (Niemcy, Europa). Projekt zbudowany w oparciu o Next.js 16, React 19, Tailwind CSS v4 i Framer Motion.
 
@@ -54,4 +54,4 @@ Projekt przeszedł gruntowną optymalizację pod kątem Core Web Vitals i SEO:
 ## 🚢 Wdrożenie
 
 Projekt jest gotowy do wdrożenia na Vercel, Netlify lub Cloudflare Pages.
-Repozytorium: `https://github.com/666Dynamic/autosprowadzone-new`
+Repozytorium: `https://github.com/666Dynamic/autosprowadzone-final`

@@ -2,7 +2,7 @@ import { ContactForm } from "@/components/contact-form"
 import { Mail, MapPin, Phone, Clock } from "lucide-react"
 
 export const metadata = {
-    title: "Kontakt | autosprowadzone.pl",
+    title: "Kontakt | SprowadzoneAuto.pl",
     description: "Skontaktuj się z nami. Import aut z Niemiec, weryfikacja, aukcje B2B.",
 }
 
@@ -34,7 +34,7 @@ export default function ContactPage() {
                         {
                             icon: Mail,
                             title: "Napisz do nas",
-                            content: ["autosprowadzone@gmail.com"],
+                            content: ["kontakt@sprowadzoneauto.pl"],
                             sub: "Odpisujemy w 24h",
                             color: "text-blue-500",
                             bg: "bg-blue-500/10",

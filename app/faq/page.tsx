@@ -2,7 +2,7 @@ import { FaqSection } from "@/components/faq-section"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Najczęściej Zadawane Pytania (FAQ) | autosprowadzone.pl",
+    title: "Najczęściej Zadawane Pytania (FAQ) | SprowadzoneAuto.pl",
     description: "Odpowiedzi na pytania o import aut z Niemiec. Koszty, akcyza, czas transportu, procedury.",
 }
 

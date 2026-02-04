@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-    title: "Weryfikacja Aut w Niemczech | autosprowadzone.pl",
+    title: "Weryfikacja Aut w Niemczech | SprowadzoneAuto.pl",
     description: "Sprawdzenie auta przed zakupem w Niemczech. Inspekcja techniczna, pomiar lakieru, diagnostyka komputerowa. Obszar Bremen i całe Niemcy.",
 }
 
@@ -67,7 +67,7 @@ export default function VerificationPage() {
                                     <div className="absolute inset-0 z-0">
                                         <Image
                                             src="/expert-inspection.png"
-                                            alt="Ekspert autosprowadzone.pl podczas inspekcji"
+                                            alt="Ekspert SprowadzoneAuto.pl podczas inspekcji"
                                             fill
                                             className="object-cover object-center opacity-90 mix-blend-multiply"
                                             sizes="(max-width: 768px) 100vw, 40vw"

@@ -2,7 +2,7 @@ import { Calculator } from "@/components/calculator"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Kalkulator Akcyzy 2026 | autosprowadzone.pl",
+    title: "Kalkulator Akcyzy 2026 | SprowadzoneAuto.pl",
     description: "Oblicz całkowity koszt sprowadzenia auta z Niemiec. Sprawdź aktualne stawki akcyzy (3.1% / 18.6%), koszty rejestracji i prowizję.",
 }
 
