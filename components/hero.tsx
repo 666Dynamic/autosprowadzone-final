@@ -14,15 +14,10 @@ export function Hero() {
                     loop
                     muted
                     playsInline
-                    preload="none"
+                    preload="auto"
                     poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%230f172a' width='1920' height='1080'/%3E%3C/svg%3E"
-                    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 [&.loaded]:opacity-15 dark:[&.loaded]:opacity-20"
+                    className="absolute inset-0 w-full h-full object-cover opacity-15 dark:opacity-20 transition-opacity duration-1000"
                     aria-hidden="true"
-                    onLoadedData={(e) => e.currentTarget.classList.add('loaded')}
-                    onError={(e) => {
-                        // Hide video if it fails to load
-                        e.currentTarget.style.display = 'none'
-                    }}
                 >
                     <source src="/13164895_3840_2160_30fps.mp4" type="video/mp4" />
                 </video>
