@@ -19,8 +19,8 @@ function LogoVariant1() {
                 </svg>
             </div>
             <div className="flex items-baseline tracking-tighter uppercase font-extrabold">
-                <span className="text-2xl italic text-foreground">auto</span>
-                <span className="text-2xl text-primary font-black">sprowadzone</span>
+                <span className="text-2xl italic text-foreground">sprowadzone</span>
+                <span className="text-2xl text-primary font-black">auto</span>
                 <span className="text-muted-foreground/30 text-xs ml-0.5 font-bold">.pl</span>
             </div>
         </div>
@@ -37,8 +37,8 @@ function LogoVariant2() {
                 </svg>
             </div>
             <div className="flex flex-col -gap-1">
-                <span className="text-xl font-black tracking-tight text-foreground uppercase leading-none">Auto</span>
-                <span className="text-xl font-black tracking-tight text-primary uppercase leading-none">Sprowadzone</span>
+                <span className="text-xl font-black tracking-tight text-foreground uppercase leading-none">Sprowadzone</span>
+                <span className="text-xl font-black tracking-tight text-primary uppercase leading-none">Auto</span>
             </div>
         </div>
     )
@@ -48,10 +48,10 @@ function LogoVariant3() {
     return (
         <div className="flex items-center gap-0">
             <div className="bg-foreground text-background px-3 py-1.5 rounded-l-lg font-black text-2xl italic tracking-tighter uppercase">
-                AUTO
+                SPROWADZONE
             </div>
             <div className="bg-primary text-white px-3 py-1.5 rounded-r-lg font-black text-2xl italic tracking-tighter uppercase shadow-[4px_0_15px_rgba(245,158,11,0.5)]">
-                SPROWADZONE
+                AUTO
             </div>
             <span className="ml-2 text-muted-foreground font-bold italic">.pl</span>
         </div>

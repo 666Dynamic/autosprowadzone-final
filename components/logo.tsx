@@ -23,8 +23,8 @@ export function Logo({ className }: { className?: string }) {
 
             {/* Unified Wordmark - Restored to static state */}
             <div className="flex items-baseline tracking-tighter uppercase font-extrabold select-none whitespace-nowrap">
-                <span className="text-xl md:text-[1.35rem] leading-none text-foreground">auto</span>
-                <span className="text-xl md:text-[1.35rem] leading-none text-primary italic">sprowadzone</span>
+                <span className="text-xl md:text-[1.35rem] leading-none text-foreground">sprowadzone</span>
+                <span className="text-xl md:text-[1.35rem] leading-none text-primary italic">auto</span>
             </div>
         </div>
     )
