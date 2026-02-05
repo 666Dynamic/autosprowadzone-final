@@ -17,8 +17,8 @@ export async function sendContactEmail(formData: FormData) {
 
     try {
         // Send to Admin
-        await resend.emails.send({
-            from: 'SprowadzoneAuto <kontakt@sprowadzoneauto.pl>',
+        const result = await resend.emails.send({
+            from: 'SprowadzoneAuto <kontakt@sprowadzoneauto.pl>', 
             to: ['kontakt@sprowadzoneauto.pl'],
             replyTo: email,
             subject: `Nowe zgłoszenie: ${mode} - ${name}`,
@@ -33,12 +33,15 @@ export async function sendContactEmail(formData: FormData) {
       `
         });
 
+        console.log('Email sent successfully:', result);
+
         // Optional: Send auto-reply to Client
         // await resend.emails.send({ ... })
 
         return { success: true };
     } catch (error) {
         console.error('Email sending failed:', error);
+        console.error('Error details:', JSON.stringify(error, null, 2));
         return { success: false, error: 'Błąd wysyłki. Spróbuj ponownie.' };
     }
 }
