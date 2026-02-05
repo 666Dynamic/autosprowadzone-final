@@ -42,12 +42,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.6,
         },
         {
-            url: `${baseUrl}/o-nas`,
-            lastModified: new Date(),
-            changeFrequency: 'yearly',
-            priority: 0.4,
-        },
-        {
             url: `${baseUrl}/polityka-prywatnosci`,
             lastModified: new Date(),
             changeFrequency: 'yearly',

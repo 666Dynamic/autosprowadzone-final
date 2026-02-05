@@ -16,7 +16,6 @@ export function Footer() {
 
                 <div className="flex flex-col space-y-3">
                     <h3 className="font-black text-white">O Nas</h3>
-                    <Link href="/o-nas" className="text-sm text-slate-400 hover:text-primary">O Firmie</Link>
                     <Link href="/weryfikacja" className="text-sm text-slate-400 hover:text-primary">Weryfikacja Aut</Link>
                     <Link href="/kalkulator" className="text-sm text-slate-400 hover:text-primary">Kalkulator</Link>
                     <Link href="/polityka-prywatnosci" className="text-sm text-slate-400 hover:text-primary">Polityka Prywatności</Link>

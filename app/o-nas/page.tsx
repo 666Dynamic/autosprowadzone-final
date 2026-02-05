@@ -6,6 +6,10 @@ import { Button } from "@/components/ui/button"
 export const metadata = {
     title: "O Nas | SprowadzoneAuto.pl",
     description: "Poznaj Miami Autocenter GmbH. Twój zaufany partner w imporcie aut z Niemiec. Lukas & Damian.",
+    robots: {
+        index: false,
+        follow: false,
+    },
 }
 
 export default function AboutPage() {
