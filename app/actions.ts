@@ -16,11 +16,10 @@ export async function sendContactEmail(formData: FormData) {
     }
 
     try {
-        // Note for User: You need to verify a domain on Resend or use 'onboarding@resend.dev' for testing
         // Send to Admin
         await resend.emails.send({
-            from: 'SprowadzoneAuto Form <onboarding@resend.dev>',
-            to: ['kontakt@sprowadzoneauto.pl'], // TODO: Replace with user's real email
+            from: 'SprowadzoneAuto <kontakt@sprowadzoneauto.pl>',
+            to: ['kontakt@sprowadzoneauto.pl'],
             replyTo: email,
             subject: `Nowe zgłoszenie: ${mode} - ${name}`,
             html: `
