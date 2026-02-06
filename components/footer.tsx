@@ -20,6 +20,7 @@ export function Footer() {
                     <Link href="/kalkulator" className="text-sm text-slate-400 hover:text-primary">Kalkulator</Link>
                     <Link href="/polityka-prywatnosci" className="text-sm text-slate-400 hover:text-primary">Polityka Prywatności</Link>
                     <Link href="/regulamin" className="text-sm text-slate-400 hover:text-primary">Regulamin</Link>
+                    <Link href="/impressum" className="text-sm text-slate-400 hover:text-primary">Impressum</Link>
                 </div>
 
                 <div className="flex flex-col space-y-3">
