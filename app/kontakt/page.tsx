@@ -26,7 +26,7 @@ export default function ContactPage() {
                             icon: Phone,
                             title: "Tel / WhatsApp",
                             content: ["+49 156 79264391 (DE)", "+48 780 010 848 (PL)"],
-                            sub: "Pn-Pt: 9:00 - 18:00",
+                            sub: "Szybki kontakt 7:00–22:00",
                             color: "text-emerald-500",
                             bg: "bg-emerald-500/10",
                             border: "group-hover:border-emerald-500/50"
@@ -52,8 +52,8 @@ export default function ContactPage() {
                         {
                             icon: Clock,
                             title: "Godziny pracy",
-                            content: ["Poniedziałek - Piątek", "9:00 - 18:00"],
-                            sub: "Soboty: Po ustaleniu",
+                            content: ["Codziennie", "7:00 - 22:00"],
+                            sub: "Poza tymi godzinami zostaw wiadomość",
                             color: "text-amber-500",
                             bg: "bg-amber-500/10",
                             border: "group-hover:border-amber-500/50"
