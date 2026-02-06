@@ -21,6 +21,7 @@ export function Footer() {
                     <Link href="/polityka-prywatnosci" className="text-sm text-slate-400 hover:text-primary">Polityka Prywatności / Impressum</Link>
                     <Link href="/datenschutz" className="text-sm text-slate-400 hover:text-primary">Datenschutz (DE)</Link>
                     <Link href="/regulamin" className="text-sm text-slate-400 hover:text-primary">Regulamin</Link>
+                    <a href="/umowa-posrednictwa.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-400 hover:text-primary">Umowa Pośrednictwa (PDF)</a>
                 </div>
 
                 <div className="flex flex-col space-y-3">
