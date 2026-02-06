@@ -19,6 +19,7 @@ export function Footer() {
                     <Link href="/weryfikacja" className="text-sm text-slate-400 hover:text-primary">Weryfikacja Aut</Link>
                     <Link href="/kalkulator" className="text-sm text-slate-400 hover:text-primary">Kalkulator</Link>
                     <Link href="/polityka-prywatnosci" className="text-sm text-slate-400 hover:text-primary">Polityka Prywatności / Impressum</Link>
+                    <Link href="/datenschutz" className="text-sm text-slate-400 hover:text-primary">Datenschutz (DE)</Link>
                     <Link href="/regulamin" className="text-sm text-slate-400 hover:text-primary">Regulamin</Link>
                 </div>
 
