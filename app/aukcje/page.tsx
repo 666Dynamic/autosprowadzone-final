@@ -66,7 +66,7 @@ export default function AuctionsPage() {
                             Omiń pośredników i marże handlarzy. Zapewniamy pełny dostęp do ponad 40 zamkniętych platform B2B, gdzie kupisz sprawdzone auta poleasingowe z całej Europy.
                         </p>
                         <div className="flex flex-wrap gap-6 justify-center md:justify-start">
-                            <Link href="/#request-section">
+                            <Link href="/#zlecenie">
                                 <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all px-8 h-12 font-bold rounded-lg shadow-lg">
                                     Darmowa konsultacja <ChevronRight className="ml-2 w-5 h-5" />
                                 </Button>
@@ -409,7 +409,7 @@ export default function AuctionsPage() {
                         Chcesz sprawdzić <br /><span className="italic">aktualne oferty?</span>
                     </h2>
                     <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-                        <Link href="/#request-section">
+                        <Link href="/#zlecenie">
                             <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 hover:scale-[1.02] transition-all h-12 px-8 font-semibold rounded-lg shadow-lg">
                                 Zapytaj o dostęp <Zap className="ml-2 w-5 h-5" />
                             </Button>
