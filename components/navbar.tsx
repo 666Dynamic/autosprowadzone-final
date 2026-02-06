@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -23,6 +23,7 @@ const navItems = [
 export function Navbar() {
     const [isOpen, setIsOpen] = React.useState(false)
     const pathname = usePathname()
+    const router = useRouter()
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/60 shadow-sm">
@@ -47,11 +48,35 @@ export function Navbar() {
                         </Link>
                     ))}
                     <ModeToggle />
-                    <Link href="#zlecenie">
+                    <button
+                        onClick={() => {
+                            if (pathname === "/") {
+                                const el = document.getElementById("zlecenie")
+                                if (el) {
+                                    el.scrollIntoView({ behavior: "smooth", block: "start" })
+                                } else {
+                                    // If the section is not yet mounted (dynamic import), poll briefly
+                                    const start = Date.now()
+                                    const iv = setInterval(() => {
+                                        const e = document.getElementById("zlecenie")
+                                        if (e) {
+                                            clearInterval(iv)
+                                            e.scrollIntoView({ behavior: "smooth", block: "start" })
+                                        }
+                                        if (Date.now() - start > 3000) clearInterval(iv)
+                                    }, 100)
+                                }
+                            } else {
+                                router.push("/#zlecenie")
+                            }
+                        }}
+                        className="h-12"
+                        aria-label="Wyceń Import"
+                    >
                         <Button className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-12 px-4 font-bold rounded-lg">
                             Wyceń Import
                         </Button>
-                    </Link>
+                    </button>
                 </div>
 
                 {/* Mobile Toggle */}
@@ -93,9 +118,32 @@ export function Navbar() {
                                     {item.name}
                                 </Link>
                             ))}
-                            <Link href="#zlecenie" onClick={() => setIsOpen(false)} className="pt-4">
-                                <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-12 font-bold rounded-lg touch-manipulation min-h-[48px]">Wyceń Import</Button>
-                            </Link>
+                                    <button
+                                        onClick={() => {
+                                            setIsOpen(false)
+                                            if (pathname === "/") {
+                                                const el = document.getElementById("zlecenie")
+                                                if (el) {
+                                                    el.scrollIntoView({ behavior: "smooth", block: "start" })
+                                                } else {
+                                                    const start = Date.now()
+                                                    const iv = setInterval(() => {
+                                                        const e = document.getElementById("zlecenie")
+                                                        if (e) {
+                                                            clearInterval(iv)
+                                                            e.scrollIntoView({ behavior: "smooth", block: "start" })
+                                                        }
+                                                        if (Date.now() - start > 3000) clearInterval(iv)
+                                                    }, 100)
+                                                }
+                                            } else {
+                                                router.push("/#zlecenie")
+                                            }
+                                        }}
+                                        className="pt-4 w-full"
+                                    >
+                                        <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-12 font-bold rounded-lg touch-manipulation min-h-[48px]">Wyceń Import</Button>
+                                    </button>
                         </div>
                     </motion.div>
                 )}
