@@ -146,10 +146,45 @@ export default function DatenschutzPage() {
                     </CardContent>
                 </Card>
 
-                {/* 5. E-Mail-Versand */}
+                {/* 5. Webanalyse */}
                 <Card className="border-2 border-border bg-card">
                     <CardHeader>
-                        <CardTitle className="uppercase tracking-widest text-lg font-black text-muted-foreground">5. E-Mail-Versand (Resend)</CardTitle>
+                        <CardTitle className="uppercase tracking-widest text-lg font-black text-muted-foreground">5. Webanalyse (Google Analytics & Vercel Analytics)</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-4 text-muted-foreground leading-relaxed text-sm">
+                        <div>
+                            <h4 className="font-bold text-foreground mb-2">Google Analytics (gtag.js)</h4>
+                            <p>
+                                Diese Website nutzt Google Analytics, einen Webanalysedienst der Google Ireland Limited (Gordon House, Barrow Street, Dublin 4, Irland).
+                                Google Analytics verwendet Technologien (z. B. Cookies oder ähnliche Identifikatoren), um die Nutzung der Website zu analysieren.
+                                Die dadurch erzeugten Informationen können an Server von Google in den USA übertragen und dort gespeichert werden.
+                            </p>
+                            <p className="mt-2">
+                                Wir setzen Google Analytics ein, um die Nutzung unserer Website auszuwerten und unser Angebot zu verbessern.
+                                Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).
+                            </p>
+                            <p className="mt-2">
+                                Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">policies.google.com/privacy</a>.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 className="font-bold text-foreground mb-2">Vercel Analytics</h4>
+                            <p>
+                                Zusätzlich nutzen wir Vercel Analytics zur Messung von Seitenaufrufen und Performance. Anbieter ist Vercel Inc. (USA).
+                                Die Verarbeitung erfolgt zur Auswertung der Website-Nutzung und Stabilität.
+                            </p>
+                            <p className="mt-2">
+                                Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).
+                                Weitere Informationen: <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">vercel.com/legal/privacy-policy</a>.
+                            </p>
+                        </div>
+                    </CardContent>
+                </Card>
+
+                {/* 6. E-Mail-Versand */}
+                <Card className="border-2 border-border bg-card">
+                    <CardHeader>
+                        <CardTitle className="uppercase tracking-widest text-lg font-black text-muted-foreground">6. E-Mail-Versand (Resend)</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4 text-muted-foreground leading-relaxed text-sm">
                         <p>
@@ -172,10 +207,10 @@ export default function DatenschutzPage() {
                     </CardContent>
                 </Card>
 
-                {/* 6. Ihre Rechte */}
+                {/* 7. Ihre Rechte */}
                 <Card className="border-2 border-border bg-card">
                     <CardHeader>
-                        <CardTitle className="uppercase tracking-widest text-lg font-black text-muted-foreground">6. Ihre Rechte nach DSGVO</CardTitle>
+                        <CardTitle className="uppercase tracking-widest text-lg font-black text-muted-foreground">7. Ihre Rechte nach DSGVO</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4 text-muted-foreground leading-relaxed text-sm">
                         <p>Sie haben folgende Rechte:</p>
@@ -194,10 +229,10 @@ export default function DatenschutzPage() {
                     </CardContent>
                 </Card>
 
-                {/* 7. SSL-Verschlüsselung */}
+                {/* 8. SSL-Verschlüsselung */}
                 <Card className="border-2 border-border bg-card">
                     <CardHeader>
-                        <CardTitle className="uppercase tracking-widest text-lg font-black text-muted-foreground">7. SSL- bzw. TLS-Verschlüsselung</CardTitle>
+                        <CardTitle className="uppercase tracking-widest text-lg font-black text-muted-foreground">8. SSL- bzw. TLS-Verschlüsselung</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4 text-muted-foreground leading-relaxed text-sm">
                         <p>
@@ -209,10 +244,10 @@ export default function DatenschutzPage() {
                     </CardContent>
                 </Card>
 
-                {/* 8. Streitschlichtung */}
+                {/* 9. Streitschlichtung */}
                 <Card className="border-2 border-border bg-card">
                     <CardHeader>
-                        <CardTitle className="uppercase tracking-widest text-lg font-black text-muted-foreground">8. Streitschlichtung</CardTitle>
+                        <CardTitle className="uppercase tracking-widest text-lg font-black text-muted-foreground">9. Streitschlichtung</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4 text-muted-foreground leading-relaxed text-sm">
                         <p>

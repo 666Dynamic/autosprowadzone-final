@@ -6,6 +6,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { SeoFooter } from "@/components/seo-footer";
 import { CookieBanner } from "@/components/cookie-banner";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -191,6 +192,10 @@ export default function RootLayout({
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" sizes="180x180" href="/icon-192.svg" />
         <link rel="manifest" href="/manifest.json" />
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VPZB549MMW" />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {"window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-VPZB549MMW');"}
+        </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

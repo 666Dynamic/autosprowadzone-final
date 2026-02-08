@@ -38,6 +38,34 @@ export function AboutAuctions() {
         "Audi Q5 - zbliżenie na raport stanu lakieru"
     ], [])
 
+    const seededRandom = (seed: number) => {
+        const x = Math.sin(seed) * 10000
+        return x - Math.floor(x)
+    }
+
+    const particleConfigs = useMemo(() => (
+        [...Array(4)].map((_, i) => ({
+            left: `${seededRandom(i + 1) * 100}%`,
+            top: `${seededRandom(i + 11) * 100}%`,
+            duration: seededRandom(i + 21) * 5 + 5,
+            delay: seededRandom(i + 31) * 5,
+        }))
+    ), [])
+
+    const confettiConfigs = useMemo(() => (
+        [...Array(12)].map((_, i) => ({
+            top: `${seededRandom(i + 41) * 100}%`,
+            left: `${seededRandom(i + 51) * 100}%`,
+            duration: seededRandom(i + 61) * 2 + 1.5,
+            repeatDelay: seededRandom(i + 71) * 2,
+            colorIndex: Math.floor(seededRandom(i + 81) * 3),
+        }))
+    ), [])
+
+    const formattedPrice = useMemo(() => (
+        new Intl.NumberFormat("pl-PL").format(price)
+    ), [price])
+
     useEffect(() => {
         setMounted(true)
     }, [])
@@ -140,7 +168,7 @@ export function AboutAuctions() {
 
                 {/* Floating Particles - Reduced count for mobile via hidden/block classes or JS logic */}
                 <div className="hidden md:block">
-                    {[...Array(4)].map((_, i) => (
+                    {particleConfigs.map((particle, i) => (
                         <motion.div
                             key={i}
                             className="absolute w-1 h-1 bg-primary/40 rounded-full"
@@ -149,13 +177,13 @@ export function AboutAuctions() {
                                 opacity: [0, 1, 0],
                             }}
                             transition={{
-                                duration: Math.random() * 5 + 5,
+                                duration: particle.duration,
                                 repeat: Infinity,
-                                delay: Math.random() * 5,
+                                delay: particle.delay,
                             }}
                             style={{
-                                left: `${Math.random() * 100}%`,
-                                top: `${Math.random() * 100}%`,
+                                left: particle.left,
+                                top: particle.top,
                             }}
                         />
                     ))}
@@ -166,25 +194,24 @@ export function AboutAuctions() {
             <AnimatePresence>
                 {isFinished && (
                     <div className="absolute inset-0 pointer-events-none z-50 overflow-hidden">
-                        {[...Array(12)].map((_, i) => (
+                        {confettiConfigs.map((confetti, i) => (
                             <motion.div
                                 key={i}
                                 initial={{ top: "50%", left: "50%", scale: 0, opacity: 1 }}
                                 animate={{
-                                    top: [`50%`, `${Math.random() * 100}%`],
-                                    left: [`50%`, `${Math.random() * 100}%`],
+                                    top: [`50%`, confetti.top],
+                                    left: [`50%`, confetti.left],
                                     scale: [0, 1, 0],
                                     opacity: [0, 1, 0],
                                     rotate: [0, 180],
                                 }}
                                 transition={{
-                                    duration: Math.random() * 2 + 1.5,
+                                    duration: confetti.duration,
                                     repeat: Infinity,
-                                    repeatDelay: Math.random() * 2,
+                                    repeatDelay: confetti.repeatDelay,
                                     ease: "easeOut",
                                 }}
-                                className={`absolute w-1.5 h-1.5 rounded-full ${["bg-primary/80", "bg-yellow-400/80", "bg-white/80"][Math.floor(Math.random() * 3)]
-                                    } blur-[0.5px]`}
+                                className={`absolute w-1.5 h-1.5 rounded-full ${["bg-primary/80", "bg-yellow-400/80", "bg-white/80"][confetti.colorIndex]} blur-[0.5px]`}
                             />
                         ))}
                     </div>
@@ -371,7 +398,7 @@ export function AboutAuctions() {
                                                     <div className="text-right justify-self-end">
                                                         <div className="text-xs text-slate-400 uppercase font-bold tracking-widest mb-1">Twoja oferta</div>
                                                         <div className={`text-3xl font-black tabular-nums tracking-tighter whitespace-nowrap leading-none ${status === "winning" ? "text-green-600" : "text-red-600"}`}>
-                                                            {price.toLocaleString()} €
+                                                            {formattedPrice} €
                                                         </div>
                                                     </div>
                                                 </div>
