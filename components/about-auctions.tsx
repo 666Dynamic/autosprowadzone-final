@@ -45,19 +45,19 @@ export function AboutAuctions() {
 
     const particleConfigs = useMemo(() => (
         [...Array(4)].map((_, i) => ({
-            left: `${seededRandom(i + 1) * 100}%`,
-            top: `${seededRandom(i + 11) * 100}%`,
-            duration: seededRandom(i + 21) * 5 + 5,
-            delay: seededRandom(i + 31) * 5,
+            left: `${Math.round(seededRandom(i + 1) * 10000) / 100}%`,
+            top: `${Math.round(seededRandom(i + 11) * 10000) / 100}%`,
+            duration: Math.round(seededRandom(i + 21) * 500 + 500) / 100,
+            delay: Math.round(seededRandom(i + 31) * 500) / 100,
         }))
     ), [])
 
     const confettiConfigs = useMemo(() => (
         [...Array(12)].map((_, i) => ({
-            top: `${seededRandom(i + 41) * 100}%`,
-            left: `${seededRandom(i + 51) * 100}%`,
-            duration: seededRandom(i + 61) * 2 + 1.5,
-            repeatDelay: seededRandom(i + 71) * 2,
+            top: `${Math.round(seededRandom(i + 41) * 10000) / 100}%`,
+            left: `${Math.round(seededRandom(i + 51) * 10000) / 100}%`,
+            duration: Math.round(seededRandom(i + 61) * 200 + 150) / 100,
+            repeatDelay: Math.round(seededRandom(i + 71) * 200) / 100,
             colorIndex: Math.floor(seededRandom(i + 81) * 3),
         }))
     ), [])
@@ -325,8 +325,8 @@ export function AboutAuctions() {
                                                         alt={imageAlts[currentImageIndex]}
                                                         fill
                                                         sizes="(min-width: 1024px) 45vw, 100vw"
-                                                        priority={false}
-                                                        loading="lazy"
+                                                        priority={currentImageIndex === 0}
+                                                        loading={currentImageIndex === 0 ? "eager" : "lazy"}
                                                         quality={75}
                                                         className="object-cover"
                                                     />

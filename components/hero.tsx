@@ -7,19 +7,20 @@ import Link from "next/link"
 export function Hero() {
     return (
         <section className="relative overflow-hidden pt-20 md:pt-24 pb-24 lg:pt-32 lg:pb-32 min-h-[80vh] flex items-center">
-            {/* Background Video - Only video, no images */}
+            {/* Background Video - Optimized for instant load */}
             <div className="absolute inset-0 z-0 bg-transparent dark:bg-transparent">
                 <video
                     autoPlay
                     loop
                     muted
                     playsInline
-                    preload="metadata"
-                    poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%230f172a' width='1920' height='1080'/%3E%3C/svg%3E"
+                    preload="auto"
+                    poster="/hero-poster.webp"
                     className="absolute inset-0 w-full h-full object-cover opacity-15 dark:opacity-20 transition-opacity duration-1000"
                     aria-hidden="true"
                 >
-                    <source src="/13164895_3840_2160_30fps.mp4" type="video/mp4" />
+                    <source src="/hero-bg.webm" type="video/webm" />
+                    <source src="/hero-bg.mp4" type="video/mp4" />
                 </video>
                 <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-transparent" />
                 {/* Smooth fade transition bottom */}

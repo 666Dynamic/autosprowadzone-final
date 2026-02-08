@@ -192,6 +192,11 @@ export default function RootLayout({
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" sizes="180x180" href="/icon-192.svg" />
         <link rel="manifest" href="/manifest.json" />
+        {/* Preload hero video & poster for instant display */}
+        <link rel="preload" href="/hero-poster.webp" as="image" type="image/webp" />
+        <link rel="preload" href="/hero-bg.mp4" as="video" type="video/mp4" />
+        {/* Preload first auction image */}
+        <link rel="preload" href="/audi/max-AD55987_01bdb54e3e0af8794c16fffcbf2ca28d.webp" as="image" type="image/webp" />
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VPZB549MMW" />
         <Script id="gtag-init" strategy="afterInteractive">
           {"window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-VPZB549MMW');"}
