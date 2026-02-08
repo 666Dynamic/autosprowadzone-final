@@ -15,18 +15,22 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
     if (!post) {
         return {
-            title: "Post nie znalezionY",
+            title: "Post nie znaleziony",
         }
     }
 
     return {
-        title: `${post.title} | SprowadzoneAuto.pl`,
+        title: post.title,
         description: post.excerpt,
+        alternates: {
+            canonical: `https://sprowadzoneauto.pl/blog/${slug}`,
+        },
         openGraph: {
             title: post.title,
             description: post.excerpt,
             type: "article",
             publishedTime: post.date,
+            url: `https://sprowadzoneauto.pl/blog/${slug}`,
         },
     }
 }

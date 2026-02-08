@@ -4,8 +4,16 @@ import { Metadata } from "next"
 import { ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
-    title: "Blog - Poradnik Importera | SprowadzoneAuto.pl",
-    description: "Artykuły i porady dotyczące sprowadzania samochodów z Niemiec, Belgii i Holandii.",
+    title: "Blog — Poradnik Importera Aut z Niemiec",
+    description: "Artykuły i porady dotyczące sprowadzania samochodów z Niemiec, Belgii i Holandii. Przewodniki po aukcjach BCA i AUTO1, koszty importu, procedury rejestracji.",
+    alternates: {
+        canonical: "https://sprowadzoneauto.pl/blog",
+    },
+    openGraph: {
+        title: "Blog — Poradnik Importera Aut z Niemiec",
+        description: "Artykuły i porady: aukcje BCA, AUTO1, koszty importu, procedury rejestracji aut z zagranicy.",
+        url: "https://sprowadzoneauto.pl/blog",
+    },
 }
 
 import { posts } from "@/lib/blog"

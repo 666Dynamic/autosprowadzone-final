@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
             {
                 userAgent: '*',
                 allow: '/',
-                disallow: ['/private/', '/w-budowie', '/test-logos'],
+                disallow: ['/private/', '/w-budowie', '/test-logos', '/promo/'],
             },
         ],
         sitemap: 'https://sprowadzoneauto.pl/sitemap.xml',

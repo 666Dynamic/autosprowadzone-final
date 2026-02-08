@@ -15,7 +15,12 @@ export function CookieBanner() {
     }, [])
 
     const handleAccept = () => {
-        localStorage.setItem("cookie-consent", "true")
+        localStorage.setItem("cookie-consent", "accepted")
+        setShow(false)
+    }
+
+    const handleReject = () => {
+        localStorage.setItem("cookie-consent", "rejected")
         setShow(false)
     }
 
@@ -36,9 +41,14 @@ export function CookieBanner() {
                                 <a href="/polityka-prywatnosci" className="text-primary hover:underline ml-1">Polityka Prywatności</a>.
                             </p>
                         </div>
-                        <Button onClick={handleAccept} className="bg-primary text-primary-foreground font-bold hover:bg-primary/90 shrink-0">
-                            Akceptuję
-                        </Button>
+                        <div className="flex gap-2 shrink-0">
+                            <Button onClick={handleReject} variant="ghost" className="text-slate-400 hover:text-white hover:bg-slate-800 font-bold text-sm">
+                                Odrzuć
+                            </Button>
+                            <Button onClick={handleAccept} className="bg-primary text-primary-foreground font-bold hover:bg-primary/90">
+                                Akceptuję
+                            </Button>
+                        </div>
                     </div>
                 </motion.div>
             )}

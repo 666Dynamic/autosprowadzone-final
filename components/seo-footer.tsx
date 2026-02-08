@@ -12,18 +12,18 @@ export function SeoFooter() {
                         <h4 className="font-bold text-foreground mb-4 uppercase tracking-wider text-sm">Lokalizacje Importu</h4>
                         <ul className="space-y-2 text-xs text-muted-foreground">
                             <li><Link href="/aukcje" className="hover:text-primary transition-colors">Sprowadzanie aut z Niemiec</Link></li>
-                            <li><Link href="/w-budowie" className="hover:text-primary transition-colors">Import aut z Belgii</Link></li>
-                            <li><Link href="/w-budowie" className="hover:text-primary transition-colors">Auta z Holandii</Link></li>
-                            <li><Link href="/w-budowie" className="hover:text-primary transition-colors">Licytacje Szwajcaria</Link></li>
+                            <li><Link href="/aukcje" className="hover:text-primary transition-colors">Aukcje B2B Europa</Link></li>
+                            <li><Link href="/weryfikacja" className="hover:text-primary transition-colors">Weryfikacja w Niemczech</Link></li>
+                            <li><Link href="/kalkulator" className="hover:text-primary transition-colors">Koszty importu z UE</Link></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="font-bold text-foreground mb-4 uppercase tracking-wider text-sm">Rodzaje Pojazdów</h4>
                         <ul className="space-y-2 text-xs text-muted-foreground">
-                            <li><Link href="/w-budowie" className="hover:text-primary transition-colors">Auta poleasingowe</Link></li>
-                            <li><Link href="/w-budowie" className="hover:text-primary transition-colors">Samochody uszkodzone</Link></li>
-                            <li><Link href="/w-budowie" className="hover:text-primary transition-colors">Dostawcze z Niemiec</Link></li>
-                            <li><Link href="/w-budowie" className="hover:text-primary transition-colors">Auta elektryczne (bez akcyzy)</Link></li>
+                            <li><Link href="/aukcje" className="hover:text-primary transition-colors">Auta poleasingowe</Link></li>
+                            <li><Link href="/aukcje" className="hover:text-primary transition-colors">Samochody z defleetu</Link></li>
+                            <li><Link href="/aukcje" className="hover:text-primary transition-colors">Auta flotowe z Niemiec</Link></li>
+                            <li><Link href="/kalkulator" className="hover:text-primary transition-colors">Auta elektryczne (bez akcyzy)</Link></li>
                         </ul>
                     </div>
                     <div>
@@ -31,8 +31,8 @@ export function SeoFooter() {
                         <ul className="space-y-2 text-xs text-muted-foreground">
                             <li><Link href="/blog/bca-europe-przewodnik" className="hover:text-primary transition-colors">BCA Auctions</Link></li>
                             <li><Link href="/blog/auto1-jak-licytowac" className="hover:text-primary transition-colors">AUTO1.com</Link></li>
-                            <li><Link href="/w-budowie" className="hover:text-primary transition-colors">Autorola</Link></li>
-                            <li><Link href="/w-budowie" className="hover:text-primary transition-colors">Adesa / Openlane</Link></li>
+                            <li><Link href="/aukcje" className="hover:text-primary transition-colors">Autorola</Link></li>
+                            <li><Link href="/aukcje" className="hover:text-primary transition-colors">Adesa / Openlane</Link></li>
                         </ul>
                     </div>
                     <div>

@@ -1,9 +1,18 @@
 import { ContactForm } from "@/components/contact-form"
 import { Mail, MapPin, Phone, Clock } from "lucide-react"
+import type { Metadata } from "next"
 
-export const metadata = {
-    title: "Kontakt | SprowadzoneAuto.pl",
-    description: "Skontaktuj się z nami. Import aut z Niemiec, weryfikacja, aukcje B2B.",
+export const metadata: Metadata = {
+    title: "Kontakt — Zapytaj o Import Auta z Niemiec",
+    description: "Skontaktuj się z nami w sprawie importu aut z Niemiec, weryfikacji pojazdu lub dostępu do aukcji B2B. Odpowiadamy 7 dni w tygodniu, 7:00–22:00. Telefon PL/DE, WhatsApp, e-mail.",
+    alternates: {
+        canonical: "https://sprowadzoneauto.pl/kontakt",
+    },
+    openGraph: {
+        title: "Kontakt — Zapytaj o Import Auta z Niemiec",
+        description: "Skontaktuj się w sprawie importu, weryfikacji auta lub aukcji B2B. Odpowiadamy 7:00–22:00.",
+        url: "https://sprowadzoneauto.pl/kontakt",
+    },
 }
 
 export default function ContactPage() {

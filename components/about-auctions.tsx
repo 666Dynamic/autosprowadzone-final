@@ -27,6 +27,17 @@ export function AboutAuctions() {
         "/audi/max-AD55987_ee56ff1e3170932847ff99740f2fd3f6.webp"
     ], [])
 
+    const imageAlts = useMemo(() => [
+        "Audi Q5 2021 - widok z przodu na aukcji BCA",
+        "Audi Q5 - wnętrze, deska rozdzielcza i kierownica",
+        "Audi Q5 - widok z boku, profil nadwozia",
+        "Audi Q5 - tylne siedzenia i przestrzeń pasażerska",
+        "Audi Q5 - bagażnik i przestrzeń ładunkowa",
+        "Audi Q5 - widok z tyłu, lampy LED",
+        "Audi Q5 - detal felg i zawieszenia",
+        "Audi Q5 - zbliżenie na raport stanu lakieru"
+    ], [])
+
     useEffect(() => {
         setMounted(true)
     }, [])
@@ -284,7 +295,7 @@ export function AboutAuctions() {
                                                 >
                                                     <Image
                                                         src={images[currentImageIndex]}
-                                                        alt="Audi Q5 Auction"
+                                                        alt={imageAlts[currentImageIndex]}
                                                         fill
                                                         sizes="(min-width: 1024px) 45vw, 100vw"
                                                         priority={false}

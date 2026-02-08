@@ -1,13 +1,16 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Regulamin świadczenia usług | SprowadzoneAuto.pl",
+  title: "Regulamin Świadczenia Usług",
   description: "Warunki świadczenia usług pośrednictwa w zakupie samochodów, weryfikacji pojazdu i organizacji transportu przez SprowadzoneAuto.pl (Miami Autocenter GmbH).",
+  alternates: {
+    canonical: "https://sprowadzoneauto.pl/regulamin",
+  },
 }
 
 export default function TermsPage() {
   return (
-    <main className="container mx-auto px-4 md:px-8 py-24 max-w-4xl">
+    <div className="container mx-auto px-4 md:px-8 py-24 max-w-4xl">
       <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-10">
         Regulamin <span className="text-primary not-italic">Świadczenia Usług</span>
       </h1>
@@ -67,6 +70,6 @@ export default function TermsPage() {
           Kontakt: kontakt@sprowadzoneauto.pl | +49 156 79264391 | +48 780 010 848
         </p>
       </section>
-    </main>
+    </div>
   )
 }

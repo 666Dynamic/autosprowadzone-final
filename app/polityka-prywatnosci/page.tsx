@@ -2,13 +2,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Polityka Prywatności i Impressum | SprowadzoneAuto.pl",
+    title: "Polityka Prywatności i Impressum",
     description: "Informacje o administratorze danych, polityce prywatności i danych firmy Miami Autocenter GmbH (Impressum).",
+    alternates: {
+        canonical: "https://sprowadzoneauto.pl/polityka-prywatnosci",
+    },
 }
 
 export default function PrivacyPolicyPage() {
     return (
-        <main className="container mx-auto px-4 py-32 max-w-4xl">
+        <div className="container mx-auto px-4 py-32 max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-12 text-center">
                 Polityka <span className="text-primary">Prywatności</span>
             </h1>
@@ -106,6 +109,6 @@ export default function PrivacyPolicyPage() {
                     </p>
                 </div>
             </div>
-        </main>
+        </div>
     )
 }

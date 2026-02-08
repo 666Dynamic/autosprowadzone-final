@@ -4,8 +4,16 @@ import type { Metadata } from "next"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-    title: "Weryfikacja Aut w Niemczech | SprowadzoneAuto.pl",
-    description: "Sprawdzenie auta przed zakupem w Niemczech. Inspekcja techniczna, pomiar lakieru, diagnostyka komputerowa. Obszar Bremen i całe Niemcy.",
+    title: "Weryfikacja Aut w Niemczech — Inspekcja Przed Zakupem",
+    description: "Sprawdzenie auta przed zakupem w Niemczech. Inspekcja techniczna, pomiar lakieru, diagnostyka komputerowa. Obsługujemy region Bremen i całe Niemcy. Raport ze zdjęciami w 24h.",
+    alternates: {
+        canonical: "https://sprowadzoneauto.pl/weryfikacja",
+    },
+    openGraph: {
+        title: "Weryfikacja Aut w Niemczech — Inspekcja Przed Zakupem",
+        description: "Inspekcja techniczna auta w Niemczech: pomiar lakieru, diagnostyka, raport ze zdjęciami.",
+        url: "https://sprowadzoneauto.pl/weryfikacja",
+    },
 }
 
 export default function VerificationPage() {

@@ -14,7 +14,7 @@ export function Hero() {
                     loop
                     muted
                     playsInline
-                    preload="auto"
+                    preload="metadata"
                     poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%230f172a' width='1920' height='1080'/%3E%3C/svg%3E"
                     className="absolute inset-0 w-full h-full object-cover opacity-15 dark:opacity-20 transition-opacity duration-1000"
                     aria-hidden="true"
@@ -47,7 +47,7 @@ export function Hero() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 md:gap-4 w-full sm:w-auto px-4 md:px-0">
-                        <Link href="#zlecenie">
+                        <Link href="/#zlecenie">
                             <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 transition-all w-full sm:w-auto h-14 md:h-14 px-8 font-bold rounded-lg shadow-lg [text-shadow:0_1px_2px_rgba(0,0,0,0.2)] min-h-[56px] touch-manipulation" aria-label="Zamów bezpłatną wycenę importu auta">
                                 Zamów bezpłatną wycenę
                                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

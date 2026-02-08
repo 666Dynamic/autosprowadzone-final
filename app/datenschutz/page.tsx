@@ -3,13 +3,16 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-    title: "Datenschutzerklärung | SprowadzoneAuto.pl",
-    description: "Datenschutzerklärung und Informationen zur Datenverarbeitung gemäß DSGVO.",
+    title: "Datenschutzerklärung",
+    description: "Datenschutzerklärung und Informationen zur Datenverarbeitung gemäß DSGVO. Miami Autocenter GmbH, Osterholz-Scharmbeck.",
+    alternates: {
+        canonical: "https://sprowadzoneauto.pl/datenschutz",
+    },
 }
 
 export default function DatenschutzPage() {
     return (
-        <main className="container mx-auto px-4 py-32 max-w-4xl">
+        <div lang="de" className="container mx-auto px-4 py-32 max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-12 text-center">
                 <span className="text-primary">Datenschutzerklärung</span>
             </h1>
@@ -228,6 +231,6 @@ export default function DatenschutzPage() {
                     </Link>
                 </div>
             </div>
-        </main>
+        </div>
     )
 }
