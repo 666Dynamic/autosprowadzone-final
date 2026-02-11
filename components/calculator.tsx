@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button"
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table"
 import { Calculator as CalculatorIcon, ArrowRight, RefreshCcw } from "lucide-react"
+import Link from "next/link"
 import { CALCULATOR_CONFIG, validatePrice, validateExchangeRate, formatCurrency } from "@/lib/calculator-constants"
 
 export function Calculator() {
@@ -131,7 +132,7 @@ export function Calculator() {
                                         <p className={`font-bold tracking-tight transition-colors ${item.checked ? "text-primary dark:text-primary" : "text-foreground group-hover:text-primary"}`}>
                                             {item.label}
                                         </p>
-                                        <p className="text-xs uppercase font-bold tracking-widest text-muted-foreground group-hover:text-primary/70 transition-colors uppercase">{item.sub}</p>
+                                        <p className="text-xs uppercase font-bold tracking-widest text-muted-foreground group-hover:text-primary/70 transition-colors">{item.sub}</p>
                                     </div>
                                 </div>
                             ))}
@@ -201,13 +202,14 @@ export function Calculator() {
                 </div>
 
                 <div className="max-w-2xl mx-auto space-y-4">
-                    <Button
-                        onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-11 font-bold rounded-lg shadow-lg"
-                    >
-                        <span>Zamów Weryfikację</span>
-                        <ArrowRight className="ml-3 h-5 w-5" />
-                    </Button>
+                    <Link href="/#zlecenie">
+                        <Button
+                            className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-11 font-bold rounded-lg shadow-lg"
+                        >
+                            <span>Zamów Weryfikację</span>
+                            <ArrowRight className="ml-3 h-5 w-5" />
+                        </Button>
+                    </Link>
                     <p className="text-xs text-center text-muted-foreground font-bold uppercase tracking-wider md:tracking-[0.3em]">
                         * Powyższa kalkulacja ma charakter szacunkowy.
                     </p>

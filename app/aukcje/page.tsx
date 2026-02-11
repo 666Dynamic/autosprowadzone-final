@@ -51,8 +51,31 @@ const partners = [
 ]
 
 export default function AuctionsPage() {
+    const breadcrumbJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Strona Główna",
+                "item": "https://sprowadzoneauto.pl"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Aukcje B2B",
+                "item": "https://sprowadzoneauto.pl/aukcje"
+            }
+        ]
+    }
+
     return (
         <div>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             {/* Hero Section */}
             <section className="relative py-24 md:py-32 overflow-hidden">
                 <div className="absolute inset-0 bg-primary/5 blur-3xl rounded-full translate-y-1/2 -translate-x-1/2 w-[600px] h-[600px] pointer-events-none" />

@@ -54,6 +54,13 @@ export const metadata: Metadata = {
       'x-default': "https://sprowadzoneauto.pl",
     },
   },
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+    'max-video-preview': -1,
+  },
 };
 
 const jsonLd = {
@@ -177,27 +184,29 @@ export default function RootLayout({
   return (
     <html lang="pl" suppressHydrationWarning>
       <head>
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="format-detection" content="telephone=no" />
         <link rel="manifest" href="/manifest.json" />
-        {/* Preload hero video & poster for instant display */}
-        <link rel="preload" href="/hero-poster.webp" as="image" type="image/webp" />
-        <link rel="preload" href="/hero-bg.mp4" as="video" type="video/mp4" />
-        {/* Preload first auction image */}
-        <link rel="preload" href="/audi/max-AD55987_01bdb54e3e0af8794c16fffcbf2ca28d.webp" as="image" type="image/webp" />
+
         <Script id="gtag-init" strategy="afterInteractive">
           {`
             if (typeof window !== 'undefined' && localStorage.getItem('cookie-consent') === 'accepted') {
-              var s = document.createElement('script');
-              s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VPZB549MMW';
-              s.async = true;
-              document.head.appendChild(s);
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-VPZB549MMW');
+              try {
+                var s = document.createElement('script');
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VPZB549MMW';
+                s.async = true;
+                s.onerror = function() {
+                  console.warn('Google Analytics script failed to load');
+                };
+                document.head.appendChild(s);
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-VPZB549MMW');
+              } catch (e) {
+                console.warn('Google Analytics initialization failed:', e);
+              }
             }
           `}
         </Script>

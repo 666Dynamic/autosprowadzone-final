@@ -16,8 +16,31 @@ export const metadata: Metadata = {
 }
 
 export default function ContactPage() {
+    const breadcrumbJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Strona Główna",
+                "item": "https://sprowadzoneauto.pl"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Kontakt",
+                "item": "https://sprowadzoneauto.pl/kontakt"
+            }
+        ]
+    }
+
     return (
         <div className="pt-24 pb-16">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             <div className="container mx-auto px-4 md:px-8">
 
                 {/* Header */}

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { sendContactEmail } from "@/app/actions";
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Send, Search, Car, CheckCircle2 } from "lucide-react"
+import Link from "next/link"
 
 interface ContactFormProps {
     mode?: "simple" | "search" | "weryfikacja"
@@ -26,6 +27,25 @@ export function ContactForm({
 }: ContactFormProps) {
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [isSuccess, setIsSuccess] = useState(false)
+    const [initialMessage, setInitialMessage] = useState("")
+
+    useEffect(() => {
+        // Pre-populate form from URL params (client-side only)
+        if (typeof window !== 'undefined') {
+            const params = new URLSearchParams(window.location.search)
+            const make = params.get('make')
+            const year = params.get('year')
+            const budget = params.get('budget')
+            
+            if (make || year || budget) {
+                let message = ""
+                if (make) message += `Marka i model: ${make}\n`
+                if (year) message += `Rocznik od: ${year}\n`
+                if (budget) message += `Budżet: ${budget} PLN\n`
+                setInitialMessage(message)
+            }
+        }
+    }, [])
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -63,7 +83,7 @@ export function ContactForm({
                         <CheckCircle2 className="w-8 h-8 md:w-10 md:h-10" />
                     </div>
                     <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tighter">Wiadomość wysłana!</h3>
-                    <p className="text-sm md:text-muted-foreground font-medium">Dziękujemy za kontakt. Nasz ekspert odezwie się do Ciebie w ciągu 24 godzin.</p>
+                    <p className="text-sm text-muted-foreground font-medium">Dziękujemy za kontakt. Nasz ekspert odezwie się do Ciebie w ciągu 24 godzin.</p>
                     <Button
                         onClick={() => setIsSuccess(false)}
                         variant="outline"
@@ -123,6 +143,7 @@ export function ContactForm({
                         <Textarea
                             id="message"
                             name="message"
+                            defaultValue={initialMessage}
                             placeholder={
                                 mode === "search"
                                     ? "Mercedes GLC, od 2020, Budżet do 250 000 PLN\nWyposażenie: AMG, Panorama, Hak..."
@@ -144,7 +165,7 @@ export function ContactForm({
                         {!isSubmitting && <Send className="ml-3 w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
                     </Button>
                     <p className="text-center text-xs text-muted-foreground font-bold uppercase tracking-tighter">
-                        Wysyłając zgłoszenie akceptujesz <a href="/polityka-prywatnosci" className="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors">politykę prywatności</a>. Dane są przetwarzane wyłącznie w celu obsługi zapytania.
+                        Wysyłając zgłoszenie akceptujesz <Link href="/polityka-prywatnosci" className="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors">politykę prywatności</Link>. Dane są przetwarzane wyłącznie w celu obsługi zapytania.
                     </p>
                 </form>
             </CardContent>

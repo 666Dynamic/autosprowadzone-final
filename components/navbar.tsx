@@ -23,6 +23,11 @@ const navItems = [
 export function Navbar() {
     const [isOpen, setIsOpen] = React.useState(false)
     const pathname = usePathname()
+    
+    const isActiveRoute = (href: string) => {
+        if (href === '/') return pathname === '/'
+        return pathname.startsWith(href)
+    }
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/60 shadow-sm">
@@ -40,7 +45,7 @@ export function Navbar() {
                             href={item.href}
                             className={cn(
                                 "text-sm font-medium transition-colors hover:text-primary",
-                                pathname === item.href ? "text-primary" : "text-muted-foreground"
+                                isActiveRoute(item.href) ? "text-primary" : "text-muted-foreground"
                             )}
                         >
                             {item.name}
@@ -87,7 +92,7 @@ export function Navbar() {
                                     onClick={() => setIsOpen(false)}
                                     className={cn(
                                         "text-sm font-medium py-4 px-2 transition-colors hover:text-primary touch-manipulation rounded-lg hover:bg-muted/50 min-h-[48px] flex items-center",
-                                        pathname === item.href ? "text-primary bg-primary/5" : "text-muted-foreground"
+                                        isActiveRoute(item.href) ? "text-primary bg-primary/5" : "text-muted-foreground"
                                     )}
                                 >
                                     {item.name}

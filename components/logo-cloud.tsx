@@ -3,17 +3,17 @@
 import { motion } from "framer-motion"
 
 const logos = [
-    { name: "BCA Auction", color: "text-[#002f6c]" },
+    { name: "BCA Auction", color: "text-[#002f6c] dark:text-[#93c5fd]" },
     { name: "AUTO1.com", color: "text-[#f39c12]" },
     { name: "Autobid.de", color: "text-[#d32f2f]" },
-    { name: "CarOnSale", color: "text-[#2c3e50]" },
+    { name: "CarOnSale", color: "text-[#2c3e50] dark:text-[#94a3b8]" },
     { name: "OpenLane", color: "text-[#27ae60]" },
-    { name: "Alcopa Auction", color: "text-[#004a99]" },
+    { name: "Alcopa Auction", color: "text-[#004a99] dark:text-[#60a5fa]" },
     { name: "Arval", color: "text-[#00965e]" },
-    { name: "Alphabet", color: "text-[#003399]" },
+    { name: "Alphabet", color: "text-[#003399] dark:text-[#818cf8]" },
     { name: "Athlon", color: "text-[#ff6600]" },
-    { name: "Autorola", color: "text-[#003366]" },
-    { name: "AutoProff", color: "text-[#1a1a1a]" },
+    { name: "Autorola", color: "text-[#003366] dark:text-[#93c5fd]" },
+    { name: "AutoProff", color: "text-[#1a1a1a] dark:text-[#cbd5e1]" },
 ]
 
 export function LogoCloud() {

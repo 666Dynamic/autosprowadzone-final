@@ -8,6 +8,11 @@ import Link from "next/link"
 import { useState, useEffect, useMemo } from "react"
 import Image from "next/image"
 
+const seededRandomFn = (seed: number) => {
+    const x = Math.sin(seed) * 10000
+    return x - Math.floor(x)
+}
+
 export function AboutAuctions() {
     const [price, setPrice] = useState(18658)
     const [status, setStatus] = useState<"winning" | "outbid">("winning")
@@ -38,27 +43,22 @@ export function AboutAuctions() {
         "Audi Q5 - zbliżenie na raport stanu lakieru"
     ], [])
 
-    const seededRandom = (seed: number) => {
-        const x = Math.sin(seed) * 10000
-        return x - Math.floor(x)
-    }
-
     const particleConfigs = useMemo(() => (
         [...Array(4)].map((_, i) => ({
-            left: `${Math.round(seededRandom(i + 1) * 10000) / 100}%`,
-            top: `${Math.round(seededRandom(i + 11) * 10000) / 100}%`,
-            duration: Math.round(seededRandom(i + 21) * 500 + 500) / 100,
-            delay: Math.round(seededRandom(i + 31) * 500) / 100,
+            left: `${Math.round(seededRandomFn(i + 1) * 10000) / 100}%`,
+            top: `${Math.round(seededRandomFn(i + 11) * 10000) / 100}%`,
+            duration: Math.round(seededRandomFn(i + 21) * 500 + 500) / 100,
+            delay: Math.round(seededRandomFn(i + 31) * 500) / 100,
         }))
     ), [])
 
     const confettiConfigs = useMemo(() => (
         [...Array(12)].map((_, i) => ({
-            top: `${Math.round(seededRandom(i + 41) * 10000) / 100}%`,
-            left: `${Math.round(seededRandom(i + 51) * 10000) / 100}%`,
-            duration: Math.round(seededRandom(i + 61) * 200 + 150) / 100,
-            repeatDelay: Math.round(seededRandom(i + 71) * 200) / 100,
-            colorIndex: Math.floor(seededRandom(i + 81) * 3),
+            top: `${Math.round(seededRandomFn(i + 41) * 10000) / 100}%`,
+            left: `${Math.round(seededRandomFn(i + 51) * 10000) / 100}%`,
+            duration: Math.round(seededRandomFn(i + 61) * 200 + 150) / 100,
+            repeatDelay: Math.round(seededRandomFn(i + 71) * 200) / 100,
+            colorIndex: Math.floor(seededRandomFn(i + 81) * 3),
         }))
     ), [])
 

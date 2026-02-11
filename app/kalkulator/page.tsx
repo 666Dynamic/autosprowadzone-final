@@ -18,8 +18,31 @@ import { ContactForm } from "@/components/contact-form"
 import { ArrowRight, AlertTriangle } from "lucide-react"
 
 export default function CalculatorPage() {
+    const breadcrumbJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Strona Główna",
+                "item": "https://sprowadzoneauto.pl"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Kalkulator",
+                "item": "https://sprowadzoneauto.pl/kalkulator"
+            }
+        ]
+    }
+
     return (
         <div className="w-full overflow-x-hidden">
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        />
         <div className="w-full mx-auto max-w-6xl px-4 md:px-8 py-12 md:py-20">
             <div className="max-w-4xl mx-auto mb-12 text-center">
                 <h1 className="text-3xl md:text-4xl font-black mb-6 uppercase tracking-tighter italic">Kalkulator <span className="text-primary not-italic">Kosztów Importu</span></h1>

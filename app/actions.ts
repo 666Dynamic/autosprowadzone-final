@@ -2,6 +2,10 @@
 
 import { Resend } from 'resend';
 
+if (!process.env.RESEND_API_KEY) {
+    console.error('RESEND_API_KEY is not configured');
+}
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendContactEmail(formData: FormData) {
@@ -13,6 +17,11 @@ export async function sendContactEmail(formData: FormData) {
 
     if (!name || !email || !message) {
         return { success: false, error: 'Wypełnij wymagane pola.' };
+    }
+
+    if (!process.env.RESEND_API_KEY) {
+        console.error('Missing RESEND_API_KEY');
+        return { success: false, error: 'Konfiguracja serwera jest nieprawidłowa. Skontaktuj się telefonicznie.' };
     }
 
     // Sanitize inputs to prevent XSS in email HTML

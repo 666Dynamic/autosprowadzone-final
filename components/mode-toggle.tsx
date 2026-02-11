@@ -11,7 +11,7 @@ export function ModeToggle() {
         <button
             onClick={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}
             className="p-2 hover:bg-muted transition-colors relative text-muted-foreground hover:text-primary"
-            aria-label="Toggle theme"
+            aria-label="Przełącz motyw jasny/ciemny"
         >
             <div className="relative w-5 h-5">
                 <Sun className="h-5 w-5 absolute inset-0 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />

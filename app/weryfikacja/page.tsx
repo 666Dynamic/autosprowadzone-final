@@ -17,8 +17,31 @@ export const metadata: Metadata = {
 }
 
 export default function VerificationPage() {
+    const breadcrumbJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Strona Główna",
+                "item": "https://sprowadzoneauto.pl"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Weryfikacja",
+                "item": "https://sprowadzoneauto.pl/weryfikacja"
+            }
+        ]
+    }
+
     return (
         <div>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             <div className="container mx-auto px-4 md:px-8 py-12 md:py-24">
                 <div className="max-w-6xl mx-auto space-y-24">
 
