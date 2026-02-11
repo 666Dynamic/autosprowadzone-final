@@ -28,7 +28,7 @@ export function Navbar() {
         <nav className="fixed top-0 left-0 right-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/60 shadow-sm">
             <div className="container mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
                 {/* Logo */}
-                <Link href="/">
+                <Link href="/" aria-label="SprowadzoneAuto.pl — Strona główna">
                     <Logo />
                 </Link>
 
@@ -86,14 +86,14 @@ export function Navbar() {
                                     href={item.href}
                                     onClick={() => setIsOpen(false)}
                                     className={cn(
-                                        "text-sm font-medium py-4 px-2 transition-colors hover:text-primary touch-manipulation rounded-lg hover:bg-muted/50 block min-h-[48px] flex items-center",
+                                        "text-sm font-medium py-4 px-2 transition-colors hover:text-primary touch-manipulation rounded-lg hover:bg-muted/50 min-h-[48px] flex items-center",
                                         pathname === item.href ? "text-primary bg-primary/5" : "text-muted-foreground"
                                     )}
                                 >
                                     {item.name}
                                 </Link>
                             ))}
-                            <Link href="#zlecenie" onClick={() => setIsOpen(false)} className="pt-4">
+                            <Link href="/#zlecenie" onClick={() => setIsOpen(false)} className="pt-4">
                                 <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all h-12 font-bold rounded-lg touch-manipulation min-h-[48px]">Wyceń Import</Button>
                             </Link>
                         </div>

@@ -78,7 +78,7 @@ export default function CalculatorPage() {
                                 </h3>
                                 <div className="bg-muted border border-border p-6 md:p-8 rounded-2xl md:rounded-[2.5rem] group-hover:border-primary/20 transition-all">
                                     <p className="text-base text-muted-foreground leading-relaxed m-0 italic font-medium">
-                                        Koszt transportu lawetą zależy od odległości. Średnio z zachodnich Niemiec to ok. <span className="text-foreground font-bold not-italic underline decoration-primary/30 underline-offset-4">2000-3000 zł</span>. Przy powrocie "na kołach" dolicz tablice zjazdowe (ok. 150-250 EUR).
+                                        Transport wyceniamy indywidualnie w zależności od odległości. Koszt zazwyczaj mieści się w granicach <span className="text-foreground font-bold not-italic underline decoration-primary/30 underline-offset-4">1500 - 3500 zł</span>. Przy powrocie "na kołach" dolicz tablice zjazdowe (ok. 150-250 EUR).
                                     </p>
                                 </div>
                             </div>
@@ -144,7 +144,7 @@ export default function CalculatorPage() {
                     <div className="max-w-2xl relative z-10">
                         <h3 className="text-primary-foreground text-2xl md:text-3xl font-black mb-6 uppercase tracking-tighter italic drop-shadow-md">Kompleksowa Obsługa</h3>
                         <p className="text-primary-foreground/90 text-base leading-relaxed mb-0 font-bold italic drop-shadow-md">
-                            Przejmujemy na siebie cały proces: od weryfikacji auta i negocjacji, po przygotowanie kompletu dokumentów do rejestracji. Ty tylko odbierasz kluczyki pod domem.
+                            Przejmujemy na siebie cały proces: od wyszukania auta na aukcjach i weryfikacji na miejscu u dealera, przez negocjacje, po przygotowanie kompletu dokumentów do rejestracji. Ty tylko odbierasz samochód pod domem.
                         </p>
                     </div>
                 </div>

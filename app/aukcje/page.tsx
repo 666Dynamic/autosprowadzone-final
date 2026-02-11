@@ -138,7 +138,7 @@ export default function AuctionsPage() {
                                         <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-black shrink-0">3</div>
                                         <div>
                                             <h4 className="font-bold text-lg mb-1 text-foreground">Licytacja i Logistyka</h4>
-                                            <p className="text-sm text-muted-foreground leading-relaxed">Licytujemy w Twoim imieniu do ustalonym budżetu. Po wygranej zajmujemy się dokumentacją eksportową i transportem pod dom.</p>
+                                            <p className="text-sm text-muted-foreground leading-relaxed">Licytujemy w Twoim imieniu do ustalonego budżetu. Po wygranej zajmujemy się dokumentacją eksportową i transportem pod dom.</p>
                                         </div>
                                     </div>
                                 </div>

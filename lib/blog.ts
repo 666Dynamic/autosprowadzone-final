@@ -2,6 +2,7 @@ export interface Post {
     title: string;
     excerpt: string;
     date: string;
+    dateISO: string;
     slug: string;
     content?: string;
 }
@@ -11,6 +12,7 @@ export const posts: Post[] = [
         title: "BCA Europe – Największy wybór aut w UE",
         excerpt: "Ponad 1.3 mln pojazdów rocznie. Dowiedz się, dlaczego system EuroShop to rewolucja w zakupach B2B.",
         date: "11.01.2026",
+        dateISO: "2026-01-11",
         slug: "bca-europe-przewodnik",
         content: `
             <p>BCA Europe to niekwestionowany lider na rynku aukcji samochodów używanych w Europie. Obsługując ponad <strong>1.3 miliona pojazdów rocznie</strong>, platforma ta stała się kluczowym punktem dla profesjonalnych dealerów, importerów oraz klientów indywidualnych korzystających z pośrednictwa.</p>
@@ -146,6 +148,7 @@ export const posts: Post[] = [
         title: "AUTO1.com – Cyfrowe aukcje bez tajemnic",
         excerpt: "Jak licytować wśród 30 000 nowych ofert dziennie? Sprawdzamy model biznesowy największego gracza online.",
         date: "10.01.2026",
+        dateISO: "2026-01-10",
         slug: "auto1-jak-licytowac",
         content: `
             <p>AUTO1.com zrewolucjonizowało sposób, w jaki handlarze kupują i sprzedają samochody w Europie. Jako <strong>największa platforma B2B w Europie</strong>, oferuje dostęp do ponad <strong>30,000 nowych ofert dziennie</strong> z 30 krajów. To cyfrowy marketplace, który eliminuje pośredników i łączy sprzedających bezpośrednio z kupującymi.</p>
@@ -380,6 +383,7 @@ export const posts: Post[] = [
         title: "Opłaty Aukcyjne (Aufgeld) – Ile naprawdę płacisz?",
         excerpt: " Szczegółowe zestawienie kosztów dodatkowych: prowizje B2B, opłaty eksportowe i przygotowanie dokumentów.",
         date: "08.01.2026",
+        dateISO: "2026-01-08",
         slug: "oplaty-aukcyjne-wyjasnienie",
         content: `
             <p>Zrozumienie struktury opłat na aukcjach zagranicznych jest kluczowe dla prawidłowego wyliczenia opłacalności zakupu. Cena, którą widzisz na ekranie, to tylko początek.</p>
@@ -395,6 +399,7 @@ export const posts: Post[] = [
         title: "Zustandsbericht – Czy można wierzyć raportom?",
         excerpt: "Analiza standardów rzeczoznawców DEKRA i TÜV SÜD. Na co zwrócić uwagę w opisie uszkodzeń (Delle/Kratzer).",
         date: "05.01.2026",
+        dateISO: "2026-01-05",
         slug: "raporty-rzeczoznawcow-standardy",
         content: `
             <p>Raport stanu technicznego (Zustandsbericht) to Biblia dla kupującego online. Standardy rzeczoznawców takich jak DEKRA czy TÜV SÜD są bardzo wysokie, ale trzeba umieć je czytać.</p>
@@ -410,6 +415,7 @@ export const posts: Post[] = [
         title: "Akcyza 2026 - co się zmieniło?",
         excerpt: "Analiza aktualnych stawek akcyzowych dla silników powyżej 2.0L oraz aut hybrydowych.",
         date: "03.01.2026",
+        dateISO: "2026-01-03",
         slug: "akcyza-2026-stawki",
         content: `
             <p>Akcyza to <strong>największy ukryty koszt przy imporcie auta z zagranicy</strong>. Dla silnika powyżej 2.0L może wynieść nawet 20,000-30,000 PLN. W 2026 roku stawki pozostają bez zmian, ale pojawiły się <strong>nowe interpretacje ulg dla hybryd plug-in</strong> oraz <strong>podwyższony próg dla aut starszych</strong>. Sprawdź, ile faktycznie zapłacisz.</p>

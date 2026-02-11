@@ -15,21 +15,29 @@ export async function sendContactEmail(formData: FormData) {
         return { success: false, error: 'Wypełnij wymagane pola.' };
     }
 
+    // Sanitize inputs to prevent XSS in email HTML
+    const escapeHtml = (str: string) => str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+    const safeName = escapeHtml(name);
+    const safeEmail = escapeHtml(email);
+    const safePhone = escapeHtml(phone || 'Nie podano');
+    const safeMessage = escapeHtml(message).replace(/\n/g, '<br>');
+    const safeMode = escapeHtml(mode || 'simple');
+
     try {
         // Send to Admin
         const result = await resend.emails.send({
             from: 'SprowadzoneAuto <kontakt@sprowadzoneauto.pl>', 
             to: ['kontakt@sprowadzoneauto.pl'],
             replyTo: email,
-            subject: `Nowe zgłoszenie: ${mode} - ${name}`,
+            subject: `Nowe zgłoszenie: ${safeMode} - ${safeName}`,
             html: `
-        <h2>Nowe zgłoszenie z formularza (${mode})</h2>
-        <p><strong>Imię i nazwisko:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Telefon:</strong> ${phone || 'Nie podano'}</p>
+        <h2>Nowe zgłoszenie z formularza (${safeMode})</h2>
+        <p><strong>Imię i nazwisko:</strong> ${safeName}</p>
+        <p><strong>Email:</strong> ${safeEmail}</p>
+        <p><strong>Telefon:</strong> ${safePhone}</p>
         <hr />
         <h3>Wiadomość:</h3>
-        <p>${message.replace(/\n/g, '<br>')}</p>
+        <p>${safeMessage}</p>
       `
         });
 

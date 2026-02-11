@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
             title: post.title,
             description: post.excerpt,
             type: "article",
-            publishedTime: post.date,
+            publishedTime: post.dateISO,
             url: `https://sprowadzoneauto.pl/blog/${slug}`,
         },
     }
@@ -74,8 +74,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": post.title,
-        "datePublished": post.date,
-        "dateModified": post.date,
+        "datePublished": post.dateISO,
+        "dateModified": post.dateISO,
         "inLanguage": "pl-PL",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -155,7 +155,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                                 Zapytaj eksperta
                             </Button>
                         </Link>
-                        <Button variant="outline" size="icon">
+                        <Button variant="outline" size="icon" aria-label="Udostępnij artykuł">
                             <Share2 className="w-4 h-4" />
                         </Button>
                     </div>

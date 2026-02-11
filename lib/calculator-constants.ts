@@ -5,7 +5,7 @@
 
 export const CALCULATOR_CONFIG = {
   // Price boundaries
-  MIN_PRICE_EUR: 1000,
+  MIN_PRICE_EUR: 1,
   MAX_PRICE_EUR: 500000,
   
   // Exchange rate

@@ -17,6 +17,20 @@ export function CookieBanner() {
     const handleAccept = () => {
         localStorage.setItem("cookie-consent", "accepted")
         setShow(false)
+        // Initialize Google Analytics after consent
+        if (typeof window !== 'undefined') {
+            const s = document.createElement('script')
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VPZB549MMW'
+            s.async = true
+            document.head.appendChild(s)
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const w = window as any
+            w.dataLayer = w.dataLayer || []
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            function gtag(...args: any[]) { w.dataLayer.push(args) }
+            gtag('js', new Date())
+            gtag('config', 'G-VPZB549MMW')
+        }
     }
 
     const handleReject = () => {

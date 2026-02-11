@@ -4,15 +4,12 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ArrowLeft, Home } from 'lucide-react'
 
-// Note: metadata export not supported in "use client" components
-// The title template from layout.tsx will apply: "... | SprowadzoneAuto.pl"
-
 export default function NotFound() {
   return (
     <div className="min-h-[80vh] flex items-center justify-center px-4">
       <div className="text-center space-y-6 max-w-md">
         <div className="space-y-2">
-          <h1 className="text-8xl md:text-9xl font-black text-primary/20">404</h1>
+          <h1 className="text-8xl md:text-9xl font-black text-primary/20" aria-hidden="true">404</h1>
           <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight">
             Strona nie została znaleziona
           </h2>

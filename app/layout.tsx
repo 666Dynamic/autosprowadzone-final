@@ -41,20 +41,11 @@ export const metadata: Metadata = {
     title: "Auta z Niemiec - Aukcje B2B, Import, Weryfikacja | SprowadzoneAuto.pl",
     description: "Bezpieczny import aut z Niemiec. Dostęp do aukcji B2B (BCA, Auto1). Weryfikacja techniczna na miejscu.",
     siteName: "SprowadzoneAuto.pl",
-    images: [
-      {
-        url: "https://sprowadzoneauto.pl/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "SprowadzoneAuto.pl - Import aut z Niemiec, aukcje B2B, weryfikacja",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Auta z Niemiec - Aukcje B2B, Import, Weryfikacja | SprowadzoneAuto.pl",
     description: "Bezpieczny import aut z Niemiec. Dostęp do aukcji B2B (BCA, Auto1). Weryfikacja techniczna na miejscu.",
-    images: ["https://sprowadzoneauto.pl/og-image.png"],
   },
   alternates: {
     canonical: "https://sprowadzoneauto.pl",
@@ -102,7 +93,7 @@ const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "AutoDealer",
   "name": "SprowadzoneAuto.pl (Miami Autocenter GmbH)",
-  "image": "https://sprowadzoneauto.pl/og-image.png",
+  "image": "https://sprowadzoneauto.pl/opengraph-image",
   "url": "https://sprowadzoneauto.pl",
   "telephone": "+49 156 79264391",
   "address": {
@@ -124,7 +115,8 @@ const localBusinessJsonLd = {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
     "reviewCount": "3",
-    "bestRating": "5"
+    "bestRating": "5",
+    "worstRating": "1"
   },
   "review": [
     {
@@ -189,17 +181,25 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="format-detection" content="telephone=no" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/icon-192.svg" />
         <link rel="manifest" href="/manifest.json" />
         {/* Preload hero video & poster for instant display */}
         <link rel="preload" href="/hero-poster.webp" as="image" type="image/webp" />
         <link rel="preload" href="/hero-bg.mp4" as="video" type="video/mp4" />
         {/* Preload first auction image */}
         <link rel="preload" href="/audi/max-AD55987_01bdb54e3e0af8794c16fffcbf2ca28d.webp" as="image" type="image/webp" />
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VPZB549MMW" />
         <Script id="gtag-init" strategy="afterInteractive">
-          {"window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-VPZB549MMW');"}
+          {`
+            if (typeof window !== 'undefined' && localStorage.getItem('cookie-consent') === 'accepted') {
+              var s = document.createElement('script');
+              s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VPZB549MMW';
+              s.async = true;
+              document.head.appendChild(s);
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-VPZB549MMW');
+            }
+          `}
         </Script>
       </head>
       <body

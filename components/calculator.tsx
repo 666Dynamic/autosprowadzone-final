@@ -196,7 +196,7 @@ export function Calculator() {
                 <div className="bg-muted/50 border border-border rounded-xl p-6 text-center space-y-2 relative overflow-hidden group hover:border-primary/20 transition-all max-w-2xl mx-auto">
                     <p className="text-xs font-bold text-primary uppercase tracking-wider md:tracking-[0.3em] mb-1">Logistyka i Transport</p>
                     <p className="text-sm text-muted-foreground leading-relaxed italic max-w-sm mx-auto">
-                        Transport wyceniamy indywidualnie w zależności od odległości we Francji lub Niemczech. Koszt zazwyczaj mieści się w granicach <span className="text-foreground font-bold">1500 - 3500 zł</span>.
+                        Transport wyceniamy indywidualnie w zależności od odległości. Koszt zazwyczaj mieści się w granicach <span className="text-foreground font-bold">1500 - 3500 zł</span>.
                     </p>
                 </div>
 

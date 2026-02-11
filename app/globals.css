@@ -99,9 +99,6 @@
   /* Mobile viewport height fix for iOS */
   html {
     height: -webkit-fill-available;
-  }
-
-  html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -151,8 +148,6 @@
     overscroll-behavior-x: none;
     /* Smoother scrolling on iOS */
     -webkit-overflow-scrolling: touch;
-    /* Better text rendering on mobile */
-    text-rendering: optimizeSpeed;
   }
 
   .dark body {
@@ -276,7 +271,7 @@
   a:focus-visible,
   input:focus-visible,
   textarea:focus-visible {
-    outline: 2px solid hsl(var(--primary));
+    outline: 2px solid var(--primary);
     outline-offset: 2px;
   }
 }

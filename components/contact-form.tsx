@@ -144,7 +144,7 @@ export function ContactForm({
                         {!isSubmitting && <Send className="ml-3 w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
                     </Button>
                     <p className="text-center text-xs text-muted-foreground font-bold uppercase tracking-tighter">
-                        Wysyłając zgłoszenie akceptujesz politykę prywatności. Dane są przetwarzane wyłącznie w celu obsługi zapytania.
+                        Wysyłając zgłoszenie akceptujesz <a href="/polityka-prywatnosci" className="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors">politykę prywatności</a>. Dane są przetwarzane wyłącznie w celu obsługi zapytania.
                     </p>
                 </form>
             </CardContent>

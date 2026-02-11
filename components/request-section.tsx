@@ -5,7 +5,7 @@ import { Sparkles } from "lucide-react"
 
 export function RequestSection() {
     return (
-        <section id="zlecenie" className="py-16 md:py-24 relative overflow-hidden">
+        <section id="zlecenie" className="py-16 md:py-24 relative overflow-hidden scroll-mt-20">
             {/* Decorative background elements */}
             <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-1/4 h-1/3 bg-primary/10 blur-[100px] rounded-full pointer-events-none" />
