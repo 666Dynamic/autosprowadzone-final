@@ -34,7 +34,7 @@ export async function sendContactEmail(formData: FormData) {
 
     try {
         // Send to Admin
-        const result = await resend.emails.send({
+        await resend.emails.send({
             from: 'SprowadzoneAuto <kontakt@sprowadzoneauto.pl>', 
             to: ['kontakt@sprowadzoneauto.pl'],
             replyTo: email,
@@ -49,8 +49,6 @@ export async function sendContactEmail(formData: FormData) {
         <p>${safeMessage}</p>
       `
         });
-
-        console.log('Email sent successfully:', result);
 
         // Optional: Send auto-reply to Client
         // await resend.emails.send({ ... })

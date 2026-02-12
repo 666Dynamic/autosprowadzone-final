@@ -301,4 +301,39 @@
   .premium-card:hover .premium-card-icon {
     @apply bg-primary text-white;
   }
+
+  /* Footer styles with proper light/dark mode support */
+  .footer-bg {
+    background-color: #f8fafc;
+    border-color: #e2e8f0;
+  }
+
+  .dark .footer-bg {
+    background-color: #020617;
+    border-color: #1e293b;
+  }
+
+  .footer-text {
+    color: #475569;
+  }
+
+  .dark .footer-text {
+    color: #94a3b8;
+  }
+
+  .footer-heading {
+    color: #0f172a;
+  }
+
+  .dark .footer-heading {
+    color: #f8fafc;
+  }
+
+  .footer-text-emphasis {
+    color: #334155;
+  }
+
+  .dark .footer-text-emphasis {
+    color: #cbd5e1;
+  }
 }
