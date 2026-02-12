@@ -1,9 +1,11 @@
-import { posts } from "@/lib/blog"
+import { getPostBySlug, getAllPostSlugs, getAllPosts } from "@/lib/mdx"
 import { notFound } from "next/navigation"
 import { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Calendar, Share2 } from "lucide-react"
+import { MDXRemote } from "next-mdx-remote/rsc"
+import remarkGfm from "remark-gfm"
 
 interface BlogPostPageProps {
     params: Promise<{ slug: string }>
@@ -11,7 +13,7 @@ interface BlogPostPageProps {
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
     const { slug } = await params
-    const post = posts.find((p) => p.slug === slug)
+    const post = await getPostBySlug(slug)
 
     if (!post) {
         return {
@@ -36,18 +38,21 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 }
 
 export async function generateStaticParams() {
-    return posts.map((post) => ({
-        slug: post.slug,
+    const slugs = await getAllPostSlugs()
+    return slugs.map((slug) => ({
+        slug: slug,
     }))
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
     const { slug } = await params
-    const post = posts.find((p) => p.slug === slug)
+    const post = await getPostBySlug(slug)
 
     if (!post) {
         notFound()
     }
+
+    const allPosts = await getAllPosts()
 
     const baseUrl = "https://sprowadzoneauto.pl"
     const postUrl = `${baseUrl}/blog/${post.slug}`
@@ -141,8 +146,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     prose-th:p-3 prose-th:text-left prose-th:font-bold prose-th:border prose-th:border-border
                     prose-td:p-3 prose-td:border prose-td:border-border
                     prose-tr:border-b prose-tr:border-border"
-                    dangerouslySetInnerHTML={{ __html: post.content || "" }}
-                />
+                >
+                    <MDXRemote source={post.content} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
+                </div>
 
                 <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-6">
                     <div>
@@ -165,7 +171,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <div className="mt-12">
                     <h3 className="text-lg md:text-xl font-black uppercase tracking-tight mb-4">Powiązane tematy</h3>
                     <div className="grid md:grid-cols-2 gap-4">
-                        {posts.filter(p => p.slug !== post.slug).slice(0, 2).map((rel) => (
+                        {allPosts.filter(p => p.slug !== post.slug).slice(0, 2).map((rel) => (
                             <Link key={rel.slug} href={`/blog/${rel.slug}`} className="group border border-border rounded-2xl p-4 hover:border-primary/40 transition-colors">
                                 <div className="text-xs text-muted-foreground font-bold uppercase tracking-widest mb-1">{rel.date}</div>
                                 <div className="font-black text-foreground group-hover:text-primary transition-colors">{rel.title}</div>

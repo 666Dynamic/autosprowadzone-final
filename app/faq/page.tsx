@@ -16,15 +16,7 @@ export const metadata: Metadata = {
 
 export default function FaqPage() {
     return (
-        <div className="py-12 md:py-20">
-            <div className="container mx-auto px-4 md:px-8 max-w-3xl mb-8">
-                <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-center mb-4">
-                    Często zadawane <span className="text-primary italic">pytania</span>
-                </h1>
-                <p className="text-center text-muted-foreground text-lg font-medium">
-                    Wszystko, co musisz wiedzieć o imporcie aut z Niemiec
-                </p>
-            </div>
+        <div className="pt-0 pb-12 md:pt-0 md:pb-20">
             {/* FAQPage JSON-LD for rich results */}
             <script
                 type="application/ld+json"
@@ -109,12 +101,6 @@ export default function FaqPage() {
                     })
                 }}
             />
-            <div className="container mx-auto px-4 md:px-8 text-center mb-12">
-                <h1 className="text-3xl md:text-4xl font-black mb-6 uppercase tracking-tighter italic">Baza <span className="text-primary not-italic">Wiedzy</span></h1>
-                <p className="text-lg text-muted-foreground font-medium max-w-2xl mx-auto">
-                    Wszystko co musisz wiedzieć o sprowadzaniu samochodów z zagranicy.
-                </p>
-            </div>
             <FaqSection />
         </div>
     )

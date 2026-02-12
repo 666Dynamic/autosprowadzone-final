@@ -16,9 +16,11 @@ export const metadata: Metadata = {
     },
 }
 
-import { posts } from "@/lib/blog"
+import { getAllPosts } from "@/lib/mdx"
 
-export default function BlogPage() {
+export default async function BlogPage() {
+    const posts = await getAllPosts();
+
     return (
         <div className="container mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-24">
             <div className="max-w-4xl mx-auto mb-8 sm:mb-12 md:mb-16 lg:mb-20 space-y-4 sm:space-y-6">
