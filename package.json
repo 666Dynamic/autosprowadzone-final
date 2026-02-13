@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write \"**/*.{ts,tsx,css,json}\"",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test lib/**/*.test.ts"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
