@@ -44,18 +44,36 @@ export function validateExchangeRate(rate: number): boolean {
   return !isNaN(rate) && rate > 0 && rate < 10
 }
 
+const formatters = new Map<string, Intl.NumberFormat>()
+
 export function formatCurrency(value: number, currency: 'PLN' | 'EUR' = 'PLN'): string {
-  return new Intl.NumberFormat('pl-PL', {
-    style: 'currency',
-    currency,
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(value)
+  const key = `currency-${currency}`
+  let formatter = formatters.get(key)
+
+  if (!formatter) {
+    formatter = new Intl.NumberFormat('pl-PL', {
+      style: 'currency',
+      currency,
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    })
+    formatters.set(key, formatter)
+  }
+
+  return formatter.format(value)
 }
 
 export function formatNumber(value: number): string {
-  return new Intl.NumberFormat('pl-PL', {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(value)
+  const key = 'number-default'
+  let formatter = formatters.get(key)
+
+  if (!formatter) {
+    formatter = new Intl.NumberFormat('pl-PL', {
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    })
+    formatters.set(key, formatter)
+  }
+
+  return formatter.format(value)
 }
