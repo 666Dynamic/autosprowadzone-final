@@ -4,14 +4,14 @@
     "target": "ES2022",
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "jsx": "preserve",
-    
+
     // Modules
     "module": "ESNext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "allowJs": true,
     "checkJs": false,
-    
+
     // Emit
     "declaration": false,
     "sourceMap": true,
@@ -19,7 +19,7 @@
     "incremental": true,
     "isolatedModules": true,
     "esModuleInterop": true,
-    
+
     // Strict Type-Checking Options
     "strict": true,
     "noImplicitAny": true,
@@ -30,37 +30,30 @@
     "noImplicitThis": true,
     "useUnknownInCatchVariables": true,
     "alwaysStrict": true,
-    
+
     // Additional Checks
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    
+
     // Interop Constraints
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    
+
     // Next.js specific
     "plugins": [
       {
         "name": "next"
       }
     ],
-    
+
     // Path Aliases
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
     }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }
