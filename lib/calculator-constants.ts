@@ -7,55 +7,67 @@ export const CALCULATOR_CONFIG = {
   // Price boundaries
   MIN_PRICE_EUR: 1,
   MAX_PRICE_EUR: 500000,
-  
+
   // Exchange rate
   DEFAULT_EXCHANGE_RATE: 4.21,
-  
+
   // Excise tax (Akcyza)
   AKC_THRESHOLD_CC: 2000,
-  AKC_RATE_LOW: 0.031,   // 3.1% for engines ≤2000cc
-  AKC_RATE_HIGH: 0.186,  // 18.6% for engines >2000cc
-  
+  AKC_RATE_LOW: 0.031, // 3.1% for engines ≤2000cc
+  AKC_RATE_HIGH: 0.186, // 18.6% for engines >2000cc
+
   // Fixed costs
   COMMISSION: 2500,
   TRANSLATION: 250,
-  REGISTRATION_STANDARD: 161.50,
+  REGISTRATION_STANDARD: 161.5,
   REGISTRATION_INDIVIDUAL: 1080,
-  
+
   // Inspection costs
   INSPECTION_BASE: 98,
   INSPECTION_LPG: 63,
   INSPECTION_ACCIDENT: 94,
-  
+
   // Transport estimates (informational)
   TRANSPORT_MIN: 1500,
   TRANSPORT_MAX: 3500,
-} as const
+} as const;
 
 export function validatePrice(price: number): boolean {
   return (
     !isNaN(price) &&
     price >= CALCULATOR_CONFIG.MIN_PRICE_EUR &&
     price <= CALCULATOR_CONFIG.MAX_PRICE_EUR
-  )
+  );
 }
 
 export function validateExchangeRate(rate: number): boolean {
-  return !isNaN(rate) && rate > 0 && rate < 10
+  return !isNaN(rate) && rate > 0 && rate < 10;
 }
 
-export function formatCurrency(value: number, currency: 'PLN' | 'EUR' = 'PLN'): string {
-  return new Intl.NumberFormat('pl-PL', {
-    style: 'currency',
-    currency,
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(value)
+// Optimization: Cache Intl.NumberFormat instances to prevent expensive re-instantiation
+const CURRENCY_FORMATTERS = new Map<string, Intl.NumberFormat>();
+const NUMBER_FORMATTER = new Intl.NumberFormat("pl-PL", {
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 0,
+});
+
+export function formatCurrency(
+  value: number,
+  currency: "PLN" | "EUR" = "PLN"
+): string {
+  let formatter = CURRENCY_FORMATTERS.get(currency);
+  if (!formatter) {
+    formatter = new Intl.NumberFormat("pl-PL", {
+      style: "currency",
+      currency,
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+    CURRENCY_FORMATTERS.set(currency, formatter);
+  }
+  return formatter.format(value);
 }
 
 export function formatNumber(value: number): string {
-  return new Intl.NumberFormat('pl-PL', {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(value)
+  return NUMBER_FORMATTER.format(value);
 }

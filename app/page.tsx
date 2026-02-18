@@ -1,21 +1,39 @@
-import { FeaturesSection } from "@/components/features-section"
-import { Hero } from "@/components/hero"
-import { LogoCloud } from "@/components/logo-cloud"
-import { ProcessSection } from "@/components/process-section"
-import { AboutAuctions } from "@/components/about-auctions"
-import dynamic from "next/dynamic"
+import { FeaturesSection } from "@/components/features-section";
+import { Hero } from "@/components/hero";
+import { LogoCloud } from "@/components/logo-cloud";
+import { ProcessSection } from "@/components/process-section";
+import { AboutAuctions } from "@/components/about-auctions";
+import dynamic from "next/dynamic";
 
-const RequestSection = dynamic(() => import("@/components/request-section").then(mod => ({ default: mod.RequestSection })), {
-  loading: () => <div className="py-16 md:py-24 min-h-[500px]" />,
-})
+const RequestSection = dynamic(
+  () =>
+    import("@/components/request-section").then((mod) => ({
+      default: mod.RequestSection,
+    })),
+  {
+    loading: () => <div className="py-16 md:py-24 min-h-[500px]" />,
+  }
+);
 
-const TestimonialsSection = dynamic(() => import("@/components/testimonials-section").then(mod => ({ default: mod.TestimonialsSection })), {
-  loading: () => <div className="py-16 md:py-24 min-h-[400px]" />,
-})
+const TestimonialsSection = dynamic(
+  () =>
+    import("@/components/testimonials-section").then((mod) => ({
+      default: mod.TestimonialsSection,
+    })),
+  {
+    loading: () => <div className="py-16 md:py-24 min-h-[400px]" />,
+  }
+);
 
-const FaqSection = dynamic(() => import("@/components/faq-section").then(mod => ({ default: mod.FaqSection })), {
-  loading: () => <div className="py-16 md:py-24 min-h-[400px]" />,
-})
+const FaqSection = dynamic(
+  () =>
+    import("@/components/faq-section").then((mod) => ({
+      default: mod.FaqSection,
+    })),
+  {
+    loading: () => <div className="py-16 md:py-24 min-h-[400px]" />,
+  }
+);
 
 export default function Home() {
   return (
@@ -29,5 +47,5 @@ export default function Home() {
       <RequestSection />
       <FaqSection limit={5} />
     </div>
-  )
+  );
 }
