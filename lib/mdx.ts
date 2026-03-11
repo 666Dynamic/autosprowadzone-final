@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs from 'fs/promises';
 import path from 'path';
 import matter from 'gray-matter';
 import { serialize } from 'next-mdx-remote/serialize';
@@ -25,32 +25,34 @@ export interface Post extends PostMetadata {
 // Pobierz wszystkie posty
 export async function getAllPosts(): Promise<PostMetadata[]> {
     try {
-        const files = fs.readdirSync(contentDirectory);
+        const files = await fs.readdir(contentDirectory);
         
-        const posts = files
-            .filter((file) => file.endsWith('.mdx'))
-            .map((file) => {
-                const slug = file.replace('.mdx', '');
-                const filePath = path.join(contentDirectory, file);
-                const fileContents = fs.readFileSync(filePath, 'utf8');
-                const { data } = matter(fileContents);
-                
-                return {
-                    slug,
-                    title: data.title,
-                    excerpt: data.excerpt,
-                    date: data.date,
-                    dateISO: data.dateISO,
-                    keywords: data.keywords || [],
-                    author: data.author || 'SprowadzoneAuto.pl',
-                    readTime: data.readTime || '5 min',
-                } as PostMetadata;
-            })
-            .sort((a, b) => new Date(b.dateISO).getTime() - new Date(a.dateISO).getTime());
+        const mdxFiles = files.filter((file) => file.endsWith('.mdx'));
+
+        const postsPromises = mdxFiles.map(async (file) => {
+            const slug = file.replace('.mdx', '');
+            const filePath = path.join(contentDirectory, file);
+            const fileContents = await fs.readFile(filePath, 'utf8');
+            const { data } = matter(fileContents);
+
+            return {
+                slug,
+                title: data.title,
+                excerpt: data.excerpt,
+                date: data.date,
+                dateISO: data.dateISO,
+                keywords: data.keywords || [],
+                author: data.author || 'SprowadzoneAuto.pl',
+                readTime: data.readTime || '5 min',
+            } as PostMetadata;
+        });
+
+        const posts = await Promise.all(postsPromises);
         
-        return posts;
+        return posts.sort((a, b) => new Date(b.dateISO).getTime() - new Date(a.dateISO).getTime());
     } catch (error) {
-        console.error('Error reading blog posts:', error);
+        const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+        console.error('Error reading blog posts:', errorMessage);
         return [];
     }
 }
@@ -60,11 +62,8 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     try {
         const filePath = path.join(contentDirectory, `${slug}.mdx`);
         
-        if (!fs.existsSync(filePath)) {
-            return null;
-        }
-        
-        const fileContents = fs.readFileSync(filePath, 'utf8');
+        // Use direct file read to save an existence check (ENOENT handled in catch)
+        const fileContents = await fs.readFile(filePath, 'utf8');
         const { data, content } = matter(fileContents);
         
         return {
@@ -78,8 +77,12 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
             readTime: data.readTime || '5 min',
             content,
         };
-    } catch (error) {
-        console.error(`Error reading post ${slug}:`, error);
+    } catch (error: unknown) {
+        if (typeof error === 'object' && error !== null && 'code' in error && (error as { code: unknown }).code === 'ENOENT') {
+            return null; // File not found
+        }
+        const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+        console.error(`Error reading post ${slug}:`, errorMessage);
         return null;
     }
 }
@@ -97,12 +100,13 @@ export async function serializeMDX(content: string) {
 // Pobierz wszystkie slugi (dla generateStaticParams)
 export async function getAllPostSlugs(): Promise<string[]> {
     try {
-        const files = fs.readdirSync(contentDirectory);
+        const files = await fs.readdir(contentDirectory);
         return files
             .filter((file) => file.endsWith('.mdx'))
             .map((file) => file.replace('.mdx', ''));
     } catch (error) {
-        console.error('Error reading post slugs:', error);
+        const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+        console.error('Error reading post slugs:', errorMessage);
         return [];
     }
 }
