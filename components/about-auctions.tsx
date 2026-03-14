@@ -62,9 +62,8 @@ export function AboutAuctions() {
         }))
     ), [])
 
-    const formattedPrice = useMemo(() => (
-        new Intl.NumberFormat("pl-PL").format(price)
-    ), [price])
+    const priceFormatter = useMemo(() => new Intl.NumberFormat("pl-PL"), [])
+    const formattedPrice = useMemo(() => priceFormatter.format(price), [price, priceFormatter])
 
     useEffect(() => {
         setMounted(true)
