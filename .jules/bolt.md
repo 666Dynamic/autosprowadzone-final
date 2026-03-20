@@ -1,0 +1,3 @@
+## 2025-02-24 - [Intl.NumberFormat Caching]
+**Learning:** `Intl.NumberFormat` instances must be cached rather than repeatedly instantiated inside functions or rapid render loops to avoid significant CPU overhead. Re-instantiating inside a formatting utility like `formatCurrency` when it's called multiple times per keystroke in a React component causes huge performance bottlenecks.
+**Action:** Always extract `Intl.NumberFormat` instantiations outside of functional closures or React render loops. Cache them statically in a constants file using a Map, a static record, or via `useMemo` in React components.
