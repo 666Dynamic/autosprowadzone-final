@@ -44,8 +44,19 @@ export function validateExchangeRate(rate: number): boolean {
   return !isNaN(rate) && rate > 0 && rate < 10
 }
 
+// Cache for Intl.NumberFormat instances to avoid CPU overhead during rapid render loops
+const numberFormatCache = new Map<string, Intl.NumberFormat>()
+
+function getNumberFormat(options: Intl.NumberFormatOptions): Intl.NumberFormat {
+  const cacheKey = JSON.stringify(options)
+  if (!numberFormatCache.has(cacheKey)) {
+    numberFormatCache.set(cacheKey, new Intl.NumberFormat('pl-PL', options))
+  }
+  return numberFormatCache.get(cacheKey)!
+}
+
 export function formatCurrency(value: number, currency: 'PLN' | 'EUR' = 'PLN'): string {
-  return new Intl.NumberFormat('pl-PL', {
+  return getNumberFormat({
     style: 'currency',
     currency,
     minimumFractionDigits: 2,
@@ -54,7 +65,7 @@ export function formatCurrency(value: number, currency: 'PLN' | 'EUR' = 'PLN'): 
 }
 
 export function formatNumber(value: number): string {
-  return new Intl.NumberFormat('pl-PL', {
+  return getNumberFormat({
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   }).format(value)
