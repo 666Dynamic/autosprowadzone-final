@@ -7,6 +7,7 @@ import { ArrowRight, Fuel, Gauge, Calendar, ShieldCheck, Euro, Zap, Activity, Sp
 import Link from "next/link"
 import { useState, useEffect, useMemo } from "react"
 import Image from "next/image"
+import { formatGeneralNumber } from "@/lib/calculator-constants"
 
 const seededRandomFn = (seed: number) => {
     const x = Math.sin(seed) * 10000
@@ -63,7 +64,7 @@ export function AboutAuctions() {
     ), [])
 
     const formattedPrice = useMemo(() => (
-        new Intl.NumberFormat("pl-PL").format(price)
+        formatGeneralNumber(price)
     ), [price])
 
     useEffect(() => {
