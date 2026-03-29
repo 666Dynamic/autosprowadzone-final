@@ -46,7 +46,7 @@ export async function getAllPosts(): Promise<PostMetadata[]> {
                     readTime: data.readTime || '5 min',
                 } as PostMetadata;
             })
-            .sort((a, b) => new Date(b.dateISO).getTime() - new Date(a.dateISO).getTime());
+            .sort((a, b) => b.dateISO.localeCompare(a.dateISO));
         
         return posts;
     } catch (error) {
