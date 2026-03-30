@@ -46,7 +46,9 @@ export async function getAllPosts(): Promise<PostMetadata[]> {
                     readTime: data.readTime || '5 min',
                 } as PostMetadata;
             })
-            .sort((a, b) => new Date(b.dateISO).getTime() - new Date(a.dateISO).getTime());
+            // Performance optimization: Using direct string comparison for ISO 8601 dates
+            // instead of instantiating new Date() objects to improve sorting performance.
+            .sort((a, b) => (b.dateISO > a.dateISO ? 1 : b.dateISO < a.dateISO ? -1 : 0));
         
         return posts;
     } catch (error) {
