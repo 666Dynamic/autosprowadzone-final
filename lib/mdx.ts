@@ -46,7 +46,9 @@ export async function getAllPosts(): Promise<PostMetadata[]> {
                     readTime: data.readTime || '5 min',
                 } as PostMetadata;
             })
-            .sort((a, b) => new Date(b.dateISO).getTime() - new Date(a.dateISO).getTime());
+            // ⚡ Bolt Optimization: Use direct lexicographical string comparison for ISO 8601 dates (YYYY-MM-DD).
+            // This is functionally equivalent to parsing dates but significantly faster by avoiding expensive Date object instantiations within the sort loop.
+            .sort((a, b) => (b.dateISO > a.dateISO ? 1 : b.dateISO < a.dateISO ? -1 : 0));
         
         return posts;
     } catch (error) {
