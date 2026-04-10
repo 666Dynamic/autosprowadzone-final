@@ -22,6 +22,10 @@ export interface Post extends PostMetadata {
     content: string;
 }
 
+function isPublished(dateISO: string): boolean {
+    return new Date(dateISO).getTime() <= Date.now();
+}
+
 // Pobierz wszystkie posty
 export async function getAllPosts(): Promise<PostMetadata[]> {
     try {
@@ -46,6 +50,7 @@ export async function getAllPosts(): Promise<PostMetadata[]> {
                     readTime: data.readTime || '5 min',
                 } as PostMetadata;
             })
+            .filter((post) => isPublished(post.dateISO))
             .sort((a, b) => new Date(b.dateISO).getTime() - new Date(a.dateISO).getTime());
         
         return posts;
@@ -66,6 +71,10 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
         
         const fileContents = fs.readFileSync(filePath, 'utf8');
         const { data, content } = matter(fileContents);
+
+        if (!isPublished(data.dateISO)) {
+            return null;
+        }
         
         return {
             slug,
@@ -100,7 +109,19 @@ export async function getAllPostSlugs(): Promise<string[]> {
         const files = fs.readdirSync(contentDirectory);
         return files
             .filter((file) => file.endsWith('.mdx'))
-            .map((file) => file.replace('.mdx', ''));
+            .map((file) => {
+                const slug = file.replace('.mdx', '');
+                const filePath = path.join(contentDirectory, file);
+                const fileContents = fs.readFileSync(filePath, 'utf8');
+                const { data } = matter(fileContents);
+
+                return {
+                    slug,
+                    dateISO: data.dateISO,
+                };
+            })
+            .filter((post) => isPublished(post.dateISO))
+            .map((post) => post.slug);
     } catch (error) {
         console.error('Error reading post slugs:', error);
         return [];

@@ -3,6 +3,8 @@ import Link from "next/link"
 import { Metadata } from "next"
 import { ArrowRight } from "lucide-react"
 
+export const revalidate = 86400
+
 export const metadata: Metadata = {
     title: "Blog — Poradnik Importera Aut z Niemiec",
     description: "Artykuły i porady dotyczące sprowadzania samochodów z Niemiec, Belgii i Holandii. Przewodniki po aukcjach BCA i AUTO1, koszty importu, procedury rejestracji.",

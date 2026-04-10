@@ -7,6 +7,8 @@ import { ArrowLeft, Calendar, Share2 } from "lucide-react"
 import { MDXRemote } from "next-mdx-remote/rsc"
 import remarkGfm from "remark-gfm"
 
+export const revalidate = 86400
+
 interface BlogPostPageProps {
     params: Promise<{ slug: string }>
 }
