@@ -1,8 +1,9 @@
 import { MetadataRoute } from 'next'
-import { posts } from '@/lib/blog'
+import { getAllPosts } from '@/lib/mdx'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = 'https://sprowadzoneauto.pl'
+    const posts = await getAllPosts()
 
     const currentDate = new Date()
     
