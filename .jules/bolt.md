@@ -1,0 +1,3 @@
+## 2024-05-18 - [Framer Motion and Custom Timers]
+**Learning:** Framer Motion automatically optimizes standard visual animations for `motion.div` when off-screen. However, for custom state-driven timers (like `setInterval` or `setTimeout` simulating bidding or sliders), you must manually use the `useInView` hook to pause execution and prevent background re-renders.
+**Action:** Always check `setInterval` and `setTimeout` usages in React components, particularly those driving UI states, and wrap their execution logic in an `isInView` check using `useInView` from framer-motion or a similar IntersectionObserver hook.
