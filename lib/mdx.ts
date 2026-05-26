@@ -22,14 +22,11 @@ export interface Post extends PostMetadata {
     content: string;
 }
 
-function isPublished(dateISO: string): boolean {
-    return new Date(dateISO).getTime() <= Date.now();
-}
-
 // Pobierz wszystkie posty
 export async function getAllPosts(): Promise<PostMetadata[]> {
     try {
         const files = fs.readdirSync(contentDirectory);
+        const todayISO = new Date().toISOString();
         
         const posts = files
             .filter((file) => file.endsWith('.mdx'))
@@ -50,8 +47,8 @@ export async function getAllPosts(): Promise<PostMetadata[]> {
                     readTime: data.readTime || '5 min',
                 } as PostMetadata;
             })
-            .filter((post) => isPublished(post.dateISO))
-            .sort((a, b) => new Date(b.dateISO).getTime() - new Date(a.dateISO).getTime());
+            .filter((post) => post.dateISO <= todayISO)
+            .sort((a, b) => (b.dateISO > a.dateISO ? 1 : b.dateISO < a.dateISO ? -1 : 0));
         
         return posts;
     } catch (error) {
@@ -71,8 +68,9 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
         
         const fileContents = fs.readFileSync(filePath, 'utf8');
         const { data, content } = matter(fileContents);
+        const todayISO = new Date().toISOString();
 
-        if (!isPublished(data.dateISO)) {
+        if (data.dateISO > todayISO) {
             return null;
         }
         
@@ -107,6 +105,7 @@ export async function serializeMDX(content: string) {
 export async function getAllPostSlugs(): Promise<string[]> {
     try {
         const files = fs.readdirSync(contentDirectory);
+        const todayISO = new Date().toISOString();
         return files
             .filter((file) => file.endsWith('.mdx'))
             .map((file) => {
@@ -120,7 +119,7 @@ export async function getAllPostSlugs(): Promise<string[]> {
                     dateISO: data.dateISO,
                 };
             })
-            .filter((post) => isPublished(post.dateISO))
+            .filter((post) => post.dateISO <= todayISO)
             .map((post) => post.slug);
     } catch (error) {
         console.error('Error reading post slugs:', error);
