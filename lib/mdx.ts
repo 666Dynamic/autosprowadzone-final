@@ -22,13 +22,14 @@ export interface Post extends PostMetadata {
     content: string;
 }
 
-function isPublished(dateISO: string): boolean {
-    return new Date(dateISO).getTime() <= Date.now();
+function isPublished(dateISO: string, today: string): boolean {
+    return dateISO <= today;
 }
 
 // Pobierz wszystkie posty
 export async function getAllPosts(): Promise<PostMetadata[]> {
     try {
+        const today = new Date().toISOString();
         const files = fs.readdirSync(contentDirectory);
         
         const posts = files
@@ -50,12 +51,13 @@ export async function getAllPosts(): Promise<PostMetadata[]> {
                     readTime: data.readTime || '5 min',
                 } as PostMetadata;
             })
-            .filter((post) => isPublished(post.dateISO))
-            .sort((a, b) => new Date(b.dateISO).getTime() - new Date(a.dateISO).getTime());
+            .filter((post) => isPublished(post.dateISO, today))
+            .sort((a, b) => (b.dateISO > a.dateISO ? 1 : b.dateISO < a.dateISO ? -1 : 0));
         
         return posts;
     } catch (error) {
-        console.error('Error reading blog posts:', error);
+        const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+        console.error('Error reading blog posts:', errorMessage, error);
         return [];
     }
 }
@@ -63,6 +65,7 @@ export async function getAllPosts(): Promise<PostMetadata[]> {
 // Pobierz pojedynczy post
 export async function getPostBySlug(slug: string): Promise<Post | null> {
     try {
+        const today = new Date().toISOString();
         const filePath = path.join(contentDirectory, `${slug}.mdx`);
         
         if (!fs.existsSync(filePath)) {
@@ -72,7 +75,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
         const fileContents = fs.readFileSync(filePath, 'utf8');
         const { data, content } = matter(fileContents);
 
-        if (!isPublished(data.dateISO)) {
+        if (!isPublished(data.dateISO, today)) {
             return null;
         }
         
@@ -88,7 +91,8 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
             content,
         };
     } catch (error) {
-        console.error(`Error reading post ${slug}:`, error);
+        const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+        console.error(`Error reading post ${slug}:`, errorMessage, error);
         return null;
     }
 }
@@ -106,6 +110,7 @@ export async function serializeMDX(content: string) {
 // Pobierz wszystkie slugi (dla generateStaticParams)
 export async function getAllPostSlugs(): Promise<string[]> {
     try {
+        const today = new Date().toISOString();
         const files = fs.readdirSync(contentDirectory);
         return files
             .filter((file) => file.endsWith('.mdx'))
@@ -120,10 +125,11 @@ export async function getAllPostSlugs(): Promise<string[]> {
                     dateISO: data.dateISO,
                 };
             })
-            .filter((post) => isPublished(post.dateISO))
+            .filter((post) => isPublished(post.dateISO, today))
             .map((post) => post.slug);
     } catch (error) {
-        console.error('Error reading post slugs:', error);
+        const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+        console.error('Error reading post slugs:', errorMessage, error);
         return [];
     }
 }
