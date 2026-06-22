@@ -1,0 +1,3 @@
+## 2024-06-22 - Optimize Intl.NumberFormat Instantiation
+**Learning:** In highly dynamic React components (like continuous bidding simulations), recreating `Intl.NumberFormat` inside `useMemo` where dependencies change rapidly (e.g., `price` every few milliseconds) defeats the purpose of memoization and causes unnecessary CPU overhead. Furthermore, extracting `Intl.NumberFormat` instances to module-level constants in a utility file (`lib/calculator-constants.ts`) ensures they are created exactly once for the application lifetime.
+**Action:** Always extract `Intl.NumberFormat` or `Intl.DateTimeFormat` instantiations to module-scoped constants, rather than using `useMemo` with fast-changing dependencies or recreating them inside frequent render loops or helper functions.
