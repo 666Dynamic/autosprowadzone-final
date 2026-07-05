@@ -8,6 +8,9 @@ import Link from "next/link"
 import { useState, useEffect, useMemo } from "react"
 import Image from "next/image"
 
+// Cache formatter to avoid expensive instantiation on every render/price update
+const priceFormatter = new Intl.NumberFormat("pl-PL")
+
 const seededRandomFn = (seed: number) => {
     const x = Math.sin(seed) * 10000
     return x - Math.floor(x)
@@ -62,9 +65,7 @@ export function AboutAuctions() {
         }))
     ), [])
 
-    const formattedPrice = useMemo(() => (
-        new Intl.NumberFormat("pl-PL").format(price)
-    ), [price])
+    const formattedPrice = priceFormatter.format(price)
 
     useEffect(() => {
         setMounted(true)
