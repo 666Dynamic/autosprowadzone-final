@@ -1,0 +1,3 @@
+## 2024-06-25 - [Intl.NumberFormat Caching]
+**Learning:** Instantiating `Intl.NumberFormat` is relatively expensive. Instantiating it inside utility functions called frequently or inside rapid render loops (like animations or frequent state updates) causes a significant performance hit.
+**Action:** Always cache `Intl.NumberFormat` instances. In utility files, use module-scoped variables or a static `Map` (if caching by locale/currency). In React components, use `useMemo` to cache the formatter instance itself (with an empty dependency array if locale is static), and then call `.format(value)` on the cached instance during render, rather than putting the dynamically changing value being formatted into the `useMemo` dependency array (which defeats the cache).
