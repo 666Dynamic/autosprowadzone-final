@@ -45,6 +45,12 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
             url: `https://sprowadzoneauto.pl/blog/${slug}`,
             authors: ['SprowadzoneAuto.pl'],
             tags: post.keywords || [],
+            images: [{
+                url: 'https://sprowadzoneauto.pl/opengraph-image',
+                width: 1200,
+                height: 630,
+                alt: post.title,
+            }],
         },
         twitter: {
             card: "summary_large_image",

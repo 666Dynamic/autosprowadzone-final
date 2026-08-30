@@ -21,10 +21,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://sprowadzoneauto.pl'),
   title: {
-    default: "Auta z Niemiec - Aukcje B2B, Import, Weryfikacja | SprowadzoneAuto.pl",
+    default: "Sprowadzanie Aut z Niemiec na Zamówienie — Aukcje B2B | SprowadzoneAuto.pl",
     template: "%s | SprowadzoneAuto.pl",
   },
-  description: "Sprowadzamy auta z Niemiec z aukcji B2B i od dealerów. Niemiecka spółka, pewna historia, transport door-to-door. Sprawdź naszą ofertę weryfikacji i importu!",
+  description: "Sprowadzamy auta z Niemiec z aukcji B2B (BCA, AUTO1). Dostęp do zamkniętych platform. Polska obsługa, stała prowizja 2500 zł. Weryfikacja i transport door-to-door.",
   keywords: [
     "sprowadzanie aut z niemiec", "auta z niemiec aukcje", "licytacje samochodowe niemcy", "auto import niemcy", "sprowadzanie aut na zamówienie",
     "aukcje b2b auta", "weryfikacja aut niemcy", "inspekcja auta niemcy", "auta poleasingowe niemcy", "import aut z niemiec procedura",
@@ -38,14 +38,20 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pl_PL",
     url: "https://sprowadzoneauto.pl",
-    title: "Auta z Niemiec - Aukcje B2B, Import, Weryfikacja | SprowadzoneAuto.pl",
-    description: "Bezpieczny import aut z Niemiec. Dostęp do aukcji B2B (BCA, Auto1). Weryfikacja techniczna na miejscu.",
+    title: "Sprowadzanie Aut z Niemiec na Zamówienie — Aukcje B2B | SprowadzoneAuto.pl",
+    description: "Sprowadzamy auta z Niemiec z aukcji B2B (BCA, AUTO1). Dostęp do zamkniętych platform. Polska obsługa, stała prowizja 2500 zł. Weryfikacja i transport.",
     siteName: "SprowadzoneAuto.pl",
+    images: [{
+      url: 'https://sprowadzoneauto.pl/opengraph-image',
+      width: 1200,
+      height: 630,
+      alt: 'SprowadzoneAuto.pl - Import Aut z Niemiec, Aukcje B2B',
+    }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Auta z Niemiec - Aukcje B2B, Import, Weryfikacja | SprowadzoneAuto.pl",
-    description: "Bezpieczny import aut z Niemiec. Dostęp do aukcji B2B (BCA, Auto1). Weryfikacja techniczna na miejscu.",
+    title: "Sprowadzanie Aut z Niemiec na Zamówienie — Aukcje B2B | SprowadzoneAuto.pl",
+    description: "Sprowadzamy auta z Niemiec z aukcji B2B (BCA, AUTO1). Dostęp do zamkniętych platform. Polska obsługa, stała prowizja 2500 zł.",
   },
   alternates: {
     canonical: "https://sprowadzoneauto.pl",

@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
             {
                 userAgent: '*',
                 allow: '/',
-                disallow: ['/private/', '/w-budowie', '/test-logos', '/promo/', '/opengraph-image', '/*?*', '/page'],
+                disallow: ['/private/', '/w-budowie', '/test-logos', '/promo/', '/opengraph-image'],
             },
         ],
         sitemap: [

@@ -14,6 +14,13 @@ export const metadata: Metadata = {
         title: "Aukcje Samochodowe B2B z Europy | Auta Poleasingowe",
         description: "Dostęp do BCA, AUTO1 i 40+ zamkniętych platform aukcyjnych. Auta poleasingowe 20% taniej niż na portalach.",
         url: "https://sprowadzoneauto.pl/aukcje",
+        type: "website",
+        images: [{
+            url: 'https://sprowadzoneauto.pl/opengraph-image',
+            width: 1200,
+            height: 630,
+            alt: 'Aukcje Samochodowe B2B - Auta Poleasingowe',
+        }],
     },
 }
 

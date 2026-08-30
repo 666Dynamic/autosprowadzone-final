@@ -2,13 +2,33 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle2, Building2, Trophy } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import type { Metadata } from "next"
 
-export const metadata = {
-    title: "O Nas | SprowadzoneAuto.pl",
-    description: "Poznaj Miami Autocenter GmbH. Twój zaufany partner w imporcie aut z Niemiec. Lukas & Damian.",
+export const metadata: Metadata = {
+    title: "O Nas — Miami Autocenter GmbH | SprowadzoneAuto.pl",
+    description: "Poznaj Miami Autocenter GmbH. Zaufany partner w imporcie aut z Niemiec od 2023. HRB 211101, Osterholz-Scharmbeck. Dostęp do aukcji BCA, AUTO1 i 40+ platform B2B.",
+    keywords: ["Miami Autocenter", "import aut z niemiec", "firma sprowadzająca auta", "GmbH Niemcy"],
     robots: {
-        index: false,
-        follow: false,
+        index: true,
+        follow: true,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+        'max-video-preview': -1,
+    },
+    alternates: {
+        canonical: "https://sprowadzoneauto.pl/o-nas",
+    },
+    openGraph: {
+        title: "O Nas — Miami Autocenter GmbH | SprowadzoneAuto.pl",
+        description: "Poznaj Miami Autocenter GmbH. Zaufany partner w imporcie aut z Niemiec od 2023. HRB 211101, Osterholz-Scharmbeck.",
+        url: "https://sprowadzoneauto.pl/o-nas",
+        type: "website",
+        images: [{
+            url: 'https://sprowadzoneauto.pl/opengraph-image',
+            width: 1200,
+            height: 630,
+            alt: 'Miami Autocenter GmbH - Import Aut z Niemiec',
+        }],
     },
 }
 

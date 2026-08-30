@@ -12,6 +12,13 @@ export const metadata: Metadata = {
         title: "Kontakt — Zapytaj o Import Auta z Niemiec",
         description: "Skontaktuj się w sprawie importu, weryfikacji auta lub aukcji B2B. Odpowiadamy 7:00–22:00.",
         url: "https://sprowadzoneauto.pl/kontakt",
+        type: "website",
+        images: [{
+            url: 'https://sprowadzoneauto.pl/opengraph-image',
+            width: 1200,
+            height: 630,
+            alt: 'Kontakt - SprowadzoneAuto.pl',
+        }],
     },
 }
 

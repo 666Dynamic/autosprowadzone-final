@@ -7,7 +7,7 @@ export const revalidate = 86400
 
 export const metadata: Metadata = {
     title: "Blog — Poradnik Importera Aut z Niemiec | SprowadzoneAuto.pl",
-    description: "Artykuły o sprowadzaniu samochodów z Niemiec, Belgii i Holandii. Przewodniki po aukcjach BCA i AUTO1. Koszty importu, procedury rejestracji, kalkulator akcyzy 2026.",
+    description: "Artykuły o sprowadzaniu samochodów z Niemiec, Belgii i Holandii. Przewodniki po aukcjach BCA, AUTO1, kosztach importu i procedurach rejestracji. Kalkulator akcyzy 2026.",
     keywords: [
         "sprowadzanie aut z niemiec",
         "import aut z niemiec",
@@ -26,6 +26,13 @@ export const metadata: Metadata = {
         title: "Blog — Poradnik Importera Aut z Niemiec",
         description: "Artykuły o sprowadzaniu samochodów z Niemiec, Belgii i Holandii. Przewodniki po aukcjach BCA i AUTO1. Koszty importu, procedury rejestracji, kalkulator akcyzy.",
         url: "https://sprowadzoneauto.pl/blog",
+        type: "website",
+        images: [{
+            url: 'https://sprowadzoneauto.pl/opengraph-image',
+            width: 1200,
+            height: 630,
+            alt: 'SprowadzoneAuto.pl Blog - Poradnik Importera Aut z Niemiec',
+        }],
     },
     robots: {
         index: true,

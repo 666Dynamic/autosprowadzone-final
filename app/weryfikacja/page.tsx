@@ -13,6 +13,13 @@ export const metadata: Metadata = {
         title: "Weryfikacja Aut w Niemczech — Inspekcja Przed Zakupem",
         description: "Inspekcja techniczna auta w Niemczech: pomiar lakieru, diagnostyka, raport ze zdjęciami.",
         url: "https://sprowadzoneauto.pl/weryfikacja",
+        type: "website",
+        images: [{
+            url: 'https://sprowadzoneauto.pl/opengraph-image',
+            width: 1200,
+            height: 630,
+            alt: 'Weryfikacja Aut w Niemczech - Inspekcja Przed Zakupem',
+        }],
     },
 }
 
