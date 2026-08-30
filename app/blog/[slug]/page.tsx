@@ -125,7 +125,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             "@type": "Organization",
             "name": "SprowadzoneAuto.pl"
         },
-        "description": post.excerpt,
         "articleBody": post.content
     }
 
