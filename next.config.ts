@@ -19,6 +19,21 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
   
+  // HTTP to HTTPS redirect + security headers
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=31536000; includeSubDomains',
+          },
+        ],
+      },
+    ];
+  },
+
   // Experimental features dla wydajności
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion', '@radix-ui/react-accordion', '@radix-ui/react-checkbox', '@radix-ui/react-dropdown-menu'],

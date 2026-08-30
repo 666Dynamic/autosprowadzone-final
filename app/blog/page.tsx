@@ -6,15 +6,33 @@ import { ArrowRight } from "lucide-react"
 export const revalidate = 86400
 
 export const metadata: Metadata = {
-    title: "Blog — Poradnik Importera Aut z Niemiec",
-    description: "Artykuły i porady dotyczące sprowadzania samochodów z Niemiec, Belgii i Holandii. Przewodniki po aukcjach BCA i AUTO1, koszty importu, procedury rejestracji.",
+    title: "Blog — Poradnik Importera Aut z Niemiec | SprowadzoneAuto.pl",
+    description: "Artykuły o sprowadzaniu samochodów z Niemiec, Belgii i Holandii. Przewodniki po aukcjach BCA i AUTO1. Koszty importu, procedury rejestracji, kalkulator akcyzy 2026.",
+    keywords: [
+        "sprowadzanie aut z niemiec",
+        "import aut z niemiec",
+        "aukcje samochodowe",
+        "bca europe",
+        "auto1 jak licytować",
+        "koszty importu auta",
+        "akcyza 2026",
+        "weryfikacja auta niemcy",
+        "rejestracja auta z niemiec",
+    ],
     alternates: {
         canonical: "https://sprowadzoneauto.pl/blog",
     },
     openGraph: {
         title: "Blog — Poradnik Importera Aut z Niemiec",
-        description: "Artykuły i porady: aukcje BCA, AUTO1, koszty importu, procedury rejestracji aut z zagranicy.",
+        description: "Artykuły o sprowadzaniu samochodów z Niemiec, Belgii i Holandii. Przewodniki po aukcjach BCA i AUTO1. Koszty importu, procedury rejestracji, kalkulator akcyzy.",
         url: "https://sprowadzoneauto.pl/blog",
+    },
+    robots: {
+        index: true,
+        follow: true,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+        'max-video-preview': -1,
     },
 }
 

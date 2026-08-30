@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero"
 import { LogoCloud } from "@/components/logo-cloud"
 import { ProcessSection } from "@/components/process-section"
 import { AboutAuctions } from "@/components/about-auctions"
+import { FeaturedArticles } from "@/components/featured-articles"
 import dynamic from "next/dynamic"
 
 const RequestSection = dynamic(() => import("@/components/request-section").then(mod => ({ default: mod.RequestSection })), {
@@ -26,6 +27,7 @@ export default function Home() {
       <FeaturesSection />
       <ProcessSection />
       <TestimonialsSection />
+      <FeaturedArticles limit={3} />
       <RequestSection />
       <FaqSection limit={5} />
     </div>

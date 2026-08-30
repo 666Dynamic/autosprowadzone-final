@@ -24,17 +24,32 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     }
 
     return {
-        title: post.title,
+        title: `${post.title} | Blog SprowadzoneAuto.pl`,
         description: post.excerpt,
+        keywords: post.keywords || ['sprowadzanie aut z niemiec', 'import aut', 'aukcje b2b'],
+        robots: {
+            index: true,
+            follow: true,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+            'max-video-preview': -1,
+        },
         alternates: {
             canonical: `https://sprowadzoneauto.pl/blog/${slug}`,
         },
         openGraph: {
-            title: post.title,
+            title: `${post.title} | SprowadzoneAuto.pl`,
             description: post.excerpt,
             type: "article",
             publishedTime: post.dateISO,
             url: `https://sprowadzoneauto.pl/blog/${slug}`,
+            authors: ['SprowadzoneAuto.pl'],
+            tags: post.keywords || [],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: `${post.title} | SprowadzoneAuto.pl`,
+            description: post.excerpt,
         },
     }
 }
@@ -81,26 +96,37 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": post.title,
+        "description": post.excerpt,
         "datePublished": post.dateISO,
         "dateModified": post.dateISO,
         "inLanguage": "pl-PL",
+        "keywords": post.keywords?.join(", ") || "sprowadzanie aut z niemiec",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": postUrl
+        },
+        "image": {
+            "@type": "ImageObject",
+            "url": `${baseUrl}/icon.svg`,
+            "width": 1200,
+            "height": 630
         },
         "publisher": {
             "@type": "Organization",
             "name": "SprowadzoneAuto.pl",
             "logo": {
                 "@type": "ImageObject",
-                "url": `${baseUrl}/icon.svg`
+                "url": `${baseUrl}/icon.svg`,
+                "width": 512,
+                "height": 512
             }
         },
         "author": {
             "@type": "Organization",
             "name": "SprowadzoneAuto.pl"
         },
-        "description": post.excerpt
+        "description": post.excerpt,
+        "articleBody": post.content
     }
 
     return (
