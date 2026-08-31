@@ -2,16 +2,62 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence, useInView } from "framer-motion"
 import { ArrowRight, Fuel, Gauge, Calendar, ShieldCheck, Euro, Zap, Activity, Sparkles, Clock, MapPin, Camera } from "lucide-react"
 import Link from "next/link"
-import { useState, useEffect, useMemo } from "react"
+import { useState, useEffect, useMemo, useRef } from "react"
 import Image from "next/image"
 
 const seededRandomFn = (seed: number) => {
     const x = Math.sin(seed) * 10000
     return x - Math.floor(x)
 }
+
+const images = [
+    "/audi/max-AD55987_01bdb54e3e0af8794c16fffcbf2ca28d.webp",
+    "/audi/max-AD55987_2d6cf1cc4d29426a8dc28267a693307d.webp",
+    "/audi/max-AD55987_339081aa4a32ad5ea2581b0a9375e908.webp",
+    "/audi/max-AD55987_7f553c1a461f10b679137e7a4f991b02.webp",
+    "/audi/max-AD55987_ca66144394b467109c133464308a30c5.webp",
+    "/audi/max-AD55987_dbedf5b7e4de4bc9977b9c004db8622c.webp",
+    "/audi/max-AD55987_dfb80e1c658ec4aaa94a866e2f02f8a7.webp",
+    "/audi/max-AD55987_ee56ff1e3170932847ff99740f2fd3f6.webp"
+]
+
+const imageAlts = [
+    "Audi Q5 2021 - widok z przodu na aukcji BCA",
+    "Audi Q5 - wnętrze, deska rozdzielcza i kierownica",
+    "Audi Q5 - widok z boku, profil nadwozia",
+    "Audi Q5 - tylne siedzenia i przestrzeń pasażerska",
+    "Audi Q5 - bagażnik i przestrzeń ładunkowa",
+    "Audi Q5 - widok z tyłu, lampy LED",
+    "Audi Q5 - detal felg i zawieszenia",
+    "Audi Q5 - zbliżenie na raport stanu lakieru"
+]
+
+const particleConfigs = [...Array(4)].map((_, i) => ({
+    left: `${Math.round(seededRandomFn(i + 1) * 10000) / 100}%`,
+    top: `${Math.round(seededRandomFn(i + 11) * 10000) / 100}%`,
+    duration: Math.round(seededRandomFn(i + 21) * 500 + 500) / 100,
+    delay: Math.round(seededRandomFn(i + 31) * 500) / 100,
+}))
+
+const confettiConfigs = [...Array(12)].map((_, i) => ({
+    top: `${Math.round(seededRandomFn(i + 41) * 10000) / 100}%`,
+    left: `${Math.round(seededRandomFn(i + 51) * 10000) / 100}%`,
+    duration: Math.round(seededRandomFn(i + 61) * 200 + 150) / 100,
+    repeatDelay: Math.round(seededRandomFn(i + 71) * 200) / 100,
+    colorIndex: Math.floor(seededRandomFn(i + 81) * 3),
+}))
+
+const carSpecs = [
+    { label: "Przebieg", value: "151 357 km", icon: Gauge },
+    { label: "Rejestracja", value: "11/2021", icon: Calendar },
+    { label: "Moc", value: "150 kW / 204 KM", icon: Zap },
+    { label: "Paliwo", value: "Diesel", icon: Fuel },
+    { label: "Skrzynia", value: "Dwusprzęgłowa", icon: Activity },
+    { label: "Lokalizacja", value: "Niemcy (DE)", icon: MapPin },
+]
 
 export function AboutAuctions() {
     const [price, setPrice] = useState(18658)
@@ -21,46 +67,9 @@ export function AboutAuctions() {
     const [isFinished, setIsFinished] = useState(false)
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-    const images = useMemo(() => [
-        "/audi/max-AD55987_01bdb54e3e0af8794c16fffcbf2ca28d.webp",
-        "/audi/max-AD55987_2d6cf1cc4d29426a8dc28267a693307d.webp",
-        "/audi/max-AD55987_339081aa4a32ad5ea2581b0a9375e908.webp",
-        "/audi/max-AD55987_7f553c1a461f10b679137e7a4f991b02.webp",
-        "/audi/max-AD55987_ca66144394b467109c133464308a30c5.webp",
-        "/audi/max-AD55987_dbedf5b7e4de4bc9977b9c004db8622c.webp",
-        "/audi/max-AD55987_dfb80e1c658ec4aaa94a866e2f02f8a7.webp",
-        "/audi/max-AD55987_ee56ff1e3170932847ff99740f2fd3f6.webp"
-    ], [])
-
-    const imageAlts = useMemo(() => [
-        "Audi Q5 2021 - widok z przodu na aukcji BCA",
-        "Audi Q5 - wnętrze, deska rozdzielcza i kierownica",
-        "Audi Q5 - widok z boku, profil nadwozia",
-        "Audi Q5 - tylne siedzenia i przestrzeń pasażerska",
-        "Audi Q5 - bagażnik i przestrzeń ładunkowa",
-        "Audi Q5 - widok z tyłu, lampy LED",
-        "Audi Q5 - detal felg i zawieszenia",
-        "Audi Q5 - zbliżenie na raport stanu lakieru"
-    ], [])
-
-    const particleConfigs = useMemo(() => (
-        [...Array(4)].map((_, i) => ({
-            left: `${Math.round(seededRandomFn(i + 1) * 10000) / 100}%`,
-            top: `${Math.round(seededRandomFn(i + 11) * 10000) / 100}%`,
-            duration: Math.round(seededRandomFn(i + 21) * 500 + 500) / 100,
-            delay: Math.round(seededRandomFn(i + 31) * 500) / 100,
-        }))
-    ), [])
-
-    const confettiConfigs = useMemo(() => (
-        [...Array(12)].map((_, i) => ({
-            top: `${Math.round(seededRandomFn(i + 41) * 10000) / 100}%`,
-            left: `${Math.round(seededRandomFn(i + 51) * 10000) / 100}%`,
-            duration: Math.round(seededRandomFn(i + 61) * 200 + 150) / 100,
-            repeatDelay: Math.round(seededRandomFn(i + 71) * 200) / 100,
-            colorIndex: Math.floor(seededRandomFn(i + 81) * 3),
-        }))
-    ), [])
+    // Performance optimization: track visibility to pause expensive animations
+    const sectionRef = useRef(null)
+    const isInView = useInView(sectionRef, { margin: "0px 0px 0px 0px" })
 
     const formattedPrice = useMemo(() => (
         new Intl.NumberFormat("pl-PL").format(price)
@@ -70,23 +79,40 @@ export function AboutAuctions() {
         setMounted(true)
     }, [])
 
-    // Image slider logic
+    // Image slider logic - Paused when out of view
     useEffect(() => {
-        if (!mounted) return
+        if (!mounted || !isInView) return
         const slideInterval = setInterval(() => {
             setCurrentImageIndex(prev => (prev + 1) % images.length)
         }, 3000)
         return () => clearInterval(slideInterval)
-    }, [mounted, images.length])
+    }, [mounted, isInView])
 
-    // Simulate bidding cycle
+    // Simulate bidding cycle - Paused when out of view
     useEffect(() => {
-        if (!mounted || isFinished) return
+        if (!mounted || isFinished || !isInView) return
 
         let isActive = true
         const INITIAL_TIME = 15
 
-        // Initial setup
+        // Only reset if we are starting fresh?
+        // Logic: if we scroll back, we want the simulation to run.
+        // We can keep the current state, but the simulation loop needs to be managed carefully.
+        // The original logic had local `isActive` variable.
+
+        // If we just re-run this effect, it will restart the simulation loop from where `price` is?
+        // No, `simulateBidding` sets `currentPrice = 14000` initially.
+        // So every time it comes into view, it restarts the bidding "story".
+        // This is actually good for user engagement (they see the drama).
+        // To prevent jarring reset if they scroll up and down quickly, maybe check if already finished?
+        // `isFinished` is checked in deps.
+
+        // If we want to resume, we would need to hoist state out of this effect.
+        // But for this "demo" component, restarting or continuing from a reset is acceptable.
+        // Let's stick to the original behavior: it resets when effect runs.
+        // To avoid rapid resets, we could use a timeout, but useInView handles some debouncing naturally via margin.
+
+        // Initial setup for the simulation run
         setPrice(14000)
         setStatus("winning")
         setTimeLeft(INITIAL_TIME)
@@ -143,19 +169,10 @@ export function AboutAuctions() {
             isActive = false
             clearInterval(timer)
         }
-    }, [mounted, isFinished])
-
-    const carSpecs = [
-        { label: "Przebieg", value: "151 357 km", icon: Gauge },
-        { label: "Rejestracja", value: "11/2021", icon: Calendar },
-        { label: "Moc", value: "150 kW / 204 KM", icon: Zap },
-        { label: "Paliwo", value: "Diesel", icon: Fuel },
-        { label: "Skrzynia", value: "Dwusprzęgłowa", icon: Activity },
-        { label: "Lokalizacja", value: "Niemcy (DE)", icon: MapPin },
-    ]
+    }, [mounted, isFinished, isInView])
 
     return (
-        <section className="py-16 md:py-32 text-foreground relative overflow-hidden">
+        <section ref={sectionRef} className="py-16 md:py-32 text-foreground relative overflow-hidden">
             {/* Ambient Background Glows - Optimized Layout & Performance */}
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
                 {/* Static blurred blobs instead of animated ones for better mobile perf */}
