@@ -1,0 +1,3 @@
+## 2025-02-18 - [Date Performance Bottleneck in Loops]
+**Learning:** Instantiating `new Date(dateISO)` and calling `Date.now()` inside loops (like `filter` or `sort` for blog posts) causes significant CPU overhead, particularly when handling static files dynamically on the server. Next.js performance drops when this happens during Static Site Generation (SSG) or mapping loops.
+**Action:** When filtering or sorting dates based on ISO 8601 strings (YYYY-MM-DD), pre-calculate the reference date string once (e.g., `const todayISO = new Date().toISOString()`) and use direct lexicographical string comparisons (e.g., `dateISO <= todayISO`) to bypass Date instantiation overhead.
