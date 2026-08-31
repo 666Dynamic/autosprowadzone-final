@@ -1,0 +1,3 @@
+## 2024-03-08 - [Avoid Date Instantiation in Loops]
+**Learning:** Performance & Correctness Pitfall: Computing `new Date(dateISO).getTime()` inside high-frequency loops (like filtering or sorting blog posts) creates unnecessary object instantiation overhead. Since ISO 8601 strings sort lexicographically, they can be directly compared (e.g., `(a, b) => (b.dateISO > a.dateISO ? 1 : -1)`) bypassing the need for `Date` parsing entirely.
+**Action:** When filtering or sorting data with dates stored as ISO strings (`YYYY-MM-DD` or full ISO), calculate a single reference date before the loop (`const today = new Date().toISOString()`) and use pure string comparisons instead of instantiating `Date` objects inside loops.
