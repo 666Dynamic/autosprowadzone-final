@@ -1,0 +1,16 @@
+$ next dev
+   ▲ Next.js 15.5.9
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.0.2:3000
+   - Experiments (use with caution):
+     · optimizePackageImports
+
+ ✓ Starting...
+ ✓ Ready in 2s
+ ○ Compiling /kalkulator ...
+ ✓ Compiled /kalkulator in 12.7s (1676 modules)
+ GET /kalkulator 200 in 17225ms
+ ○ Compiling / ...
+ ✓ Compiled / in 3.3s (1829 modules)
+ GET /kalkulator 200 in 976ms
+ GET / 200 in 4607ms
