@@ -13,6 +13,12 @@ const seededRandomFn = (seed: number) => {
     return x - Math.floor(x)
 }
 
+// ⚡ Bolt Performance Optimization:
+// Cached Intl.NumberFormat outside the component to prevent expensive re-instantiation
+// on every re-render (which happens frequently during the animation bidding cycle).
+// Impact: Reduces CPU overhead during high-frequency state updates.
+const plNumberFormatter = new Intl.NumberFormat("pl-PL");
+
 export function AboutAuctions() {
     const [price, setPrice] = useState(18658)
     const [status, setStatus] = useState<"winning" | "outbid">("winning")
@@ -63,7 +69,7 @@ export function AboutAuctions() {
     ), [])
 
     const formattedPrice = useMemo(() => (
-        new Intl.NumberFormat("pl-PL").format(price)
+        plNumberFormatter.format(price)
     ), [price])
 
     useEffect(() => {
