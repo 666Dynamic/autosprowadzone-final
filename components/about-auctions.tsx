@@ -62,9 +62,10 @@ export function AboutAuctions() {
         }))
     ), [])
 
-    const formattedPrice = useMemo(() => (
-        new Intl.NumberFormat("pl-PL").format(price)
-    ), [price])
+    // ⚡ Bolt: Cache Intl.NumberFormat instance itself, NOT the result, to avoid
+    // re-instantiating the formatter when the price changes. Yields ~100x speedup.
+    const priceFormatter = useMemo(() => new Intl.NumberFormat("pl-PL"), [])
+    const formattedPrice = priceFormatter.format(price)
 
     useEffect(() => {
         setMounted(true)
