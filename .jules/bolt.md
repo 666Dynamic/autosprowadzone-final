@@ -1,0 +1,4 @@
+
+## 2025-02-27 - [Performance] Cache Intl.NumberFormat Instantiations
+**Learning:** `Intl.NumberFormat` instantiation is notoriously expensive. Creating new instances inside frequently executing functions (like `formatCurrency`) or inside fast render loops (like animated components updating `price` states multiple times a second) introduces significant CPU overhead. Furthermore, wrapping the formatting in `useMemo` isn't optimal if the dependency array changes very frequently, as it forces the string recalculation anyway.
+**Action:** Extract and cache `Intl.NumberFormat` instantiations in the module scope. For standard string generation in React components from rapidly changing numerical state, formatting directly using a cached module-scoped formatter instance is much more performant than generating a new formatter or relying on `useMemo` for frequently invalidating state.
