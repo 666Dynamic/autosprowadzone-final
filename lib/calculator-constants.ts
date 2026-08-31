@@ -44,18 +44,33 @@ export function validateExchangeRate(rate: number): boolean {
   return !isNaN(rate) && rate > 0 && rate < 10
 }
 
+// ⚡ Bolt Optimization: Cache Intl.NumberFormat instances
+// Instantiating Intl.NumberFormat is computationally expensive.
+// By caching these formatters via a Map, we avoid recreating them on every component re-render.
+// This significantly improves performance during rapid state updates (e.g., typing in the calculator).
+const currencyFormatters = new Map<string, Intl.NumberFormat>()
+
 export function formatCurrency(value: number, currency: 'PLN' | 'EUR' = 'PLN'): string {
-  return new Intl.NumberFormat('pl-PL', {
-    style: 'currency',
-    currency,
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(value)
+  let formatter = currencyFormatters.get(currency)
+  if (!formatter) {
+    formatter = new Intl.NumberFormat('pl-PL', {
+      style: 'currency',
+      currency,
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    })
+    currencyFormatters.set(currency, formatter)
+  }
+  return formatter.format(value)
 }
 
+// ⚡ Bolt Optimization: Cache static Intl.NumberFormat
+// Reuses a single instance for plain number formatting to eliminate instantiation overhead.
+const numberFormatter = new Intl.NumberFormat('pl-PL', {
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 0,
+})
+
 export function formatNumber(value: number): string {
-  return new Intl.NumberFormat('pl-PL', {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(value)
+  return numberFormatter.format(value)
 }
