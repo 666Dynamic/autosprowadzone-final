@@ -13,6 +13,10 @@ const seededRandomFn = (seed: number) => {
     return x - Math.floor(x)
 }
 
+// ⚡ Bolt Performance Optimization:
+// Cache Intl.NumberFormat instance globally outside the component
+const PL_NUMBER_FORMATTER = new Intl.NumberFormat("pl-PL")
+
 export function AboutAuctions() {
     const [price, setPrice] = useState(18658)
     const [status, setStatus] = useState<"winning" | "outbid">("winning")
@@ -62,9 +66,9 @@ export function AboutAuctions() {
         }))
     ), [])
 
-    const formattedPrice = useMemo(() => (
-        new Intl.NumberFormat("pl-PL").format(price)
-    ), [price])
+    // ⚡ Bolt Performance Optimization:
+    // Extract formattedPrice to use a cached formatNumber instead of inline new Intl.NumberFormat
+    const formattedPrice = PL_NUMBER_FORMATTER.format(price)
 
     useEffect(() => {
         setMounted(true)
