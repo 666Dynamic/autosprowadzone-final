@@ -44,18 +44,28 @@ export function validateExchangeRate(rate: number): boolean {
   return !isNaN(rate) && rate > 0 && rate < 10
 }
 
+// Cache for Intl.NumberFormat instances to prevent expensive instantiations during rapid React re-renders.
+// Improves CPU performance measurably, especially in loops or frequently updated components.
+const currencyFormatters: Record<string, Intl.NumberFormat> = {}
+
 export function formatCurrency(value: number, currency: 'PLN' | 'EUR' = 'PLN'): string {
-  return new Intl.NumberFormat('pl-PL', {
-    style: 'currency',
-    currency,
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(value)
+  if (!currencyFormatters[currency]) {
+    currencyFormatters[currency] = new Intl.NumberFormat('pl-PL', {
+      style: 'currency',
+      currency,
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    })
+  }
+  return currencyFormatters[currency].format(value)
 }
 
+// Cached formatter for standard numbers
+const numberFormatter = new Intl.NumberFormat('pl-PL', {
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 0,
+})
+
 export function formatNumber(value: number): string {
-  return new Intl.NumberFormat('pl-PL', {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(value)
+  return numberFormatter.format(value)
 }
