@@ -44,18 +44,42 @@ export function validateExchangeRate(rate: number): boolean {
   return !isNaN(rate) && rate > 0 && rate < 10
 }
 
+// Cache Intl.NumberFormat instances to prevent expensive re-instantiation on every render
+const formatters = new Map<string, Intl.NumberFormat>()
+
 export function formatCurrency(value: number, currency: 'PLN' | 'EUR' = 'PLN'): string {
-  return new Intl.NumberFormat('pl-PL', {
-    style: 'currency',
-    currency,
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(value)
+  let formatter = formatters.get(currency)
+  if (!formatter) {
+    formatter = new Intl.NumberFormat('pl-PL', {
+      style: 'currency',
+      currency,
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    })
+    formatters.set(currency, formatter)
+  }
+  return formatter.format(value)
+}
+
+// Cache the default number formatter
+let numberFormatter: Intl.NumberFormat | null = null
+
+// Cache an additional formatter without digit restrictions for general use
+let generalNumberFormatter: Intl.NumberFormat | null = null
+
+export function formatGeneralNumber(value: number): string {
+  if (!generalNumberFormatter) {
+    generalNumberFormatter = new Intl.NumberFormat('pl-PL')
+  }
+  return generalNumberFormatter.format(value)
 }
 
 export function formatNumber(value: number): string {
-  return new Intl.NumberFormat('pl-PL', {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(value)
+  if (!numberFormatter) {
+    numberFormatter = new Intl.NumberFormat('pl-PL', {
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    })
+  }
+  return numberFormatter.format(value)
 }
