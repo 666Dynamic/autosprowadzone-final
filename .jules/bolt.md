@@ -1,0 +1,3 @@
+## 2024-05-30 - [Performance] Cache Intl.NumberFormat instances
+**Learning:** `Intl.NumberFormat` instantiation is notoriously slow and CPU-intensive in JavaScript. Repeatedly instantiating it inside frequently called utility functions or React render loops (like animated components where values update rapidly) causes significant performance degradation. This is a common performance pitfall.
+**Action:** Always cache `Intl.NumberFormat` instances. In utility files, use module-scoped variables or static Maps. In React components, use a module-scoped variable if the locale is static, or `useMemo` if the locale depends on component state, but do *not* put the value being formatted into the `useMemo` dependency array (which defeats the caching).
