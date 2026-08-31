@@ -195,6 +195,10 @@ export default function RootLayout({
         <meta name="format-detection" content="telephone=no" />
         <link rel="manifest" href="/manifest.json" />
 
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <Script id="gtag-init" strategy="afterInteractive">
           {`
             if (typeof window !== 'undefined' && localStorage.getItem('cookie-consent') === 'accepted') {
@@ -216,10 +220,6 @@ export default function RootLayout({
             }
           `}
         </Script>
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
