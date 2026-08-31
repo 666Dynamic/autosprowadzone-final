@@ -1,0 +1,3 @@
+## 2024-06-27 - [Performance Issue] Expensive Intl.NumberFormat Instantiation
+**Learning:** Instantiating `Intl.NumberFormat` is a surprisingly expensive CPU operation in V8/JavaScript. Putting it inside formatters called in rapid loops or inside a React `useMemo` where the dependency (like `price` in an auction simulator) changes rapidly negates the benefit of `useMemo` and causes significant performance overhead.
+**Action:** Always cache `Intl.NumberFormat` (and other `Intl` constructors like `Intl.DateTimeFormat`) at the module scope or using a static map, rather than creating new instances per function call or inside frequently updating React components.
