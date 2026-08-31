@@ -13,6 +13,10 @@ const seededRandomFn = (seed: number) => {
     return x - Math.floor(x)
 }
 
+// Cache Intl.NumberFormat instance to avoid recreating it on every render,
+// especially during rapid price updates in the auction animation
+const priceFormatter = new Intl.NumberFormat("pl-PL")
+
 export function AboutAuctions() {
     const [price, setPrice] = useState(18658)
     const [status, setStatus] = useState<"winning" | "outbid">("winning")
@@ -62,9 +66,7 @@ export function AboutAuctions() {
         }))
     ), [])
 
-    const formattedPrice = useMemo(() => (
-        new Intl.NumberFormat("pl-PL").format(price)
-    ), [price])
+    const formattedPrice = priceFormatter.format(price)
 
     useEffect(() => {
         setMounted(true)

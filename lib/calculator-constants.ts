@@ -44,18 +44,30 @@ export function validateExchangeRate(rate: number): boolean {
   return !isNaN(rate) && rate > 0 && rate < 10
 }
 
-export function formatCurrency(value: number, currency: 'PLN' | 'EUR' = 'PLN'): string {
-  return new Intl.NumberFormat('pl-PL', {
+// Formatters cache to prevent expensive Intl.NumberFormat instantiations
+const formatters = {
+  currencyPLN: new Intl.NumberFormat('pl-PL', {
     style: 'currency',
-    currency,
+    currency: 'PLN',
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
-  }).format(value)
+  }),
+  currencyEUR: new Intl.NumberFormat('pl-PL', {
+    style: 'currency',
+    currency: 'EUR',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }),
+  number: new Intl.NumberFormat('pl-PL', {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }),
+} as const;
+
+export function formatCurrency(value: number, currency: 'PLN' | 'EUR' = 'PLN'): string {
+  return (currency === 'EUR' ? formatters.currencyEUR : formatters.currencyPLN).format(value);
 }
 
 export function formatNumber(value: number): string {
-  return new Intl.NumberFormat('pl-PL', {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(value)
+  return formatters.number.format(value)
 }
