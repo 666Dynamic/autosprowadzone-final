@@ -1,0 +1,3 @@
+## 2024-05-18 - Caching Intl Formatter Instances
+**Learning:** Instantiating `Intl.NumberFormat` (or `Intl.DateTimeFormat`) is relatively expensive. In components like `about-auctions.tsx` or utilities like `calculator-constants.ts`, repeated instantiations on every re-render or format call can cause performance overhead. Furthermore, caching formatters inside `useMemo` isn't optimal if the dependencies change frequently (e.g., dynamically updated prices in a loop).
+**Action:** Always extract and cache `Intl` instances at the module level when possible, especially if the locale and configuration are static. Instead of creating them inside utility functions or component bodies, define them as constants outside the execution scope.
