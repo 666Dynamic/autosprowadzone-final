@@ -1,0 +1,3 @@
+## 2025-02-27 - [Optimize Date parsing in loops]
+**Learning:** `new Date()` parsing inside tight loops (like filtering or sorting thousands of posts/items) can be significantly slower than simple string comparisons. In JS, ISO 8601 strings (YYYY-MM-DD or YYYY-MM-DDTHH:mm:ssZ) are lexicographically sortable and comparable directly.
+**Action:** When filtering or sorting dates represented as ISO strings, calculate `todayISO = new Date().toISOString()` ONCE outside the loop, and use `str1 > str2` or `(a, b) => b.dateISO > a.dateISO ? 1 : ...` to compare dates directly. This avoids expensive Date parsing on every iteration.
