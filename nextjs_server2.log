@@ -1,0 +1,15 @@
+
+> sprowadzoneauto@1.0.0 dev
+> next dev
+
+   ▲ Next.js 15.5.9
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.0.2:3000
+   - Experiments (use with caution):
+     · optimizePackageImports
+
+ ✓ Starting...
+ ✓ Ready in 1980ms
+ ○ Compiling /aukcje ...
+ ✓ Compiled /aukcje in 11.1s (1383 modules)
+ GET /aukcje 200 in 14161ms
