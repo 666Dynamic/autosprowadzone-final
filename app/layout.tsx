@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://sprowadzoneauto.pl'),
+  metadataBase: new URL('https://www.sprowadzoneauto.pl'),
   title: {
     default: "Sprowadzanie Aut z Niemiec na Zamówienie — Aukcje B2B | SprowadzoneAuto.pl",
     template: "%s | SprowadzoneAuto.pl",
@@ -37,12 +37,12 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pl_PL",
-    url: "https://sprowadzoneauto.pl",
+    url: "https://www.sprowadzoneauto.pl",
     title: "Sprowadzanie Aut z Niemiec na Zamówienie — Aukcje B2B | SprowadzoneAuto.pl",
     description: "Sprowadzamy auta z Niemiec z aukcji B2B (BCA, AUTO1). Dostęp do zamkniętych platform. Polska obsługa, stała prowizja 2500 zł. Weryfikacja i transport.",
     siteName: "SprowadzoneAuto.pl",
     images: [{
-      url: 'https://sprowadzoneauto.pl/opengraph-image',
+      url: 'https://www.sprowadzoneauto.pl/opengraph-image',
       width: 1200,
       height: 630,
       alt: 'SprowadzoneAuto.pl - Import Aut z Niemiec, Aukcje B2B',
@@ -54,10 +54,10 @@ export const metadata: Metadata = {
     description: "Sprowadzamy auta z Niemiec z aukcji B2B (BCA, AUTO1). Dostęp do zamkniętych platform. Polska obsługa, stała prowizja 2500 zł.",
   },
   alternates: {
-    canonical: "https://sprowadzoneauto.pl",
+    canonical: "https://www.sprowadzoneauto.pl",
     languages: {
-      'pl': "https://sprowadzoneauto.pl",
-      'x-default': "https://sprowadzoneauto.pl",
+      'pl': "https://www.sprowadzoneauto.pl",
+      'x-default': "https://www.sprowadzoneauto.pl",
     },
   },
   robots: {
@@ -73,8 +73,8 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "SprowadzoneAuto.pl",
-  "url": "https://sprowadzoneauto.pl",
-  "logo": "https://sprowadzoneauto.pl/icon.svg",
+  "url": "https://www.sprowadzoneauto.pl",
+  "logo": "https://www.sprowadzoneauto.pl/icon.svg",
   "description": "Profesjonalny import samochodów z Niemiec oraz weryfikacja stanu technicznego pojazdów na terenie Niemiec.",
   "address": {
     "@type": "PostalAddress",
@@ -106,8 +106,8 @@ const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "AutoDealer",
   "name": "SprowadzoneAuto.pl (Miami Autocenter GmbH)",
-  "image": "https://sprowadzoneauto.pl/opengraph-image",
-  "url": "https://sprowadzoneauto.pl",
+  "image": "https://www.sprowadzoneauto.pl/opengraph-image",
+  "url": "https://www.sprowadzoneauto.pl",
   "telephone": "+49 156 79264391",
   "address": {
     "@type": "PostalAddress",
@@ -167,7 +167,7 @@ const serviceJsonLd = {
     "@type": "Offer",
     "price": "2500",
     "priceCurrency": "PLN",
-    "url": "https://sprowadzoneauto.pl/kontakt",
+    "url": "https://www.sprowadzoneauto.pl/kontakt",
     "availability": "https://schema.org/InStock"
   }
 }

@@ -10,7 +10,7 @@ export default function robots(): MetadataRoute.Robots {
             },
         ],
         sitemap: [
-            'https://sprowadzoneauto.pl/sitemap.xml',
+            'https://www.sprowadzoneauto.pl/sitemap.xml',
         ],
     }
 }

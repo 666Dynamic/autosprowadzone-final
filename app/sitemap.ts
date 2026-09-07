@@ -1,36 +1,32 @@
 import { MetadataRoute } from 'next'
-import fs from 'fs'
-import path from 'path'
-
-// WYMUSZAMY Node.js runtime (fs nie działa w Edge)
-export const runtime = 'nodejs'
 
 export const revalidate = 3600
 
-function getBlogSlugs() {
-    try {
-        const postsDir = path.join(process.cwd(), 'content', 'blog')
-        if (!fs.existsSync(postsDir)) {
-            console.error('Sitemap: content/blog not found at', postsDir)
-            return []
-        }
-        const files = fs.readdirSync(postsDir)
-        return files
-            .filter(f => f.endsWith('.mdx') || f.endsWith('.md'))
-            .map(f => f.replace(/\.(mdx|md)$/, ''))
-    } catch (e) {
-        console.error('Sitemap error:', e)
-        return []
-    }
-}
+const blogSlugs = [
+    'akcyza-2026-stawki',
+    'auta-flotowe-z-niemiec-jak-rozpoznac-dobry-egzemplarz',
+    'auta-poleasingowe-z-niemiec-czy-warto',
+    'auto-po-szkodzie-z-niemiec-czy-warto',
+    'auto-z-niemiec-od-osoby-prywatnej-czy-z-aukcji',
+    'auto1-jak-licytowac',
+    'bca-europe-przewodnik',
+    'czy-warto-sprowadzic-hybryde-z-niemiec',
+    'diesel-benzyna-czy-hybryda-z-niemiec',
+    'ile-trwa-sprowadzenie-auta-z-niemiec',
+    'import-samemu-czy-przez-posrednika',
+    'jak-czytac-raport-szkod-i-raport-aukcyjny',
+    'jak-sprawdzic-auto-z-niemiec-przed-zakupem',
+    'jak-sprawdzic-przebieg-auta-z-niemiec',
+    'koszt-sprowadzenia-auta-z-niemiec-2026',
+    'openlane-adesa-jak-kupowac-auto',
+    'oplaty-aukcyjne-wyjasnienie',
+    'oszustwa-przy-sprowadzaniu-aut-z-niemiec',
+    'raporty-rzeczoznawcow-standardy',
+    'rejestracja-auta-z-niemiec-2026',
+]
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const baseUrl = 'https://sprowadzoneauto.pl'
-    const slugs = getBlogSlugs()
-    
-    console.log(`Sitemap: ${slugs.length} blog posts found`)
-    console.log('Slugs:', slugs) // Zobaczysz w logach Vercel
-
+    const baseUrl = 'https://www.sprowadzoneauto.pl'
     const currentDate = new Date()
 
     const mainPages: MetadataRoute.Sitemap = [
@@ -47,7 +43,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         { url: `${baseUrl}/datenschutz`, lastModified: currentDate, changeFrequency: 'yearly', priority: 0.3 },
     ]
 
-    const articles: MetadataRoute.Sitemap = slugs.map((slug) => ({
+    const articles: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
         url: `${baseUrl}/blog/${slug}`,
         lastModified: currentDate,
         changeFrequency: 'monthly' as const,

@@ -5,12 +5,12 @@ export const metadata: Metadata = {
     title: "Kalkulator Akcyzy 2026 — Koszt Importu Auta z Niemiec",
     description: "Oblicz całkowity koszt sprowadzenia auta z Niemiec w 2026 roku. Sprawdź aktualne stawki akcyzy (3.1% / 18.6%), koszty rejestracji, transportu i prowizję pośrednika. Precyzyjne wyliczenie online.",
     alternates: {
-        canonical: "https://sprowadzoneauto.pl/kalkulator",
+        canonical: "https://www.sprowadzoneauto.pl/kalkulator",
     },
     openGraph: {
         title: "Kalkulator Akcyzy 2026 — Koszt Importu Auta",
         description: "Oblicz całkowity koszt sprowadzenia auta z Niemiec. Aktualne stawki akcyzy, koszty rejestracji i transportu.",
-        url: "https://sprowadzoneauto.pl/kalkulator",
+        url: "https://www.sprowadzoneauto.pl/kalkulator",
     },
 }
 
@@ -26,13 +26,13 @@ export default function CalculatorPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Strona Główna",
-                "item": "https://sprowadzoneauto.pl"
+                "item": "https://www.sprowadzoneauto.pl"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Kalkulator",
-                "item": "https://sprowadzoneauto.pl/kalkulator"
+                "item": "https://www.sprowadzoneauto.pl/kalkulator"
             }
         ]
     }

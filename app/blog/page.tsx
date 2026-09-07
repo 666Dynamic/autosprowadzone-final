@@ -20,15 +20,15 @@ export const metadata: Metadata = {
         "rejestracja auta z niemiec",
     ],
     alternates: {
-        canonical: "https://sprowadzoneauto.pl/blog",
+        canonical: "https://www.sprowadzoneauto.pl/blog",
     },
     openGraph: {
         title: "Blog — Poradnik Importera Aut z Niemiec",
         description: "Artykuły o sprowadzaniu samochodów z Niemiec, Belgii i Holandii. Przewodniki po aukcjach BCA i AUTO1. Koszty importu, procedury rejestracji, kalkulator akcyzy.",
-        url: "https://sprowadzoneauto.pl/blog",
+        url: "https://www.sprowadzoneauto.pl/blog",
         type: "website",
         images: [{
-            url: 'https://sprowadzoneauto.pl/opengraph-image',
+            url: 'https://www.sprowadzoneauto.pl/opengraph-image',
             width: 1200,
             height: 630,
             alt: 'SprowadzoneAuto.pl Blog - Poradnik Importera Aut z Niemiec',

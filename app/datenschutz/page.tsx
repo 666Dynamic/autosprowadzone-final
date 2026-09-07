@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: "Datenschutzerklärung",
     description: "Datenschutzerklärung und Informationen zur Datenverarbeitung gemäß DSGVO. Miami Autocenter GmbH, Osterholz-Scharmbeck.",
     alternates: {
-        canonical: "https://sprowadzoneauto.pl/datenschutz",
+        canonical: "https://www.sprowadzoneauto.pl/datenschutz",
     },
 }
 

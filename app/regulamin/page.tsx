@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Regulamin Świadczenia Usług",
   description: "Warunki świadczenia usług pośrednictwa w zakupie samochodów, weryfikacji pojazdu i organizacji transportu przez SprowadzoneAuto.pl (Miami Autocenter GmbH).",
   alternates: {
-    canonical: "https://sprowadzoneauto.pl/regulamin",
+    canonical: "https://www.sprowadzoneauto.pl/regulamin",
   },
 }
 

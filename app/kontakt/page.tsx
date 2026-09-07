@@ -6,15 +6,15 @@ export const metadata: Metadata = {
     title: "Kontakt — Zapytaj o Import Auta z Niemiec",
     description: "Skontaktuj się z nami w sprawie importu aut z Niemiec, weryfikacji pojazdu lub dostępu do aukcji B2B. Odpowiadamy 7 dni w tygodniu, 7:00–22:00. Telefon PL/DE, WhatsApp, e-mail.",
     alternates: {
-        canonical: "https://sprowadzoneauto.pl/kontakt",
+        canonical: "https://www.sprowadzoneauto.pl/kontakt",
     },
     openGraph: {
         title: "Kontakt — Zapytaj o Import Auta z Niemiec",
         description: "Skontaktuj się w sprawie importu, weryfikacji auta lub aukcji B2B. Odpowiadamy 7:00–22:00.",
-        url: "https://sprowadzoneauto.pl/kontakt",
+        url: "https://www.sprowadzoneauto.pl/kontakt",
         type: "website",
         images: [{
-            url: 'https://sprowadzoneauto.pl/opengraph-image',
+            url: 'https://www.sprowadzoneauto.pl/opengraph-image',
             width: 1200,
             height: 630,
             alt: 'Kontakt - SprowadzoneAuto.pl',
@@ -31,13 +31,13 @@ export default function ContactPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Strona Główna",
-                "item": "https://sprowadzoneauto.pl"
+                "item": "https://www.sprowadzoneauto.pl"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Kontakt",
-                "item": "https://sprowadzoneauto.pl/kontakt"
+                "item": "https://www.sprowadzoneauto.pl/kontakt"
             }
         ]
     }

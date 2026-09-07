@@ -35,18 +35,18 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
             'max-video-preview': -1,
         },
         alternates: {
-            canonical: `https://sprowadzoneauto.pl/blog/${slug}`,
+            canonical: `https://www.sprowadzoneauto.pl/blog/${slug}`,
         },
         openGraph: {
             title: `${post.title} | SprowadzoneAuto.pl`,
             description: post.excerpt,
             type: "article",
             publishedTime: post.dateISO,
-            url: `https://sprowadzoneauto.pl/blog/${slug}`,
+            url: `https://www.sprowadzoneauto.pl/blog/${slug}`,
             authors: ['SprowadzoneAuto.pl'],
             tags: post.keywords || [],
             images: [{
-                url: 'https://sprowadzoneauto.pl/opengraph-image',
+                url: 'https://www.sprowadzoneauto.pl/opengraph-image',
                 width: 1200,
                 height: 630,
                 alt: post.title,
@@ -77,7 +77,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
     const allPosts = await getAllPosts()
 
-    const baseUrl = "https://sprowadzoneauto.pl"
+    const baseUrl = "https://www.sprowadzoneauto.pl"
     const postUrl = `${baseUrl}/blog/${post.slug}`
     const breadcrumbJsonLd = {
         "@context": "https://schema.org",

@@ -7,15 +7,15 @@ export const metadata: Metadata = {
     title: "Weryfikacja Aut w Niemczech — Inspekcja Przed Zakupem",
     description: "Sprawdzenie auta przed zakupem w Niemczech. Inspekcja techniczna, pomiar lakieru, diagnostyka komputerowa. Obsługujemy region Bremen i całe Niemcy. Raport ze zdjęciami w 24h.",
     alternates: {
-        canonical: "https://sprowadzoneauto.pl/weryfikacja",
+        canonical: "https://www.sprowadzoneauto.pl/weryfikacja",
     },
     openGraph: {
         title: "Weryfikacja Aut w Niemczech — Inspekcja Przed Zakupem",
         description: "Inspekcja techniczna auta w Niemczech: pomiar lakieru, diagnostyka, raport ze zdjęciami.",
-        url: "https://sprowadzoneauto.pl/weryfikacja",
+        url: "https://www.sprowadzoneauto.pl/weryfikacja",
         type: "website",
         images: [{
-            url: 'https://sprowadzoneauto.pl/opengraph-image',
+            url: 'https://www.sprowadzoneauto.pl/opengraph-image',
             width: 1200,
             height: 630,
             alt: 'Weryfikacja Aut w Niemczech - Inspekcja Przed Zakupem',
@@ -32,13 +32,13 @@ export default function VerificationPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Strona Główna",
-                "item": "https://sprowadzoneauto.pl"
+                "item": "https://www.sprowadzoneauto.pl"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Weryfikacja",
-                "item": "https://sprowadzoneauto.pl/weryfikacja"
+                "item": "https://www.sprowadzoneauto.pl/weryfikacja"
             }
         ]
     }

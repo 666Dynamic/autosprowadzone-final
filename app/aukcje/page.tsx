@@ -8,15 +8,15 @@ export const metadata: Metadata = {
     title: "Aukcje Samochodowe B2B z Europy | Auta Poleasingowe",
     description: "Zyskaj dostęp do BCA, AUTO1 i 40+ zamkniętych platform aukcyjnych w całej Europie. Sprawdź, jak kupić auto poleasingowe 20% taniej niż na portalach. Ekspercka weryfikacja i transport.",
     alternates: {
-        canonical: "https://sprowadzoneauto.pl/aukcje",
+        canonical: "https://www.sprowadzoneauto.pl/aukcje",
     },
     openGraph: {
         title: "Aukcje Samochodowe B2B z Europy | Auta Poleasingowe",
         description: "Dostęp do BCA, AUTO1 i 40+ zamkniętych platform aukcyjnych. Auta poleasingowe 20% taniej niż na portalach.",
-        url: "https://sprowadzoneauto.pl/aukcje",
+        url: "https://www.sprowadzoneauto.pl/aukcje",
         type: "website",
         images: [{
-            url: 'https://sprowadzoneauto.pl/opengraph-image',
+            url: 'https://www.sprowadzoneauto.pl/opengraph-image',
             width: 1200,
             height: 630,
             alt: 'Aukcje Samochodowe B2B - Auta Poleasingowe',
@@ -66,13 +66,13 @@ export default function AuctionsPage() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Strona Główna",
-                "item": "https://sprowadzoneauto.pl"
+                "item": "https://www.sprowadzoneauto.pl"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Aukcje B2B",
-                "item": "https://sprowadzoneauto.pl/aukcje"
+                "item": "https://www.sprowadzoneauto.pl/aukcje"
             }
         ]
     }

@@ -5,12 +5,12 @@ export const metadata: Metadata = {
     title: "FAQ — Najczęściej Zadawane Pytania o Imporcie Aut",
     description: "Odpowiedzi na pytania o import aut z Niemiec: koszty sprowadzenia, stawki akcyzy 2026, czas transportu, procedury rejestracji, gwarancja i depozyt. Wszystko w jednym miejscu.",
     alternates: {
-        canonical: "https://sprowadzoneauto.pl/faq",
+        canonical: "https://www.sprowadzoneauto.pl/faq",
     },
     openGraph: {
         title: "FAQ — Najczęściej Zadawane Pytania o Imporcie Aut",
         description: "Odpowiedzi na pytania o import aut z Niemiec: koszty, akcyza, transport, rejestracja.",
-        url: "https://sprowadzoneauto.pl/faq",
+        url: "https://www.sprowadzoneauto.pl/faq",
     },
 }
 

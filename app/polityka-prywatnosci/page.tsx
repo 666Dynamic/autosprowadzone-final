@@ -5,7 +5,7 @@ export const metadata: Metadata = {
     title: "Polityka Prywatności i Impressum",
     description: "Informacje o administratorze danych, polityce prywatności i danych firmy Miami Autocenter GmbH (Impressum).",
     alternates: {
-        canonical: "https://sprowadzoneauto.pl/polityka-prywatnosci",
+        canonical: "https://www.sprowadzoneauto.pl/polityka-prywatnosci",
     },
 }
 

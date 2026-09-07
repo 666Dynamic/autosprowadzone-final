@@ -16,15 +16,15 @@ export const metadata: Metadata = {
         'max-video-preview': -1,
     },
     alternates: {
-        canonical: "https://sprowadzoneauto.pl/o-nas",
+        canonical: "https://www.sprowadzoneauto.pl/o-nas",
     },
     openGraph: {
         title: "O Nas — Miami Autocenter GmbH | SprowadzoneAuto.pl",
         description: "Poznaj Miami Autocenter GmbH. Zaufany partner w imporcie aut z Niemiec od 2023. HRB 211101, Osterholz-Scharmbeck.",
-        url: "https://sprowadzoneauto.pl/o-nas",
+        url: "https://www.sprowadzoneauto.pl/o-nas",
         type: "website",
         images: [{
-            url: 'https://sprowadzoneauto.pl/opengraph-image',
+            url: 'https://www.sprowadzoneauto.pl/opengraph-image',
             width: 1200,
             height: 630,
             alt: 'Miami Autocenter GmbH - Import Aut z Niemiec',
