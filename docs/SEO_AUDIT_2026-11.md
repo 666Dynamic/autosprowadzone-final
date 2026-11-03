@@ -150,3 +150,14 @@ Kolejność według wpływu:
 4. **Linki z treścią** — artykuły gościnne lub wywiady na portalach motoryzacyjnych (autokult, moto.pl, autoświat — sekcje poradnikowe), lokalne media, fora (forum.autoswiat, motocaina), grupy na Facebooku o imporcie aut — wartościowe odpowiedzi z linkiem do poradnika, nie spam.
 5. **Prawdziwe realizacje i opinie** — podstrona „Realizacje” z autami sprowadzonymi dla klientów (model, rocznik, cena aukcji vs cena w Polsce, zdjęcia przy odbiorze). To też dobry materiał do social media.
 6. **YouTube / Facebook** — krótkie filmy „ile kosztowało sprowadzenie X”, linkujące do kalkulatora i artykułów. Wyniki z wideo i grup FB już są w top 10 na główną frazę.
+
+## 10. Etap 5 (3.11.2026) — jakość treści i aktualność danych
+
+- **Nieaktualne ceny badania technicznego** — od 19.09.2025 (Dz.U. 2025 poz. 1223) badanie osobówki kosztuje **149 zł** (było 98 zł), dopłata LPG **96 zł** (było 63 zł), po wypadku **143 zł** (było 94 zł). Poprawione w kalkulatorze (`CALCULATOR_CONFIG`) i we wszystkich artykułach.
+- **Rejestracja auta z Niemiec** — przepisana na instrukcję krok po kroku: terminy (14 dni akcyza, 30 dni rejestracja), komplet dokumentów, obowiązkowe badanie przed pierwszą rejestracją (wcześniej artykuł mylnie sugerował, że „może być potrzebne”), koszty, checklista.
+- **Opłaty aukcyjne** — przepisane; usunięte sprzeczności z resztą strony (stawki BCA, transport 600–800 € vs 1500–3500 zł, zbędne „świadectwo pochodzenia” przy zakupie w UE). Przykład wyliczenia spójny z kalkulatorem, dodany VAT (procedura marży vs faktura z VAT) i postój.
+- **Diesel / benzyna / hybryda** — tabela akcyzy dla każdego napędu na przykładzie auta za 20 000 €, ryzyka techniczne napędów, uwaga o miękkich hybrydach.
+- **Hybrydy** — tabela stawek HEV / PHEV / MHEV i lista popularnych modeli z ich stawką akcyzy.
+- **BreadcrumbList** na `/faq`, `/o-nas`, `/blog` (pozostałe podstrony już miały).
+- **PageSpeed (mobile):** Performance 96, Accessibility 95, Best Practices 100, SEO 100; LCP 2,6 s, CLS 0 — wydajność nie jest problemem.
+- IndexNow wysłany ponownie po wdrożeniu (40 adresów).
