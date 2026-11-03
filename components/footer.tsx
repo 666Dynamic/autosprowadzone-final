@@ -36,17 +36,17 @@ export function Footer() {
                 <div className="flex flex-col space-y-3">
                     <h3 className="font-black footer-heading">Kontakt</h3>
                     <div className="flex flex-col gap-2">
-                        <a href="tel:+4915679264391" className="text-sm footer-text hover:text-primary transition-colors flex items-center gap-3">
+                        <a href="https://wa.me/4915679264391" target="_blank" rel="noopener noreferrer" className="text-sm footer-text hover:text-primary transition-colors flex items-center gap-3">
                             <span className="text-lg leading-none">🇩🇪</span>
                             <div>
-                                <span className="font-bold text-xs uppercase tracking-wider block footer-text-emphasis mb-0.5">Tel / WhatsApp</span>
+                                <span className="font-bold text-xs uppercase tracking-wider block footer-text-emphasis mb-0.5">WhatsApp / Tel</span>
                                 <span className="font-medium">+49 156 79264391</span>
                             </div>
                         </a>
-                        <a href="tel:+48780010848" className="text-sm footer-text hover:text-primary transition-colors flex items-center gap-3">
+                        <a href="https://wa.me/48780010848" target="_blank" rel="noopener noreferrer" className="text-sm footer-text hover:text-primary transition-colors flex items-center gap-3">
                             <span className="text-lg leading-none">🇵🇱</span>
                             <div>
-                                <span className="font-bold text-xs uppercase tracking-wider block footer-text-emphasis mb-0.5">Tel / WhatsApp</span>
+                                <span className="font-bold text-xs uppercase tracking-wider block footer-text-emphasis mb-0.5">WhatsApp / Tel</span>
                                 <span className="font-medium">+48 780 010 848</span>
                             </div>
                         </a>
@@ -55,7 +55,7 @@ export function Footer() {
                         kontakt@sprowadzoneauto.pl
                     </a>
                     <p className="text-xs footer-text-emphasis uppercase tracking-widest font-bold">
-                        Szybki kontakt 7:00–22:00. Poza tymi godzinami zostaw wiadomość.
+                        Telefon: pn–pt 9:00–17:00. Wiadomości WhatsApp i formularz — 24/7.
                     </p>
                     <div className="flex gap-4 mt-4">
                         <a href="https://www.facebook.com/sprowadzoneauto/" target="_blank" rel="noopener noreferrer" aria-label="Odwiedź nasz profil na Facebooku" className="footer-text hover:text-[#1877F2] transition-colors">

@@ -4,13 +4,13 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
     title: "Kontakt — Zapytaj o Import Auta z Niemiec",
-    description: "Zapytaj o import auta z Niemiec, weryfikację pojazdu lub aukcje B2B. Odpowiadamy 7 dni w tygodniu, 7:00–22:00 – telefon PL/DE, WhatsApp, e-mail.",
+    description: "Zapytaj o import auta z Niemiec, weryfikację lub aukcje B2B. Napisz na WhatsApp lub przez formularz – telefon pn–pt 9:00–17:00.",
     alternates: {
         canonical: "https://www.sprowadzoneauto.pl/kontakt",
     },
     openGraph: {
         title: "Kontakt — Zapytaj o Import Auta z Niemiec",
-        description: "Skontaktuj się w sprawie importu, weryfikacji auta lub aukcji B2B. Odpowiadamy 7:00–22:00.",
+        description: "Skontaktuj się w sprawie importu, weryfikacji auta lub aukcji B2B. Telefon pn–pt 9:00–17:00, wiadomości 24/7.",
         url: "https://www.sprowadzoneauto.pl/kontakt",
         type: "website",
         images: [{
@@ -54,7 +54,7 @@ export default function ContactPage() {
                 <div className="text-center max-w-2xl mx-auto mb-20 space-y-4">
                     <h1 className="text-3xl md:text-5xl font-black tracking-tighter uppercase italic line-clamp-2">Skontaktuj się <span className="text-primary not-italic">z nami</span></h1>
                     <p className="text-lg text-muted-foreground font-medium">
-                        Masz pytania? Chcesz sprowadzić auto? Jesteśmy do Twojej dyspozycji telefonicznie, na WhatsAppie oraz w naszej społeczności na Facebooku.
+                        Masz pytania? Chcesz sprowadzić auto? Najszybciej odpowiadamy na wiadomości — napisz na WhatsAppie lub wypełnij formularz poniżej (opisz auto i budżet). Rozmowy telefoniczne prowadzimy od poniedziałku do piątku w godzinach 9:00–17:00.
                     </p>
                 </div>
 
@@ -63,9 +63,9 @@ export default function ContactPage() {
                     {[
                         {
                             icon: Phone,
-                            title: "Tel / WhatsApp",
+                            title: "WhatsApp / Tel",
                             content: ["+49 156 79264391 (DE)", "+48 780 010 848 (PL)"],
-                            sub: "Szybki kontakt 7:00–22:00",
+                            sub: "Wiadomości 24/7 · rozmowy pn–pt 9–17",
                             color: "text-emerald-500",
                             bg: "bg-emerald-500/10",
                             border: "group-hover:border-emerald-500/50"
@@ -91,8 +91,8 @@ export default function ContactPage() {
                         {
                             icon: Clock,
                             title: "Godziny pracy",
-                            content: ["Codziennie", "7:00 - 22:00"],
-                            sub: "Poza tymi godzinami zostaw wiadomość",
+                            content: ["Poniedziałek – piątek", "9:00 – 17:00"],
+                            sub: "Poza tymi godzinami napisz na WhatsApp – odpiszemy",
                             color: "text-amber-500",
                             bg: "bg-amber-500/10",
                             border: "group-hover:border-amber-500/50"
