@@ -111,6 +111,42 @@ Okres 7.02–31.10.2026: **179 kliknięć, 14,8 tys. wyświetleń, CTR 1,2%, śr
 - Walidacja „Błąd przekierowania” i „Strona wykryta – niezindeksowana” była już w toku („Rozpoczęto”).
 - Treść pod frazy z GSC: `/aukcje` z nowym tytułem (aukcje b2b, Adesa, CarOnSale), nowy tytuł artykułu o Adesa/Openlane, nowe artykuły: `/blog/caronsale-aukcje-b2b-jak-kupic-auto`, `/blog/sprowadzanie-aut-z-europy`, `/blog/firma-sprowadzajaca-auta-z-niemiec-jak-wybrac`.
 
-**Do zgłoszenia w kolejnych dniach (limit ok. 10 dziennie):** `/aukcje`, `/faq`, `/blog`, `/blog/auto1-jak-licytowac`, `/blog/bca-europe-przewodnik`, `/blog/caronsale-aukcje-b2b-jak-kupic-auto`, `/blog/sprowadzanie-aut-z-europy`, `/blog/firma-sprowadzajaca-auta-z-niemiec-jak-wybrac`, `/blog/czy-warto-sprowadzic-hybryde-z-niemiec`, `/blog/auto-z-niemiec-od-osoby-prywatnej-czy-z-aukcji`, `/blog/import-samemu-czy-przez-posrednika`, `/blog/oplaty-aukcyjne-wyjasnienie`, `/blog/jak-czytac-raport-szkod-i-raport-aukcyjny`, `/blog/auta-flotowe-z-niemiec-jak-rozpoznac-dobry-egzemplarz`, `/blog/diesel-benzyna-czy-hybryda-z-niemiec`.
+**Do zgłoszenia w kolejnych dniach (limit ok. 10 dziennie):** `/blog/autobid-de-aukcje-jak-kupic-auto`, `/blog/autorola-aukcje-b2b`, `/aukcje`, `/faq`, `/blog`, `/blog/auto1-jak-licytowac`, `/blog/bca-europe-przewodnik`, `/blog/caronsale-aukcje-b2b-jak-kupic-auto`, `/blog/sprowadzanie-aut-z-europy`, `/blog/firma-sprowadzajaca-auta-z-niemiec-jak-wybrac`, `/blog/czy-warto-sprowadzic-hybryde-z-niemiec`, `/blog/auto-z-niemiec-od-osoby-prywatnej-czy-z-aukcji`, `/blog/import-samemu-czy-przez-posrednika`, `/blog/oplaty-aukcyjne-wyjasnienie`, `/blog/jak-czytac-raport-szkod-i-raport-aukcyjny`, `/blog/auta-flotowe-z-niemiec-jak-rozpoznac-dobry-egzemplarz`, `/blog/diesel-benzyna-czy-hybryda-z-niemiec`.
 
 **Co obserwować:** za 1–2 tygodnie w GSC → Strony liczba zindeksowanych powinna rosnąć z 13 w stronę 35+; w Skuteczności — pozycja fraz „sprowadzanie aut z niemiec”, „firmy sprowadzające auta z niemiec”, „import aut z europy”.
+
+## 8. Etap 4 (3.11.2026) — analiza konkurencji i kolejne wdrożenia
+
+**Dlaczego strona jest daleko na „sprowadzanie aut z niemiec”:**
+- Domena zarejestrowana **4.02.2026** — ma 9 miesięcy. Top 10 to w większości starsze serwisy małych firm (sprowadzamyauta.pl, auta-z-niemiec.com, autazniemiec.com, bartek-auta.pl), plus OLX, otomoto, wise.com, grupa na Facebooku.
+- **Na stronie wygrywamy:** strona główna ma ok. 2000 słów, 8 sekcji H2 i pełne dane strukturalne; bartek-auta.pl ma ok. 400 słów i brak H1, autazniemiec.com nie ma H2. Różnicę robią **wiek domeny, linki przychodzące i sygnały marki** — tego nie da się nadrobić w kodzie.
+
+**Grupy zapytań z GSC (16 mies.):**
+
+| Grupa | Zapytania | Wyświetlenia | Śr. pozycja |
+|---|---|---|---|
+| Frazy usługowe („sprowadzanie…”, „import…”) | 93 | 2 865 | 55 |
+| Aukcje i platformy (b2b, Adesa, Openlane, CarOnSale, Autorola…) | 86 | 1 437 | **14,8** |
+| Kalkulator | 106 | 1 205 | **18,1** |
+| Europa / UE / zagranica | 26 | 917 | 69 |
+| Koszty i opłaty | 68 | 307 | 25,6 |
+| Firmy / pośrednicy | 12 | 238 | 46 |
+
+Najbliżej top 10 są aukcje i kalkulator — tam skierowaliśmy pracę w tym etapie.
+
+**Wdrożone:**
+- Nowe artykuły: `/blog/autobid-de-aukcje-jak-kupic-auto`, `/blog/autorola-aukcje-b2b`; w artykule o Openlane sekcja o nazwach Adesa / CarsOnTheWeb / Openlane (CarsOnTheWeb kupione przez KAR w 2019 i przemianowane na ADESA Europe).
+- `/aukcje`: karty platform linkują do poradników.
+- `/kalkulator`: tytuł „Kalkulator Sprowadzenia Auta z Niemiec 2026 — Akcyza i Opłaty”, sekcja „Jak policzyć koszt — wzór” (wartości z `CALCULATOR_CONFIG`), 4 pytania FAQ, schema WebApplication + FAQPage. Test wyników rozszerzonych Google: 4 prawidłowe elementy.
+- **IndexNow**: plik klucza w `public/`, skrypt `npm run indexnow` — wysłano 40 adresów (Bing, Yandex, Seznam, Naver), odpowiedź 202. Uruchamiać po każdym wdrożeniu z nowymi stronami.
+
+## 9. Czego nie da się zrobić w kodzie — a co najbardziej podniesie pozycje
+
+Kolejność według wpływu:
+
+1. **Profil firmy w Google (Google Business Profile)** — wpis z kategorią „Pośrednik w sprzedaży samochodów”, adresem, telefonem, godzinami i linkiem do strony. Zdjęcia aut przekazanych klientom. Poproś każdego klienta o opinię w Google — to najsilniejszy sygnał zaufania dla firmy usługowej.
+2. **Katalogi firm (cytowania NAP)** — identyczna nazwa, adres i telefon wszędzie: panoramafirm.pl, pkt.pl, aleo.com, firmy.net, cylex-polska.pl, zumi / oferteo.pl, Gelbe Seiten (DE). Każdy wpis = link i potwierdzenie danych firmy.
+3. **Bing Webmaster Tools** — zaloguj się na bing.com/webmasters kontem Google i wybierz „Importuj z Google Search Console” (2 kliknięcia). IndexNow już działa, to doda raporty.
+4. **Linki z treścią** — artykuły gościnne lub wywiady na portalach motoryzacyjnych (autokult, moto.pl, autoświat — sekcje poradnikowe), lokalne media, fora (forum.autoswiat, motocaina), grupy na Facebooku o imporcie aut — wartościowe odpowiedzi z linkiem do poradnika, nie spam.
+5. **Prawdziwe realizacje i opinie** — podstrona „Realizacje” z autami sprowadzonymi dla klientów (model, rocznik, cena aukcji vs cena w Polsce, zdjęcia przy odbiorze). To też dobry materiał do social media.
+6. **YouTube / Facebook** — krótkie filmy „ile kosztowało sprowadzenie X”, linkujące do kalkulatora i artykułów. Wyniki z wideo i grup FB już są w top 10 na główną frazę.
