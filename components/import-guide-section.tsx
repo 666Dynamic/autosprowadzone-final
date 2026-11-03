@@ -6,7 +6,7 @@ const costRows = [
     { item: "Opłata aukcyjna (Aufgeld) + dokumenty eksportowe", value: "ok. 3–4% + 120–180 €" },
     { item: "Transport lawetą do Polski", value: `${formatNumber(CALCULATOR_CONFIG.TRANSPORT_MIN)}–${formatNumber(CALCULATOR_CONFIG.TRANSPORT_MAX)} zł` },
     { item: "Akcyza (silnik do 2.0 l / powyżej 2.0 l)", value: "3,1% / 18,6% wartości" },
-    { item: "Tłumaczenia, badanie techniczne, rejestracja", value: "ok. 500 zł" },
+    { item: "Tłumaczenia, badanie techniczne, rejestracja", value: "ok. 550 zł" },
     { item: "Prowizja SprowadzoneAuto.pl", value: `${formatNumber(CALCULATOR_CONFIG.COMMISSION)} zł (stała)` },
 ]
 

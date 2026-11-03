@@ -24,7 +24,7 @@ import Link from "next/link"
 const calculatorFaq: FaqItem[] = [
     {
         question: "Ile kosztuje sprowadzenie auta z Niemiec w 2026 roku?",
-        answer: "Do ceny auta doliczasz akcyzę (3,1% dla silników do 2000 cm³, 18,6% powyżej; hybrydy 1,55% lub 9,3%; elektryki 0%), transport lawetą (zwykle 1500–3500 zł), tłumaczenia (ok. 250 zł), przegląd techniczny (ok. 100–200 zł) i rejestrację (ok. 160 zł). Przy zakupie przez pośrednika dochodzi jego prowizja. Przy aucie za 20 000 € z silnikiem do 2.0 łączne opłaty razem z prowizją pośrednika to zwykle ok. 7–9 tys. zł.",
+        answer: "Do ceny auta doliczasz akcyzę (3,1% dla silników do 2000 cm³, 18,6% powyżej; hybrydy 1,55% lub 9,3%; elektryki 0%), transport lawetą (zwykle 1500–3500 zł), tłumaczenia (ok. 250 zł), badanie techniczne (149 zł) i rejestrację (ok. 160 zł). Przy zakupie przez pośrednika dochodzi jego prowizja. Przy aucie za 20 000 € z silnikiem do 2.0 łączne opłaty razem z prowizją pośrednika to zwykle ok. 7–9 tys. zł.",
     },
     {
         question: "Jak obliczyć akcyzę za auto z Niemiec?",
@@ -175,7 +175,7 @@ export default function CalculatorPage() {
                                 },
                                 {
                                     step: "Krok 3: Rejestracja",
-                                    desc: "Pierwsze badanie techniczne w kraju (ok. 100 zł) oraz rejestracja w Twoim Wydziale Komunikacji (161.50 zł).",
+                                    desc: "Pierwsze badanie techniczne w kraju (149 zł) oraz rejestracja w Twoim Wydziale Komunikacji (161.50 zł).",
                                     active: false
                                 }
                             ].map((item, idx) => (
@@ -293,7 +293,7 @@ export default function CalculatorPage() {
                         Kupujesz na aukcji Audi A4 2.0 TDI za <strong>20 000 €</strong>. Przy kursie 4,21 zł podstawa to 84 200 zł,
                         więc akcyza (3,1%) wynosi <strong>ok. 2 610 zł</strong>. Gdyby to był silnik 3.0 TDI (18,6%), akcyza
                         wzrosłaby do <strong>ok. 15 660 zł</strong> — dlatego pojemność silnika ma tak duże znaczenie przy wyborze auta do importu.
-                        Do tego dochodzą: transport (1500–3500 zł), tłumaczenia (ok. 250 zł), badanie techniczne (ok. 100 zł),
+                        Do tego dochodzą: transport (1500–3500 zł), tłumaczenia (ok. 250 zł), badanie techniczne (149 zł),
                         rejestracja (161,50 zł) i nasza prowizja (2500 zł).
                     </p>
                     <h3>Terminy i formalności</h3>

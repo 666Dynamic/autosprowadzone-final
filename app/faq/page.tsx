@@ -1,4 +1,5 @@
 import { FaqSection } from "@/components/faq-section"
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs"
 import { faqJsonLd } from "@/lib/faq"
 import { Metadata } from "next"
 
@@ -19,6 +20,10 @@ export const metadata: Metadata = {
 export default function FaqPage() {
     return (
         <div className="pt-0 pb-12 md:pt-0 md:pb-20">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("FAQ", "/faq")) }}
+            />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd()) }}

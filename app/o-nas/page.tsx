@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { breadcrumbJsonLd } from "@/lib/breadcrumbs"
 import { CheckCircle2, Building2, Trophy } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -35,6 +36,10 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
         <div className="pt-24 pb-16">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd("O nas", "/o-nas")) }}
+            />
             <div className="container mx-auto px-4 md:px-8">
 
                 {/* Hero Section */}

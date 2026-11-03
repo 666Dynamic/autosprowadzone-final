@@ -25,9 +25,9 @@ export const CALCULATOR_CONFIG = {
   REGISTRATION_INDIVIDUAL: 1080,
   
   // Inspection costs
-  INSPECTION_BASE: 98,
-  INSPECTION_LPG: 63,
-  INSPECTION_ACCIDENT: 94,
+  INSPECTION_BASE: 149,  // stawki od 19.09.2025 (Dz.U. 2025 poz. 1223)
+  INSPECTION_LPG: 96,
+  INSPECTION_ACCIDENT: 143,
   
   // Transport estimates (informational)
   TRANSPORT_MIN: 1500,
