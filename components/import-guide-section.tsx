@@ -40,10 +40,11 @@ export function ImportGuideSection() {
                         <p>
                             Większość samochodów kupujemy na platformach dealerskich, do których osoba prywatna nie ma dostępu:
                             {" "}<Link href="/blog/bca-europe-przewodnik">BCA</Link>, <Link href="/blog/auto1-jak-licytowac">AUTO1</Link>, Autobid,
-                            {" "}<Link href="/blog/openlane-adesa-jak-kupowac-auto">Openlane (dawna Adesa)</Link> i ponad 30 innych serwisów.
+                            {" "}<Link href="/blog/openlane-adesa-jak-kupowac-auto">Openlane (dawna Adesa)</Link>, <Link href="/blog/caronsale-aukcje-b2b-jak-kupic-auto">CarOnSale</Link> i ponad 30 innych serwisów.
                             Trafiają tam auta z wygasłych kontraktów leasingowych, z flot firmowych, z banków i od dealerów, którzy nie chcą
                             ich sprzedawać detalicznie. Każde auto ma raport stanu (Zustandsbericht) z pomiarem lakieru i zdjęciami uszkodzeń.
-                            Więcej o tym rynku przeczytasz na stronie <Link href="/aukcje">aukcje samochodowe B2B</Link>.
+                            Więcej o tym rynku przeczytasz na stronie <Link href="/aukcje">aukcje samochodowe B2B</Link>, a o autach z Belgii,
+                            Holandii czy Francji w artykule <Link href="/blog/sprowadzanie-aut-z-europy">sprowadzanie aut z Europy</Link>.
                         </p>
 
                         <h3>Ile kosztuje sprowadzenie auta z Niemiec w 2026 roku?</h3>
@@ -97,6 +98,8 @@ export function ImportGuideSection() {
                             Obie drogi porównujemy uczciwie w artykule
                             {" "}<Link href="/blog/import-samemu-czy-przez-posrednika">samodzielny import czy przez pośrednika</Link>
                             {" "}oraz <Link href="/blog/auto-z-niemiec-od-osoby-prywatnej-czy-z-aukcji">od osoby prywatnej czy z aukcji</Link>.
+                            Jeśli wybierasz pośrednika, skorzystaj z naszej listy pytań:
+                            {" "}<Link href="/blog/firma-sprowadzajaca-auta-z-niemiec-jak-wybrac">jak wybrać firmę sprowadzającą auta z Niemiec</Link>.
                         </p>
 
                         <h3>Jak nie kupić złego auta z Niemiec?</h3>

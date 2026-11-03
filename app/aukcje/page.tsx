@@ -5,13 +5,13 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Aukcje Samochodowe B2B z Europy | Auta Poleasingowe",
-    description: "Zyskaj dostęp do BCA, AUTO1 i 40+ zamkniętych platform aukcyjnych w całej Europie. Sprawdź, jak kupić auto poleasingowe 20% taniej niż na portalach. Ekspercka weryfikacja i transport.",
+    title: "Aukcje B2B aut z Niemiec i Europy – BCA, AUTO1, Adesa, CarOnSale",
+    description: "Aukcje samochodowe B2B dla osób prywatnych i firm z Polski: BCA, AUTO1, Openlane (Adesa), CarOnSale i 40+ platform. Kupujemy auta poleasingowe i flotowe za Ciebie – weryfikacja, licytacja, transport.",
     alternates: {
         canonical: "https://www.sprowadzoneauto.pl/aukcje",
     },
     openGraph: {
-        title: "Aukcje Samochodowe B2B z Europy | Auta Poleasingowe",
+        title: "Aukcje B2B aut z Niemiec i Europy – BCA, AUTO1, Adesa, CarOnSale",
         description: "Dostęp do BCA, AUTO1 i 40+ zamkniętych platform aukcyjnych. Auta poleasingowe 20% taniej niż na portalach.",
         url: "https://www.sprowadzoneauto.pl/aukcje",
         type: "website",

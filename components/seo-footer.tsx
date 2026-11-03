@@ -12,9 +12,11 @@ export function SeoFooter() {
                         <p className="font-bold text-foreground mb-4 uppercase tracking-wider text-sm">Lokalizacje Importu</p>
                         <ul className="space-y-2 text-xs text-muted-foreground">
                             <li><Link href="/" className="hover:text-primary transition-colors">Sprowadzanie aut z Niemiec</Link></li>
+                            <li><Link href="/blog/sprowadzanie-aut-z-europy" className="hover:text-primary transition-colors">Sprowadzanie aut z Europy</Link></li>
                             <li><Link href="/aukcje" className="hover:text-primary transition-colors">Aukcje B2B Europa</Link></li>
                             <li><Link href="/weryfikacja" className="hover:text-primary transition-colors">Weryfikacja w Niemczech</Link></li>
                             <li><Link href="/blog/koszt-sprowadzenia-auta-z-niemiec-2026" className="hover:text-primary transition-colors">Koszt sprowadzenia auta 2026</Link></li>
+                            <li><Link href="/blog/firma-sprowadzajaca-auta-z-niemiec-jak-wybrac" className="hover:text-primary transition-colors">Jak wybrać firmę importującą</Link></li>
                         </ul>
                     </div>
                     <div>
@@ -31,7 +33,7 @@ export function SeoFooter() {
                         <ul className="space-y-2 text-xs text-muted-foreground">
                             <li><Link href="/blog/bca-europe-przewodnik" className="hover:text-primary transition-colors">BCA Auctions</Link></li>
                             <li><Link href="/blog/auto1-jak-licytowac" className="hover:text-primary transition-colors">AUTO1.com</Link></li>
-                            <li><Link href="/aukcje" className="hover:text-primary transition-colors">Autorola</Link></li>
+                            <li><Link href="/blog/caronsale-aukcje-b2b-jak-kupic-auto" className="hover:text-primary transition-colors">CarOnSale</Link></li>
                             <li><Link href="/blog/openlane-adesa-jak-kupowac-auto" className="hover:text-primary transition-colors">Adesa / Openlane</Link></li>
                         </ul>
                     </div>
