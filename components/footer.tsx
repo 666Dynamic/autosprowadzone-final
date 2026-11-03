@@ -39,14 +39,14 @@ export function Footer() {
                         <a href="https://wa.me/4915679264391" target="_blank" rel="noopener noreferrer" className="text-sm footer-text hover:text-primary transition-colors flex items-center gap-3">
                             <span className="text-lg leading-none">🇩🇪</span>
                             <div>
-                                <span className="font-bold text-xs uppercase tracking-wider block footer-text-emphasis mb-0.5">WhatsApp / Tel</span>
+                                <span className="font-bold text-xs uppercase tracking-wider block footer-text-emphasis mb-0.5">WhatsApp</span>
                                 <span className="font-medium">+49 156 79264391</span>
                             </div>
                         </a>
-                        <a href="https://wa.me/48780010848" target="_blank" rel="noopener noreferrer" className="text-sm footer-text hover:text-primary transition-colors flex items-center gap-3">
+                        <a href="tel:+48780010848" className="text-sm footer-text hover:text-primary transition-colors flex items-center gap-3">
                             <span className="text-lg leading-none">🇵🇱</span>
                             <div>
-                                <span className="font-bold text-xs uppercase tracking-wider block footer-text-emphasis mb-0.5">WhatsApp / Tel</span>
+                                <span className="font-bold text-xs uppercase tracking-wider block footer-text-emphasis mb-0.5">Telefon PL · pn–pt 9–17</span>
                                 <span className="font-medium">+48 780 010 848</span>
                             </div>
                         </a>
@@ -55,7 +55,7 @@ export function Footer() {
                         kontakt@sprowadzoneauto.pl
                     </a>
                     <p className="text-xs footer-text-emphasis uppercase tracking-widest font-bold">
-                        Telefon: pn–pt 9:00–17:00. Wiadomości WhatsApp i formularz — 24/7.
+                        WhatsApp i formularz — 24/7. Telefon: pn–pt 9:00–17:00.
                     </p>
                     <div className="flex gap-4 mt-4">
                         <a href="https://www.facebook.com/sprowadzoneauto/" target="_blank" rel="noopener noreferrer" aria-label="Odwiedź nasz profil na Facebooku" className="footer-text hover:text-[#1877F2] transition-colors">

@@ -64,8 +64,8 @@ export default function ContactPage() {
                         {
                             icon: Phone,
                             title: "WhatsApp / Tel",
-                            content: ["+49 156 79264391 (DE)", "+48 780 010 848 (PL)"],
-                            sub: "Wiadomości 24/7 · rozmowy pn–pt 9–17",
+                            content: ["WhatsApp: +49 156 79264391", "Tel. PL: +48 780 010 848"],
+                            sub: "WhatsApp 24/7 · telefon pn–pt 9–17",
                             color: "text-emerald-500",
                             bg: "bg-emerald-500/10",
                             border: "group-hover:border-emerald-500/50"
