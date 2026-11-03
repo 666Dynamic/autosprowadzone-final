@@ -39,12 +39,12 @@ export function Hero() {
                     </div>
 
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tighter leading-[0.9] uppercase italic">
-                        Sprowadzamy Auta na <br className="hidden sm:inline" />
-                        <span className="text-primary not-italic drop-shadow-[0_2px_8px_rgba(0,0,0,0.15)]">Indywidualne Zamówienie</span>
+                        Sprowadzanie Aut z Niemiec <br className="hidden sm:inline" />
+                        <span className="text-primary not-italic drop-shadow-[0_2px_8px_rgba(0,0,0,0.15)]">na Zamówienie</span>
                     </h1>
 
                     <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed px-2 md:px-0">
-                        Twój osobisty broker w Niemczech. Pozyskujemy auta z pewnych źródeł: licytacje B2B, floty bankowe oraz sprawdzeni dealerzy. Pełna weryfikacja i dostawa pod dom.
+                        Twój osobisty broker w Niemczech. Sprowadzamy auta z pewnych źródeł: aukcje B2B (BCA, AUTO1, Autobid), floty bankowe i leasingowe oraz sprawdzeni dealerzy. Pełna weryfikacja, transport i pomoc w rejestracji w Polsce.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 md:gap-4 w-full sm:w-auto px-4 md:px-0">

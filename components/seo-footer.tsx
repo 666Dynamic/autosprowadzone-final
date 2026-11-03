@@ -9,37 +9,42 @@ export function SeoFooter() {
             <div className="container mx-auto px-4 md:px-8 relative z-10">
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                     <div>
-                        <h4 className="font-bold text-foreground mb-4 uppercase tracking-wider text-sm">Lokalizacje Importu</h4>
+                        <p className="font-bold text-foreground mb-4 uppercase tracking-wider text-sm">Lokalizacje Importu</p>
                         <ul className="space-y-2 text-xs text-muted-foreground">
-                            <li><Link href="/aukcje" className="hover:text-primary transition-colors">Sprowadzanie aut z Niemiec</Link></li>
+                            <li><Link href="/" className="hover:text-primary transition-colors">Sprowadzanie aut z Niemiec</Link></li>
                             <li><Link href="/aukcje" className="hover:text-primary transition-colors">Aukcje B2B Europa</Link></li>
                             <li><Link href="/weryfikacja" className="hover:text-primary transition-colors">Weryfikacja w Niemczech</Link></li>
-                            <li><Link href="/kalkulator" className="hover:text-primary transition-colors">Koszty importu z UE</Link></li>
+                            <li><Link href="/blog/koszt-sprowadzenia-auta-z-niemiec-2026" className="hover:text-primary transition-colors">Koszt sprowadzenia auta 2026</Link></li>
                         </ul>
                     </div>
                     <div>
-                        <h4 className="font-bold text-foreground mb-4 uppercase tracking-wider text-sm">Rodzaje Pojazdów</h4>
+                        <p className="font-bold text-foreground mb-4 uppercase tracking-wider text-sm">Rodzaje Pojazdów</p>
                         <ul className="space-y-2 text-xs text-muted-foreground">
-                            <li><Link href="/aukcje" className="hover:text-primary transition-colors">Auta poleasingowe</Link></li>
+                            <li><Link href="/blog/auta-poleasingowe-z-niemiec-czy-warto" className="hover:text-primary transition-colors">Auta poleasingowe z Niemiec</Link></li>
                             <li><Link href="/aukcje" className="hover:text-primary transition-colors">Samochody z defleetu</Link></li>
-                            <li><Link href="/aukcje" className="hover:text-primary transition-colors">Auta flotowe z Niemiec</Link></li>
-                            <li><Link href="/kalkulator" className="hover:text-primary transition-colors">Auta elektryczne (bez akcyzy)</Link></li>
+                            <li><Link href="/blog/auta-flotowe-z-niemiec-jak-rozpoznac-dobry-egzemplarz" className="hover:text-primary transition-colors">Auta flotowe z Niemiec</Link></li>
+                            <li><Link href="/blog/czy-warto-sprowadzic-hybryde-z-niemiec" className="hover:text-primary transition-colors">Hybrydy z Niemiec</Link></li>
                         </ul>
                     </div>
                     <div>
-                        <h4 className="font-bold text-foreground mb-4 uppercase tracking-wider text-sm">Partnerzy Aukcyjni</h4>
+                        <p className="font-bold text-foreground mb-4 uppercase tracking-wider text-sm">Partnerzy Aukcyjni</p>
                         <ul className="space-y-2 text-xs text-muted-foreground">
                             <li><Link href="/blog/bca-europe-przewodnik" className="hover:text-primary transition-colors">BCA Auctions</Link></li>
                             <li><Link href="/blog/auto1-jak-licytowac" className="hover:text-primary transition-colors">AUTO1.com</Link></li>
                             <li><Link href="/aukcje" className="hover:text-primary transition-colors">Autorola</Link></li>
-                            <li><Link href="/aukcje" className="hover:text-primary transition-colors">Adesa / Openlane</Link></li>
+                            <li><Link href="/blog/openlane-adesa-jak-kupowac-auto" className="hover:text-primary transition-colors">Adesa / Openlane</Link></li>
                         </ul>
                     </div>
                     <div>
-                        <h4 className="font-bold text-foreground mb-4 uppercase tracking-wider text-sm">Wiedza</h4>
+                        <p className="font-bold text-foreground mb-4 uppercase tracking-wider text-sm">Wiedza</p>
                         <ul className="space-y-2 text-xs text-muted-foreground">
                             <li><Link href="/kalkulator" className="hover:text-primary transition-colors">Kalkulator Akcyzy 2026</Link></li>
-                            <li><Link href="/faq" className="hover:text-primary transition-colors">Procedura Rejestracji</Link></li>
+                            <li><Link href="/blog/transport-auta-z-niemiec-koszt" className="hover:text-primary transition-colors">Transport auta z Niemiec</Link></li>
+                            <li><Link href="/blog/dokumenty-przy-zakupie-auta-w-niemczech" className="hover:text-primary transition-colors">Dokumenty z Niemiec</Link></li>
+                            <li><Link href="/blog/akcyza-2026-stawki" className="hover:text-primary transition-colors">Akcyza 2026 — stawki</Link></li>
+                            <li><Link href="/blog/rejestracja-auta-z-niemiec-2026" className="hover:text-primary transition-colors">Rejestracja auta z Niemiec</Link></li>
+                            <li><Link href="/blog/jak-sprawdzic-auto-z-niemiec-przed-zakupem" className="hover:text-primary transition-colors">Jak sprawdzić auto z Niemiec</Link></li>
+                            <li><Link href="/faq" className="hover:text-primary transition-colors">FAQ</Link></li>
                             <li><Link href="/blog" className="hover:text-primary transition-colors">Poradnik Importera</Link></li>
                         </ul>
                     </div>

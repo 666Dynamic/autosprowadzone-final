@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react"
 export const revalidate = 86400
 
 export const metadata: Metadata = {
-    title: "Blog — Poradnik Importera Aut z Niemiec | SprowadzoneAuto.pl",
+    title: "Blog o Sprowadzaniu Aut z Niemiec — Poradnik Importera",
     description: "Artykuły o sprowadzaniu samochodów z Niemiec, Belgii i Holandii. Przewodniki po aukcjach BCA, AUTO1, kosztach importu i procedurach rejestracji. Kalkulator akcyzy 2026.",
     keywords: [
         "sprowadzanie aut z niemiec",
@@ -55,10 +55,10 @@ export default async function BlogPage() {
                     Baza Wiedzy & Newsy
                 </div>
                 <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-black uppercase tracking-tighter leading-none italic text-foreground">
-                    Blog <br /><span className="text-primary not-italic">Importeria</span>
+                    Blog o sprowadzaniu <br /><span className="text-primary not-italic">aut z Niemiec</span>
                 </h1>
                 <p className="text-sm sm:text-base text-muted-foreground font-medium leading-relaxed">
-                    Najnowsze informacje ze świata motoryzacji, poradniki i kulisy importu aut z Niemiec.
+                    Poradniki o imporcie aut z Niemiec: koszty i akcyza, aukcje B2B (BCA, AUTO1, Openlane), sprawdzanie auta przed zakupem, transport i rejestracja w Polsce. Piszemy z perspektywy firmy, która na co dzień sprowadza auta z Niemiec dla klientów.
                 </p>
             </div>
 

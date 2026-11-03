@@ -8,13 +8,14 @@ import { Button } from "@/components/ui/button"
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table"
 import { Calculator as CalculatorIcon, ArrowRight, RefreshCcw } from "lucide-react"
 import Link from "next/link"
-import { CALCULATOR_CONFIG, validatePrice, validateExchangeRate, formatCurrency } from "@/lib/calculator-constants"
+import { CALCULATOR_CONFIG, DRIVETRAINS, type Drivetrain, getExciseRate, validatePrice, validateExchangeRate, formatCurrency } from "@/lib/calculator-constants"
 
 export function Calculator() {
     // State with validation
     const [eurPrice, setEurPrice] = useState<number>(10000)
     const [exchangeRate, setExchangeRate] = useState<number>(CALCULATOR_CONFIG.DEFAULT_EXCHANGE_RATE)
     const [isLargeEngine, setIsLargeEngine] = useState<boolean>(false)
+    const [drivetrain, setDrivetrain] = useState<Drivetrain>("combustion")
     const [isLpg, setIsLpg] = useState<boolean>(false)
     const [isAccident, setIsAccident] = useState<boolean>(false)
     const [isIndividualPlates, setIsIndividualPlates] = useState<boolean>(false)
@@ -36,7 +37,8 @@ export function Calculator() {
 
     // Calculations using constants
     const pricePln = eurPrice * exchangeRate
-    const exciseRate = isLargeEngine ? CALCULATOR_CONFIG.AKC_RATE_HIGH : CALCULATOR_CONFIG.AKC_RATE_LOW
+    const exciseRate = getExciseRate(drivetrain, isLargeEngine)
+    const exciseRateLabel = `${(exciseRate * 100).toLocaleString("pl-PL", { maximumFractionDigits: 2 })}%`
     const excise = pricePln * exciseRate
     const inspection = CALCULATOR_CONFIG.INSPECTION_BASE + 
         (isLpg ? CALCULATOR_CONFIG.INSPECTION_LPG : 0) + 
@@ -98,10 +100,31 @@ export function Calculator() {
                     </div>
 
                     <div className="space-y-3">
+                        <Label id="drivetrain-label" className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground ml-1">Rodzaj napędu</Label>
+                        <div role="radiogroup" aria-labelledby="drivetrain-label" className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                            {DRIVETRAINS.map((d) => (
+                                <button
+                                    key={d.id}
+                                    type="button"
+                                    role="radio"
+                                    aria-checked={drivetrain === d.id}
+                                    onClick={() => setDrivetrain(d.id)}
+                                    className={`min-h-[44px] rounded-xl border px-3 text-sm font-bold transition-all touch-manipulation focus-visible:ring-2 focus-visible:ring-primary outline-none ${drivetrain === d.id
+                                        ? "border-primary/50 bg-primary/5 text-primary shadow-md shadow-primary/5"
+                                        : "border-border bg-card text-foreground hover:bg-muted/50 hover:border-primary/20"
+                                        }`}
+                                >
+                                    {d.label}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="space-y-3">
                         <Label className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground ml-1">Szczegóły pojazdu</Label>
                         <div className="grid gap-2">
                             {[
-                                { id: "engine", checked: isLargeEngine, set: setIsLargeEngine, label: "Silnik powyżej 2.0L", sub: "Akcyza 18.6%" },
+                                { id: "engine", checked: isLargeEngine, set: setIsLargeEngine, label: "Silnik powyżej 2.0L", sub: drivetrain === "ev" ? "Elektryk — bez akcyzy" : `Akcyza ${(getExciseRate(drivetrain, true) * 100).toLocaleString("pl-PL")}%` },
                                 { id: "lpg", checked: isLpg, set: setIsLpg, label: "Instalacja LPG", sub: "+63 PLN badanie" },
                                 { id: "accident", checked: isAccident, set: setIsAccident, label: "Po kolizji", sub: "+94 PLN badanie" },
                                 { id: "plates", checked: isIndividualPlates, set: setIsIndividualPlates, label: "Tablice Indywidualne", sub: "+918 PLN" },
@@ -170,7 +193,7 @@ export function Calculator() {
                                     <TableCell className="text-right text-sm md:text-base font-black text-foreground py-3">{formatCurrency(pricePln)}</TableCell>
                                 </TableRow>
                                 <TableRow className="hover:bg-muted/50 transition-colors border-none group">
-                                    <TableCell className="text-[10px] md:text-sm font-bold py-3 text-muted-foreground group-hover:text-foreground uppercase tracking-wider transition-colors">Podatek Akcyzowy ({isLargeEngine ? "18.6%" : "3.1%"})</TableCell>
+                                    <TableCell className="text-[10px] md:text-sm font-bold py-3 text-muted-foreground group-hover:text-foreground uppercase tracking-wider transition-colors">Podatek Akcyzowy ({exciseRateLabel})</TableCell>
                                     <TableCell className="text-right text-sm md:text-base font-black text-foreground py-3">{formatCurrency(excise)}</TableCell>
                                 </TableRow>
                                 <TableRow className="hover:bg-muted/50 transition-colors border-none group">

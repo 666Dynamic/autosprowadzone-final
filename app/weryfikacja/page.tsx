@@ -58,7 +58,7 @@ export default function VerificationPage() {
                             <Sparkles className="w-4 h-4" /> Profesjonalny Audyt Pojazdu
                         </div>
                         <h1 className="text-3xl md:text-5xl lg:text-7xl font-black leading-none uppercase tracking-tighter text-foreground italic">
-                            Weryfikacja <br /><span className="text-primary not-italic">Zanim Kupisz</span>
+                            Weryfikacja auta w Niemczech <br /><span className="text-primary not-italic">Zanim Kupisz</span>
                         </h1>
                         <p className="text-base text-muted-foreground font-medium max-w-3xl mx-auto leading-relaxed">
                             Nie ryzykuj oszczędności życia. Wyślij naszego eksperta na miejsce, aby sprawdził auto od osoby prywatnej lub dealera w całych Niemczech.

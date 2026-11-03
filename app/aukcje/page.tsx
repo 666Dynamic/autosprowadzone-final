@@ -97,8 +97,8 @@ export default function AuctionsPage() {
                             Verified Broker Access
                         </div>
                         <h1 className="text-3xl md:text-4xl lg:text-6xl font-black text-foreground leading-none uppercase tracking-tighter mb-8 italic">
-                            AUKCJE <br />
-                            <span className="text-primary not-italic">EUROPEJSKIE</span>
+                            Aukcje samochodowe <br />
+                            <span className="text-primary not-italic">B2B w Niemczech i Europie</span>
                         </h1>
                         <p className="text-base md:text-lg text-muted-foreground font-medium mb-12 leading-relaxed max-w-2xl mx-auto md:mx-0">
                             Omiń pośredników i marże handlarzy. Zapewniamy pełny dostęp do ponad 40 zamkniętych platform B2B, gdzie kupisz sprawdzone auta poleasingowe z całej Europy.

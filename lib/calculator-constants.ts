@@ -15,6 +15,8 @@ export const CALCULATOR_CONFIG = {
   AKC_THRESHOLD_CC: 2000,
   AKC_RATE_LOW: 0.031,   // 3.1% for engines ≤2000cc
   AKC_RATE_HIGH: 0.186,  // 18.6% for engines >2000cc
+  AKC_RATE_HYBRID_LOW: 0.0155,  // 1.55% HEV ≤2000cc
+  AKC_RATE_HYBRID_HIGH: 0.093,  // 9.3% HEV/PHEV 2001–3500cc
   
   // Fixed costs
   COMMISSION: 2500,
@@ -31,6 +33,29 @@ export const CALCULATOR_CONFIG = {
   TRANSPORT_MIN: 1500,
   TRANSPORT_MAX: 3500,
 } as const
+
+export type Drivetrain = 'combustion' | 'hev' | 'phev' | 'ev'
+
+export const DRIVETRAINS: { id: Drivetrain; label: string }[] = [
+  { id: 'combustion', label: 'Spalinowy' },
+  { id: 'hev', label: 'Hybryda' },
+  { id: 'phev', label: 'Plug-in' },
+  { id: 'ev', label: 'Elektryk' },
+]
+
+// Stawki akcyzy 2026: PHEV do 2000 cm³ zwolnione do 31.12.2029, elektryki zwolnione.
+export function getExciseRate(drivetrain: Drivetrain, isLargeEngine: boolean): number {
+  switch (drivetrain) {
+    case 'ev':
+      return 0
+    case 'phev':
+      return isLargeEngine ? CALCULATOR_CONFIG.AKC_RATE_HYBRID_HIGH : 0
+    case 'hev':
+      return isLargeEngine ? CALCULATOR_CONFIG.AKC_RATE_HYBRID_HIGH : CALCULATOR_CONFIG.AKC_RATE_HYBRID_LOW
+    default:
+      return isLargeEngine ? CALCULATOR_CONFIG.AKC_RATE_HIGH : CALCULATOR_CONFIG.AKC_RATE_LOW
+  }
+}
 
 export function validatePrice(price: number): boolean {
   return (

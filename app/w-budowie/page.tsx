@@ -4,7 +4,7 @@ import { ArrowLeft, Clock } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Strona w budowie | SprowadzoneAuto.pl",
+    title: "Strona w budowie",
     robots: { index: false, follow: false },
 }
 

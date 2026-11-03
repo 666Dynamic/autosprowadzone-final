@@ -2,8 +2,8 @@ import { Calculator } from "@/components/calculator"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Kalkulator Akcyzy 2026 — Koszt Importu Auta z Niemiec",
-    description: "Oblicz całkowity koszt sprowadzenia auta z Niemiec w 2026 roku. Sprawdź aktualne stawki akcyzy (3.1% / 18.6%), koszty rejestracji, transportu i prowizję pośrednika. Precyzyjne wyliczenie online.",
+    title: "Kalkulator Akcyzy 2026 — Koszt Sprowadzenia Auta z Niemiec",
+    description: "Kalkulator akcyzy 2026 i kosztów sprowadzenia auta z Niemiec. Stawki akcyzy 3,1% / 18,6%, hybrydy 1,55% / 9,3%, elektryki 0%. Policz transport, tłumaczenia, rejestrację i prowizję online.",
     alternates: {
         canonical: "https://www.sprowadzoneauto.pl/kalkulator",
     },
@@ -11,11 +11,13 @@ export const metadata: Metadata = {
         title: "Kalkulator Akcyzy 2026 — Koszt Importu Auta",
         description: "Oblicz całkowity koszt sprowadzenia auta z Niemiec. Aktualne stawki akcyzy, koszty rejestracji i transportu.",
         url: "https://www.sprowadzoneauto.pl/kalkulator",
+        images: ["https://www.sprowadzoneauto.pl/opengraph-image"],
     },
 }
 
 import { ContactForm } from "@/components/contact-form"
 import { ArrowRight, AlertTriangle } from "lucide-react"
+import Link from "next/link"
 
 export default function CalculatorPage() {
     const breadcrumbJsonLd = {
@@ -45,7 +47,7 @@ export default function CalculatorPage() {
         />
         <div className="w-full mx-auto max-w-6xl px-4 md:px-8 py-12 md:py-20">
             <div className="max-w-4xl mx-auto mb-12 text-center">
-                <h1 className="text-3xl md:text-4xl font-black mb-6 uppercase tracking-tighter italic">Kalkulator <span className="text-primary not-italic">Kosztów Importu</span></h1>
+                <h1 className="text-3xl md:text-4xl font-black mb-6 uppercase tracking-tighter italic">Kalkulator akcyzy 2026 <span className="text-primary not-italic">i kosztów importu auta z Niemiec</span></h1>
                 <p className="text-lg text-muted-foreground font-medium max-w-2xl mx-auto">
                     Skorzystaj z naszego precyzyjnego narzędzia, aby oszacować całkowity koszt sprowadzenia samochodu "pod dom".
                     Uwzględniamy wszystkie opłaty urzędowe obowiązujące w 2026 roku.
@@ -83,8 +85,8 @@ export default function CalculatorPage() {
                                     {[
                                         { rate: "3.1%", desc: "do 2000 cm³" },
                                         { rate: "18.6%", desc: "powyżej 2000 cm³" },
-                                        { rate: "1.55% / 9.3%", desc: "hybrydy (HEV/PHEV)" },
-                                        { rate: "0%", desc: "auta elektryczne" },
+                                        { rate: "1.55% / 9.3%", desc: "hybrydy HEV (do / pow. 2000 cm³)" },
+                                        { rate: "0%", desc: "elektryczne i PHEV do 2000 cm³" },
                                     ].map((item, idx) => (
                                         <li key={idx} className="bg-card border border-border p-5 rounded-3xl flex flex-col group-hover:border-primary/40 transition-all shadow-sm">
                                             <span className="text-primary font-black text-2xl">{item.rate}</span>
@@ -127,7 +129,7 @@ export default function CalculatorPage() {
                                 },
                                 {
                                     step: "Krok 2: Akcyza i Tłumaczenia",
-                                    desc: "Masz 14 dni na deklarację AKC-U/S i 30 dni na opłatę. Wymagane są również tłumaczenia przysięgłe dokumentów.",
+                                    desc: "Masz 14 dni na deklarację AKC-U/S i zapłatę akcyzy. Wymagane są również tłumaczenia przysięgłe dokumentów.",
                                     active: false
                                 },
                                 {
@@ -172,6 +174,68 @@ export default function CalculatorPage() {
                     </div>
                 </div>
             </div>
+
+            <section className="mt-32 max-w-3xl mx-auto px-4" aria-labelledby="akcyza-2026">
+                <h2 id="akcyza-2026" className="text-3xl md:text-4xl font-black mb-8 uppercase tracking-tighter italic text-foreground">
+                    Akcyza 2026 na auto z Niemiec — <span className="text-primary not-italic">stawki i przykład</span>
+                </h2>
+                <div className="prose prose-slate dark:prose-invert max-w-none prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-foreground prose-headings:text-foreground prose-headings:font-black prose-a:text-primary prose-a:font-bold prose-a:no-underline hover:prose-a:underline">
+                    <p>
+                        Akcyzę płaci się od samochodu osobowego sprowadzonego do Polski z innego kraju UE, w tym z Niemiec.
+                        Podstawą opodatkowania jest kwota zapłacona za auto (z faktury lub umowy), przeliczona na złote po kursie
+                        średnim NBP z dnia poprzedzającego powstanie obowiązku podatkowego. Stawka zależy od pojemności silnika i rodzaju napędu:
+                    </p>
+                    <div className="not-prose overflow-x-auto my-6 rounded-2xl border border-border">
+                        <table className="w-full text-sm">
+                            <thead className="bg-muted">
+                                <tr>
+                                    <th className="text-left p-3 font-black text-foreground">Rodzaj auta</th>
+                                    <th className="text-left p-3 font-black text-foreground">Pojemność silnika</th>
+                                    <th className="text-left p-3 font-black text-foreground">Akcyza 2026</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {[
+                                    ["Benzyna / diesel / LPG", "do 2000 cm³", "3,1%"],
+                                    ["Benzyna / diesel / LPG", "powyżej 2000 cm³", "18,6%"],
+                                    ["Hybryda (HEV)", "do 2000 cm³", "1,55%"],
+                                    ["Hybryda (HEV)", "2001–3500 cm³", "9,3%"],
+                                    ["Hybryda plug-in (PHEV)", "do 2000 cm³", "0% (zwolnienie do końca 2029 r.)"],
+                                    ["Hybryda plug-in (PHEV)", "2001–3500 cm³", "9,3%"],
+                                    ["Elektryczny (BEV) / wodorowy", "—", "0%"],
+                                ].map(([type, cc, rate]) => (
+                                    <tr key={type + cc} className="border-t border-border">
+                                        <td className="p-3 text-muted-foreground">{type}</td>
+                                        <td className="p-3 text-muted-foreground whitespace-nowrap">{cc}</td>
+                                        <td className="p-3 font-bold text-foreground">{rate}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3>Przykład: ile wyniesie akcyza i całkowity koszt?</h3>
+                    <p>
+                        Kupujesz na aukcji Audi A4 2.0 TDI za <strong>20 000 €</strong>. Przy kursie 4,21 zł podstawa to 84 200 zł,
+                        więc akcyza (3,1%) wynosi <strong>ok. 2 610 zł</strong>. Gdyby to był silnik 3.0 TDI (18,6%), akcyza
+                        wzrosłaby do <strong>ok. 15 660 zł</strong> — dlatego pojemność silnika ma tak duże znaczenie przy wyborze auta do importu.
+                        Do tego dochodzą: transport (1500–3500 zł), tłumaczenia (ok. 250 zł), badanie techniczne (ok. 100 zł),
+                        rejestracja (161,50 zł) i nasza prowizja (2500 zł).
+                    </p>
+                    <h3>Terminy i formalności</h3>
+                    <ul>
+                        <li>Deklarację <strong>AKC-U/S</strong> składasz i akcyzę płacisz w ciągu 14 dni od powstania obowiązku podatkowego (w praktyce od przywiezienia auta do Polski) — w urzędzie skarbowym lub online przez PUESC.</li>
+                        <li>Potwierdzenie zapłaty akcyzy (lub zwolnienia) jest potrzebne do rejestracji auta w wydziale komunikacji.</li>
+                        <li>Na rejestrację auta sprowadzonego z UE masz 30 dni od dnia przywozu do Polski.</li>
+                    </ul>
+                    <p>
+                        Więcej szczegółów: <Link href="/blog/akcyza-2026-stawki">akcyza 2026 — stawki i ulgi</Link>,
+                        {" "}<Link href="/blog/koszt-sprowadzenia-auta-z-niemiec-2026">pełne wyliczenie kosztu sprowadzenia auta z Niemiec</Link>
+                        {" "}oraz <Link href="/blog/rejestracja-auta-z-niemiec-2026">rejestracja auta z Niemiec krok po kroku</Link>.
+                        Jeśli chcesz, żebyśmy znaleźli i sprowadzili auto za Ciebie, zobacz jak działa
+                        {" "}<Link href="/">sprowadzanie aut z Niemiec na zamówienie</Link>.
+                    </p>
+                </div>
+            </section>
 
             <div className="mt-32 max-w-4xl mx-auto px-4 pb-20">
                 <div className="text-center mb-16">

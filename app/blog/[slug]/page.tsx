@@ -1,4 +1,4 @@
-import { getPostBySlug, getAllPostSlugs, getAllPosts } from "@/lib/mdx"
+import { getPostBySlug, getAllPostSlugs, getAllPosts, getRelatedPosts } from "@/lib/mdx"
 import { notFound } from "next/navigation"
 import { Metadata } from "next"
 import Link from "next/link"
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     }
 
     return {
-        title: `${post.title} | Blog SprowadzoneAuto.pl`,
+        title: post.title,
         description: post.excerpt,
         keywords: post.keywords || ['sprowadzanie aut z niemiec', 'import aut', 'aukcje b2b'],
         robots: {
@@ -42,15 +42,10 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
             description: post.excerpt,
             type: "article",
             publishedTime: post.dateISO,
+            modifiedTime: post.dateModified,
             url: `https://www.sprowadzoneauto.pl/blog/${slug}`,
             authors: ['SprowadzoneAuto.pl'],
             tags: post.keywords || [],
-            images: [{
-                url: 'https://www.sprowadzoneauto.pl/opengraph-image',
-                width: 1200,
-                height: 630,
-                alt: post.title,
-            }],
         },
         twitter: {
             card: "summary_large_image",
@@ -86,12 +81,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             {
                 "@type": "ListItem",
                 "position": 1,
+                "name": "Strona główna",
+                "item": baseUrl
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
                 "name": "Blog",
                 "item": `${baseUrl}/blog`
             },
             {
                 "@type": "ListItem",
-                "position": 2,
+                "position": 3,
                 "name": post.title,
                 "item": postUrl
             }
@@ -100,11 +101,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
     const articleJsonLd = {
         "@context": "https://schema.org",
-        "@type": "Article",
+        "@type": "BlogPosting",
         "headline": post.title,
         "description": post.excerpt,
         "datePublished": post.dateISO,
-        "dateModified": post.dateISO,
+        "dateModified": post.dateModified,
         "inLanguage": "pl-PL",
         "keywords": post.keywords?.join(", ") || "sprowadzanie aut z niemiec",
         "mainEntityOfPage": {
@@ -113,26 +114,21 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         },
         "image": {
             "@type": "ImageObject",
-            "url": `${baseUrl}/icon.svg`,
+            "url": `${postUrl}/opengraph-image`,
             "width": 1200,
             "height": 630
         },
-        "publisher": {
-            "@type": "Organization",
-            "name": "SprowadzoneAuto.pl",
-            "logo": {
-                "@type": "ImageObject",
-                "url": `${baseUrl}/icon.svg`,
-                "width": 512,
-                "height": 512
-            }
-        },
         "author": {
             "@type": "Organization",
-            "name": "SprowadzoneAuto.pl"
+            "@id": `${baseUrl}/#organization`,
+            "name": "SprowadzoneAuto.pl",
+            "url": `${baseUrl}/o-nas`
         },
-        "articleBody": post.content
+        "publisher": { "@id": `${baseUrl}/#organization` },
+        "isPartOf": { "@id": `${baseUrl}/#website` }
     }
+
+    const relatedPosts = getRelatedPosts(post, allPosts, 3)
 
     return (
         <article className="container mx-auto px-4 md:px-8 py-12 md:py-20">
@@ -150,7 +146,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     <div className="flex items-center gap-4 text-sm text-muted-foreground">
                         <div className="flex items-center gap-1">
                             <Calendar className="w-4 h-4" />
-                            {post.date}
+                            <time dateTime={post.dateISO}>{post.date}</time>
+                            {post.dateModified !== post.dateISO && (
+                                <span>· aktualizacja: <time dateTime={post.dateModified}>{new Date(post.dateModified).toLocaleDateString("pl-PL")}</time></span>
+                            )}
                         </div>
                         <div className="flex items-center gap-1">
                             <span className="w-1 h-1 rounded-full bg-border" />
@@ -183,7 +182,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     <MDXRemote source={post.content} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
                 </div>
 
-                <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-6">
+                <aside className="mt-16 p-6 md:p-8 rounded-2xl border border-border bg-muted/30">
+                    <p className="text-xs font-bold uppercase tracking-widest text-primary mb-2">O autorze</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                        Artykuł przygotował zespół <Link href="/o-nas" className="text-foreground font-bold hover:text-primary">SprowadzoneAuto.pl</Link> (Miami
+                        Autocenter GmbH, Osterholz-Scharmbeck). Na co dzień zajmujemy się{" "}
+                        <Link href="/" className="text-primary font-bold hover:underline">sprowadzaniem aut z Niemiec na zamówienie</Link> —
+                        kupujemy samochody na <Link href="/aukcje" className="text-primary font-bold hover:underline">aukcjach B2B</Link>,
+                        sprawdzamy je na miejscu i dostarczamy do klientów w całej Polsce. Koszt importu konkretnego auta policzysz w{" "}
+                        <Link href="/kalkulator" className="text-primary font-bold hover:underline">kalkulatorze akcyzy i kosztów importu</Link>.
+                    </p>
+                </aside>
+
+                <div className="mt-8 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-6">
                     <div>
                         <p className="font-bold mb-1">Masz pytania dotyczące tego tematu?</p>
                         <p className="text-sm text-muted-foreground">Skontaktuj się z naszym ekspertem.</p>
@@ -202,9 +213,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
                 {/* Powiązane artykuły */}
                 <div className="mt-12">
-                    <h3 className="text-lg md:text-xl font-black uppercase tracking-tight mb-4">Powiązane tematy</h3>
-                    <div className="grid md:grid-cols-2 gap-4">
-                        {allPosts.filter(p => p.slug !== post.slug).slice(0, 2).map((rel) => (
+                    <h2 className="text-lg md:text-xl font-black uppercase tracking-tight mb-4">Przeczytaj też</h2>
+                    <div className="grid md:grid-cols-3 gap-4">
+                        {relatedPosts.map((rel) => (
                             <Link key={rel.slug} href={`/blog/${rel.slug}`} className="group border border-border rounded-2xl p-4 hover:border-primary/40 transition-colors">
                                 <div className="text-xs text-muted-foreground font-bold uppercase tracking-widest mb-1">{rel.date}</div>
                                 <div className="font-black text-foreground group-hover:text-primary transition-colors">{rel.title}</div>

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "O Nas — Miami Autocenter GmbH | SprowadzoneAuto.pl",
+    title: "O Nas — Miami Autocenter GmbH",
     description: "Poznaj Miami Autocenter GmbH. Zaufany partner w imporcie aut z Niemiec od 2023. HRB 211101, Osterholz-Scharmbeck. Dostęp do aukcji BCA, AUTO1 i 40+ platform B2B.",
     keywords: ["Miami Autocenter", "import aut z niemiec", "firma sprowadzająca auta", "GmbH Niemcy"],
     robots: {

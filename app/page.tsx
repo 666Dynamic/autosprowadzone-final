@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { FeaturesSection } from "@/components/features-section"
 import { Hero } from "@/components/hero"
 import { LogoCloud } from "@/components/logo-cloud"
@@ -7,6 +8,13 @@ import { FeaturedArticles } from "@/components/featured-articles"
 import { RequestSection } from "@/components/request-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { FaqSection } from "@/components/faq-section"
+import { ImportGuideSection } from "@/components/import-guide-section"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.sprowadzoneauto.pl",
+  },
+}
 
 export default function Home() {
   return (
@@ -17,6 +25,7 @@ export default function Home() {
       <FeaturesSection />
       <ProcessSection />
       <TestimonialsSection />
+      <ImportGuideSection />
       <FeaturedArticles limit={3} />
       <RequestSection />
       <FaqSection limit={5} />

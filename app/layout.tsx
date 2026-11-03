@@ -53,13 +53,6 @@ export const metadata: Metadata = {
     title: "Sprowadzanie Aut z Niemiec na Zamówienie — Aukcje B2B | SprowadzoneAuto.pl",
     description: "Sprowadzamy auta z Niemiec z aukcji B2B (BCA, AUTO1). Dostęp do zamkniętych platform. Polska obsługa, stała prowizja 2500 zł.",
   },
-  alternates: {
-    canonical: "https://www.sprowadzoneauto.pl",
-    languages: {
-      'pl': "https://www.sprowadzoneauto.pl",
-      'x-default': "https://www.sprowadzoneauto.pl",
-    },
-  },
   robots: {
     index: true,
     follow: true,
@@ -69,107 +62,96 @@ export const metadata: Metadata = {
   },
 };
 
+const siteUrl = "https://www.sprowadzoneauto.pl"
+
+// Jeden graf encji: organizacja (AutoDealer), serwis WWW i usługa.
+// Bez AggregateRating/Review — Google nie pokazuje (i może karać) opinii wystawionych sobie samemu.
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "SprowadzoneAuto.pl",
-  "url": "https://www.sprowadzoneauto.pl",
-  "logo": "https://www.sprowadzoneauto.pl/icon.svg",
-  "description": "Profesjonalny import samochodów z Niemiec oraz weryfikacja stanu technicznego pojazdów na terenie Niemiec.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "DE",
-    "addressLocality": "Osterholz-Scharmbeck",
-  },
-  "contactPoint": [
+  "@graph": [
     {
-      "@type": "ContactPoint",
+      "@type": ["Organization", "AutoDealer"],
+      "@id": `${siteUrl}/#organization`,
+      "name": "SprowadzoneAuto.pl",
+      "legalName": "Miami Autocenter GmbH",
+      "alternateName": ["Sprowadzone Auto", "SprowadzoneAuto"],
+      "url": siteUrl,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteUrl}/logo.png`,
+        "width": 512,
+        "height": 512
+      },
+      "image": `${siteUrl}/opengraph-image`,
+      "description": "Sprowadzanie aut z Niemiec na zamówienie: zakup na aukcjach B2B (BCA, AUTO1, Autobid), weryfikacja pojazdu w Niemczech, transport i pomoc w rejestracji w Polsce.",
+      "email": "kontakt@sprowadzoneauto.pl",
       "telephone": "+49 156 79264391",
-      "contactType": "customer service",
-      "areaServed": ["PL", "DE"],
-      "availableLanguage": ["Polish", "German"]
+      "vatID": "DE361829942",
+      "foundingDate": "2023",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bremer Heerstraße 7A",
+        "addressLocality": "Osterholz-Scharmbeck",
+        "postalCode": "27711",
+        "addressCountry": "DE"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "07:00",
+        "closes": "22:00"
+      },
+      "areaServed": [
+        { "@type": "Country", "name": "Polska" },
+        { "@type": "Country", "name": "Niemcy" }
+      ],
+      "knowsLanguage": ["pl", "de"],
+      "priceRange": "$$",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+49 156 79264391",
+          "contactType": "customer service",
+          "areaServed": ["PL", "DE"],
+          "availableLanguage": ["Polish", "German"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+48 780 010 848",
+          "contactType": "customer service",
+          "areaServed": "PL",
+          "availableLanguage": "Polish"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/sprowadzoneauto/"
+      ]
     },
     {
-      "@type": "ContactPoint",
-      "telephone": "+48 780 010 848",
-      "contactType": "customer service",
-      "areaServed": "PL",
-      "availableLanguage": "Polish"
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      "url": siteUrl,
+      "name": "SprowadzoneAuto.pl",
+      "alternateName": "Sprowadzone Auto",
+      "inLanguage": "pl-PL",
+      "publisher": { "@id": `${siteUrl}/#organization` }
+    },
+    {
+      "@type": "Service",
+      "@id": `${siteUrl}/#service`,
+      "name": "Sprowadzanie aut z Niemiec na zamówienie",
+      "serviceType": "Import samochodów z Niemiec, zakup na aukcjach B2B, weryfikacja pojazdu, transport",
+      "provider": { "@id": `${siteUrl}/#organization` },
+      "areaServed": { "@type": "Country", "name": "Polska" },
+      "offers": {
+        "@type": "Offer",
+        "price": "2500",
+        "priceCurrency": "PLN",
+        "description": "Stała prowizja za pośrednictwo w zakupie auta z Niemiec",
+        "url": `${siteUrl}/kontakt`
+      }
     }
-  ],
-  "sameAs": [
-    "https://www.facebook.com/sprowadzoneauto/"
   ]
-}
-
-const localBusinessJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "AutoDealer",
-  "name": "SprowadzoneAuto.pl (Miami Autocenter GmbH)",
-  "image": "https://www.sprowadzoneauto.pl/opengraph-image",
-  "url": "https://www.sprowadzoneauto.pl",
-  "telephone": "+49 156 79264391",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Bremer Heerstraße 7A",
-    "addressLocality": "Osterholz-Scharmbeck",
-    "postalCode": "27711",
-    "addressCountry": "DE"
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-    "opens": "07:00",
-    "closes": "22:00"
-  },
-  "areaServed": ["PL", "DE"],
-  "priceRange": "$$",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "3",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
-  "review": [
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Marek K." },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-      "reviewBody": "Cały proces importu przebiegł wzorowo. Auto sprawdzone na miejscu w Bremie, raport był bardzo szczegółowy."
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Tomasz W." },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-      "reviewBody": "Dzięki dostępowi do aukcji BCA udało się kupić 3-letnie Audi A4 w cenie, o której w Polsce można tylko pomarzyć."
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Anna S." },
-      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-      "reviewBody": "Bardzo profesjonalne podejście. Auto pod domem po 5 dniach."
-    }
-  ]
-}
-
-const serviceJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Import aut z Niemiec i aukcje B2B",
-  "provider": {
-    "@type": "Organization",
-    "name": "SprowadzoneAuto.pl"
-  },
-  "areaServed": ["PL"],
-  "serviceType": "Sprowadzanie samochodów z Niemiec, weryfikacja pojazdu, logistyka",
-  "offers": {
-    "@type": "Offer",
-    "price": "2500",
-    "priceCurrency": "PLN",
-    "url": "https://www.sprowadzoneauto.pl/kontakt",
-    "availability": "https://schema.org/InStock"
-  }
 }
 
 export const viewport = {
@@ -223,14 +205,6 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
         />
         <ThemeProvider
           attribute="class"
