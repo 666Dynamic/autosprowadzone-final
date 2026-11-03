@@ -47,6 +47,7 @@ export function SeoFooter() {
                             <li><Link href="/blog/transport-auta-z-niemiec-koszt" className="hover:text-primary transition-colors">Transport auta z Niemiec</Link></li>
                             <li><Link href="/blog/dokumenty-przy-zakupie-auta-w-niemczech" className="hover:text-primary transition-colors">Dokumenty z Niemiec</Link></li>
                             <li><Link href="/blog/akcyza-2026-stawki" className="hover:text-primary transition-colors">Akcyza 2026 — stawki</Link></li>
+                            <li><Link href="/blog/akcyza-za-samochod-online-puesc" className="hover:text-primary transition-colors">Akcyza za samochód online</Link></li>
                             <li><Link href="/blog/rejestracja-auta-z-niemiec-2026" className="hover:text-primary transition-colors">Rejestracja auta z Niemiec</Link></li>
                             <li><Link href="/blog/podatki-auto-z-niemiec-pcc-vat-clo" className="hover:text-primary transition-colors">Podatki: PCC, VAT, cło</Link></li>
                             <li><Link href="/blog/ubezpieczenie-oc-auto-z-niemiec" className="hover:text-primary transition-colors">OC auta z Niemiec</Link></li>

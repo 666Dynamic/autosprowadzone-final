@@ -4,7 +4,7 @@ import { faqJsonLd, type FaqItem } from "@/lib/faq"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Kalkulator Akcyzy i Kosztów Auta z Niemiec 2026",
+    title: "Kalkulator Akcyzy za Samochód z Niemiec 2026",
     description: "Kalkulator akcyzy 2026 i kosztów sprowadzenia auta z Niemiec: stawki 3,1% / 18,6%, hybrydy, elektryki 0%. Policz transport, rejestrację i pełny koszt.",
     alternates: {
         canonical: "https://www.sprowadzoneauto.pl/kalkulator",
@@ -304,6 +304,7 @@ export default function CalculatorPage() {
                     </ul>
                     <p>
                         Więcej szczegółów: <Link href="/blog/akcyza-2026-stawki">akcyza 2026 — stawki i ulgi</Link>,
+                        {" "}<Link href="/blog/akcyza-za-samochod-online-puesc">jak zapłacić akcyzę za samochód online</Link>,
                         {" "}<Link href="/blog/koszt-sprowadzenia-auta-z-niemiec-2026">pełne wyliczenie kosztu sprowadzenia auta z Niemiec</Link>
                         {" "}oraz <Link href="/blog/rejestracja-auta-z-niemiec-2026">rejestracja auta z Niemiec krok po kroku</Link>.
                         Jeśli chcesz, żebyśmy znaleźli i sprowadzili auto za Ciebie, zobacz jak działa

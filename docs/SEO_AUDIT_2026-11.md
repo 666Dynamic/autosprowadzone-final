@@ -111,7 +111,7 @@ Okres 7.02–31.10.2026: **179 kliknięć, 14,8 tys. wyświetleń, CTR 1,2%, śr
 - Walidacja „Błąd przekierowania” i „Strona wykryta – niezindeksowana” była już w toku („Rozpoczęto”).
 - Treść pod frazy z GSC: `/aukcje` z nowym tytułem (aukcje b2b, Adesa, CarOnSale), nowy tytuł artykułu o Adesa/Openlane, nowe artykuły: `/blog/caronsale-aukcje-b2b-jak-kupic-auto`, `/blog/sprowadzanie-aut-z-europy`, `/blog/firma-sprowadzajaca-auta-z-niemiec-jak-wybrac`.
 
-**Do zgłoszenia w kolejnych dniach (limit ok. 10 dziennie):** `/blog/autobid-de-aukcje-jak-kupic-auto`, `/blog/autorola-aukcje-b2b`, `/aukcje`, `/faq`, `/blog`, `/blog/auto1-jak-licytowac`, `/blog/bca-europe-przewodnik`, `/blog/caronsale-aukcje-b2b-jak-kupic-auto`, `/blog/sprowadzanie-aut-z-europy`, `/blog/firma-sprowadzajaca-auta-z-niemiec-jak-wybrac`, `/blog/czy-warto-sprowadzic-hybryde-z-niemiec`, `/blog/auto-z-niemiec-od-osoby-prywatnej-czy-z-aukcji`, `/blog/import-samemu-czy-przez-posrednika`, `/blog/oplaty-aukcyjne-wyjasnienie`, `/blog/jak-czytac-raport-szkod-i-raport-aukcyjny`, `/blog/auta-flotowe-z-niemiec-jak-rozpoznac-dobry-egzemplarz`, `/blog/diesel-benzyna-czy-hybryda-z-niemiec`.
+**Do zgłoszenia w kolejnych dniach (limit ok. 10 dziennie):** `/blog/akcyza-za-samochod-online-puesc`, `/blog/aukcje-samochodowe-dla-osob-prywatnych`, `/blog/podatki-auto-z-niemiec-pcc-vat-clo`, `/blog/ubezpieczenie-oc-auto-z-niemiec`, `/kalkulator`, `/blog/autobid-de-aukcje-jak-kupic-auto`, `/blog/autorola-aukcje-b2b`, `/aukcje`, `/faq`, `/blog`, `/blog/auto1-jak-licytowac`, `/blog/bca-europe-przewodnik`, `/blog/caronsale-aukcje-b2b-jak-kupic-auto`, `/blog/sprowadzanie-aut-z-europy`, `/blog/firma-sprowadzajaca-auta-z-niemiec-jak-wybrac`, `/blog/czy-warto-sprowadzic-hybryde-z-niemiec`, `/blog/auto-z-niemiec-od-osoby-prywatnej-czy-z-aukcji`, `/blog/import-samemu-czy-przez-posrednika`, `/blog/oplaty-aukcyjne-wyjasnienie`, `/blog/jak-czytac-raport-szkod-i-raport-aukcyjny`, `/blog/auta-flotowe-z-niemiec-jak-rozpoznac-dobry-egzemplarz`, `/blog/diesel-benzyna-czy-hybryda-z-niemiec`.
 
 **Co obserwować:** za 1–2 tygodnie w GSC → Strony liczba zindeksowanych powinna rosnąć z 13 w stronę 35+; w Skuteczności — pozycja fraz „sprowadzanie aut z niemiec”, „firmy sprowadzające auta z niemiec”, „import aut z europy”.
 
@@ -161,3 +161,34 @@ Kolejność według wpływu:
 - **BreadcrumbList** na `/faq`, `/o-nas`, `/blog` (pozostałe podstrony już miały).
 - **PageSpeed (mobile):** Performance 96, Accessibility 95, Best Practices 100, SEO 100; LCP 2,6 s, CLS 0 — wydajność nie jest problemem.
 - IndexNow wysłany ponownie po wdrożeniu (40 adresów).
+
+## 11. Etap 6 (3.11.2026) — narzędzia agencyjne: Keyword Planner, audyt on-page, podpowiedzi Google
+
+**Google Ads Keyword Planner (Polska, język polski, paź 2025 – wrz 2026), średnio miesięcznie:**
+
+| Fraza | Wyszukania | Konkurencja Ads | Nasza strona docelowa |
+|---|---|---|---|
+| mobile de | 100 tys. – 1 mln | niska | `/blog/jak-kupic-auto-na-mobile-de` (nawigacyjna — mała szansa) |
+| auto1 | 10 – 100 tys. | niska | `/blog/auto1-jak-licytowac` |
+| **akcyza za samochód** (+ „z niemiec”, „online”, „urząd skarbowy”) | **1 – 10 tys. każda** | niska | **nowy:** `/blog/akcyza-za-samochod-online-puesc` |
+| sprowadzanie aut z niemiec | 1 – 10 tys. | średnia | `/` |
+| auta z niemiec / samochody z niemiec | 1 – 10 tys. | średnia | `/` |
+| aukcje samochodowe | 1 – 10 tys. | duża | `/aukcje` |
+| autobid / autorola / openlane / caronsale | 1 – 10 tys. każda | niska–średnia | poradniki platform |
+| licytacje komornicze samochodów | 1 – 10 tys. | — | wzmianka w `/blog/aukcje-samochodowe-dla-osob-prywatnych` |
+| kalkulator akcyzy (za samochód) | 100 – 1 tys. | niska | `/kalkulator` (tytuł zmieniony pod tę frazę) |
+| puesc akcyza, potwierdzenie zapłaty akcyzy, korekta akcyzy, opłata akcyzy przez internet | 100 – 1 tys. każda | niska | `/blog/akcyza-za-samochod-online-puesc` |
+| aukcje samochodowe niemcy, bca aukcje, licytacje samochodowe, import aut z niemiec, rejestracja auta z niemiec, ile kosztuje sprowadzenie auta z niemiec, firma sprowadzająca auta | 100 – 1 tys. | różna | istniejące strony |
+| aukcje dla osób prywatnych, poleasingowe, z europy, z belgii/holandii, miasta (warszawa, kraków) | 10 – 100 | duża | nisza — zrobione artykuły, bez stron „miejskich” |
+
+**Wniosek:** największy niewykorzystany wolumen był w klastrze **„akcyza za samochód”** — kilkanaście wariantów po 1–10 tys. wyszukań, niska konkurencja. Mieliśmy tylko artykuł „akcyza na auto z Niemiec”. Frazy miejskie mają po 10–100 wyszukań — nie opłaca się tworzyć osobnych podstron (ryzyko doorway pages).
+
+**Audyt on-page w stylu Yoast** (skrypt sprawdzający wszystkie URL-e z sitemapy: długość title/description, liczba H1, alt obrazków, liczba słów, canonical, robots):
+- 30 z 32 artykułów miało **title 75–116 znaków** i **description 175–240 znaków** — Google je ucinał. Dodano pola `seoTitle` i `metaDescription` we frontmatterze MDX (H1 i lead zostają pełne), wszystkie tytuły ≤ 45 znaków + „| SprowadzoneAuto.pl”, opisy 120–160 znaków.
+- Skrócono też title/description strony głównej, `/kalkulator`, `/aukcje`, `/weryfikacja`, `/blog`, `/faq`, `/kontakt`, `/o-nas`.
+- Wszystkie strony: 1 × H1, obrazki z alt, poprawny canonical; `/test-logos` i `/w-budowie` mają `noindex` (OK). Krótkie zostały tylko strony prawne (bez znaczenia dla SEO).
+
+**Nowe treści w tym etapie:** `/blog/akcyza-za-samochod-online-puesc`, `/blog/podatki-auto-z-niemiec-pcc-vat-clo`, `/blog/ubezpieczenie-oc-auto-z-niemiec`, `/blog/aukcje-samochodowe-dla-osob-prywatnych`, sekcja „PUESC krok po kroku” w artykule o akcyzie; linki ze stopki, kalkulatora, `/aukcje` i powiązanych wpisów.
+
+**Narzędzia sprawdzone i wyniki:** Google Search Console (zapytania, linki: 0 zewnętrznych linków), Ahrefs (DR 0, ok. 1,1 tys. spamowych linków automatycznych — Google je ignoruje, disavow niepotrzebny), PageSpeed Insights (OK), Rich Results Test (OK), podpowiedzi Google (luki tematyczne), Google Ads Keyword Planner (wolumeny powyżej). Wolumeny w Keyword Plannerze są w przedziałach, bo konto nie ma aktywnej kampanii — dokładne liczby pokażą się po uruchomieniu nawet małej kampanii.
+
