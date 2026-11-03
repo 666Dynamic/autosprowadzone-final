@@ -102,8 +102,15 @@ Okres 7.02–31.10.2026: **179 kliknięć, 14,8 tys. wyświetleń, CTR 1,2%, śr
 
 **Fragmenty opinii:** Google wykrywa 4 elementy „Review” na stronie głównej (stary schemat z ocenami). Po wdrożeniu znikną — to dobrze, bo oceny wystawione samemu sobie łamią wytyczne Google.
 
-**Kolejność działań po wdrożeniu:**
-1. Vercel → Domains → `sprowadzoneauto.pl` → przekierowanie na www jako **308**.
-2. GSC → „Sprawdzenie adresu URL” → „Poproś o zindeksowanie” dla: `/`, `/kalkulator`, `/aukcje`, `/faq`, `/blog/akcyza-2026-stawki`, `/blog/koszt-sprowadzenia-auta-z-niemiec-2026`, nowych artykułów (limit ok. 10 dziennie).
-3. GSC → Strony → „Błąd przekierowania” → „Sprawdź poprawkę”.
-4. GSC → Mapy witryn → ponownie przesłać `https://www.sprowadzoneauto.pl/sitemap.xml`.
+**Wykonane 3.11.2026:**
+- Wdrożenie na produkcję (commity `341a478`, `c6a5a49`).
+- Vercel: `sprowadzoneauto.pl` → `www` zmienione z **307 na 308** (sprawdzone curl-em).
+- `autosprowadzone-final.vercel.app` (pełny duplikat strony z kodem 200) przekierowuje teraz 308 na www — w middleware (`VERCEL_ENV=production`).
+- GSC: ponownie przesłana mapa `https://www.sprowadzoneauto.pl/sitemap.xml`, usunięta mapa bez www.
+- GSC: „Poproś o zindeksowanie” dla 11 adresów: `/`, `/kalkulator`, `/blog/akcyza-2026-stawki`, `/blog/koszt-sprowadzenia-auta-z-niemiec-2026`, `/blog/transport-auta-z-niemiec-koszt`, `/blog/rejestracja-auta-z-niemiec-2026`, `/blog/auta-poleasingowe-z-niemiec-czy-warto`, `/blog/ile-trwa-sprowadzenie-auta-z-niemiec`, `/blog/dokumenty-przy-zakupie-auta-w-niemczech`, `/blog/tablice-wywozowe-z-niemiec-ausfuhrkennzeichen`, `/blog/jak-kupic-auto-na-mobile-de`. Potem Google zgłosił dzienny limit.
+- Walidacja „Błąd przekierowania” i „Strona wykryta – niezindeksowana” była już w toku („Rozpoczęto”).
+- Treść pod frazy z GSC: `/aukcje` z nowym tytułem (aukcje b2b, Adesa, CarOnSale), nowy tytuł artykułu o Adesa/Openlane, nowe artykuły: `/blog/caronsale-aukcje-b2b-jak-kupic-auto`, `/blog/sprowadzanie-aut-z-europy`, `/blog/firma-sprowadzajaca-auta-z-niemiec-jak-wybrac`.
+
+**Do zgłoszenia w kolejnych dniach (limit ok. 10 dziennie):** `/aukcje`, `/faq`, `/blog`, `/blog/auto1-jak-licytowac`, `/blog/bca-europe-przewodnik`, `/blog/caronsale-aukcje-b2b-jak-kupic-auto`, `/blog/sprowadzanie-aut-z-europy`, `/blog/firma-sprowadzajaca-auta-z-niemiec-jak-wybrac`, `/blog/czy-warto-sprowadzic-hybryde-z-niemiec`, `/blog/auto-z-niemiec-od-osoby-prywatnej-czy-z-aukcji`, `/blog/import-samemu-czy-przez-posrednika`, `/blog/oplaty-aukcyjne-wyjasnienie`, `/blog/jak-czytac-raport-szkod-i-raport-aukcyjny`, `/blog/auta-flotowe-z-niemiec-jak-rozpoznac-dobry-egzemplarz`, `/blog/diesel-benzyna-czy-hybryda-z-niemiec`.
+
+**Co obserwować:** za 1–2 tygodnie w GSC → Strony liczba zindeksowanych powinna rosnąć z 13 w stronę 35+; w Skuteczności — pozycja fraz „sprowadzanie aut z niemiec”, „firmy sprowadzające auta z niemiec”, „import aut z europy”.
