@@ -30,29 +30,32 @@ const mainPlatforms = [
         description: "Eurolider remarketingu. Auta poflotowe, bankowe i największy w UE wybór aut dostawczych (LCV). Rygorystyczne raporty BCA 1-5.",
         stats: "1.3m+ aut rocznie",
         fees: "Ok. 3.9% (min. ~500€) + opłata eksportowa",
-        color: "bg-[#002f5f]"
+        color: "bg-[#002f5f]",
+        guide: "/blog/bca-europe-przewodnik"
     },
     {
         name: "AUTO1.com",
         description: "Największa cyfrowa giełda w Europie. 30k+ nowych ofert dziennie. Transparentny proces i własna logistyka.",
         stats: "600k+ aut rocznie",
         fees: "Cennik dynamiczny (ok. 300-400€)",
-        color: "bg-[#f59e0b]"
+        color: "bg-[#f59e0b]",
+        guide: "/blog/auto1-jak-licytowac"
     },
     {
         name: "Autobid.de",
         description: "Niemiecka precyzja. Bezpośrednie aukcje od producentów (BMW, Ford, VW) i dużych grup dealerskich. 17 centrów w DE.",
         stats: "4.5k aut tygodniowo",
         fees: "Ok. 3% (min. 300-450€) + opłata eksportowa",
-        color: "bg-[#e10613]"
+        color: "bg-[#e10613]",
+        guide: "/blog/autobid-de-aukcje-jak-kupic-auto"
     }
 ]
 
 const partners = [
-    { name: "CarOnSale", desc: "Premium stock od autoryzowanych dealerów z raportem 'COS Check'." },
-    { name: "Autorola", desc: "Globalna platforma z silną pozycją w segmencie aut luksusowych i flotowych." },
+    { name: "CarOnSale", desc: "Premium stock od autoryzowanych dealerów z raportem 'COS Check'.", guide: "/blog/caronsale-aukcje-b2b-jak-kupic-auto" },
+    { name: "Autorola", desc: "Globalna platforma z silną pozycją w segmencie aut luksusowych i flotowych.", guide: "/blog/autorola-aukcje-b2b" },
     { name: "AutoProff", desc: "Model C2B/B2B z Danii, coraz silniejszy w Niemczech. Niskie prowizje." },
-    { name: "Adesa / Openlane", desc: "Eksperci od aukcji transgranicznych z pełną obsługą dokumentacji." },
+    { name: "Adesa / Openlane", desc: "Eksperci od aukcji transgranicznych z pełną obsługą dokumentacji.", guide: "/blog/openlane-adesa-jak-kupowac-auto" },
     { name: "Auktion & Markt", desc: "Dedykowane aukcje bankowe i leasingowe z pewną historią." },
     { name: "Manheim", desc: "Specjalizacja w autach młodych i pofarmaceutycznych." }
 ]
@@ -343,9 +346,9 @@ export default function AuctionsPage() {
                                     </div>
 
                                     <div className="pt-2">
-                                        <div className="text-xs font-bold text-emerald-600 flex items-center gap-1 uppercase tracking-widest italic">
-                                            <Activity className="w-3 h-3" /> Live Inventory
-                                        </div>
+                                        <Link href={p.guide} className="text-xs font-bold text-primary flex items-center gap-1 uppercase tracking-widest hover:underline">
+                                            Jak kupować na {p.name} <ChevronRight className="w-3 h-3" />
+                                        </Link>
                                     </div>
                                 </CardContent>
                             </Card>
@@ -366,6 +369,9 @@ export default function AuctionsPage() {
                             <div key={i} className="p-4 rounded-xl border border-border bg-card text-card-foreground shadow-sm transition-colors hover:border-primary/40 hover:shadow-md">
                                 <h4 className="text-sm font-black text-primary mb-1">{partner.name}</h4>
                                 <p className="text-xs text-muted-foreground leading-tight">{partner.desc}</p>
+                                {partner.guide && (
+                                    <Link href={partner.guide} className="mt-2 inline-block text-xs font-bold text-primary hover:underline">Poradnik →</Link>
+                                )}
                             </div>
                         ))}
                     </div>

@@ -1,14 +1,16 @@
 import { Calculator } from "@/components/calculator"
+import { CALCULATOR_CONFIG } from "@/lib/calculator-constants"
+import { faqJsonLd, type FaqItem } from "@/lib/faq"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Kalkulator Akcyzy 2026 — Koszt Sprowadzenia Auta z Niemiec",
+    title: "Kalkulator Sprowadzenia Auta z Niemiec 2026 — Akcyza i Opłaty",
     description: "Kalkulator akcyzy 2026 i kosztów sprowadzenia auta z Niemiec. Stawki akcyzy 3,1% / 18,6%, hybrydy 1,55% / 9,3%, elektryki 0%. Policz transport, tłumaczenia, rejestrację i prowizję online.",
     alternates: {
         canonical: "https://www.sprowadzoneauto.pl/kalkulator",
     },
     openGraph: {
-        title: "Kalkulator Akcyzy 2026 — Koszt Importu Auta",
+        title: "Kalkulator Sprowadzenia Auta z Niemiec 2026 — Akcyza i Opłaty",
         description: "Oblicz całkowity koszt sprowadzenia auta z Niemiec. Aktualne stawki akcyzy, koszty rejestracji i transportu.",
         url: "https://www.sprowadzoneauto.pl/kalkulator",
         images: ["https://www.sprowadzoneauto.pl/opengraph-image"],
@@ -18,6 +20,37 @@ export const metadata: Metadata = {
 import { ContactForm } from "@/components/contact-form"
 import { ArrowRight, AlertTriangle } from "lucide-react"
 import Link from "next/link"
+
+const calculatorFaq: FaqItem[] = [
+    {
+        question: "Ile kosztuje sprowadzenie auta z Niemiec w 2026 roku?",
+        answer: "Do ceny auta doliczasz akcyzę (3,1% dla silników do 2000 cm³, 18,6% powyżej; hybrydy 1,55% lub 9,3%; elektryki 0%), transport lawetą (zwykle 1500–3500 zł), tłumaczenia (ok. 250 zł), przegląd techniczny (ok. 100–200 zł) i rejestrację (ok. 160 zł). Przy zakupie przez pośrednika dochodzi jego prowizja. Przy aucie za 20 000 € z silnikiem do 2.0 łączne opłaty razem z prowizją pośrednika to zwykle ok. 7–9 tys. zł.",
+    },
+    {
+        question: "Jak obliczyć akcyzę za auto z Niemiec?",
+        answer: "Kwotę z faktury lub umowy w euro przelicz na złote po średnim kursie NBP z dnia poprzedzającego powstanie obowiązku podatkowego i pomnóż przez stawkę: 3,1% (silnik do 2000 cm³) albo 18,6% (powyżej 2000 cm³). Dla hybryd HEV stawki wynoszą 1,55% i 9,3%, plug-in do 2000 cm³ i elektryki są zwolnione.",
+    },
+    {
+        question: "Jakie opłaty trzeba zapłacić za auto z Niemiec po przyjeździe do Polski?",
+        answer: "Akcyzę (deklaracja AKC-U/S w ciągu 14 dni od przywozu), tłumaczenia przysięgłe dokumentów, badanie techniczne w Polsce oraz opłaty rejestracyjne w wydziale komunikacji (tablice, dowód, nalepka). Rejestracji trzeba dokonać w ciągu 30 dni od przywozu.",
+    },
+    {
+        question: "Czy kalkulator uwzględnia cło i VAT?",
+        answer: "Przy imporcie auta z Niemiec i innych krajów UE nie płaci się cła. VAT jest zawarty w cenie auta z faktury (lub auto jest sprzedawane w procedurze marży). Osobne zasady dotyczą firm kupujących nowe auta oraz aut spoza UE — wtedy dochodzi odprawa celna, cło i VAT.",
+    },
+]
+
+const webAppJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Kalkulator sprowadzenia auta z Niemiec",
+    "url": "https://www.sprowadzoneauto.pl/kalkulator",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "inLanguage": "pl-PL",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "PLN" },
+    "publisher": { "@id": "https://www.sprowadzoneauto.pl/#organization" },
+}
 
 export default function CalculatorPage() {
     const breadcrumbJsonLd = {
@@ -44,6 +77,14 @@ export default function CalculatorPage() {
         <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        />
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppJsonLd) }}
+        />
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(calculatorFaq)) }}
         />
         <div className="w-full mx-auto max-w-6xl px-4 md:px-8 py-12 md:py-20">
             <div className="max-w-4xl mx-auto mb-12 text-center">
@@ -174,6 +215,40 @@ export default function CalculatorPage() {
                     </div>
                 </div>
             </div>
+
+            <section className="mt-32 max-w-3xl mx-auto px-4" aria-labelledby="jak-liczyc">
+                <h2 id="jak-liczyc" className="text-3xl md:text-4xl font-black mb-8 uppercase tracking-tighter italic text-foreground">
+                    Jak policzyć koszt sprowadzenia auta z Niemiec? <span className="text-primary not-italic">Wzór</span>
+                </h2>
+                <div className="prose prose-slate dark:prose-invert max-w-none prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-foreground prose-headings:text-foreground prose-headings:font-black prose-a:text-primary prose-a:font-bold prose-a:no-underline hover:prose-a:underline">
+                    <p>
+                        Kalkulator liczy całkowity koszt auta „pod dom” według prostego wzoru:
+                        <strong> cena auta + akcyza + transport + tłumaczenia + przegląd + rejestracja + prowizja</strong>.
+                        Przyjmowane wartości:
+                    </p>
+                    <ul>
+                        <li><strong>Cena auta</strong> — kwota z faktury lub umowy w euro, przeliczona po kursie (domyślnie {CALCULATOR_CONFIG.DEFAULT_EXCHANGE_RATE.toFixed(2).replace(".", ",")} zł/€ — możesz go zmienić).</li>
+                        <li><strong>Akcyza</strong> — procent od ceny w złotych, zależnie od pojemności i napędu (tabela poniżej).</li>
+                        <li><strong>Transport lawetą</strong> — {CALCULATOR_CONFIG.TRANSPORT_MIN} – {CALCULATOR_CONFIG.TRANSPORT_MAX} zł, zależnie od odległości (<Link href="/blog/transport-auta-z-niemiec-koszt">ile kosztuje transport auta z Niemiec</Link>).</li>
+                        <li><strong>Tłumaczenia przysięgłe</strong> — ok. {CALCULATOR_CONFIG.TRANSLATION} zł.</li>
+                        <li><strong>Badanie techniczne</strong> — od {CALCULATOR_CONFIG.INSPECTION_BASE} zł (więcej przy LPG lub po szkodzie).</li>
+                        <li><strong>Rejestracja</strong> — {CALCULATOR_CONFIG.REGISTRATION_STANDARD.toFixed(2).replace(".", ",")} zł (tablice indywidualne {CALCULATOR_CONFIG.REGISTRATION_INDIVIDUAL} zł).</li>
+                        <li><strong>Prowizja</strong> — przy sprowadzeniu auta przez nas stała: {CALCULATOR_CONFIG.COMMISSION} zł.</li>
+                    </ul>
+                    <h3>Najczęstsze pytania o koszty</h3>
+                </div>
+                <div className="mt-4 space-y-3">
+                    {calculatorFaq.map((item) => (
+                        <details key={item.question} className="group rounded-2xl border border-border bg-card p-5">
+                            <summary className="cursor-pointer list-none font-bold text-foreground flex justify-between gap-4">
+                                <h3 className="text-base">{item.question}</h3>
+                                <span className="text-primary transition-transform group-open:rotate-45" aria-hidden>+</span>
+                            </summary>
+                            <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{item.answer}</p>
+                        </details>
+                    ))}
+                </div>
+            </section>
 
             <section className="mt-32 max-w-3xl mx-auto px-4" aria-labelledby="akcyza-2026">
                 <h2 id="akcyza-2026" className="text-3xl md:text-4xl font-black mb-8 uppercase tracking-tighter italic text-foreground">

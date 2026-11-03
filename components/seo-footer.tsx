@@ -34,6 +34,8 @@ export function SeoFooter() {
                             <li><Link href="/blog/bca-europe-przewodnik" className="hover:text-primary transition-colors">BCA Auctions</Link></li>
                             <li><Link href="/blog/auto1-jak-licytowac" className="hover:text-primary transition-colors">AUTO1.com</Link></li>
                             <li><Link href="/blog/caronsale-aukcje-b2b-jak-kupic-auto" className="hover:text-primary transition-colors">CarOnSale</Link></li>
+                            <li><Link href="/blog/autobid-de-aukcje-jak-kupic-auto" className="hover:text-primary transition-colors">Autobid.de</Link></li>
+                            <li><Link href="/blog/autorola-aukcje-b2b" className="hover:text-primary transition-colors">Autorola</Link></li>
                             <li><Link href="/blog/openlane-adesa-jak-kupowac-auto" className="hover:text-primary transition-colors">Adesa / Openlane</Link></li>
                         </ul>
                     </div>
