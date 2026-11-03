@@ -10,6 +10,8 @@ const contentDirectory = path.join(process.cwd(), 'content/blog');
 export interface PostMetadata {
     title: string;
     excerpt: string;
+    seoTitle?: string;
+    metaDescription?: string;
     date: string;
     dateISO: string;
     dateModified: string;
@@ -82,6 +84,8 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
             slug,
             title: data.title,
             excerpt: data.excerpt,
+            seoTitle: data.seoTitle,
+            metaDescription: data.metaDescription,
             date: data.date,
             dateISO: data.dateISO,
             dateModified: data.dateModified || data.dateISO,

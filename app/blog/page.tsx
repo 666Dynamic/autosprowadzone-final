@@ -7,8 +7,8 @@ import { ArrowRight } from "lucide-react"
 export const revalidate = 86400
 
 export const metadata: Metadata = {
-    title: "Blog o Sprowadzaniu Aut z Niemiec — Poradnik Importera",
-    description: "Artykuły o sprowadzaniu samochodów z Niemiec, Belgii i Holandii. Przewodniki po aukcjach BCA, AUTO1, kosztach importu i procedurach rejestracji. Kalkulator akcyzy 2026.",
+    title: "Poradnik Importera – Sprowadzanie Aut z Niemiec",
+    description: "Poradniki o sprowadzaniu aut z Niemiec i Europy: aukcje BCA, AUTO1 i Autobid, akcyza 2026, podatki, transport, rejestracja i koszty importu.",
     keywords: [
         "sprowadzanie aut z niemiec",
         "import aut z niemiec",

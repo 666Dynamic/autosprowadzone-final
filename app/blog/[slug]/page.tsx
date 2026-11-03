@@ -23,9 +23,13 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
         }
     }
 
+    // Short SERP-friendly variants; the full title/excerpt stay as H1 and lead
+    const title = post.seoTitle || post.title
+    const description = post.metaDescription || post.excerpt
+
     return {
-        title: post.title,
-        description: post.excerpt,
+        title,
+        description,
         keywords: post.keywords || ['sprowadzanie aut z niemiec', 'import aut', 'aukcje b2b'],
         robots: {
             index: true,
@@ -38,8 +42,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
             canonical: `https://www.sprowadzoneauto.pl/blog/${slug}`,
         },
         openGraph: {
-            title: `${post.title} | SprowadzoneAuto.pl`,
-            description: post.excerpt,
+            title: `${title} | SprowadzoneAuto.pl`,
+            description,
             type: "article",
             publishedTime: post.dateISO,
             modifiedTime: post.dateModified,
@@ -49,8 +53,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
         },
         twitter: {
             card: "summary_large_image",
-            title: `${post.title} | SprowadzoneAuto.pl`,
-            description: post.excerpt,
+            title: `${title} | SprowadzoneAuto.pl`,
+            description,
         },
     }
 }

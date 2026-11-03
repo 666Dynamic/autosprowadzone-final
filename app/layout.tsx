@@ -21,10 +21,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.sprowadzoneauto.pl'),
   title: {
-    default: "Sprowadzanie Aut z Niemiec na Zamówienie — Aukcje B2B | SprowadzoneAuto.pl",
+    default: "Sprowadzanie Aut z Niemiec na Zamówienie – Aukcje B2B",
     template: "%s | SprowadzoneAuto.pl",
   },
-  description: "Sprowadzamy auta z Niemiec z aukcji B2B (BCA, AUTO1). Dostęp do zamkniętych platform. Polska obsługa, stała prowizja 2500 zł. Weryfikacja i transport door-to-door.",
+  description: "Sprowadzamy auta z Niemiec na zamówienie z aukcji B2B (BCA, AUTO1). Polska obsługa, stała prowizja 2500 zł, weryfikacja i transport pod dom.",
   keywords: [
     "sprowadzanie aut z niemiec", "auta z niemiec aukcje", "licytacje samochodowe niemcy", "auto import niemcy", "sprowadzanie aut na zamówienie",
     "aukcje b2b auta", "weryfikacja aut niemcy", "inspekcja auta niemcy", "auta poleasingowe niemcy", "import aut z niemiec procedura",

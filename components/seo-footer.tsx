@@ -37,6 +37,7 @@ export function SeoFooter() {
                             <li><Link href="/blog/autobid-de-aukcje-jak-kupic-auto" className="hover:text-primary transition-colors">Autobid.de</Link></li>
                             <li><Link href="/blog/autorola-aukcje-b2b" className="hover:text-primary transition-colors">Autorola</Link></li>
                             <li><Link href="/blog/openlane-adesa-jak-kupowac-auto" className="hover:text-primary transition-colors">Adesa / Openlane</Link></li>
+                            <li><Link href="/blog/aukcje-samochodowe-dla-osob-prywatnych" className="hover:text-primary transition-colors">Aukcje dla osób prywatnych</Link></li>
                         </ul>
                     </div>
                     <div>
@@ -47,6 +48,8 @@ export function SeoFooter() {
                             <li><Link href="/blog/dokumenty-przy-zakupie-auta-w-niemczech" className="hover:text-primary transition-colors">Dokumenty z Niemiec</Link></li>
                             <li><Link href="/blog/akcyza-2026-stawki" className="hover:text-primary transition-colors">Akcyza 2026 — stawki</Link></li>
                             <li><Link href="/blog/rejestracja-auta-z-niemiec-2026" className="hover:text-primary transition-colors">Rejestracja auta z Niemiec</Link></li>
+                            <li><Link href="/blog/podatki-auto-z-niemiec-pcc-vat-clo" className="hover:text-primary transition-colors">Podatki: PCC, VAT, cło</Link></li>
+                            <li><Link href="/blog/ubezpieczenie-oc-auto-z-niemiec" className="hover:text-primary transition-colors">OC auta z Niemiec</Link></li>
                             <li><Link href="/blog/jak-sprawdzic-auto-z-niemiec-przed-zakupem" className="hover:text-primary transition-colors">Jak sprawdzić auto z Niemiec</Link></li>
                             <li><Link href="/faq" className="hover:text-primary transition-colors">FAQ</Link></li>
                             <li><Link href="/blog" className="hover:text-primary transition-colors">Poradnik Importera</Link></li>

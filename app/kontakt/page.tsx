@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
     title: "Kontakt — Zapytaj o Import Auta z Niemiec",
-    description: "Skontaktuj się z nami w sprawie importu aut z Niemiec, weryfikacji pojazdu lub dostępu do aukcji B2B. Odpowiadamy 7 dni w tygodniu, 7:00–22:00. Telefon PL/DE, WhatsApp, e-mail.",
+    description: "Zapytaj o import auta z Niemiec, weryfikację pojazdu lub aukcje B2B. Odpowiadamy 7 dni w tygodniu, 7:00–22:00 – telefon PL/DE, WhatsApp, e-mail.",
     alternates: {
         canonical: "https://www.sprowadzoneauto.pl/kontakt",
     },

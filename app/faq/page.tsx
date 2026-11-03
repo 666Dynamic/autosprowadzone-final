@@ -4,8 +4,8 @@ import { faqJsonLd } from "@/lib/faq"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "FAQ — Sprowadzanie Aut z Niemiec: Koszty, Akcyza, Transport",
-    description: "Odpowiedzi na pytania o sprowadzanie aut z Niemiec: ile kosztuje import, akcyza 2026, czas transportu, aukcje B2B dla osób prywatnych, rejestracja, gwarancja i depozyt.",
+    title: "FAQ – Sprowadzanie Aut z Niemiec: Koszty i Akcyza",
+    description: "Pytania o sprowadzanie aut z Niemiec: ile kosztuje import, akcyza 2026, czas transportu, aukcje B2B dla osób prywatnych, rejestracja i depozyt.",
     alternates: {
         canonical: "https://www.sprowadzoneauto.pl/faq",
     },

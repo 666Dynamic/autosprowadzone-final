@@ -4,8 +4,8 @@ import type { Metadata } from "next"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-    title: "Weryfikacja Aut w Niemczech — Inspekcja Przed Zakupem",
-    description: "Sprawdzenie auta przed zakupem w Niemczech. Inspekcja techniczna, pomiar lakieru, diagnostyka komputerowa. Obsługujemy region Bremen i całe Niemcy. Raport ze zdjęciami w 24h.",
+    title: "Weryfikacja Auta w Niemczech przed Zakupem",
+    description: "Sprawdzenie auta przed zakupem w Niemczech: inspekcja techniczna, pomiar lakieru, diagnostyka komputerowa. Region Bremen i całe Niemcy, raport w 24h.",
     alternates: {
         canonical: "https://www.sprowadzoneauto.pl/weryfikacja",
     },

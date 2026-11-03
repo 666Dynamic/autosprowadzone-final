@@ -5,8 +5,8 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Aukcje B2B aut z Niemiec i Europy – BCA, AUTO1, Adesa, CarOnSale",
-    description: "Aukcje samochodowe B2B dla osób prywatnych i firm z Polski: BCA, AUTO1, Openlane (Adesa), CarOnSale i 40+ platform. Kupujemy auta poleasingowe i flotowe za Ciebie – weryfikacja, licytacja, transport.",
+    title: "Aukcje B2B Aut z Niemiec – BCA, AUTO1, Adesa",
+    description: "Aukcje samochodowe B2B dla osób prywatnych i firm: BCA, AUTO1, Openlane (Adesa), CarOnSale i 40+ platform. Licytujemy auta poleasingowe za Ciebie.",
     alternates: {
         canonical: "https://www.sprowadzoneauto.pl/aukcje",
     },
@@ -133,7 +133,7 @@ export default function AuctionsPage() {
                                 Czym są <span className="text-primary italic">Aukcje B2B?</span>
                             </h2>
                             <p className="text-base text-muted-foreground font-medium leading-relaxed">
-                                To zamknięte platformy remarketingowe (np. BCA, AUTO1, Autobid.de), gdzie rocznie sprzedaje się ponad <span className="text-foreground font-bold">2 miliony pojazdów</span>. Są to źródła, z których korzystają najwięksi dealerzy w Europie. Dzięki nam, Ty również masz tam wstęp.
+                                To zamknięte platformy remarketingowe (np. BCA, AUTO1, Autobid.de), gdzie rocznie sprzedaje się ponad <span className="text-foreground font-bold">2 miliony pojazdów</span>. Są to źródła, z których korzystają najwięksi dealerzy w Europie. Dzięki nam, Ty również masz tam wstęp — także jako osoba prywatna, bez zakładania firmy (<Link href="/blog/aukcje-samochodowe-dla-osob-prywatnych" className="text-primary font-bold hover:underline">aukcje samochodowe dla osób prywatnych</Link>).
                             </p>
                             <div className="grid sm:grid-cols-2 gap-6">
                                 <div className="space-y-2">
