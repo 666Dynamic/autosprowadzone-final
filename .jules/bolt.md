@@ -1,0 +1,3 @@
+## 2025-05-19 - Caching Intl.NumberFormat
+**Learning:** Intl.NumberFormat instances should be cached rather than repeatedly instantiated, particularly inside frequently running loops (like the simulated auction bidding sequence in components/about-auctions.tsx). Doing so inline inside useMemo dependency blocks that frequently change (e.g., depending on price) defeats caching and degrades render performance.
+**Action:** Extract Intl.NumberFormat instantiations into module-scoped variables or empty-dependency `useMemo` hooks so they are instantiated only once, decoupling them from dynamically updating variables.

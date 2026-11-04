@@ -62,9 +62,12 @@ export function AboutAuctions() {
         }))
     ), [])
 
+    // Cache the formatter to prevent re-instantiation on every render during bidding loop
+    const priceFormatter = useMemo(() => new Intl.NumberFormat("pl-PL"), [])
+
     const formattedPrice = useMemo(() => (
-        new Intl.NumberFormat("pl-PL").format(price)
-    ), [price])
+        priceFormatter.format(price)
+    ), [price, priceFormatter])
 
     useEffect(() => {
         setMounted(true)
