@@ -1,0 +1,3 @@
+## 2023-11-20 - Intl.NumberFormat Instantiation Overhead in Render Loops
+**Learning:** Instantiating `Intl.NumberFormat` inside loops or rapid React render cycles (like a bidding simulation) introduces significant CPU overhead. Even wrapping it in `useMemo` is counterproductive if the dependencies (like the formatted value) change frequently, as it defeats the cache and still re-instantiates the object.
+**Action:** Always cache `Intl.NumberFormat` (and other expensive `Intl` objects) at the module level or in a constants file to reuse a single instance across function calls and renders.
