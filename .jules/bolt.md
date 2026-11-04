@@ -1,0 +1,3 @@
+## 2024-06-28 - Avoid re-instantiating Intl.NumberFormat
+**Learning:** Instantiating `Intl.NumberFormat` repeatedly inside formatting functions or rapid render loops (like animated bid numbers) adds significant CPU overhead. Uncached instantiation is nearly 70x slower than using a cached instance for 100k calls. In memory it says: "Intl.NumberFormat instances must be cached (e.g., in a constants file using a Map, a static record, or a module-scoped variable) rather than repeatedly instantiated inside functions or rapid render loops to avoid significant CPU overhead."
+**Action:** Always cache `Intl.NumberFormat` instances in module-scoped variables or maps when used in utility functions or rapidly updating React components.
