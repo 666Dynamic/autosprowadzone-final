@@ -1,0 +1,3 @@
+## 2024-05-07 - [Intl.NumberFormat caching]
+**Learning:** Instantiating `Intl.NumberFormat` is extremely expensive (~70x slower) compared to reusing a cached instance. This has a significant impact on rendering performance when formatting numbers/currencies inside React components or rapid loops. In this project, `formatCurrency` and `formatNumber` in `lib/calculator-constants.ts` and `formattedPrice` in `components/about-auctions.tsx` are repeatedly instantiating new formatters.
+**Action:** Cache `Intl.NumberFormat` instances in a module-scoped variable or static record instead of recreating them inside formatting functions or useMemo hooks (where dependencies might still cause re-instantiation).
