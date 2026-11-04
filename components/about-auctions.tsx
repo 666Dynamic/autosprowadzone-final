@@ -2,10 +2,10 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence, useInView } from "framer-motion"
 import { ArrowRight, Fuel, Gauge, Calendar, ShieldCheck, Euro, Zap, Activity, Sparkles, Clock, MapPin, Camera } from "lucide-react"
 import Link from "next/link"
-import { useState, useEffect, useMemo } from "react"
+import { useState, useEffect, useMemo, useRef } from "react"
 import Image from "next/image"
 
 const seededRandomFn = (seed: number) => {
@@ -14,6 +14,8 @@ const seededRandomFn = (seed: number) => {
 }
 
 export function AboutAuctions() {
+    const ref = useRef(null)
+    const inView = useInView(ref, { once: false, margin: "100px" })
     const [price, setPrice] = useState(18658)
     const [status, setStatus] = useState<"winning" | "outbid">("winning")
     const [timeLeft, setTimeLeft] = useState(25)
@@ -72,16 +74,16 @@ export function AboutAuctions() {
 
     // Image slider logic
     useEffect(() => {
-        if (!mounted) return
+        if (!mounted || !inView) return
         const slideInterval = setInterval(() => {
             setCurrentImageIndex(prev => (prev + 1) % images.length)
         }, 3000)
         return () => clearInterval(slideInterval)
-    }, [mounted, images.length])
+    }, [mounted, inView, images.length])
 
     // Simulate bidding cycle
     useEffect(() => {
-        if (!mounted || isFinished) return
+        if (!mounted || isFinished || !inView) return
 
         let isActive = true
         const INITIAL_TIME = 15
@@ -143,7 +145,7 @@ export function AboutAuctions() {
             isActive = false
             clearInterval(timer)
         }
-    }, [mounted, isFinished])
+    }, [mounted, isFinished, inView])
 
     const carSpecs = [
         { label: "Przebieg", value: "151 357 km", icon: Gauge },
@@ -155,7 +157,7 @@ export function AboutAuctions() {
     ]
 
     return (
-        <section className="py-16 md:py-32 text-foreground relative overflow-hidden">
+        <section ref={ref} className="py-16 md:py-32 text-foreground relative overflow-hidden">
             {/* Ambient Background Glows - Optimized Layout & Performance */}
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
                 {/* Static blurred blobs instead of animated ones for better mobile perf */}
