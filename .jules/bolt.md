@@ -1,0 +1,4 @@
+
+## 2024-11-20 - [Performance Pitfall: Uncached Intl.NumberFormat]
+**Learning:** Instantiating `new Intl.NumberFormat(...)` is an expensive operation in JavaScript, taking up to 1ms or more per call. Doing this repeatedly within frequently executed functions (like `formatCurrency` in utility files) or rapidly changing render loops (like animated bidding sequences with `price` state changes in React) causes significant main thread blocking and lag. While `useMemo` is generally good for caching, caching an `Intl.NumberFormat` instance using `useMemo` with dependencies that update frequently (like `[price]`) completely defeats the cache, leading to continuous re-instantiation on every render.
+**Action:** Always cache `Intl.NumberFormat` instances in module-scoped variables (e.g., using a `Map` for multiple currencies or a `const` for static formatters) instead of inline instantiation, especially within utility functions and React components.
