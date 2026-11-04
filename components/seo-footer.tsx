@@ -38,6 +38,7 @@ export function SeoFooter() {
                             <li><Link href="/blog/autorola-aukcje-b2b" className="hover:text-primary transition-colors">Autorola</Link></li>
                             <li><Link href="/blog/openlane-adesa-jak-kupowac-auto" className="hover:text-primary transition-colors">Adesa / Openlane</Link></li>
                             <li><Link href="/blog/aukcje-samochodowe-dla-osob-prywatnych" className="hover:text-primary transition-colors">Aukcje dla osób prywatnych</Link></li>
+                            <li><Link href="/blog/licytacje-komornicze-samochodow" className="hover:text-primary transition-colors">Licytacje komornicze aut</Link></li>
                         </ul>
                     </div>
                     <div>
