@@ -54,7 +54,3 @@ coverage/
 # Temporary files
 tmp/
 temp/
-
-# wygenerowane posty i zdjęcia na FB
-fb-posts/
-oferty*.txt
