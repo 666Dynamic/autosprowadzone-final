@@ -63,7 +63,7 @@ export function Hero() {
 
                     {/* Value + pricing clarity */}
                     <div className="mt-2 text-[11px] md:text-xs text-muted-foreground font-bold uppercase tracking-widest">
-                        Stała prowizja: <span className="text-foreground">2500 zł</span> • Typowa oszczędność vs portale: <span className="text-foreground">20–30%</span>.
+                        Stała prowizja: <span className="text-foreground">2470 zł</span> • Typowa oszczędność vs portale: <span className="text-foreground">20–30%</span>.
                         <Link href="/kalkulator" className="ml-2 underline decoration-primary/30 underline-offset-4 hover:text-primary">Zobacz kalkulację</Link>
                     </div>
 

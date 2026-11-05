@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     default: "Sprowadzanie Aut z Niemiec na Zamówienie – Aukcje B2B",
     template: "%s | SprowadzoneAuto.pl",
   },
-  description: "Sprowadzamy auta z Niemiec na zamówienie z aukcji B2B (BCA, AUTO1). Polska obsługa, stała prowizja 2500 zł, weryfikacja i transport pod dom.",
+  description: "Sprowadzamy auta z Niemiec na zamówienie z aukcji B2B (BCA, AUTO1). Polska obsługa, stała prowizja 2470 zł, weryfikacja i transport pod dom.",
   keywords: [
     "sprowadzanie aut z niemiec", "auta z niemiec aukcje", "licytacje samochodowe niemcy", "auto import niemcy", "sprowadzanie aut na zamówienie",
     "aukcje b2b auta", "weryfikacja aut niemcy", "inspekcja auta niemcy", "auta poleasingowe niemcy", "import aut z niemiec procedura",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     locale: "pl_PL",
     url: "https://www.sprowadzoneauto.pl",
     title: "Sprowadzanie Aut z Niemiec na Zamówienie — Aukcje B2B | SprowadzoneAuto.pl",
-    description: "Sprowadzamy auta z Niemiec z aukcji B2B (BCA, AUTO1). Dostęp do zamkniętych platform. Polska obsługa, stała prowizja 2500 zł. Weryfikacja i transport.",
+    description: "Sprowadzamy auta z Niemiec z aukcji B2B (BCA, AUTO1). Dostęp do zamkniętych platform. Polska obsługa, stała prowizja 2470 zł. Weryfikacja i transport.",
     siteName: "SprowadzoneAuto.pl",
     images: [{
       url: 'https://www.sprowadzoneauto.pl/opengraph-image',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Sprowadzanie Aut z Niemiec na Zamówienie — Aukcje B2B | SprowadzoneAuto.pl",
-    description: "Sprowadzamy auta z Niemiec z aukcji B2B (BCA, AUTO1). Dostęp do zamkniętych platform. Polska obsługa, stała prowizja 2500 zł.",
+    description: "Sprowadzamy auta z Niemiec z aukcji B2B (BCA, AUTO1). Dostęp do zamkniętych platform. Polska obsługa, stała prowizja 2470 zł.",
   },
   robots: {
     index: true,
@@ -145,7 +145,7 @@ const jsonLd = {
       "areaServed": { "@type": "Country", "name": "Polska" },
       "offers": {
         "@type": "Offer",
-        "price": "2500",
+        "price": "2470",
         "priceCurrency": "PLN",
         "description": "Stała prowizja za pośrednictwo w zakupie auta z Niemiec",
         "url": `${siteUrl}/kontakt`

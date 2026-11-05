@@ -32,12 +32,12 @@ export default function TermsPage() {
 
         <h2>3. Wynagrodzenie</h2>
         <p>
-          Prowizja pośrednictwa wynosi 2500 zł (PLN) brutto. Prowizja jest należna wyłącznie w przypadku skutecznego zakupu pojazdu.
+          Prowizja pośrednictwa wynosi 2470 zł (PLN) brutto. Prowizja jest należna wyłącznie w przypadku skutecznego zakupu pojazdu.
         </p>
 
         <h2>4. Depozyt i rozliczenia</h2>
         <p>
-          Przed licytacją Klient wpłaca depozyt zabezpieczający. Depozyt jest w 100% zwrotny, jeśli nie dojdzie do zakupu. W przypadku wygranej aukcji depozyt zaliczany jest na poczet wynagrodzenia.
+          Przed licytacją Klient wpłaca depozyt zabezpieczający w wysokości 2470 zł. Depozyt jest w 100% zwrotny, jeśli nie dojdzie do zakupu. W przypadku wygranej aukcji depozyt zaliczany jest na poczet wynagrodzenia.
         </p>
 
         <h2>5. Odpowiedzialność i raporty</h2>

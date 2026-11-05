@@ -22,7 +22,7 @@ Kategoria: Import samochodów / Pośrednictwo w zakupie samochodów / Handel sam
 ```
 
 **Krótki opis (do 250 znaków):**
-> Sprowadzamy auta z Niemiec na zamówienie z aukcji B2B (BCA, AUTO1, Autobid). Weryfikacja auta, licytacja, transport pod dom i pomoc w rejestracji w Polsce. Stała prowizja 2500 zł.
+> Sprowadzamy auta z Niemiec na zamówienie z aukcji B2B (BCA, AUTO1, Autobid). Weryfikacja auta, licytacja, transport pod dom i pomoc w rejestracji w Polsce. Stała prowizja 2470 zł.
 
 **Długi opis (do 750 znaków):**
 > SprowadzoneAuto.pl to polskojęzyczna obsługa niemieckiej firmy Miami Autocenter GmbH. Kupujemy samochody dla klientów z Polski na zamkniętych aukcjach B2B w Niemczech i Europie — BCA, AUTO1, Autobid, Openlane, CarOnSale i ponad 40 innych platform. Klient opisuje auto i budżet, a my wyszukujemy egzemplarze z raportami rzeczoznawców, liczymy pełny koszt z akcyzą i transportem, licytujemy do ustalonego limitu i dostarczamy auto lawetą pod dom z kompletem dokumentów do rejestracji. Pracujemy za stałą, z góry znaną prowizją. Na stronie znajdziesz darmowy kalkulator akcyzy i kosztów importu oraz poradniki o sprowadzaniu aut z Niemiec.

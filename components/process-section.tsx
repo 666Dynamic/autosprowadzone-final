@@ -26,7 +26,7 @@ const steps = [
     {
         id: "04",
         title: "Wpłać Depozyt",
-        description: "Wpłacasz depozyt zabezpieczający licytację. Jest on w 100% zwrotny, jeśli nie wygramy aukcji.",
+        description: "Wpłacasz 2470 zł depozytu zabezpieczającego licytację. Jest on w 100% zwrotny, jeśli nie wygramy aukcji.",
         icon: Wallet,
     },
     {

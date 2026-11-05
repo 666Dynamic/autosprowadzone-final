@@ -62,7 +62,7 @@ export default function AboutPage() {
                     {[
                         { icon: Building2, label: "Niemiecka Spółka GmbH", value: "HRB 211101" },
                         { icon: Trophy, label: "Dostęp do Platform B2B", value: "40+" },
-                        { icon: CheckCircle2, label: "Stała Prowizja", value: "2500 PLN" },
+                        { icon: CheckCircle2, label: "Stała Prowizja", value: "2470 PLN" },
                     ].map((stat, i) => (
                         <div key={i} className="p-6 bg-card border border-border rounded-3xl text-center">
                             <stat.icon className="w-8 h-8 mx-auto mb-4 text-primary" />

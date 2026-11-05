@@ -294,7 +294,7 @@ export default function CalculatorPage() {
                         więc akcyza (3,1%) wynosi <strong>ok. 2 610 zł</strong>. Gdyby to był silnik 3.0 TDI (18,6%), akcyza
                         wzrosłaby do <strong>ok. 15 660 zł</strong> — dlatego pojemność silnika ma tak duże znaczenie przy wyborze auta do importu.
                         Do tego dochodzą: transport (1500–3500 zł), tłumaczenia (ok. 250 zł), badanie techniczne (149 zł),
-                        rejestracja (161,50 zł) i nasza prowizja (2500 zł).
+                        rejestracja (161,50 zł) i nasza prowizja (2470 zł).
                     </p>
                     <h3>Terminy i formalności</h3>
                     <ul>

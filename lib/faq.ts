@@ -7,11 +7,11 @@ export interface FaqItem {
 export const faqItems: FaqItem[] = [
     {
         question: "Ile kosztuje sprowadzenie auta z Niemiec?",
-        answer: "Na koszt składa się cena auta, opłaty aukcyjne (Aufgeld ok. 3–4% i opłata eksportowa ok. 120–180 €), transport do Polski (zwykle 1500–3500 zł), akcyza (3,1% lub 18,6% wartości auta), tłumaczenia, badanie techniczne i rejestracja (ok. 400–600 zł) oraz nasza stała prowizja 2500 zł. Dokładną kwotę dla konkretnego auta policzysz w naszym kalkulatorze kosztów importu.",
+        answer: "Na koszt składa się cena auta, opłaty aukcyjne (Aufgeld ok. 3–4% i opłata eksportowa ok. 120–180 €), transport do Polski (zwykle 1500–3500 zł), akcyza (3,1% lub 18,6% wartości auta), tłumaczenia, badanie techniczne i rejestracja (ok. 400–600 zł) oraz nasza stała prowizja 2470 zł. Dokładną kwotę dla konkretnego auta policzysz w naszym kalkulatorze kosztów importu.",
     },
     {
         question: "Czy depozyt jest zwrotny?",
-        answer: "Tak, w 100%. Jeśli nie uda nam się wylicytować wybranego przez Ciebie samochodu lub zrezygnujesz przed licytacją, depozyt wraca na Twoje konto bezzwłocznie. Zatrzymujemy go (jako prowizję) tylko w momencie sukcesu - czyli zakupu auta.",
+        answer: "Tak, w 100%. Jeśli nie uda nam się wylicytować wybranego przez Ciebie samochodu lub zrezygnujesz przed licytacją, depozyt wraca na Twoje konto bezzwłocznie. Depozyt wynosi 2470 zł — zatrzymujemy go (jako całą naszą prowizję) tylko w momencie sukcesu - czyli zakupu auta.",
     },
     {
         question: "Ile trwa transport samochodu?",
