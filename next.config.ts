@@ -4,6 +4,12 @@ const nextConfig: NextConfig = {
   // Optymalizacja produkcyjna
   reactStrictMode: true,
 
+  // Artykuły czytane z dysku (lib/mdx.ts) muszą trafić do funkcji serwerowych,
+  // inaczej po odświeżeniu ISR sitemap/blog widzą pusty katalog content/.
+  outputFileTracingIncludes: {
+    '/*': ['./content/**/*'],
+  },
+
   // Optymalizacja obrazów
   images: {
     formats: ['image/webp', 'image/avif'],
